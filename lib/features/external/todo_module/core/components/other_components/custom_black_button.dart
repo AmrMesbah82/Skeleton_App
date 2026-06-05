@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:demo_app/features/external/main_core/core/theme/font_manager.dart';
+import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
 import 'package:demo_app/features/external/main_core/core/theme/app_theme.dart';
 

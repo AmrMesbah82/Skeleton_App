@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/ui/pages/mobile/employees_screen_mobile.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/controller/settings_controller.dart';
 
-import '../../../../../external/form_builder_module/core/helpers/responsive_helper.dart';
+import 'package:demo_app/core/widgets/responsive_helper.dart';
 import 'tablet/employees_screen.dart';
 GlobalKey employeesNavKey = GlobalKey();
 

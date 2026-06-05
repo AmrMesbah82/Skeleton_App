@@ -1,4 +1,4 @@
-// Responsive helper widget — shows mobileWidget or tabletWidget based on screen size.
+// Responsive layout helper — shows mobileWidget or tabletWidget based on screen size.
 import 'package:flutter/material.dart';
 
 class ResponsiveHelper extends StatelessWidget {

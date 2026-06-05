@@ -2,10 +2,10 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/features/external/main_core/core/theme/font_manager.dart';
+import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/features/external/todo_module/core/constants/screen_size.dart';
 import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
-import 'package:demo_app/features/external/main_core/core/theme/theme_controller.dart';
+import 'package:demo_app/core/theme/main_core_theme_controller.dart';
 
 Widget textfieled(
     BuildContext context,

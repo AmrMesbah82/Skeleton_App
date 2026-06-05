@@ -14,7 +14,7 @@ import 'package:demo_app/features/external/todo_module/features/todo_list/presen
 import 'package:page_transition/page_transition.dart';
 
 import '../../../../../nav_bar_package.dart/functions.dart';
-import '../../../data_grc_module/feature/settings_screen/views/settings_screen.dart';
+import 'package:demo_app/core/stubs/module_page_stubs.dart';
 
 //Date:April/3/2023
 //by: Bassem Mohamed

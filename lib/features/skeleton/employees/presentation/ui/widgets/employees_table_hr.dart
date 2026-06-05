@@ -5,7 +5,7 @@
 // Objectives: this is a widget to customize the table of attendance
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:demo_app/features/external/data_grc_module/feature/nav_bar.dart' hide themeController;
+import 'package:demo_app/core/theme/grc_theme_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';

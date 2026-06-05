@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:demo_app/core/stubs/module_page_stubs.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:demo_app/features/external/data_grc_module/grc_responsive_page.dart';
+
 // REMOVED_MODULE: import 'package:demo_app/features/external/database_builder/database_builder_responsive_page.dart';
 import 'package:demo_app/features/external/messaging_package/features/home/presentation/ui/pages/home_layout_helper.dart';
 import 'package:demo_app/features/external/services_mangment_module/responsive_services.dart';
@@ -12,15 +13,15 @@ import 'package:demo_app/features/skeleton/roles/domain/enums/services/services_
 // REMOVED_MODULE: import '../../../../external/form_builder_module/core/routes/get_pages.dart';
 // REMOVED_MODULE: import '../../../../external/form_builder_module/core/services/form_navigator_service.dart';
 import '../../../../external/database_module/database_responsive_page.dart';
-import '../../../../external/form_builder_module/form_builder_responsive_page.dart';
-import '../../../../external/grc/grc_responsive_page_new.dart';
+
+
 import '../../../../external/inventory_module/inventory_responsive_page.dart';
 import '../../../../external/knowledge_hub_module/knowledge_hub_responsive_page.dart';
 // REMOVED_MODULE: import '../../../../external/services_mangment_module/Category/presentation/ui/service_department_manager/tablet/s1_create_service/home_services/home_page_services_toggle.dart';
-import '../../../../external/task_management_module/tasks_responsive_page.dart';
+
 // REMOVED_MODULE: import '../../../../external/todo_module/todo_responsive_page.dart';
 import '../../../../external/todo_new_module/todo_responsive_page.dart';
-import '../../../../external/tracker_module/tracker_responsive_page_new.dart';
+
 // REMOVED_MODULE: import '../../../../external/tracking_module/tracking_responsive_page.dart';
 import '../../../employees/presentation/ui/pages/employees_responsive_page.dart';
 import '../../../home/presentation/ui/pages/home_responsive_page.dart';

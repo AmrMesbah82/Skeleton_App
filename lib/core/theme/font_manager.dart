@@ -4,10 +4,8 @@ import 'package:demo_app/core/helper/biometric_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 
 class FontConstants {
-  static String cairoFontFamily = Get.locale.toString().contains('ar')
-      ? storage.read('font_arabic') ?? 'Vazirmatn'
-      : storage.read('font') ?? 'Cairo';
-  //'Ojuju';
+  // getter so font resolves dynamically at runtime (not at class load time)
+  static String get cairoFontFamily => MyThemeData.font;
 
   static double fontSize07 = 0.007;
   static double fontSize09 = 0.009;
