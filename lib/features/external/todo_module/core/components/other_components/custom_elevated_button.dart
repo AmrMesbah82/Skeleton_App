@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/features/external/main_core/core/theme/font_manager.dart';
+import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
 import 'package:demo_app/features/external/todo_module/core/constants/enum.dart';
 import 'package:demo_app/features/external/todo_module/core/constants/haptic_controller.dart';

@@ -17,7 +17,7 @@ import 'package:demo_app/features/external/knowledge_hub/feature/document_detail
 import 'package:demo_app/features/external/knowledge_hub/feature/home/presentation/controller/knowledge_hub_controller.dart';
 
 import 'package:demo_app/core/widgets/sort_option_widget.dart';
-import 'package:demo_app/features/external/main_core/core/theme/font_manager.dart';
+import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
 import 'package:demo_app/features/external/knowledge_hub/core/constant/screen_size.dart';
 import 'dart:io';

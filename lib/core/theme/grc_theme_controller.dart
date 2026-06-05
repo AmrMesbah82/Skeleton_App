@@ -3,20 +3,20 @@ import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
-import '../../main_core/core/theme/app_colors.dart';
-import '../../main_core/core/theme/app_theme.dart';
-import '../../todo_module/core/constants/restart_widget.dart';
+import 'package:demo_app/core/widgets/restart_widget.dart';
+import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/features/external/main_core/core/theme/app_theme.dart';
 
 class GRCThemeController extends GetxController {
   final storage = GetStorage();
   Rx<ThemeData> currentTheme = AppTheme.lightTheme.obs;
-  RxBool animationsEnabled = true.obs; // For animation toggle
+  RxBool animationsEnabled = true.obs;
 
   @override
   void onInit() {
     super.onInit();
     loadThemeFromStorage();
-    loadAnimationsSetting(); // Load animation setting on init
+    loadAnimationsSetting();
     ever(currentTheme, (_) => updateSystemUIOverlayStyle());
   }
 
@@ -37,7 +37,7 @@ class GRCThemeController extends GetxController {
         SystemUiOverlayStyle(
           statusBarColor: AppColors.background,
           statusBarIconBrightness: Brightness.dark,
-          statusBarBrightness: Brightness.light, // Necessary for iOS
+          statusBarBrightness: Brightness.light,
         ),
       );
     } else {
@@ -45,7 +45,7 @@ class GRCThemeController extends GetxController {
         SystemUiOverlayStyle(
           statusBarColor: AppColors.black,
           statusBarIconBrightness: Brightness.light,
-          statusBarBrightness: Brightness.dark, // Necessary for iOS
+          statusBarBrightness: Brightness.dark,
         ),
       );
     }
@@ -57,7 +57,7 @@ class GRCThemeController extends GetxController {
         SystemUiOverlayStyle(
           statusBarColor: AppColors.white,
           statusBarIconBrightness: Brightness.dark,
-          statusBarBrightness: Brightness.light, // Necessary for iOS
+          statusBarBrightness: Brightness.light,
         ),
       );
     } else {
@@ -65,15 +65,13 @@ class GRCThemeController extends GetxController {
         SystemUiOverlayStyle(
           statusBarColor: AppColors.field,
           statusBarIconBrightness: Brightness.light,
-          statusBarBrightness: Brightness.dark, // Necessary for iOS
+          statusBarBrightness: Brightness.dark,
         ),
       );
     }
   }
 
   void toggleTheme() {
-    //AppTheme.isDark = false;
-    //AppTheme.toggleTheme();
     if (currentTheme.value == AppTheme.lightTheme) {
       currentTheme.value = AppTheme.darkTheme;
       AppTheme.toggleTheme();
@@ -109,30 +107,18 @@ class GRCThemeController extends GetxController {
     }
   }
 
-  /// Toggle whether animations are enabled or disabled.
-  ///
-  /// When animations are disabled, various transitions and animations in the app
-  /// will be skipped. This is useful for people who have motion sensitivity issues
-  /// or prefer a more static experience.
-  ///
-  /// The app will be restarted if `shouldRestartAppForAnimationChange` is true.
-  /// This is useful if other parts of the app depend on this value.
-  ///
-  /// [isEnabled] whether animations should be enabled or disabled.
   void toggleAnimations(bool isEnabled) {
     animationsEnabled.value = isEnabled;
-    storage.write('animationsEnabled', isEnabled); // Save to storage
-    // Only restart if there are other dependencies that need reloading
+    storage.write('animationsEnabled', isEnabled);
     if (shouldRestartAppForAnimationChange) {
       RestartWidget.restartApp(Get.context!);
     }
     update();
   }
 
-  bool get shouldRestartAppForAnimationChange => false; // Set as needed
+  bool get shouldRestartAppForAnimationChange => false;
 
   void loadAnimationsSetting() {
-    animationsEnabled.value =
-        storage.read('animationsEnabled') ?? true; // Load saved setting
+    animationsEnabled.value = storage.read('animationsEnabled') ?? true;
   }
 }

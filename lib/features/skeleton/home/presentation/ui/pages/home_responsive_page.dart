@@ -10,7 +10,7 @@ import 'package:demo_app/features/skeleton/home/presentation/ui/pages/mobile/hom
 import 'package:demo_app/features/skeleton/home/presentation/ui/pages/tablet/tablet_home_screen.dart';
 import 'package:get/get.dart';
 import '../../../../../../core/widgets/custom_appbar.dart';
-import '../../../../../external/form_builder_module/core/helpers/responsive_helper.dart';
+import 'package:demo_app/core/widgets/responsive_helper.dart';
 import '../../../../roles/presentation/ui/pages/role_management/role_management_home.dart';
 import '../../controller/schedule_controller.dart';
 import '../../controller/skeleton_home_controller.dart';

@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:demo_app/features/external/data_grc_module/feature/nav_bar.dart' hide themeController;
+import 'package:demo_app/core/theme/grc_theme_controller.dart';
 import 'package:demo_app/features/external/main_core/features/notification/presentation/controller/notification_controller.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';

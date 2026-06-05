@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/app_search_text_field.dart';
 import 'package:demo_app/core/widgets/custom_button.dart';
-import 'package:demo_app/features/external/data_grc_module/core/extensions/extensions.dart';
+import 'package:demo_app/core/extension/context_extensions.dart';
 import 'package:demo_app/features/external/messaging_package/features/groups/domain/entity/group_entity.dart';
 import 'package:demo_app/features/external/messaging_package/interface/controller/messaging_init_controller.dart' hide GroupEntity;
 

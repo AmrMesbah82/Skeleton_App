@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
-import 'package:demo_app/features/external/main_core/core/theme/theme_controller.dart';
+import 'package:demo_app/core/theme/main_core_theme_controller.dart';
 
 class ImagePaths {
   static String getImagePath(BuildContext context, String imageName) {

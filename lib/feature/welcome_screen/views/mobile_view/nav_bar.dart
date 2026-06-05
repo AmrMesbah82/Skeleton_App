@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/skeleton/nav_bar/presentation/ui/pages/more_page.dart';
 import 'package:demo_app/features/skeleton/system_logs/presentation/controller/system_logs_controller.dart';
-import 'package:demo_app/features/external/data_grc_module/constant/theme_controller.dart';
+import 'package:demo_app/core/theme/grc_theme_controller.dart';
 
 export 'package:demo_app/features/skeleton/nav_bar/presentation/ui/pages/more_page.dart';
 

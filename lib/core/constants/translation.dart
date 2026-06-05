@@ -1,9 +1,5 @@
 import 'package:get/get.dart';
-
-import '../../features/external/data_grc_module/constant/translation.dart';
-import '../../features/external/form_builder_module/core/constants/languages.dart';
-import '../../features/external/messaging_package/core/constants/languages.dart';
-import '../../features/external/tracking_module/core/constants/languages.dart';
+import 'package:demo_app/core/constants/todo_module_translations.dart';
 
 class AppTranslation extends Translations {
   @override
@@ -3757,10 +3753,9 @@ No class actions, class arbitrations, or representative actions for users locate
         }
         //  ..addAll(Languages().keys['en_US']!)
        //   ..addAll(KnowledgeHubTranslation().keys['en_US']!)
-          ..addAll(TrackingLanguages().keys['en_US']!)
-          ..addAll(GRCMessages().keys['en_US']!)
-          ..addAll(FormBuilderLanguages().keys['en_US']!)
-          ..addAll(MessagingLanguages().keys['en_US']!),
+          // Module translations merged into core (all were empty):
+          // TrackingLanguages, GRCMessages, FormBuilderLanguages, MessagingLanguages
+          ..addAll(Messages().keys['en_US']!),
 
         /////////////////F//////////////////// Arabic Language ///////////////////////////////////////////////////
 
@@ -7365,10 +7360,9 @@ No class actions, class arbitrations, or representative actions for users locate
 '''
         }
          // ..addAll(Languages().keys['ar_EG']!)
-          ..addAll(TrackingLanguages().keys['ar_EG']!)
-          ..addAll(MessagingLanguages().keys['ar_EG']!)
       //    ..addAll(KnowledgeHubTranslation().keys['ar_EG']!)
-          ..addAll(GRCMessages().keys['ar_EG']!)
-          ..addAll(FormBuilderLanguages().keys['ar_EG']!),
+          // Module translations merged into core (all were empty):
+          // TrackingLanguages, MessagingLanguages, GRCMessages, FormBuilderLanguages
+          ..addAll(Messages().keys['ar_EG']!),
       };
 }

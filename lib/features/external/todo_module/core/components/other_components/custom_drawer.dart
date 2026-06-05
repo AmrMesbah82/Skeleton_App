@@ -3,14 +3,14 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/external/main_core/core/theme/font_manager.dart';
+import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
 import 'package:demo_app/features/external/todo_module/core/constants/enum.dart';
 import 'package:demo_app/features/external/todo_module/core/constants/haptic_controller.dart';
 import 'package:demo_app/features/external/todo_module/features/todo_list/presentation/ui/pages/tablet/todo_home_screen_tablet.dart';
 import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:page_transition/page_transition.dart';
-import '../../../../data_grc_module/feature/settings_screen/views/settings_screen.dart';
+import 'package:demo_app/core/stubs/module_page_stubs.dart';
 
 
 /// Date Created :12/November/2023

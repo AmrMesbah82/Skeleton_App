@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/helper/format_helper.dart';
 import 'package:demo_app/core/widgets/standard_container.dart';
-import 'package:demo_app/features/external/data_grc_module/core/extensions/extensions.dart';
+import 'package:demo_app/core/extension/context_extensions.dart';
 import 'package:demo_app/features/external/messaging_package/features/groups/domain/entity/group_entity.dart';
 import 'package:demo_app/features/external/messaging_package/interface/controller/messaging_init_controller.dart';
 import 'package:demo_app/features/skeleton/home/data/models/group_message_model.dart';

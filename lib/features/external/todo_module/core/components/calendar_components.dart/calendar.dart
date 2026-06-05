@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:demo_app/features/external/main_core/core/theme/font_manager.dart';
+import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
 import 'package:demo_app/features/external/todo_module/core/components/calendar_components.dart/calendar_app_bar.dart';
 import 'package:demo_app/features/external/todo_module/core/components/calendar_components.dart/calender_package/src/models/calendar_date_picker2_config.dart';

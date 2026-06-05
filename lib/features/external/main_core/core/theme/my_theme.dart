@@ -1,8 +1,8 @@
+import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 
 import '../../../../../core/helper/biometric_controller.dart';
-import 'font_manager.dart';
 // date:April/3/2023
 // by:mohamedFouad
 // lastUpdate:April/9/2023
