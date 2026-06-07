@@ -6,7 +6,7 @@ import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/feature/employees_views/employees_hr_view/permissions/permissions_widgets.dart';
+import 'package:demo_app/features/skeleton/employees/employees_views/employees_hr_view/permissions/permissions_widgets.dart';
 
 class PermissionsView extends StatefulWidget {
   const PermissionsView({super.key});

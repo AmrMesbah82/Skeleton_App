@@ -8,7 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/employees_views/employees_hr_view/add_new_employee_vertical.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/employees/employees_views/employees_hr_view/add_new_employee_vertical.dart';
 import 'package:demo_app/features/external/main_core/features/department/presentation/controller/add_department_controller.dart';
 
 import '../../../../../../components/employees_components/employees_hr_components/employee_hr_profile_components/Permissions.dart';
@@ -19,7 +19,7 @@ import '../../../../../../core/enumeration/enum.dart';
 import '../../../../../../core/helper/haptic_controller.dart';
 import '../../../../../../core/theme/my_theme.dart';
 import '../../../../../../core/widgets/buttons/main_custom_icon_button.dart';
-// REMOVED_MODULE: import '../../../../../../feature/controller/users_access_controller.dart';
+// REMOVED_MODULE: import '../../../../controllers/users_access_controller.dart';
 import 'package:demo_app/core/widgets/custom_appbar.dart';
 import '../../../../../external/main_core/features/employee/data/models/emplyees_model/mobile_phone_model.dart';
 import '../../controller/add_new_employee_controller.dart';

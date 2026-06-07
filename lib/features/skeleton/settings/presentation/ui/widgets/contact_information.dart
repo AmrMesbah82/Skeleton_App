@@ -18,7 +18,7 @@ import 'package:demo_app/core/theme/screen_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 
 import '../../../../../../components/lib/countries.dart';
-// REMOVED: import '../../../../../../feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED: import '../../../../authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../../../../external/main_core/core/theme/app_colors.dart';
 import '../pages/settings_screen.dart';

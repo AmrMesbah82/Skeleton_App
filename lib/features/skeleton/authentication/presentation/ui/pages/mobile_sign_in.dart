@@ -18,7 +18,7 @@ import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
 import 'package:demo_app/core/widgets/dialogs/forgot_pass_dialog.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
-import 'package:demo_app/feature/controller/biometrics_contoller.dart';
+import 'package:demo_app/features/skeleton/controllers/biometrics_contoller.dart';
 import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/skeleton/authentication/presentation/controller/login_controller.dart';

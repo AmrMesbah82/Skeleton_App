@@ -17,12 +17,12 @@ import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/feature/controller/attendance_controller.dart';
-import 'package:demo_app/feature/controller/leave_request_controller.dart';
-import 'package:demo_app/feature/models/attendance_model.dart';
-import 'package:demo_app/feature/models/leave_request_model.dart';
+import 'package:demo_app/features/skeleton/controllers/attendance_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/leave_request_controller.dart';
+import 'package:demo_app/features/skeleton/models/attendance_model.dart';
+import 'package:demo_app/features/skeleton/models/leave_request_model.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
-import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 // ignore: depend_on_referenced_packages
 
 class TableData extends StatefulWidget {

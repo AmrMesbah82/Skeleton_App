@@ -8,7 +8,7 @@ import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/features/skeleton/system_logs/presentation/controller/system_logs_controller.dart';
 import 'package:demo_app/features/skeleton/system_logs/data/models/system_logs_model.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 //Created by :Fouad
 // At : 18/April/2024

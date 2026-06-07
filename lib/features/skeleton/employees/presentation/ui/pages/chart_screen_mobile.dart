@@ -6,7 +6,7 @@ import 'package:demo_app/features/skeleton/employees/presentation/ui/widgets/cus
 import 'package:demo_app/core/widgets/circle_progress.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
-import 'package:demo_app/feature/controller/attendance_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/attendance_controller.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/ui/pages/employee_hr_charts_screen.dart';
 
 import '../widgets/chart_header.dart';

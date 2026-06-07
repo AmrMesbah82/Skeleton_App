@@ -32,7 +32,7 @@ import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/skeleton/system_logs/presentation/controller/system_logs_controller.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
-import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../../../controller/settings_controller.dart';

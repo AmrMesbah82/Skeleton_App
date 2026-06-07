@@ -17,7 +17,7 @@ import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/features/skeleton/system_logs/presentation/controller/system_logs_controller.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 // ignore: must_be_immutable
 class FilterDialog extends StatefulWidget {

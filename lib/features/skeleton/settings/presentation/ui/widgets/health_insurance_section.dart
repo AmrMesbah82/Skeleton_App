@@ -18,7 +18,7 @@ import '../../../../../../core/theme/font_manager.dart';
 import '../../../../../../core/theme/my_theme.dart';
 import '../../../../../../core/widgets/country_picker_dialog.dart';
 import '../../../../../../core/widgets/intl_phone_field.dart';
-// REMOVED: import '../../../../../../feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED: import '../../../../authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../../../../external/main_core/features/employee/data/models/emplyees_model/new_employee_model.dart';
 import '../../../../../external/main_core/features/employee/presentation/controller/main_core_employee_controller.dart';

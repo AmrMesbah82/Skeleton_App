@@ -17,7 +17,7 @@ import 'package:demo_app/features/skeleton/employees/presentation/controller/mai
 import 'package:demo_app/features/skeleton/employees/presentation/controller/main_core_department_controller.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/ui/pages/add_new_employee_view.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:multi_dropdown/enum/app_enums.dart';
 import 'package:multi_dropdown/models/chip_config.dart';
 import 'package:multi_dropdown/models/value_item.dart';

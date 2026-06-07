@@ -5,7 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 
-// REMOVED_MODULE: import 'package:demo_app/feature/models/department_model.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/models/department_model.dart';
 import '../../../../../core/network/api_constants.dart';
 import '../../data/models/department_model/department_model.dart'
     as newDepartmentModel;

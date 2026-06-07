@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/skeleton/app_drawer/presentation/ui/pages/custom_drawer.dart';
-import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:demo_app/features/skeleton/app_drawer/presentation/controller/drawer_controller.dart';
 import 'package:demo_app/features/skeleton/nav_bar/presentation/controller/nav_bar_controller.dart';
 

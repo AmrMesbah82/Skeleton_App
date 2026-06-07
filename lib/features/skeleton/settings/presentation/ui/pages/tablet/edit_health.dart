@@ -22,7 +22,7 @@ import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/feature/controller/request_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/request_controller.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/tablet/preview_health.dart';
 import 'package:lottie/lottie.dart';

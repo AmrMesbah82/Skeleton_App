@@ -11,7 +11,7 @@ import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/feature/settings_screen/views/profile_screen.dart';
+import 'package:demo_app/features/skeleton/settings/settings_screen/views/profile_screen.dart';
 import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:demo_app/nav_bar_package.dart/functions.dart';
 

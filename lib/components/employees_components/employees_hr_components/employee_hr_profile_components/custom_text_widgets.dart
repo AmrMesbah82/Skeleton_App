@@ -8,7 +8,7 @@ import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/feature/employees_views/employees_hr_view/employees_profile/employee_profile_screen.dart';
+import 'package:demo_app/features/skeleton/employees/employees_views/employees_hr_view/employees_profile/employee_profile_screen.dart';
 import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
 
 class CustomTextWidget extends StatefulWidget {

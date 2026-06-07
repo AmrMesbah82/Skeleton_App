@@ -19,10 +19,10 @@ import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
-import 'package:demo_app/feature/controller/request_controller.dart';
-import 'package:demo_app/feature/models/request_model.dart';
+import 'package:demo_app/features/skeleton/controllers/request_controller.dart';
+import 'package:demo_app/features/skeleton/models/request_model.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 /// Date Created :7/Dec/2023
 /// Developer Name : Bassem Mohamed

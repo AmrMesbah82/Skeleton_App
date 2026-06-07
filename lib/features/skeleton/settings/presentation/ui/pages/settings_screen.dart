@@ -3,12 +3,12 @@
 ///Author: Mohamed Elrashidy
 ///Refactored At: 10//11/2023
 
-import 'package:demo_app/feature/controller/notification_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/controller/notification_controller.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:demo_app/features/external/main_core/features/employee/data/models/emplyees_model/new_employee_model.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/skeleton/home/presentation/controller/home_cubit.dart';

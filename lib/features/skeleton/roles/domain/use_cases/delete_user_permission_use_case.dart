@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
 import '../../../../../core/network/failure_model.dart';
-import '../../../../../feature/controller/notification_controller.dart';
+import '../../../controllers/notification_controller.dart';
 import '../../data/repository/user_role_repository.dart';
 import '../entity/user_permission_entity.dart';
 

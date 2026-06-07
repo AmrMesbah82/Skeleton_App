@@ -7,7 +7,7 @@
 // import 'package:demo_app/core/theme/my_theme.dart';
 // import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
 // import 'package:demo_app/features/skeleton/settings/presentation/controller/add_company_controller.dart';
-// // REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 // import '../../features/external/main_core/core/theme/app_theme.dart'
 // as mainCoreAppTheme;
 // // REMOVED_MODULE: import '../../features/external/messaging_package/interface/controller/messaging_init_controller.dart';
@@ -460,7 +460,7 @@ import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/controller/add_company_controller.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import '../../features/external/main_core/core/theme/app_theme.dart'
 as mainCoreAppTheme;
 // REMOVED_MODULE: import '../../features/external/messaging_package/interface/controller/messaging_init_controller.dart';

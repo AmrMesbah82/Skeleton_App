@@ -1,7 +1,7 @@
 // ignore_for_file: sdk_version_since
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/feature/controller/notification_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/extension/context_extensions.dart';
@@ -16,7 +16,7 @@ import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
 import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/controller/notification_controller.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/data_grc_module/core/extensions/extensions.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';

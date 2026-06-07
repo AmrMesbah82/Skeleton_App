@@ -17,7 +17,7 @@ import 'package:demo_app/core/theme/my_theme.dart';
 // REMOVED_MODULE: import 'package:demo_app/feature/notification/notification_screen_mobile.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import '../../features/skeleton/nav_bar/presentation/controller/nav_bar_controller.dart';
 import '../../features/skeleton/notification/notification_page.dart';
 import '../../features/skeleton/roles/domain/enums/modules_enum.dart';

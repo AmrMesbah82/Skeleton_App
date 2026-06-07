@@ -11,9 +11,9 @@ import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/main_core_department_controller.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
-import 'package:demo_app/feature/employees_views/employee_hr_mobile_add_employee.dart';
+import 'package:demo_app/features/skeleton/employees/employees_views/employee_hr_mobile_add_employee.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/ui/pages/chart_screen_mobile.dart';
-import 'package:demo_app/feature/employees_views/requests/requests_screen_mobile.dart';
+import 'package:demo_app/features/skeleton/employees/employees_views/requests/requests_screen_mobile.dart';
 
 import 'package:demo_app/nav_bar_package.dart/functions.dart';
 

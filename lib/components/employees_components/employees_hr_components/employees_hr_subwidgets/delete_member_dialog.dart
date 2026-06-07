@@ -14,7 +14,7 @@ import 'package:demo_app/core/constants/system_actions.dart';
 import 'package:demo_app/features/external/main_core/features/employee/data/models/emplyees_model/new_employee_model.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/skeleton/system_logs/presentation/controller/system_logs_controller.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../../../features/skeleton/employees/data/models/employee_model/employee_directory_model.dart';

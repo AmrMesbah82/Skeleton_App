@@ -12,7 +12,7 @@ import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/features/skeleton/home/presentation/ui/widgets/action_button_row.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
 import 'package:demo_app/features/external/main_core/core/theme/app_text_styles.dart';
 import '../../../../../../../components/meetings_components/timeline_widget.dart';

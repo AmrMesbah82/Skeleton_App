@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
 import 'package:demo_app/core/network/failure_model.dart';
 import 'package:demo_app/features/skeleton/employees/data/models/department_model/department_model.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/models/department_model.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/models/department_model.dart';
 
 import '../data_source/remote_data_source/departments_remote_data_source.dart';
 ///********************** FILE INFO ********************///

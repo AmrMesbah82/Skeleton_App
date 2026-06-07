@@ -10,8 +10,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:demo_app/core/constants/system_actions.dart';
 import 'package:demo_app/core/network/api_constants.dart';
-import 'package:demo_app/feature/models/company_model/company_model.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/skeleton/models/company_model/company_model.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 import '../../../../../core/widgets/loading.dart';
 import '../../../../../core/widgets/restart_widget.dart';
