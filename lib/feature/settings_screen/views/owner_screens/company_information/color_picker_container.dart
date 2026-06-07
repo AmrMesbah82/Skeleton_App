@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/color_picker/color_picker.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/components/meetings_components/timeline_widget.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
@@ -81,32 +80,32 @@ class _ColorPickerContainerState extends State<ColorPickerContainer> {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     // ── Color Picker Wheel ─────────────────────────────────
-                    SingleChildScrollView(
-                      child: ColorPicker(
-                        pickerColor: _selectedColor ??
-                            Color(int.parse(widget.initialColorString)),
-                        onColorChanged: (Color color) {
-                          setState(() {
-                            _selectedColor = color;
-                            // Keep the hex field in sync when wheel changes
-                            _hexController.text =
-                            '#${color.value.toRadixString(16).toUpperCase()}';
-                          });
-                        },
-                        showLabel: true,
-                        pickerAreaHeightPercent: isTablet
-                            ? (orientation ? 0.0007.h : 0.001.h)
-                            : 0.001.h,
-                        colorPickerWidth:
-                        isTablet ? (orientation ? 0.4.w : 0.3.w) : 0.6.w,
-                        labelTextStyle: titleTextStyle,
-                        pickerAreaBorderRadius:
-                        BorderRadius.all(Radius.circular(8)),
-                        labelTypes: const [],
-                        displayThumbColor: true,
-                        portraitOnly: true,
-                      ),
-                    ),
+                    // SingleChildScrollView(
+                    //   child: ColorPicker(
+                    //     pickerColor: _selectedColor ??
+                    //         Color(int.parse(widget.initialColorString)),
+                    //     onColorChanged: (Color color) {
+                    //       setState(() {
+                    //         _selectedColor = color;
+                    //         // Keep the hex field in sync when wheel changes
+                    //         _hexController.text =
+                    //         '#${color.value.toRadixString(16).toUpperCase()}';
+                    //       });
+                    //     },
+                    //     showLabel: true,
+                    //     pickerAreaHeightPercent: isTablet
+                    //         ? (orientation ? 0.0007.h : 0.001.h)
+                    //         : 0.001.h,
+                    //     colorPickerWidth:
+                    //     isTablet ? (orientation ? 0.4.w : 0.3.w) : 0.6.w,
+                    //     labelTextStyle: titleTextStyle,
+                    //     pickerAreaBorderRadius:
+                    //     BorderRadius.all(Radius.circular(8)),
+                    //     labelTypes: const [],
+                    //     displayThumbColor: true,
+                    //     portraitOnly: true,
+                    //   ),
+                    // ),
 
                     // ── Hex Input ──────────────────────────────────────────
                     Text(
