@@ -7,7 +7,7 @@
 /// Updated by: Amr Mesbah - Colors update instantly in UI after reset (no navigation needed)
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
-import 'package:demo_app/feature/settings_screen/views/owner_screens/company_information/color_display_section.dart';
+import 'package:demo_app/features/skeleton/settings/settings_screen/views/owner_screens/company_information/color_display_section.dart';
 import 'package:demo_app/features/external/knowledge_hub_module/core/custom_drop_down.dart';
 import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
 import 'package:demo_app/features/external/services_mangment_module/core/custom_reasponsive_filed.dart';
@@ -22,7 +22,7 @@ import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/core/widgets/dialogs/delete_dialog.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/settings_screen/views/owner_screens/company_information/color_display_section.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/settings/settings_screen/views/owner_screens/company_information/color_display_section.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/custom_drop_down.dart';
 import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';

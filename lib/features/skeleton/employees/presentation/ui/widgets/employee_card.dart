@@ -6,8 +6,8 @@
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:demo_app/feature/employees_views/employee_detailed_info/employee_detailed_info_screen.dart';
-import 'package:demo_app/feature/employees_views/employees_hr_view/employees_profile/employee_profile_mobile/employee_profile_screen_employee_view_mobile.dart';
+import 'package:demo_app/features/skeleton/employees/employees_views/employee_detailed_info/employee_detailed_info_screen.dart';
+import 'package:demo_app/features/skeleton/employees/employees_views/employees_hr_view/employees_profile/employee_profile_mobile/employee_profile_screen_employee_view_mobile.dart';
 import 'package:demo_app/features/external/main_core/core/theme/app_text_styles.dart';
 import 'package:demo_app/features/external/main_core/features/employee/data/models/emplyees_model/new_employee_model.dart';
 import 'package:demo_app/nav_bar_package.dart/functions.dart';

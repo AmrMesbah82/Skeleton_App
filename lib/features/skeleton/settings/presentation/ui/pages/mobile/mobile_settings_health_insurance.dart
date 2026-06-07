@@ -14,7 +14,7 @@ import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 
-import '../../../../../../../feature/settings_screen/views/profile_screen.dart';
+import '../../../../settings_screen/views/profile_screen.dart';
 import '../../widgets/health_insurance_fields.dart' hide HealthInsuranceFields;
 
 class MobileSettingsHealthInsurance extends StatefulWidget {

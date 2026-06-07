@@ -8,8 +8,8 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:demo_app/features/skeleton/home/presentation/controller/skeleton_home_controller.dart';
 
-import '../../../../../feature/events/controllers/employee_controller.dart';
-import '../../../../../feature/events/controllers/events_controllers/model/event_model.dart';
+import '../../../events/controllers/employee_controller.dart';
+import '../../../events/controllers/events_controllers/model/event_model.dart';
 import '../../../../external/task_management_module/task/data/model/board_model/board_model.dart';
 import '../../../../external/task_management_module/task/data/model/card_model/card_model.dart';
 import '../../../../external/task_management_module/task/data/model/card_model/checklist_item.dart';

@@ -4,7 +4,7 @@ import 'package:demo_app/core/theme/font_manager.dart';
 
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/feature/job_posts/review_applications/review_applications_mobile/candidates_applications_screen_mobile.dart';
+import 'package:demo_app/features/skeleton/job_posts/review_applications/review_applications_mobile/candidates_applications_screen_mobile.dart';
 import 'package:demo_app/nav_bar_package.dart/functions.dart';
 
 class CustomJobPostContainer extends StatelessWidget {

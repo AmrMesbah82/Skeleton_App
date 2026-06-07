@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/controller/users_access_controller.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/users_access_controller.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
 import 'package:demo_app/features/skeleton/system_logs/data/models/system_logs_model.dart';

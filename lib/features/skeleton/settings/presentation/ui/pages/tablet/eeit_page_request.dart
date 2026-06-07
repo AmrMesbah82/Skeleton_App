@@ -20,7 +20,7 @@ import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
-import 'package:demo_app/feature/controller/request_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/request_controller.dart';
 import 'package:demo_app/components/lib/countries.dart';
 import 'package:intl/intl.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/tablet/preview_page.dart';

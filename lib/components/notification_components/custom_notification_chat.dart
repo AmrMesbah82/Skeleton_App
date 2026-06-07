@@ -10,8 +10,8 @@ import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 
 import '../../features/skeleton/employees/data/models/notification_model.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/models/notification_model.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/models/notification_model.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class CustomNotificationChatMobile extends StatefulWidget {
   const CustomNotificationChatMobile(

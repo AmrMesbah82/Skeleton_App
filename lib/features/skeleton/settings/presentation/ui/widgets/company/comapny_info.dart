@@ -19,7 +19,7 @@ import 'package:demo_app/features/skeleton/settings/presentation/controller/add_
 import 'package:get/get.dart';
 import '../../../../../../../components/meetings_components/timeline_widget.dart';
 import '../../../../../../../core/enumeration/enum.dart';
-// REMOVED: import '../../../../../../../feature/settings_screen/views/owner_screens/company_info_update_dialog/update_company_info_dialog.dart';
+// REMOVED: import '../../../../settings_screen/views/owner_screens/company_info_update_dialog/update_company_info_dialog.dart';
 import '../../../../../../../generated/l10n.dart';
 // REMOVED_MODULE: import '../../../../../../external/inventory_module/core/custom_button_widget.dart';
 // REMOVED_MODULE: import '../../../../../../external/services_mangment_module/core/new_theme.dart';

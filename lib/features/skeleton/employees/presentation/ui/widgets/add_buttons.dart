@@ -11,7 +11,7 @@ import '../../../../../../core/theme/font_manager.dart';
 import '../../../../../../core/theme/my_theme.dart';
 import '../../../../../../core/widgets/buttons/main_custom_icon_button.dart';
 import '../../../../roles/presentation/controller/role_controller.dart';
-import '../../../../../../feature/controller/users_access_controller.dart';
+import '../../../../controllers/users_access_controller.dart';
 import '../../controller/employee_controller.dart';
 
 class AddButtons extends StatelessWidget {

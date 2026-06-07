@@ -21,7 +21,7 @@ import 'package:demo_app/core/helper/format_helper.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/text_field.dart';
 import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
-import 'package:demo_app/feature/controller/request_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/request_controller.dart';
 import 'package:demo_app/components/lib/countries.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';

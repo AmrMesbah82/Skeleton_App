@@ -21,10 +21,10 @@ import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
-import 'package:demo_app/feature/controller/attendance_controller.dart';
-import 'package:demo_app/feature/employees_views/employee_detailed_info/employee_detailed_info_screen.dart';
-import 'package:demo_app/feature/models/attendance_model.dart';
-import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/skeleton/controllers/attendance_controller.dart';
+import 'package:demo_app/features/skeleton/employees/employees_views/employee_detailed_info/employee_detailed_info_screen.dart';
+import 'package:demo_app/features/skeleton/models/attendance_model.dart';
+import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:page_transition/page_transition.dart';
 
 import '../../../data/models/new_employee_model/emplyees_model/new_employee_model.dart';

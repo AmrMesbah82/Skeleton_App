@@ -18,9 +18,9 @@ import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/tablet/tablet_personal_info_screen.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
-import 'package:demo_app/feature/settings_screen/views/profile_screen.dart';
+import 'package:demo_app/features/skeleton/settings/settings_screen/views/profile_screen.dart';
 import '../../features/skeleton/settings/presentation/controller/settings_controller.dart';
 
 class PersonalDataUpdate extends StatefulWidget {

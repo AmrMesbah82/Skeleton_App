@@ -10,7 +10,7 @@
 
   import 'package:cloud_firestore/cloud_firestore.dart';
   import 'package:dartz/dartz.dart';
-import 'package:demo_app/feature/controller/notification_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:demo_app/features/external/todo_module/features/todo_list/data/data_source/todo_remote_data_source.dart';
 import 'package:demo_app/features/external/todo_module/features/todo_list/data/repo/todo_repo_impl.dart';
 import 'package:demo_app/features/external/todo_module/features/todo_list/presentation/controllers/todo_controller.dart';
@@ -25,13 +25,13 @@ import 'package:demo_app/features/skeleton/roles/presentation/controller/user_ro
   import 'package:demo_app/core/helper/haptic_controller.dart';
   import 'package:demo_app/core/network/api_constants.dart';
   import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/feature/controller/add_wrong_employee_controller.dart';
-import 'package:demo_app/feature/controller/biometrics_contoller.dart';
-// REMOVED_MODULE:   import 'package:demo_app/feature/controller/notification_controller.dart';
-import 'package:demo_app/feature/controller/request_controller.dart';
-import 'package:demo_app/feature/events/controllers/employee_controller.dart';
-import 'package:demo_app/feature/events/controllers/events_controllers/event_controller.dart';
-// REMOVED_MODULE:   import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/skeleton/controllers/add_wrong_employee_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/biometrics_contoller.dart';
+// REMOVED_MODULE:   import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/request_controller.dart';
+import 'package:demo_app/features/skeleton/events/controllers/employee_controller.dart';
+import 'package:demo_app/features/skeleton/events/controllers/events_controllers/event_controller.dart';
+// REMOVED_MODULE:   import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
   import 'package:demo_app/features/external/main_core/features/department/presentation/controller/add_department_controller.dart';
   import 'package:demo_app/features/skeleton/app_drawer/presentation/ui/pages/custom_drawer.dart';
   import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
@@ -43,10 +43,10 @@ import 'package:demo_app/feature/events/controllers/events_controllers/event_con
 
   import '../../../../../core/network/failure_model.dart';
   import '../../../../../core/services/notifications/firebase_notification_handler.dart';
-  import '../../../../../feature/controller/add_access_type_controller.dart';
-  import '../../../../../feature/welcome_screen/views/mobile_view/mobile_sign_in.dart';
-  import '../../../../../feature/welcome_screen/views/reset_password/reset_password_screen.dart';
-  import '../../../../../feature/welcome_screen/views/start_sign_in.dart';
+  import '../../../controllers/add_access_type_controller.dart';
+  import '../../welcome_screen/views/mobile_view/mobile_sign_in.dart';
+  import '../../welcome_screen/views/reset_password/reset_password_screen.dart';
+  import '../../welcome_screen/views/start_sign_in.dart';
   import '../../../../external/form_builder_module/core/di/injection.dart';
   import '../../../../external/interfaces/messaging_interface_implementation.dart';
   import '../../../../external/main_core/core/networking/get_base_url.dart';

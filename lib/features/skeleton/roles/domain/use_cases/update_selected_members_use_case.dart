@@ -1,6 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/controller/notification_controller.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:demo_app/features/skeleton/roles/data/repository/user_role_repository.dart';
 
 import '../../../../../core/helper/date_time_in_arabic.dart';

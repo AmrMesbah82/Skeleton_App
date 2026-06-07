@@ -24,11 +24,11 @@ import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onbo
 // import '../about_this_app_screen.dart';
 // import 'mobile_settings_additional_info.dart';
 // import '../comments_and_feedback_screen.dart';
-// import '../../../../../../../feature/settings_screen/views/language_screen.dart';
+// import '../../../../settings_screen/views/language_screen.dart';
 // import '../company_info_screen.dart';
 // import 'social_screen_mobile.dart';
-// import '../../../../../../../feature/settings_screen/views/terms_and_conditions.dart';
-// import '../../../../../../../feature/welcome_screen/views/mobile_view/mobile_sign_in.dart';
+// import '../../../../settings_screen/views/terms_and_conditions.dart';
+// import '../../../../../authentication/welcome_screen/views/mobile_view/mobile_sign_in.dart';
 // import 'mobile_settings_health_insurance.dart';
 //
 // class SettingsMobileLayout extends StatelessWidget {

@@ -20,7 +20,7 @@ import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/features/external/main_core/features/employee/data/models/emplyees_model/new_employee_model.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/main_core_department_controller.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 import '../../../../features/skeleton/employees/data/models/employee_model/employee_directory_model.dart';
 import '../../../../features/skeleton/employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';

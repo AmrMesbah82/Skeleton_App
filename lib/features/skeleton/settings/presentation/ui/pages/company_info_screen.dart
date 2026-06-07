@@ -23,7 +23,7 @@ import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/controller/add_company_controller.dart';
-import 'package:demo_app/feature/settings_screen/views/owner_screens/company_info_update_dialog/update_company_info_dialog.dart';
+import 'package:demo_app/features/skeleton/settings/settings_screen/views/owner_screens/company_info_update_dialog/update_company_info_dialog.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/widgets/company/company_branding_screen.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/widgets/company/company_information_fields.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';

@@ -1,7 +1,7 @@
 import 'package:dartz/dartz.dart';
-import 'package:demo_app/feature/controller/notification_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:get/get.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/controller/notification_controller.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import '../../../../../core/helper/date_time_in_arabic.dart';
 import '../../../../../core/network/failure_model.dart';
 import '../../data/repository/account_status_repository.dart';

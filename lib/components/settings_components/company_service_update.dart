@@ -4,7 +4,7 @@ import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/skeleton/settings/presentation/controller/add_company_controller.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/settings_screen/views/owner_screens/company_info_update_dialog/company_contact_info.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/settings/settings_screen/views/owner_screens/company_info_update_dialog/company_contact_info.dart';
 
 // Globals previously declared in the removed company_contact_info.dart
 TextEditingController email = TextEditingController();

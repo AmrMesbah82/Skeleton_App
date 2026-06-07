@@ -2,7 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/network/failure_model.dart';
-import 'package:demo_app/feature/models/acces_type_model/edit_by_model.dart';
+import 'package:demo_app/features/skeleton/models/acces_type_model/edit_by_model.dart';
 import '../../../../external/main_core/core/networking/get_base_url.dart';
 import '../../../../external/main_core/features/employee/presentation/controller/main_core_employee_controller.dart';
 import '../../../settings/presentation/controller/add_company_controller.dart';

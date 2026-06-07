@@ -18,7 +18,7 @@ import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/feature/controller/request_controller.dart';
+import 'package:demo_app/features/skeleton/controllers/request_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/responsive_side_frame.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/custom_botton.dart';

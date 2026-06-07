@@ -19,7 +19,7 @@ import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 import '../../../features/external/task_management_module/task/data/model/board_model/board_model.dart';
 import '../../../features/external/task_management_module/task/data/model/card_model/card_checklists.dart';

@@ -4,7 +4,7 @@ import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
-import 'package:demo_app/feature/models/acces_type_model/edit_by_model.dart';
+import 'package:demo_app/features/skeleton/models/acces_type_model/edit_by_model.dart';
 import 'package:demo_app/features/skeleton/roles/domain/enums/messages/messages_permissions_sections.dart';
 import 'package:demo_app/features/skeleton/roles/domain/enums/qiyas/qiyas_permissions_sections.dart';
 import 'package:demo_app/features/skeleton/roles/domain/interfaces/module_permissions_sections_permissions.dart';

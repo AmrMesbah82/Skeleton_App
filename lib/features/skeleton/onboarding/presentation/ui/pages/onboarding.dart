@@ -18,8 +18,8 @@ import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/mobile_sign_in.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/start_sign_in.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/mobile_sign_in.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/start_sign_in.dart';
 import 'package:demo_app/core/theme/main_core_theme_controller.dart';
 
 import 'package:demo_app/nav_bar_package.dart/functions.dart';

@@ -7,7 +7,7 @@ import 'package:demo_app/core/widgets/form_fields/custom_search.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/features/skeleton/employees/presentation/controller/main_core_department_controller.dart';
-// REMOVED_MODULE: import 'package:demo_app/feature/welcome_screen/views/mobile_view/nav_bar.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 // ignore: must_be_immutable
 class RequestsFilterAppBar extends StatefulWidget {

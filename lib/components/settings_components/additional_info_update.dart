@@ -15,7 +15,7 @@ import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/tablet
 import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:demo_app/feature/settings_screen/views/profile_screen.dart';
+import 'package:demo_app/features/skeleton/settings/settings_screen/views/profile_screen.dart';
 
 class AdditionalInfoUpdate extends StatefulWidget {
   const AdditionalInfoUpdate({super.key});
