@@ -1,6 +1,6 @@
 // ignore_for_file: unrelated_type_equality_checks
 
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -11,7 +11,7 @@ import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 
-import '../../../features/external/main_core/core/theme/app_colors.dart';
+import '../../theme/app_colors.dart';
 
 Widget textfieled(
     BuildContext context,

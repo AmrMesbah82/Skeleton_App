@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:demo_app/components/requests_components/requests_filter_appbar.dart';
+import 'package:demo_app/core/shared_components/requests_filter_appbar.dart';
 import 'package:demo_app/core/widgets/dialogs/dialogue_switchers_row.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
@@ -10,7 +10,7 @@ import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/widgets/circle_progress.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/skeleton/employees/presentation/controller/main_core_department_controller.dart';
+import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
 
 
 class CreateBoardDialog extends StatefulWidget {

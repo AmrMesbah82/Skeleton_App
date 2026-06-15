@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 
-import '../../features/external/main_core/core/theme/app_colors.dart';
+import '../theme/app_colors.dart';
 
 
 class DefaultSwitchButton extends StatelessWidget {

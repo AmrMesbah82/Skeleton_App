@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
-import '../../features/skeleton/employees/utils/employees_constants.dart';
+import '../../features/employees/utils/employees_constants.dart';
 
 String capitalize(String input) {
   input.toLowerCase();

@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 
 import 'package:demo_app/core/widgets/restart_widget.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_theme.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 
 class GRCThemeController extends GetxController {
   final storage = GetStorage();

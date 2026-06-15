@@ -1,9 +1,9 @@
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/components/lib/countries.dart';
-import 'package:demo_app/components/lib/helpers.dart';
+import 'package:demo_app/core/shared_components/countries.dart';
+import 'package:demo_app/core/widgets/helpers.dart';
 import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';

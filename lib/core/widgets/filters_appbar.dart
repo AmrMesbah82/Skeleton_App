@@ -13,7 +13,7 @@ import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 
-import '../../features/external/main_core/core/theme/app_colors.dart';
+import '../theme/app_colors.dart';
 
 class FiltersAppBar extends StatelessWidget {
   const FiltersAppBar(

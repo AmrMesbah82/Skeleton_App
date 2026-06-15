@@ -1,5 +1,5 @@
 import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';

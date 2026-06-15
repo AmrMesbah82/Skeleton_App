@@ -5,18 +5,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/components/home_components/custom_create_task_container.dart';
-import 'package:demo_app/core/widgets/buttons/main_yellow_button%20copy.dart';
+import 'package:demo_app/core/widgets/dialogs/custom_create_task_container.dart';
+import 'package:demo_app/core/widgets/buttons/main_yellow_button copy.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
-import '../../../features/external/task_management_module/task/data/model/board_model/board_model.dart';
-import '../../../features/external/task_management_module/task/data/model/card_model/card_model.dart';
+import '../../../features/task_management_module/task/data/model/board_model/board_model.dart';
+import '../../../features/task_management_module/task/data/model/card_model/card_model.dart';
 
 
 class EditCardDetailsDialouge extends StatefulWidget {

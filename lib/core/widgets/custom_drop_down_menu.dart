@@ -1,4 +1,4 @@
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
@@ -7,8 +7,8 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_text_styles.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_text_styles.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 class CustomDropdownButton2 extends StatefulWidget {
   final String hint;

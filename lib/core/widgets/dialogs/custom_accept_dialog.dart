@@ -4,16 +4,16 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:demo_app/components/calendar_components.dart/calender_package/src/models/calendar_date_picker2_config.dart';
-import 'package:demo_app/components/calendar_components.dart/custom_calendar_picker.dart';
-import 'package:demo_app/components/job_components/custom_time_container.dart';
+import 'package:demo_app/core/shared_components/calender_package/src/models/calendar_date_picker2_config.dart';
+import 'package:demo_app/core/shared_components/custom_calendar_picker.dart';
+import 'package:demo_app/core/widgets/dialogs/custom_time_container.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class CustomAcceptDialog extends StatefulWidget {
   CustomAcceptDialog({

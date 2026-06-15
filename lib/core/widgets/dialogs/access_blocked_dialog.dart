@@ -1,4 +1,4 @@
-import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
@@ -6,7 +6,7 @@ import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:lottie/lottie.dart';
 
 import '../../../generated/l10n.dart';

@@ -4,8 +4,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/extension/context_extensions.dart';
 
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
-import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 
 
 

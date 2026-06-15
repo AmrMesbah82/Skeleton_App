@@ -1,12 +1,12 @@
-  import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
+  import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
   import 'package:flutter/services.dart';
   import 'package:flutter_screenutil/flutter_screenutil.dart';
   import 'package:flutter_svg/svg.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/theming/new_theme.dart';
 
-  import '../features/external/main_core/core/theme/app_colors.dart';
-  import '../features/external/main_core/core/theme/app_theme.dart';
+  import 'theme/app_colors.dart';
+  import 'theme/app_theme.dart';
 
   /// Enum for different validation types
   enum ValidationType {

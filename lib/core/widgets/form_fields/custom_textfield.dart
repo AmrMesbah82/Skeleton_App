@@ -5,8 +5,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_text_styles.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_text_styles.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 // ignore: must_be_immutable
 class CustomTextField extends StatefulWidget {

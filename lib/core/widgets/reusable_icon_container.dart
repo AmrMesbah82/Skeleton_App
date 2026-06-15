@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
+import 'package:demo_app/core/theme/my_theme.dart';
 
 class ReusableIconContainer extends StatelessWidget {
   final String imagePath;

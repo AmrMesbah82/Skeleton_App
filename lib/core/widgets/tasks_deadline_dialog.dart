@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/components/calendar_components.dart/calender_package/calendar_date_picker2.dart';
-import 'package:demo_app/components/calendar_components.dart/calender_package/src/models/calendar_date_picker2_config.dart';
-import 'package:demo_app/components/calendar_components.dart/custom_calendar_picker.dart';
+import 'package:demo_app/core/shared_components/calender_package/calendar_date_picker2.dart';
+import 'package:demo_app/core/shared_components/calender_package/src/models/calendar_date_picker2_config.dart';
+import 'package:demo_app/core/shared_components/custom_calendar_picker.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';

@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:demo_app/core/widgets/custom_button.dart';
-import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -12,8 +12,8 @@ import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/theme/font_manager.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:lottie/lottie.dart';
-import '../../../components/meetings_components/timeline_widget.dart';
-import '../../../features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/shared_components/timeline_widget.dart';
+import '../../theme/app_colors.dart';
 import '../../../generated/l10n.dart';
 import '../../theme/my_theme.dart';
 import '../../theme/screen_size.dart';

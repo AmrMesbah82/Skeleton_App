@@ -5,7 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:csv/csv.dart';
 import 'package:path_provider/path_provider.dart';
 
-import '../../features/external/main_core/core/networking/get_base_url.dart';
+import 'package:demo_app/core/network/get_base_url.dart';
 
 // Inline from deleted services_mangment_module — restore import when module is added.
 class FirestoreCollections {

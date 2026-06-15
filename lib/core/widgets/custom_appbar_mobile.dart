@@ -1,8 +1,8 @@
 // ignore_for_file: unrelated_type_equality_checks
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:demo_app/core/widgets/navigation.dart';
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
-import 'package:demo_app/nav_bar_package.dart/functions.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/nav_bar_package.dart/functions.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/data_grc_module/feature/nav_bar_package.dart/functions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -16,12 +16,12 @@ import 'package:demo_app/core/constants/image_paths.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 // REMOVED_MODULE: import 'package:demo_app/feature/notification/notification_screen_mobile.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
-import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
+import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
-import '../../features/skeleton/nav_bar/presentation/controller/nav_bar_controller.dart';
-import '../../features/skeleton/notification/notification_page.dart';
-import '../../features/skeleton/roles/domain/enums/modules_enum.dart';
-import '../../features/skeleton/settings/presentation/controller/add_company_controller.dart';
+import '../../features/home/nav_bar/presentation/controller/nav_bar_controller.dart';
+import '../../features/notification/notification_page.dart';
+import '../../features/roles/domain/enums/modules_enum.dart';
+import '../../features/settings/presentation/controller/add_company_controller.dart';
 import '../theme/screen_size.dart';
 
 //Date:April/3/2023

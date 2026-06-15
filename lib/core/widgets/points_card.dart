@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/my_switch.dart';
 import 'package:demo_app/core/widgets/point.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/skeleton/settings/settings_screen/views/owner_screens/subscribes_and_services_screen.dart';
+import 'package:demo_app/features/settings/settings_screen/views/owner_screens/subscribes_and_services_screen.dart';
 
 import '../theme/font_manager.dart';
 import '../theme/my_theme.dart';

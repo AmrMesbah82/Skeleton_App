@@ -1,12 +1,12 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
-import 'package:demo_app/features/external/services_mangment_module/core/custom_textformfield.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
@@ -18,14 +18,14 @@ import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/core/constants/system_actions.dart';
 import 'package:demo_app/core/helper/validator.dart';
-import 'package:demo_app/features/external/main_core/features/employee/data/models/emplyees_model/new_employee_model.dart';
+import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
-import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
+import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
-import 'package:demo_app/features/skeleton/home/presentation/ui/pages/dashboard_view_data/chart_settings_dialog.dart';
-import '../../../features/skeleton/employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
+import 'package:demo_app/features/home/presentation/ui/pages/dashboard_view_data/chart_settings_dialog.dart';
+import '../../../features/employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
 import '../../../generated/l10n.dart';
-import 'package:demo_app/features/skeleton/system_logs/presentation/controller/system_logs_controller.dart';
+import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
 
 class ForgotPassDialog extends StatefulWidget {
   ForgotPassDialog({

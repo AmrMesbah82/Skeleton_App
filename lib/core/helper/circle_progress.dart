@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import '../../features/external/main_core/core/theme/app_colors.dart';
+import '../theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/app_color.dart';
 
 // REMOVED_MODULE: import '../../features/external/services_mangment_module/core/new_theme.dart';

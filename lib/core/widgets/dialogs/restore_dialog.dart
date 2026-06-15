@@ -6,7 +6,7 @@ import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
+import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:lottie/lottie.dart';
 
 class RestoreDialog extends StatefulWidget {

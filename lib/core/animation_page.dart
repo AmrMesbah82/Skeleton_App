@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 class AnimationsShowcaseScreen extends StatefulWidget {
   const AnimationsShowcaseScreen({Key? key}) : super(key: key);

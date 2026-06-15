@@ -3,9 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:demo_app/core/helper/employee_helper.dart';
 import 'package:demo_app/core/helper/format_helper.dart';
 import 'package:demo_app/core/widgets/custom_check_box.dart';
-import 'package:demo_app/features/external/main_core/features/employee/domain/entities/employee_entity.dart';
+import 'package:demo_app/features/employee/domain/entities/employee_entity.dart';
 
-import '../../features/external/main_core/core/theme/app_colors.dart';
 import '../theme/app_colors.dart';
 import '../theme/app_text_styles.dart';
 
