@@ -12,7 +12,7 @@
 // as mainCoreAppTheme;
 // // REMOVED_MODULE: import '../../features/external/messaging_package/interface/controller/messaging_init_controller.dart';
 // import 'app_theme.dart';
-import 'package:demo_app/features/skeleton/system_logs/presentation/controller/system_logs_controller.dart';
+import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
 //
 // class ThemeController extends GetxController {
 //   final storage = GetStorage();
@@ -458,14 +458,13 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
-import 'package:demo_app/features/skeleton/settings/presentation/controller/add_company_controller.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
-import '../../features/external/main_core/core/theme/app_theme.dart'
+import 'app_theme.dart'
 as mainCoreAppTheme;
 // REMOVED_MODULE: import '../../features/external/messaging_package/interface/controller/messaging_init_controller.dart';
 import 'app_theme.dart';
-import 'package:demo_app/features/skeleton/system_logs/presentation/controller/system_logs_controller.dart';
 
 class ThemeController extends GetxController {
   SystemLogsController get systemLogsController => Get.find<SystemLogsController>();
@@ -623,7 +622,7 @@ class ThemeController extends GetxController {
     // Synchronize all theme systems
     print('🎨 [ThemeController] Updating theme in all modules...');
     mainCoreThemeController.toggleTheme();
-    AppTheme.interfaceToggleTheme();
+    AppTheme.toggleTheme();
 
     try {
       // REMOVED_MODULE: if (Get.isRegistered<MessagingInitController>()) {
@@ -679,7 +678,6 @@ class ThemeController extends GetxController {
     }
 
     // Initialize other theme systems with correct dark mode state
-    AppTheme.interfaceInitTheme(primary, secondary, isDark);
     mainCoreAppTheme.AppTheme.initTheme(primary, secondary, isDark);
 
     // ✅ CRITICAL: Update color maps after init

@@ -1,6 +1,6 @@
-// Date: 7/8/2024
-// By: Nada Mohammed
-// Last update: 7/8/2024
+// Date: 29/9/2024
+// By: Youssef Ashraf, Nada Mohammed, Mohammed Ashraf
+// Last update: 29/9/2024
 // Objectives: This file is responsible for providing the app font weights that are used in the app.
 
 import 'package:flutter/material.dart';

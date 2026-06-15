@@ -1,5 +1,5 @@
 // REMOVED_MODULE: import 'package:demo_app/feature/home/presentation/widgets/common/gradiant_container.dart';
-import 'package:demo_app/features/skeleton/home/presentation/ui/widgets/gradiant_container.dart';
+import 'package:demo_app/features/home/presentation/ui/widgets/gradiant_container.dart';
 
 String getQuoteForToday() {
   List<String> quotes = [

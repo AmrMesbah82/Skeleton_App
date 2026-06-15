@@ -1,6 +1,6 @@
 // ignore_for_file: unrelated_type_equality_checks
 
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';

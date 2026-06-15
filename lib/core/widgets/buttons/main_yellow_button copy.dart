@@ -4,7 +4,7 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class ReusableElevatedButton extends StatelessWidget {
   final String buttonText;

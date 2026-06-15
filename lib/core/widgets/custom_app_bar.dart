@@ -4,7 +4,7 @@ import 'package:demo_app/core/extension/context_extensions.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/messaging_package/core/configs/extensions/extensions.dart';
 
 import '../../../../../core/theme/app_text_styles.dart';

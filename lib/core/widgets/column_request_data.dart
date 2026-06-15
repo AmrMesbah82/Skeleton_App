@@ -10,8 +10,8 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/form_fields/custom_description_textfield.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
 import 'package:demo_app/core/widgets/form_fields/custom_textfield.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_text_styles.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_text_styles.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable

@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/features/external/main_core/features/department/presentation/controller/add_department_controller.dart';
+import 'package:demo_app/features/department/presentation/controller/add_department_controller.dart';
 import 'package:demo_app/core/extension/context_extensions.dart';
 
-import '../../features/external/main_core/features/employee/domain/entities/employee_entity.dart';
-import '../../features/external/main_core/features/employee/presentation/controller/main_core_employee_controller.dart';
+import '../../features/employee/domain/entities/employee_entity.dart';
+import '../../features/employee/presentation/controller/main_core_employee_controller.dart';
 
 abstract class EmployeeHelper {
   static String getEmployeeLocalizedName(

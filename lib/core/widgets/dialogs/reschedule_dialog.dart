@@ -1,12 +1,12 @@
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:demo_app/components/calendar_components.dart/calender_package/src/models/calendar_date_picker2_config.dart';
-import 'package:demo_app/components/calendar_components.dart/custom_calendar_picker.dart';
+import 'package:demo_app/core/shared_components/calender_package/src/models/calendar_date_picker2_config.dart';
+import 'package:demo_app/core/shared_components/custom_calendar_picker.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
-import 'package:demo_app/components/role_components/custom_schedule_or_now_dialog.dart';
+import 'package:demo_app/core/shared_components/custom_schedule_or_now_dialog.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';

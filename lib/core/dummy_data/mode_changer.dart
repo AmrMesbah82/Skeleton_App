@@ -1,5 +1,5 @@
 
-import 'package:demo_app/nav_bar_package.dart/model.dart';
+import 'package:demo_app/core/nav_bar_package.dart/model.dart';
 
 class Mode {
   static bool showInvoice= false;

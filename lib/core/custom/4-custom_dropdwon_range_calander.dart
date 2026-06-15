@@ -1,0 +1,359 @@
+import 'package:calendar_date_picker2/calendar_date_picker2.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
+
+import 'package:demo_app/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_text_styles.dart';
+import '../theme/app_colors.dart';
+
+class CustomDropdownRangeCalendar extends StatefulWidget {
+  final DateTime? startDate;
+  final DateTime? endDate;
+  final void Function(DateTime? start, DateTime? end)? onChanged;
+  final String? label;
+  final String? hint;
+  final String? errorText;
+  final String? helperText;
+  final bool required;
+  final bool enabled;
+  final Color? fillColor;
+  final BorderRadius? borderRadius;
+  final DateTime? firstDate;
+  final DateTime? lastDate;
+  final String Function(DateTime)? dateFormatter;
+
+  /// Separator between from/to — defaults to "  →  "
+  final String? separator;
+
+  final TextStyle? labelStyle;
+  final TextStyle? valueStyle;
+  final TextStyle? hintStyle;
+  final TextStyle? errorStyle;
+  final TextStyle? helperStyle;
+
+  const CustomDropdownRangeCalendar({
+    super.key,
+    this.startDate,
+    this.endDate,
+    this.onChanged,
+    this.label,
+    this.hint,
+    this.errorText,
+    this.helperText,
+    this.required = false,
+    this.enabled = true,
+    this.fillColor,
+    this.borderRadius,
+    this.firstDate,
+    this.lastDate,
+    this.dateFormatter,
+    this.separator,
+    this.labelStyle,
+    this.valueStyle,
+    this.hintStyle,
+    this.errorStyle,
+    this.helperStyle,
+  });
+
+  @override
+  State<CustomDropdownRangeCalendar> createState() =>
+      _CustomDropdownRangeCalendarState();
+}
+
+class _CustomDropdownRangeCalendarState
+    extends State<CustomDropdownRangeCalendar> {
+  Future<void> _openPicker() async {
+    if (!widget.enabled) return;
+    final result = await showCalendarDatePicker2Dialog(
+      context: context,
+      dialogBackgroundColor: AppColors.card,
+      barrierDismissible: true,
+      value: [widget.startDate, widget.endDate],
+      config: CalendarDatePicker2WithActionButtonsConfig(
+        firstDate: widget.firstDate ?? DateTime(1900),
+        lastDate: widget.lastDate ?? DateTime(2100),
+        calendarType: CalendarDatePicker2Type.range,
+        calendarViewMode: CalendarDatePicker2Mode.day,
+        closeDialogOnCancelTapped: true,
+        closeDialogOnOkTapped: true,
+        currentDate: widget.startDate ?? DateTime.now(),
+        centerAlignModePicker: true,
+        dayBorderRadius: BorderRadius.circular(8.r),
+        dayBuilder: _buildDay,
+        customModePickerIcon: SvgPicture.asset(
+          'assets/arrowdown.svg',
+          fit: BoxFit.fitHeight,
+          colorFilter: ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
+          height: 14.sp,
+        ),
+        lastMonthIcon: Transform.rotate(
+          angle: Get.locale.toString().contains('en') ? 0 : 3.14,
+          child: SvgPicture.asset(
+            'assets/icons/back_icon.svg',
+            colorFilter: ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
+          ),
+        ),
+        nextMonthIcon: Transform.rotate(
+          angle: Get.locale.toString().contains('en') ? 3.14 : 0,
+          child: SvgPicture.asset(
+            'assets/icons/back_icon.svg',
+            colorFilter: ColorFilter.mode(AppColors.primary, BlendMode.srcIn),
+          ),
+        ),
+        okButton: _buildActionButton('Set Date'.tr),
+        cancelButton: _buildActionButton('Cancel'.tr, isCancel: true),
+        weekdayLabelTextStyle: AppTextStyles.font16BlackRegularCairo
+            .copyWith(color: AppColors.primary),
+        controlsTextStyle: AppTextStyles.font14BlackCairoRegular
+            .copyWith(color: AppColors.primary),
+        selectedYearTextStyle: AppTextStyles.font14BlackCairoRegular
+            .copyWith(color: AppColors.primary),
+        selectedDayHighlightColor: AppColors.primary,
+        selectedRangeHighlightColor: AppColors.primary.withOpacity(0.15),
+        dayTextStyle:
+        AppTextStyles.font14BlackCairoRegular.copyWith(color: AppColors.text),
+        selectedDayTextStyle: AppTextStyles.font14BlackCairoRegular
+            .copyWith(color: AppColors.textButton),
+        yearTextStyle:
+        AppTextStyles.font14BlackCairoRegular.copyWith(color: AppColors.text),
+        todayTextStyle:
+        AppTextStyles.font14BlackCairoRegular.copyWith(color: AppColors.text),
+        buttonPadding: EdgeInsets.symmetric(horizontal: 14.sp),
+      ),
+      dialogSize: Size(320.w, 320.h),
+      borderRadius: BorderRadius.circular(10.r),
+      useSafeArea: true,
+    );
+    if (result != null) {
+      widget.onChanged?.call(
+        result.isNotEmpty ? result[0] : null,
+        result.length > 1 ? result[1] : null,
+      );
+    }
+  }
+
+  Widget _buildDay({
+    required DateTime date,
+    BoxDecoration? decoration,
+    bool? isDisabled,
+    bool? isSelected,
+    bool? isToday,
+    TextStyle? textStyle,
+  }) {
+    final now = DateTime.now();
+    final isTodayDate =
+        date.day == now.day && date.month == now.month && date.year == now.year;
+    return Center(
+      child: Container(
+        width: 25.sp,
+        height: 25.sp,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8.r),
+          color: isSelected == true ? AppColors.primary : AppColors.field,
+          border: Border.all(
+            color: isTodayDate ? AppColors.primary : Colors.transparent,
+          ),
+        ),
+        child: Center(
+          child: Text(
+            date.day.toString(),
+            style: AppTextStyles.font14BlackCairoRegular.copyWith(
+              color: isSelected == true
+                  ? AppColors.textButton
+                  : AppColors.secondaryText,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget _buildActionButton(String label, {bool isCancel = false}) {
+    return GestureDetector(
+      child: Container(
+        height: 38.sp,
+        width: 120.sp,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8.r),
+          color: isCancel ? AppColors.secondaryButton : AppColors.primary,
+        ),
+        child: Center(
+          child: Text(
+            label,
+            style: AppTextStyles.font14BlackCairoRegular.copyWith(
+              color: isCancel ? AppColors.text : AppColors.textButton,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  String _formatDate(DateTime d) =>
+      widget.dateFormatter?.call(d) ??
+          '${d.day.toString().padLeft(2, '0')}/${d.month.toString().padLeft(2, '0')}/${d.year}';
+
+  String get _displayText {
+    final sep = widget.separator ?? '  →  ';
+    if (widget.startDate != null && widget.endDate != null) {
+      return '${_formatDate(widget.startDate!)}$sep${_formatDate(widget.endDate!)}';
+    } else if (widget.startDate != null) {
+      return '${_formatDate(widget.startDate!)}$sep...';
+    }
+    return '';
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final hasError = widget.errorText != null && widget.errorText!.isNotEmpty;
+    final radius = widget.borderRadius ?? BorderRadius.circular(8.r);
+    final isDisabled = !widget.enabled;
+    final displayText = _displayText;
+    final isEmpty = displayText.isEmpty;
+
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (widget.label != null) ...[
+          RichText(
+            text: TextSpan(
+              text: widget.label,
+              style: widget.labelStyle ??
+                  TextStyle(
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.w500,
+                    color: hasError
+                        ? AppColors.red
+                        : isDisabled
+                        ? AppColors.text.withOpacity(0.4)
+                        : AppColors.text,
+                  ),
+              children: widget.required
+                  ? [TextSpan(text: ' *', style: TextStyle(color: AppColors.red))]
+                  : [],
+            ),
+          ),
+          SizedBox(height: 6.h),
+        ],
+        GestureDetector(
+          onTap: _openPicker,
+          child: InputDecorator(
+            isFocused: false,
+            isEmpty: isEmpty,
+            decoration: InputDecoration(
+              isDense: true,
+              contentPadding:
+              EdgeInsets.symmetric(horizontal: 12.w, vertical: 12.h),
+              filled: true,
+              fillColor: isDisabled
+                  ? (widget.fillColor ?? AppColors.card).withOpacity(0.5)
+                  : widget.fillColor ?? AppColors.card,
+              border: OutlineInputBorder(
+                  borderRadius: radius, borderSide: BorderSide.none),
+              enabledBorder: hasError
+                  ? OutlineInputBorder(
+                  borderRadius: radius,
+                  borderSide: BorderSide(color: AppColors.red, width: 1.5.w))
+                  : OutlineInputBorder(
+                  borderRadius: radius, borderSide: BorderSide.none),
+              focusedBorder: hasError
+                  ? OutlineInputBorder(
+                  borderRadius: radius,
+                  borderSide: BorderSide(color: AppColors.red, width: 1.5.w))
+                  : OutlineInputBorder(
+                  borderRadius: radius, borderSide: BorderSide.none),
+              disabledBorder: OutlineInputBorder(
+                  borderRadius: radius, borderSide: BorderSide.none),
+              prefixIcon: Padding(
+                padding: EdgeInsets.only(left: 12.w, right: 8.w),
+                child: SvgPicture.asset(
+                  'assets/calender.svg',
+                  width: 18.sp,
+                  height: 18.sp,
+                  colorFilter: ColorFilter.mode(
+                    hasError
+                        ? AppColors.red
+                        : isDisabled
+                        ? AppColors.text.withOpacity(0.3)
+                        : AppColors.text.withOpacity(0.5),
+                    BlendMode.srcIn,
+                  ),
+                ),
+              ),
+              prefixIconConstraints: const BoxConstraints(),
+              suffixIcon: Padding(
+                padding: EdgeInsets.only(left: 8.w, right: 12.w),
+                child: SvgPicture.asset(
+                  'assets/arrowdown.svg',
+                  width: 20.sp,
+                  height: 20.sp,
+                  colorFilter: ColorFilter.mode(
+                    hasError
+                        ? AppColors.red
+                        : isDisabled
+                        ? AppColors.text.withOpacity(0.3)
+                        : AppColors.text.withOpacity(0.6),
+                    BlendMode.srcIn,
+                  ),
+                ),
+              ),
+              suffixIconConstraints: const BoxConstraints(),
+              hintText: isEmpty ? (widget.hint ?? '') : null,
+              hintStyle: widget.hintStyle ??
+                  TextStyle(fontSize: 14.sp, color: AppColors.text.withOpacity(0.4)),
+              errorText: null,
+            ),
+            child: !isEmpty
+                ? Text(
+              displayText,
+              style: widget.valueStyle ??
+                  TextStyle(
+                    fontSize: 14.sp,
+                    color: isDisabled
+                        ? AppColors.text.withOpacity(0.4)
+                        : AppColors.text,
+                  ),
+              overflow: TextOverflow.ellipsis,
+            )
+                : const SizedBox.shrink(),
+          ),
+        ),
+        if (hasError) ...[
+          SizedBox(height: 4.h),
+          Text(widget.errorText!,
+              style: widget.errorStyle ??
+                  TextStyle(fontSize: 12.sp, color: AppColors.red)),
+        ] else if (widget.helperText != null) ...[
+          SizedBox(height: 4.h),
+          Text(widget.helperText!,
+              style: widget.helperStyle ??
+                  TextStyle(
+                      fontSize: 12.sp, color: AppColors.text.withOpacity(0.5))),
+        ],
+      ],
+    );
+  }
+}
+
+/*
+// ── Usage ─────────────────────────────────────────────────────────────────────
+DateTime? _from;
+DateTime? _to;
+
+CustomDropdownRangeCalendar(
+  label: 'Duration',
+  hint: 'Select date range',
+  required: true,
+  startDate: _from,
+  endDate: _to,
+  separator: '  →  ',
+  // errorText: 'Please select a range',
+  onChanged: (start, end) => setState(() {
+    _from = start;
+    _to = end;
+  }),
+)
+*/

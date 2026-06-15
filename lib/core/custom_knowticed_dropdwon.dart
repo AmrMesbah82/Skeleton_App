@@ -4,9 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/theming/new_theme.dart';
 
-import '../features/external/main_core/core/theme/app_colors.dart';
-import '../features/external/main_core/core/theme/app_theme.dart';
-import '../features/external/main_core/core/theme/new_theme.dart';
+import 'theme/app_colors.dart';
+import 'theme/app_theme.dart';
+import 'theme/new_theme.dart';
 
 /// Enum for supported languages
 enum AppLanguage {

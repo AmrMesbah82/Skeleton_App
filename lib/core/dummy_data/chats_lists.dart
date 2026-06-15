@@ -5,7 +5,7 @@
 // Objectives: this is a widget to customize the ;lists in the app
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:demo_app/components/meetings_components/day_container.dart';
+import 'package:demo_app/core/dummy_data/day_container.dart';
 
 /*
 List<GroupData> channels = [

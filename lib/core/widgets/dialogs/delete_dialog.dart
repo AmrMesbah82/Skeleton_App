@@ -1,5 +1,5 @@
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
-import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -9,11 +9,11 @@ import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/theming/new_theme.dart';
-import 'package:demo_app/features/skeleton/employees/presentation/controller/employee_controller.dart';
+import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../features/external/main_core/core/theme/app_colors.dart';
+import '../../theme/app_colors.dart';
 
 class DeleteDialog extends StatefulWidget {
   DeleteDialog({

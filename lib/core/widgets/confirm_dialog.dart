@@ -4,8 +4,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../features/external/main_core/core/theme/app_colors.dart';
-import '../../features/external/main_core/core/theme/app_text_styles.dart';
+import '../theme/app_colors.dart';
+import '../theme/app_text_styles.dart';
 import 'custom_button.dart';
 
 class ConfirmDialog {

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
+import 'package:demo_app/core/theme/my_theme.dart';
 
-import '../../features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import '../../features/onboarding/presentation/ui/pages/onboarding.dart';
 
 /// Date Created :23/November/2023
 /// Developer Name : Bassem Mohamed

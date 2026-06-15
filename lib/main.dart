@@ -1,6 +1,7 @@
 // ignore_for_file: sdk_version_since
 
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/utils/theme & loclization/ThemeAndLoc_cubit.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'dart:async';
 import 'dart:io';
 
@@ -19,15 +20,14 @@ import 'package:intl/intl.dart';
 
 import 'package:demo_app/core/services/notifications/flutter_local_notification_handler.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
-import 'package:demo_app/features/skeleton/controllers/request_controller.dart';
-import 'package:demo_app/features/skeleton/authentication/presentation/controller/login_controller.dart';
-import 'package:demo_app/features/skeleton/system_logs/presentation/controller/system_logs_controller.dart';
-import 'package:demo_app/features/external/main_core/features/department/presentation/controller/add_department_controller.dart';
-import 'package:demo_app/features/external/main_core/features/employee/presentation/controller/main_core_employee_controller.dart';
+import 'package:demo_app/features/requests/request_controller.dart';
+import 'package:demo_app/features/onboarding/authentication/presentation/controller/login_controller.dart';
+import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
+import 'package:demo_app/features/department/presentation/controller/add_department_controller.dart';
+import 'package:demo_app/features/employee/presentation/controller/main_core_employee_controller.dart';
 import 'package:demo_app/firebase/dev/firebase_options.dart';
-import 'package:demo_app/features/skeleton/no_internet/no_internet_screen.dart';
-import 'package:demo_app/features/skeleton/onboarding/splash_screen.dart';
-import 'package:demo_app/utils/theme%20%26%20loclization/ThemeAndLoc_cubit.dart';
+import 'package:demo_app/features/home/presentation/ui/pages/no_internet_screen.dart';
+import 'package:demo_app/features/onboarding/splash_screen.dart';
 
 import 'core/constants/translation.dart';
 import 'generated/l10n.dart';

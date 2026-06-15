@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 
-import '../../features/External/main_core/core/theme/app_colors.dart';
-import '../../features/External/main_core/core/theme/app_text_styles.dart';
+import '../theme/app_colors.dart';
+import '../theme/app_text_styles.dart';
 import '../../generated/l10n.dart';
 
 class ExpandedContent extends StatefulWidget {

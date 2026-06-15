@@ -6,7 +6,7 @@ import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 // ignore: must_be_immutable
 class MainCustomIconButton extends StatelessWidget {

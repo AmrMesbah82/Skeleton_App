@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/font_manager.dart';
+import 'package:flutter/material.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
+
+import '../helper/biometric_controller.dart';
 // date:April/3/2023
 // by:mohamedFouad
 // lastUpdate:April/9/2023
@@ -16,37 +16,25 @@ import 'package:demo_app/core/theme/screen_size.dart';
 // the color values previously defined in the class. This code can be used to
 // create a consistent and customizable theme for an application.
 
-// date:April/3/2023
-// by:mohamedFouad
-// lastUpdate:April/9/2023
-
-//This is a class named 'MyThemeData' that defines a set of colors and two themes,
-// one light and one dark, with specific color schemes and text styles. The color
-// values are defined as static fields of the class, making them easily accessible
-// without creating an instance of the class. The two themes are also static fields,
-// with one representing a light theme and the other a dark theme. The light and
-// dark themes are defined with specific color schemes and text styles, using
-// the color values previously defined in the class. This code can be used to
-// create a consistent and customizable theme for an application.
 class MyThemeData {
   static int action =
-      //0xFFE5B800;
-      int.parse(storage.read('primaryColor') ?? '0xFFFFDE59');
+  //0xFFE5B800;
+  int.parse(storage.read('primaryColor') ?? '0xFFFFDE59');
   // 0xff51abcb;
   static int primary =
-      //0xFFFFDE59;
-      int.parse(storage.read('secondaryColor') ?? '0xFFE5B800');
+  //0xFFFFDE59;
+  int.parse(storage.read('secondaryColor') ?? '0xFFE5B800');
   // 0xff66b6d2;
-  static String font = Get.locale.toString().contains('ar')
-      ? storage.read('font_arabic') ?? 'Vazirmatn'
-      : storage.read('font') ?? 'Cairo';
+
+  // ✅ CHANGED: Made font a getter instead of static field
+  static String get font => storage.read('font') ?? 'Cairo';
+  // Legacy setter kept for ThemeController compatibility; persists to storage.
+  static set font(String value) => storage.write('font', value);
+  // Legacy color constants migrated from the old core MyThemeData.
+  static Color colorYellow = const Color(0xFFFFDE59);
+  static Color blueNew = const Color(0xFF347AE2);
 
   Color contrastColor() {
-    // final Color primaryColor = Color(primary);
-    // final Color actionColor = Color(action);
-
-    // Check if the action color is equal to '0xFFFFDE59'
-
     final double primaryLuminance = lightPrimary.computeLuminance();
     final double actionLuminance = signOut.computeLuminance();
 
@@ -62,8 +50,6 @@ class MyThemeData {
     }
   }
 
-  static Color colorBorder = const Color(0xFFE5E5ED);
-  static Color colorYellow = const Color(0xFFFFDE59);
   static Color colorWhite = const Color(0xFFFFFFFF);
   static Color colorWhiteDark = const Color(0xFFF2F2F2);
   static Color colorLightGrey = const Color(0xFFF5F5F5);
@@ -72,6 +58,9 @@ class MyThemeData {
   static Color colorTotalBlack = const Color(0xFF000000);
   static Color colorDarkGrey = const Color(0xFF797979);
   static Color colorGreydark = const Color(0xFFCCCCCC);
+  static Color yellowColor = const Color(0xffFFCC00);
+  static Color lightRedColor = const Color(0xffFF0000);
+  static Color canceledRedColor = const Color(0xffBA1B1B);
   static Color resendColor = const Color(0xFF289BF6);
   static Color colorGreyReq = const Color(0xFF888888);
   static Color colorGreyDisabled = const Color(0xFF999999);
@@ -81,20 +70,17 @@ class MyThemeData {
   static Color colorGreyDark = const Color(0xFF6F6F6F);
   static Color deactivated = const Color(0xFFC9C9C9);
   static Color lightPrimary = Color(primary);
-  static Color mainColor = const Color(0xFFFFDE59);
-
-  // static Color lightPrimary = const Color(0xFFE5B800);
   static Color switchSettings = Color(primary);
-  // static Color switchSettings = const Color(0xFFE5B800);
+  static Color secondaryColor = Color(0xFFE5B800);
   static Color colorBlack = const Color(0xFF2D2D2D);
   static Color dividerGrey = const Color(0xFFDBDCDD);
   static Color delete = const Color(0xFFDF1C1C);
-  static Color icon = const Color(0xff2D2D2D);
-
   static Color signOut = Color(action);
-  static Color secondaryColor = Color(0xFFE5B800);
-  // static Color signOut = const Color(0xFFFFDE59);
+  static Color mainYellow = const Color(0xFFFFDE59);
   static Color textGrey = const Color(0xFF8D8D8D);
+  static Color lightGray = const Color(0xffD1D1D1);
+  static Color activeColor = const Color(0xff4BB609);
+  static Color inactiveColor = const Color(0xffDF1C1C);
   static Color textdeactivecolor = const Color.fromRGBO(121, 121, 121, 1);
   static Color cancelButton = const Color(0xFF585858);
   static Color warning = const Color(0xFFFF814A);
@@ -103,20 +89,15 @@ class MyThemeData {
   static Color versionColor = const Color(0xFF979797);
   static Color bulletColor = const Color(0xFF8D8D8D);
   static Color contColor = const Color(0xFFF2F2F2);
-  // ignore: non_constant_identifier_names
   static Color InProg = const Color(0x00a3a3a3);
   static Color iconColorBlack = const Color(0xFF303030);
   static Color barColor = Color(action);
-  // static Color barColor = const Color(0xFFFEDD58);
-  // ignore: use_full_hex_values_for_flutter_colors
   static Color jobColor = const Color(0xFFF606060);
   static Color bubbleColor = Color(action);
-  //static Color bubbleColor = const Color(0xFFFFDE59);
   static Color colorRed = const Color(0xFFDF1C1C);
   static Color block = const Color(0xFFDF0C0C);
   static Color bubbleGrey = const Color(0xFFE9E9EB);
-  // ignore: non_constant_identifier_names
-  static Color GreyBack = const Color(0xFFBBBBBB);
+  static Color GreyBack = const Color(0xFFBCCCCCCCC);
   static Color textCal = const Color(0xFF19181A);
   static Color dark = const Color(0xFF4B4B4B);
   static Color greyLightC = const Color(0xFFF8F7FA);
@@ -136,35 +117,12 @@ class MyThemeData {
   static Color level2color = const Color(0xFF4B4B4B);
   static Color level2colorOp = const Color(0xFF4B4B4B).withOpacity(0.5);
   static Color level4 = const Color(0xFFCCCCCC);
-  static Color blueNew = const Color(0xFF347AE2);
-  static Color blackColor = const Color(0xFF1C1B1A);
-  static Color greenN = const Color(0xFF27C470);
-  static Color blueN = const Color(0xFF25BAF5);
-  static Color violet = const Color(0xFF837EFF);
-  static Color darkerViolet = const Color(0xFF615BFE);
-  static Color bluelight = const Color(0xFF0ACCC9);
-  static Color violetBol = const Color(0xFF8F40DE);
-  static Color pink = const Color(0xFFFF647C);
-  static Color review = const Color(0xFF564FFD);
-  static Color darkGreen = const Color(0xFF39AB03);
-  static Color darkOrange = const Color(0xFFFD9F40);
-  static Color lightGreenPublic = const Color(0xFF33D980);
-  static Color orange = const Color(0xFFFD8E1F);
-  static Color brown = const Color(0xFFDB6D07);
-  static Color yellow = const Color(0xFFE8E14C);
-  static Color green = const Color(0xFF1EC70F);
-  static Color purple = const Color(0xFFED12F1);
-  static Color darkBlue = const Color(0xFF1820DD);
-  static Color lightPurple = const Color(0xFFEEEDFE);
-  static Color grey = const Color(0xFF6A6A75);
-  static Color blueDivider = const Color(0xFFD8F4FF);
-  static Color darkPurple = const Color(0xFF1B175F);
-  static Color semiPurple = const Color(0xFF261FA4);
-  static Color lightGreen = const Color(0xFFD2F2E1);
+  static Color whiteDashboardTable = const Color(0xFFF1F1F1);
+  static Color darkDashboardTable = const Color(0xFF28282B);
 
-  static final ThemeData lightTheme = ThemeData(
+  // ✅ CHANGED: Made lightTheme a getter instead of static final
+  static ThemeData get lightTheme => ThemeData(
     useMaterial3: true,
-    hoverColor: Colors.transparent,
     colorScheme: ColorScheme(
         outlineVariant: border,
         primary: lightPrimary,
@@ -200,7 +158,7 @@ class MyThemeData {
     scaffoldBackgroundColor: colorLightGrey,
     textTheme: TextTheme(
       titleLarge: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize055.h,
         color: colorBlack,
@@ -208,7 +166,7 @@ class MyThemeData {
         height: 1.0,
       ),
       titleMedium: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize031.h,
         color: colorBlack,
@@ -216,7 +174,7 @@ class MyThemeData {
         height: 1.0,
       ),
       titleSmall: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize030.h,
         color: colorBlack,
@@ -224,7 +182,7 @@ class MyThemeData {
         height: 1.0,
       ),
       displayLarge: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize020.h,
         fontWeight: FontWeight.w600,
@@ -232,7 +190,7 @@ class MyThemeData {
         height: 1.0,
       ),
       displayMedium: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize020.h,
         fontWeight: FontWeight.w300,
@@ -240,7 +198,7 @@ class MyThemeData {
         height: 1.0,
       ),
       displaySmall: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize020.h,
         fontWeight: FontWeight.w400,
@@ -248,14 +206,14 @@ class MyThemeData {
         height: 1.0,
       ),
       bodySmall: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontSize: FontConstants.fontSize020.h,
         fontWeight: FontWeight.w600,
         color: colorBlack,
         height: 1.0,
       ),
       bodyMedium: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize025.h,
         fontWeight: FontWeight.w500,
@@ -263,7 +221,7 @@ class MyThemeData {
         height: 1.0,
       ),
       labelSmall: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize013.h,
         fontWeight: FontWeight.w500,
@@ -272,8 +230,9 @@ class MyThemeData {
       ),
     ),
   );
-  static final ThemeData darkTheme = ThemeData(
-    hoverColor: Colors.transparent,
+
+  // ✅ CHANGED: Made darkTheme a getter instead of static final
+  static ThemeData get darkTheme => ThemeData(
     useMaterial3: true,
     colorScheme: ColorScheme(
         outlineVariant: dark, //border
@@ -309,7 +268,7 @@ class MyThemeData {
     scaffoldBackgroundColor: colorBlack,
     textTheme: TextTheme(
       titleLarge: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize055.h,
         color: colorWhiteDark,
@@ -317,7 +276,7 @@ class MyThemeData {
         height: 1.0,
       ),
       titleMedium: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize031.h,
         color: colorWhiteDark,
@@ -325,7 +284,7 @@ class MyThemeData {
         height: 1.0,
       ),
       titleSmall: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize030.h,
         color: colorWhite,
@@ -333,7 +292,7 @@ class MyThemeData {
         height: 1.0,
       ),
       displayLarge: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize020.h,
         fontWeight: FontWeight.w600,
@@ -341,7 +300,7 @@ class MyThemeData {
         height: 1.0,
       ),
       displayMedium: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize020.h,
         fontWeight: FontWeight.w300,
@@ -349,7 +308,7 @@ class MyThemeData {
         height: 1.0,
       ),
       displaySmall: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize020.h,
         fontWeight: FontWeight.w400,
@@ -357,7 +316,7 @@ class MyThemeData {
         height: 1.0,
       ),
       bodySmall: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize020.h,
         fontWeight: FontWeight.w600,
@@ -365,7 +324,7 @@ class MyThemeData {
         height: 1.0,
       ),
       bodyMedium: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize025.h,
         fontWeight: FontWeight.w500,
@@ -373,7 +332,7 @@ class MyThemeData {
         height: 1.0,
       ),
       labelSmall: TextStyle(
-        fontFamily: font,
+        fontFamily: font, // ✅ Now uses getter
         fontStyle: FontStyle.normal,
         fontSize: FontConstants.fontSize013.h,
         fontWeight: FontWeight.w500,

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_text_styles.dart';
+import 'package:demo_app/core/theme/app_text_styles.dart';
 import 'package:lottie/lottie.dart';
 
 class ResponseDialog extends StatelessWidget {
@@ -35,7 +35,7 @@ class ResponseDialog extends StatelessWidget {
       child: Container(
 
         decoration: BoxDecoration(
-            color: AppColorsThree.field, borderRadius: BorderRadius.circular(8)),
+            color: AppColors.field, borderRadius: BorderRadius.circular(8)),
         width: 500.w,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 16.w),

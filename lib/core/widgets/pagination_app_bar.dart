@@ -1,4 +1,4 @@
-import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/extension/context_extensions.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,8 +6,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/data_grc_module/core/extensions/extensions.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/theming/new_theme.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_text_styles.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_text_styles.dart';
 
 import 'custom_app_bar.dart';
 

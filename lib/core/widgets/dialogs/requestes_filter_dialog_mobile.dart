@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
-import 'package:demo_app/components/requests_components/requests_filter_appbar.dart';
+import 'package:demo_app/core/shared_components/requests_filter_appbar.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/skeleton/employees/presentation/controller/main_core_department_controller.dart';
+import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
 
 class RequestesFilterDialogMobile extends StatefulWidget {
   RequestesFilterDialogMobile({

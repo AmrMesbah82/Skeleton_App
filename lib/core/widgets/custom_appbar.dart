@@ -1,15 +1,15 @@
 // ignore_for_file: sdk_version_since
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
-import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
+import 'package:demo_app/features/notification/notification_controller.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/extension/context_extensions.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
@@ -20,10 +20,10 @@ import 'package:demo_app/core/theme/my_theme.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/data_grc_module/core/extensions/extensions.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
-import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
+import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 
-import '../../features/skeleton/app_drawer/presentation/controller/drawer_controller.dart';
-import '../../features/skeleton/notification/notification_page.dart';
+import '../../features/home/app_drawer/presentation/controller/drawer_controller.dart';
+import '../../features/notification/notification_page.dart';
 
 // ignore: must_be_immutable
 class CustomAppBar extends StatefulWidget {

@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
-import 'package:demo_app/features/external/main_core/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
 
 // ─────────────────────────────────────────────

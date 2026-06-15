@@ -1,6 +1,6 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -19,10 +19,10 @@ import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
 import 'package:demo_app/core/theme/switch_sizes.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
-import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
+import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 
-import '../../features/external/services_mangment_module/core/new_theme.dart';
+import '../../features/services_mangment_module/core/new_theme.dart';
 import '../constants/selected_currency_info .dart';
 
 class CustomCard extends StatefulWidget {

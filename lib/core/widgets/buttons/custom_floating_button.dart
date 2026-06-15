@@ -4,12 +4,12 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/theme/font_manager.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 
-import '../../../features/external/main_core/features/employee/presentation/controller/main_core_employee_controller.dart';
-import '../../../features/skeleton/roles/domain/enums/modules_enum.dart';
-import '../../../features/skeleton/roles/domain/enums/roles/active_directory_permission.dart';
-import '../../../features/skeleton/roles/domain/enums/roles/roles_permissions_sections.dart';
+import '../../../features/employee/presentation/controller/main_core_employee_controller.dart';
+import '../../../features/roles/domain/enums/modules_enum.dart';
+import '../../../features/roles/domain/enums/roles/active_directory_permission.dart';
+import '../../../features/roles/domain/enums/roles/roles_permissions_sections.dart';
 
 class CustomFloatingButton extends StatefulWidget {
   final String imagePath;

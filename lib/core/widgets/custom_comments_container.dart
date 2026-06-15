@@ -11,23 +11,23 @@ import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/dialogs/delete_dialog.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
-import 'package:demo_app/features/external/knowledge_hub/feature/create_document/presentation/controller/comments_controller.dart';
-import 'package:demo_app/features/external/knowledge_hub/feature/create_document/presentation/controller/create_document_controller.dart';
-import 'package:demo_app/features/external/knowledge_hub/feature/document_details/data/model/comments_model.dart';
-import 'package:demo_app/features/external/knowledge_hub/feature/home/presentation/controller/knowledge_hub_controller.dart';
+import 'package:demo_app/features/knowledge_hub/feature/create_document/presentation/controller/comments_controller.dart';
+import 'package:demo_app/features/knowledge_hub/feature/create_document/presentation/controller/create_document_controller.dart';
+import 'package:demo_app/features/knowledge_hub/feature/document_details/data/model/comments_model.dart';
+import 'package:demo_app/features/knowledge_hub/feature/home/presentation/controller/knowledge_hub_controller.dart';
 
 import 'package:demo_app/core/widgets/sort_option_widget.dart';
 import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
-import 'package:demo_app/features/external/knowledge_hub/core/constant/screen_size.dart';
+import 'package:demo_app/core/theme/my_theme.dart';
+import 'package:demo_app/features/knowledge_hub/core/constant/screen_size.dart';
 import 'dart:io';
 import 'package:http/http.dart' as http;
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:demo_app/features/external/main_core/features/employee/presentation/controller/main_core_employee_controller.dart';
+import 'package:demo_app/features/employee/presentation/controller/main_core_employee_controller.dart';
 
-import '../../features/external/knowledge_hub/feature/create_document/data/models/document_model.dart';
-import '../../features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
+import '../../features/knowledge_hub/feature/create_document/data/models/document_model.dart';
+import '../../features/onboarding/presentation/ui/pages/onboarding.dart';
 
 /// Date Created :21/November/2023
 /// Developer Name : Bassem Mohamed

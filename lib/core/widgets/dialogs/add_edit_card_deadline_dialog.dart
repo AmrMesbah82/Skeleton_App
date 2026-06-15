@@ -7,20 +7,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:demo_app/components/calendar_components.dart/calender_package/src/models/calendar_date_picker2_config.dart';
-import 'package:demo_app/components/calendar_components.dart/date_picker_class.dart';
+import 'package:demo_app/core/shared_components/calender_package/src/models/calendar_date_picker2_config.dart';
+import 'package:demo_app/core/shared_components/date_picker_class.dart';
 import 'package:demo_app/core/widgets/cupertino_time_picker.dart';
-import 'package:demo_app/core/widgets/buttons/main_yellow_button%20copy.dart';
+import 'package:demo_app/core/widgets/buttons/main_yellow_button copy.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
+import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
-import '../../../features/external/task_management_module/task/data/model/board_model/board_model.dart';
-import '../../../features/external/task_management_module/task/data/model/card_model/card_model.dart';
+import '../../../features/task_management_module/task/data/model/board_model/board_model.dart';
+import '../../../features/task_management_module/task/data/model/card_model/card_model.dart';
 
 
 /// Date Created :17/April/2024

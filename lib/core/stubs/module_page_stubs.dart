@@ -2,7 +2,7 @@
 // All module entry-point page stubs live here so there is one place to find them.
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/features/skeleton/settings/presentation/ui/pages/settings_screen.dart'
+import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart'
     show SettingsScreen;
 
 // ── GRC ──────────────────────────────────────────────────────────────────────

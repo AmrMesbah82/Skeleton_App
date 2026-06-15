@@ -4,10 +4,10 @@ import 'package:get/get_core/src/get_main.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/theme/my_theme.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/settings/settings_screen/views/profile_screen.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_text_styles.dart';
-import 'package:demo_app/features/external/main_core/core/theme/app_colors.dart';
+import 'package:demo_app/core/theme/app_text_styles.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 
-import '../../../features/skeleton/settings/settings_screen/views/profile_screen.dart';
+import '../../../features/settings/settings_screen/views/profile_screen.dart';
 
 class CustomDescriptionTextField extends StatefulWidget {
   final int? maxLength;
