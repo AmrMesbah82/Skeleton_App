@@ -2,8 +2,8 @@ import 'package:demo_app/features/events/events/controllers/survey_controller.da
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/test_question_container.dart';
 
 class ShowQuestionsScreen extends StatelessWidget {

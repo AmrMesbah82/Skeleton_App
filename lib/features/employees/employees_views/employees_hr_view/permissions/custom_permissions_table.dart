@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/ui/pages/add_new_employee_view.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'dart:math' as math;
@@ -56,7 +57,7 @@ class _CustomPermissionsTableWidgetState
                 ? FontConstants.fontSize017.h
                 : FontConstants.fontSize022.h
             : FontConstants.fontSize018.h,
-        color: MyThemeData.colorWhite,
+        color: AppColors.colorWhite,
         fontWeight: isTablet ? FontWeight.w600 : FontWeight.w500,
         height: isTablet
             ? isPortrait
@@ -92,7 +93,7 @@ class _CustomPermissionsTableWidgetState
               ),
               border: Border.all(
                 width: 0.001.h,
-                color: MyThemeData.colorGrey,
+                color: AppColors.colorGrey,
               ),
             ),
             child: Row(
@@ -122,10 +123,10 @@ padding: EdgeInsets.zero,
                     decoration: BoxDecoration(
                       color: index % 2 == 0
                           ? themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorLightGrey
-                              : MyThemeData.colorLightGrey
-                          : MyThemeData.colorWhite,
+                                  AppColors.lightTheme
+                              ? AppColors.colorLightGrey
+                              : AppColors.colorLightGrey
+                          : AppColors.colorWhite,
                       borderRadius: BorderRadius.only(
                         bottomLeft: Radius.circular(
                             index == tableData.length - 1 ? 8.0 : 0),
@@ -134,7 +135,7 @@ padding: EdgeInsets.zero,
                       ),
                       border: Border.all(
                         width: 0.001.h,
-                        color: MyThemeData.colorGrey,
+                        color: AppColors.colorGrey,
                       ),
                     ),
                     child: Column(
@@ -162,9 +163,9 @@ padding: EdgeInsets.zero,
                                                   : FontConstants.fontSize022.h
                                               : FontConstants.fontSize018.h,
                                           color: themeController.currentTheme ==
-                                                  MyThemeData.lightTheme
-                                              ? MyThemeData.colorDarkGrey
-                                              : MyThemeData.colorBlack,
+                                                  AppColors.lightTheme
+                                              ? AppColors.colorDarkGrey
+                                              : AppColors.colorBlack,
                                           fontWeight: Get.locale
                                                   .toString()
                                                   .contains('en')
@@ -195,7 +196,7 @@ padding: EdgeInsets.zero,
                                       : 0.05.h,
                                   value: widget.currentValues[index],
                                   padding: isPortrait ? 1 : 1.5,
-                                  activeColor: MyThemeData.lightPrimary,
+                                  activeColor: AppColors.lightPrimary,
                                   onToggle: (newValue) {
                                     hapticController.triggerHapticFeedback(
                                         vibration: VibrateType.mediumImpact,
@@ -373,7 +374,7 @@ padding: EdgeInsets.zero,
                               //       widget.currentValues[index]
                               //           ? 'assets/icons/NewSwitchOn.svg'
                               //           : themeController.currentTheme ==
-                              //                   MyThemeData.lightTheme
+                              //                   AppColors.lightTheme
                               //               ? 'assets/icons/NewSwitchOff.svg'
                               //               : 'assets/icons/NewSwitchOff.svg',
                               //     ),
@@ -383,7 +384,7 @@ padding: EdgeInsets.zero,
                           ),
                         ),
 
-                        //        if (index != tableData.length - 1) Divider(color: MyThemeData.colorBlack),
+                        //        if (index != tableData.length - 1) Divider(color: AppColors.colorBlack),
                       ],
                     ),
                   ),

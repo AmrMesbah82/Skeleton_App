@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -6,13 +7,13 @@ import 'package:demo_app/core/enumeration/enum.dart';
 
 //import 'package:image_crop/image_crop.dart';
 
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
 import 'package:demo_app/core/widgets/restart_widget.dart';
 
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
@@ -91,15 +92,15 @@ class _CustomSettingsAppBarState extends State<CustomSettingsAppBar> {
                     style: AppFontStyle.cairoRegularStyle.copyWith(
                         fontSize: FontConstants.fontSize022.h,
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorDarkGrey
-                            : MyThemeData.colorGreydark,
+                                AppColors.lightTheme
+                            ? AppColors.colorDarkGrey
+                            : AppColors.colorGreydark,
                         fontWeight: FontWeight.w400,
                         height: 0.0015.h),
                   ),
                   // ElevatedButton(
                   //   style: ElevatedButton.styleFrom(
-                  //     backgroundColor: MyThemeData.signOut,
+                  //     backgroundColor: AppColors.signOut,
                   //     padding: EdgeInsets.symmetric(
                   //       vertical: 0.01.h,
                   //       horizontal: 0.02.w,
@@ -122,7 +123,7 @@ class _CustomSettingsAppBarState extends State<CustomSettingsAppBar> {
                   //         'assets/icons/solar_camera-linear.svg',
                   //         width: 0.028.w,
                   //         height: 0.023.h,
-                  //         color: MyThemeData().contrastColor(),
+                  //         color: AppColors.textButton,
                   //       ),
                   //       SizedBox(width: 0.008.w),
                   //       Text(
@@ -132,7 +133,7 @@ class _CustomSettingsAppBarState extends State<CustomSettingsAppBar> {
                   //               ? FontConstants.fontSize018.h
                   //               : FontConstants.fontSize021.h,
                   //           fontWeight: FontWeight.w400,
-                  //           color: MyThemeData().contrastColor(),
+                  //           color: AppColors.textButton,
                   //         ),
                   //       ),
                   //     ],
@@ -199,7 +200,7 @@ class _CustomSettingsAppBarState extends State<CustomSettingsAppBar> {
                                     ? 'assets/icons/SwitchOn.svg'
                                     // ignore: unrelated_type_equality_checks
                                     : themeController.currentTheme ==
-                                            MyThemeData.lightTheme
+                                            AppColors.lightTheme
                                         ? 'assets/icons/SwitchOff.svg'
                                         : 'assets/icons/SwitchDark.svg',
                               ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
 class CustomProfileWidget extends StatelessWidget {
@@ -35,9 +36,9 @@ class CustomProfileWidget extends StatelessWidget {
                   '$reviewRating',
                  style: AppFontStyle.cairoRegularStyle.copyWith(
                   fontSize: FontConstants.fontSize018.h,
-                  color: themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorBlack
-                      : MyThemeData.colorWhiteDark,
+                  color: themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorBlack
+                      : AppColors.colorWhiteDark,
                   fontWeight: FontWeight.w600,
                   height: 0.0021.h,
                   letterSpacing: 1.5),
@@ -49,7 +50,7 @@ class CustomProfileWidget extends StatelessWidget {
             Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                border: Border.all(width: 0.005.h, color: MyThemeData.lightPrimary), // Yellow border
+                border: Border.all(width: 0.005.h, color: AppColors.lightPrimary), // Yellow border
               ),
               padding: EdgeInsets.all(0.007.h),
               child: CircleAvatar(
@@ -62,9 +63,9 @@ class CustomProfileWidget extends StatelessWidget {
               '$firstName $lastName'.capitalize as String,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                   fontSize: FontConstants.fontSize028.h,
-                  color: themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorBlack
-                      : MyThemeData.colorWhiteDark,
+                  color: themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorBlack
+                      : AppColors.colorWhiteDark,
                   fontWeight: FontWeight.w600,
                   letterSpacing: 1.5),
             ),
@@ -73,9 +74,9 @@ class CustomProfileWidget extends StatelessWidget {
               profession.capitalize as String,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize022.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorDarkGrey
-                    : MyThemeData.colorGreydark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorDarkGrey
+                    : AppColors.colorGreydark,
                 fontWeight: FontWeight.w400,
                 letterSpacing: 1.5,
               ),
@@ -85,9 +86,9 @@ class CustomProfileWidget extends StatelessWidget {
               mobileNumber,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize022.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorDarkGrey
-                    : MyThemeData.colorGreydark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorDarkGrey
+                    : AppColors.colorGreydark,
                 fontWeight: FontWeight.w400,
                 letterSpacing: 1.5,
               ),

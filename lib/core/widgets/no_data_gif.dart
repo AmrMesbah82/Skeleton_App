@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
+
 import 'package:lottie/lottie.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 // Date: 16/10/2024
 // By: Youssef Ashraf, Nada Mohammed, Mohammed Ashraf
@@ -41,7 +43,7 @@ class NoDataGif extends StatelessWidget {
                   ? FontConstants.fontSize022.h
                   : FontConstants.fontSize028.h,
               fontWeight: FontWeight.w600,
-              color: MyThemeData.colorGrey,
+              color: AppColors.colorGrey,
             ),
           ),
         ),

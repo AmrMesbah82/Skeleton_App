@@ -13,12 +13,12 @@ import 'package:demo_app/core/network/api_constants.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
 import 'package:demo_app/core/widgets/custom_upper_filter.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/widgets/loading.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';

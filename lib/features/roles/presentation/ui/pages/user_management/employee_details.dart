@@ -763,7 +763,7 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
                         }
                       },
                       textStyle: StyleText.fontSize16Weight500.copyWith(
-                        color: ColorAppLight.whiteColor,
+                        color: AppColors.white,
                       ),
                       width: context.isPhone ? 38.sp : 135.sp,
                       height: 38.sp,
@@ -887,8 +887,8 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
       return Container(
         decoration: BoxDecoration(
           color: lightMode
-              ? ColorAppLight.whiteColor
-              : ColorAppDark.chatBackground,
+              ? AppColors.white
+              : AppColors.chatBackground,
           borderRadius: BorderRadius.circular(8.r),
         ),
         child: Center(
@@ -904,8 +904,8 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
       return Container(
         decoration: BoxDecoration(
           color: lightMode
-              ? ColorAppLight.whiteColor
-              : ColorAppDark.chatBackground,
+              ? AppColors.white
+              : AppColors.chatBackground,
           borderRadius: BorderRadius.circular(8.r),
         ),
         child: Center(
@@ -925,7 +925,7 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
     return Container(
       decoration: BoxDecoration(
         color:
-        lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+        lightMode ? AppColors.white : AppColors.chatBackground,
         borderRadius: BorderRadius.circular(8.r),
       ),
       child: Column(
@@ -1093,8 +1093,8 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
         _formatPermissionName(permissionKey),
         style: StyleText.fontSize12Weight500.copyWith(
           color: lightMode
-              ? ColorAppLight.blackButton
-              : ColorAppDark.titleValue,
+              ? AppColors.blackButton
+              : AppColors.white,
         ),
       ),
     );
@@ -1127,8 +1127,8 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
           style: labelStyle ??
               StyleText.fontSize10Weight500.copyWith(
                 color: lightMode
-                    ? ColorAppLight.grayTextSla
-                    : ColorAppDark.titleKey,
+                    ? AppColors.secondaryText
+                    : AppColors.grey,
               ),
         ),
         Text(
@@ -1136,8 +1136,8 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
           style: valueStyle ??
               StyleText.fontSize10Weight500.copyWith(
                 color: lightMode
-                    ? ColorAppLight.blackButton
-                    : ColorAppDark.titleValue,
+                    ? AppColors.blackButton
+                    : AppColors.white,
               ),
         ),
       ],
@@ -1320,8 +1320,8 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
       return Container(
         decoration: BoxDecoration(
           color: lightMode
-              ? ColorAppLight.whiteColor
-              : ColorAppDark.chatBackground,
+              ? AppColors.white
+              : AppColors.chatBackground,
           borderRadius: BorderRadius.circular(8.r),
         ),
         child: Padding(
@@ -1350,8 +1350,8 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
                         fullName.isEmpty ? 'Unknown' : fullName,
                         style: StyleText.fontSize16Weight500.copyWith(
                           color: lightMode
-                              ? ColorAppLight.blackButton
-                              : ColorAppDark.titleValue,
+                              ? AppColors.blackButton
+                              : AppColors.white,
                         ),
                       ),
                       SizedBox(height: 10.sp),
@@ -1399,7 +1399,7 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
                       widget.userPermission.employeeEmail, context);
                 },
                 textStyle: StyleText.fontSize16Weight500
-                    .copyWith(color: ColorAppLight.buttonTextColor),
+                    .copyWith(color: AppColors.textButton),
                 width: 135.sp,
                 height: 38.sp,
                 space: 8.sp,
@@ -1418,8 +1418,8 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
       return Container(
         decoration: BoxDecoration(
           color: lightMode
-              ? ColorAppLight.whiteColor
-              : ColorAppDark.chatBackground,
+              ? AppColors.white
+              : AppColors.chatBackground,
           borderRadius: BorderRadius.circular(8.r),
         ),
         child: Padding(
@@ -1441,8 +1441,8 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
                         fullName.isEmpty ? 'Unknown' : fullName),
                     style: StyleText.fontSize16Weight500.copyWith(
                       color: lightMode
-                          ? ColorAppLight.blackButton
-                          : ColorAppDark.titleValue,
+                          ? AppColors.blackButton
+                          : AppColors.white,
                     ),
                   ),
                   SizedBox(height: 10.sp),
@@ -1489,7 +1489,7 @@ class _RoleEmployeeDetailsPageState extends State<RoleEmployeeDetailsPage> {
                       widget.userPermission.employeeEmail, context);
                 },
                 textStyle: StyleText.fontSize16Weight500
-                    .copyWith(color: ColorAppLight.buttonTextColor),
+                    .copyWith(color: AppColors.textButton),
                 width: 135.sp,
                 height: 38.sp,
                 space: 8.sp,

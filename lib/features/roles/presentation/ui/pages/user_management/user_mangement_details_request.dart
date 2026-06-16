@@ -457,7 +457,7 @@ class _UserManagementDetailsRequestSettingsState
       case 'rejected':
         return Colors.red[500]!;
       default:
-        return ColorAppLight.grayTextSla;
+        return AppColors.secondaryText;
     }
   }
 
@@ -899,8 +899,8 @@ class _UserManagementDetailsRequestSettingsState
           S.of(context).requestDetails,
           style: StyleText.fontSize16Weight600.copyWith(
             color: lightMode
-                ? ColorAppLight.blackButton
-                : ColorAppDark.titleValue,
+                ? AppColors.blackButton
+                : AppColors.white,
           ),
         ),
         Spacer(),
@@ -908,16 +908,16 @@ class _UserManagementDetailsRequestSettingsState
           "${S.of(context).requestedDate}: ",
           style: StyleText.fontSize12Weight400.copyWith(
             color: lightMode
-                ? ColorAppLight.grayTextSla
-                : ColorAppDark.titleKey,
+                ? AppColors.secondaryText
+                : AppColors.grey,
           ),
         ),
         Text(
           _formatDate(requestTime),
           style: StyleText.fontSize12Weight400.copyWith(
             color: lightMode
-                ? ColorAppLight.blackButton
-                : ColorAppDark.titleValue,
+                ? AppColors.blackButton
+                : AppColors.white,
           ),
         ),
       ],
@@ -978,8 +978,8 @@ class _UserManagementDetailsRequestSettingsState
                         lightMode: lightMode,
                         title: S.of(context).current_details,
                         titleColor: lightMode
-                            ? ColorAppLight.blackButton
-                            : ColorAppDark.titleValue,
+                            ? AppColors.blackButton
+                            : AppColors.white,
                         value: oldValue,
                         fieldName: fieldName,
                       ),
@@ -1035,8 +1035,8 @@ class _UserManagementDetailsRequestSettingsState
           FormatHelper.capitalize(sectionTitle),
           style: StyleText.fontSize18Weight500.copyWith(
             color: lightMode
-                ? ColorAppLight.blackButton
-                : ColorAppDark.titleValue,
+                ? AppColors.blackButton
+                : AppColors.white,
           ),
         ),
       ],
@@ -1066,7 +1066,7 @@ class _UserManagementDetailsRequestSettingsState
           enabled: false,
           submitted: submitted,
           fillColor: title.contains('current') || title.contains('الحالية')
-              ? (lightMode ? ColorAppLight.whiteOp : ColorAppDark.background)
+              ? (lightMode ? AppColors.background : AppColors.background)
               : null,
         ),
       ],

@@ -1,13 +1,14 @@
 // ignore_for_file: unrelated_type_equality_checks, sized_box_for_whitespace, unused_local_variable
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/shared_components/custom_chart_data.dart';
 import 'package:demo_app/core/shared_components/custom_chart_values.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -65,16 +66,16 @@ class _CustomVerticalChartState extends State<CustomVerticalChart> {
   }
 
   final List<Color> customColors = [
-    MyThemeData.signOut,
-    MyThemeData.colorGrey,
-    MyThemeData.lightPrimary,
-    MyThemeData.colorGreydark,
-    MyThemeData.colorLightGrey,
-    MyThemeData.colorWhiteDark,
-    MyThemeData.colorGreyDisabled,
-    MyThemeData.colorDarkGrey,
+    AppColors.signOut,
+    AppColors.colorGrey,
+    AppColors.lightPrimary,
+    AppColors.colorGreydark,
+    AppColors.colorLightGrey,
+    AppColors.colorWhiteDark,
+    AppColors.colorGreyDisabled,
+    AppColors.colorDarkGrey,
   ];
-  //MyThemeData.colorGreydark,
+  //AppColors.colorGreydark,
 
   final List<String> period = [
     'Weekly'.tr,
@@ -105,11 +106,11 @@ class _CustomVerticalChartState extends State<CustomVerticalChart> {
             ? Theme.of(context).colorScheme.inversePrimary
             : Theme.of(context).colorScheme.inversePrimary,
         borderRadius: BorderRadius.circular(9),
-        boxShadow: themeController.currentTheme == MyThemeData.lightTheme
+        boxShadow: themeController.currentTheme == AppColors.lightTheme
             ? [
                 if (widget.isTransparent == false)
                   BoxShadow(
-                    color: MyThemeData.colorGrey.withOpacity(0.2),
+                    color: AppColors.colorGrey.withOpacity(0.2),
                     blurRadius: 18,
                   ),
               ]
@@ -127,7 +128,7 @@ class _CustomVerticalChartState extends State<CustomVerticalChart> {
             child: Row(
               children: [
                 CircleAvatar(
-                  backgroundColor: MyThemeData.bubbleColor,
+                  backgroundColor: AppColors.bubbleColor,
                   radius: isTablet
                       ? isPortrait
                           ? 0.015.h
@@ -136,7 +137,7 @@ class _CustomVerticalChartState extends State<CustomVerticalChart> {
                   child: SvgPicture.asset(
                     widget.imagePath,
                     height: isTablet ? (isPortrait? 0.02.h : 0.025.h) : 0.02.h,
-                    color: MyThemeData().contrastColor(),
+                    color: AppColors.textButton,
                   ),
                 ),
                 /* SvgPicture.asset(
@@ -151,9 +152,9 @@ class _CustomVerticalChartState extends State<CustomVerticalChart> {
                           ? FontConstants.fontSize018.h
                           : FontConstants.fontSize022.h,
                       color:
-                          themeController.currentTheme == MyThemeData.lightTheme
-                              ? MyThemeData.colorBlack
-                              : MyThemeData.colorWhiteDark,
+                          themeController.currentTheme == AppColors.lightTheme
+                              ? AppColors.colorBlack
+                              : AppColors.colorWhiteDark,
                       fontWeight: FontWeight.w600,
                       height: isPortrait ? 1.8 : 0.002.h),
                 ),

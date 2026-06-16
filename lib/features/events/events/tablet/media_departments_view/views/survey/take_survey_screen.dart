@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/model/survey_model.dart';
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart';
@@ -10,11 +11,11 @@ import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 
 
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/constants/image_paths.dart';
 import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/test_question_container.dart';
 import 'package:demo_app/features/events/controllers/employee_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
@@ -351,7 +352,7 @@ class _TakeSurveyScreenState extends State<TakeSurveyScreen> {
                                     },
                                   );
                                 },
-                                buttonColor: MyThemeData.GreyBack,
+                                buttonColor: AppColors.GreyBack,
                               ),
                               CustomIconButton(
                                 buttonText: "Submit",
@@ -410,7 +411,7 @@ class _TakeSurveyScreenState extends State<TakeSurveyScreen> {
                                     },
                                   );
                                 },
-                                buttonColor: MyThemeData.signOut,
+                                buttonColor: AppColors.signOut,
                               ),
                             ],
                           ),

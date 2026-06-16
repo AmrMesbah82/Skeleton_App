@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -10,9 +11,9 @@ import 'package:demo_app/features/employees/employees_views/employees_hr_view/em
 import 'package:demo_app/core/shared_components/custom_icon_container.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
 import 'package:demo_app/features/employee/presentation/controller/main_core_employee_controller.dart';
@@ -138,7 +139,7 @@ class _CustomPersonalInfoContainerState
                       return Container(
                         padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 8.h),
                         decoration: BoxDecoration(
-                          color: themeController.currentTheme == MyThemeData.lightTheme
+                          color: themeController.currentTheme == AppColors.lightTheme
                               ? Colors.grey[300]
                               : Colors.grey[700],
                           borderRadius: BorderRadius.circular(8.r),
@@ -147,9 +148,9 @@ class _CustomPersonalInfoContainerState
                           skill.capitalize ?? skill,
                           style: AppFontStyle.cairoRegularStyle.copyWith(
                             fontSize: FontConstants.fontSize015.h,
-                            color: themeController.currentTheme == MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhiteDark,
+                            color: themeController.currentTheme == AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhiteDark,
                             fontWeight: FontWeight.w400,
                           ),
                         ),
@@ -301,9 +302,9 @@ class _CustomPersonalInfoContainerState
                 widget.personalInfoTexts![index].tr.capitalize as String,
                 style: AppFontStyle.cairoRegularStyle.copyWith(
                   fontSize: FontConstants.fontSize015.h,
-                  color: themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorDarkGrey
-                      : MyThemeData.colorGreydark,
+                  color: themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorDarkGrey
+                      : AppColors.colorGreydark,
                   height: 1.4,
                   fontWeight: FontWeight.w400,
                 ),
@@ -313,9 +314,9 @@ class _CustomPersonalInfoContainerState
               '-',
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize015.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorBlack
-                    : MyThemeData.colorWhiteDark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorBlack
+                    : AppColors.colorWhiteDark,
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -365,9 +366,9 @@ class _CustomPersonalInfoContainerState
                 widget.personalInfoTexts![index].tr.capitalize as String,
                 style: AppFontStyle.cairoRegularStyle.copyWith(
                   fontSize: FontConstants.fontSize015.h,
-                  color: themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorDarkGrey
-                      : MyThemeData.colorGreydark,
+                  color: themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorDarkGrey
+                      : AppColors.colorGreydark,
                   height: 1.4,
                   fontWeight: FontWeight.w400,
                 ),
@@ -377,9 +378,9 @@ class _CustomPersonalInfoContainerState
               '-',
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize015.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorBlack
-                    : MyThemeData.colorWhiteDark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorBlack
+                    : AppColors.colorWhiteDark,
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -410,9 +411,9 @@ class _CustomPersonalInfoContainerState
                   widget.personalInfoTexts![index].tr.capitalize as String,
                   style: AppFontStyle.cairoRegularStyle.copyWith(
                     fontSize: FontConstants.fontSize015.h,
-                    color: themeController.currentTheme == MyThemeData.lightTheme
-                        ? MyThemeData.colorDarkGrey
-                        : MyThemeData.colorGreydark,
+                    color: themeController.currentTheme == AppColors.lightTheme
+                        ? AppColors.colorDarkGrey
+                        : AppColors.colorGreydark,
                     height: 1.4,
                     fontWeight: FontWeight.w400,
                   ),
@@ -435,9 +436,9 @@ class _CustomPersonalInfoContainerState
                   item.capitalize ?? item,
                   style: AppFontStyle.cairoRegularStyle.copyWith(
                     fontSize: FontConstants.fontSize015.h,
-                    color: themeController.currentTheme == MyThemeData.lightTheme
-                        ? MyThemeData.colorBlack
-                        : MyThemeData.colorWhiteDark,
+                    color: themeController.currentTheme == AppColors.lightTheme
+                        ? AppColors.colorBlack
+                        : AppColors.colorWhiteDark,
                     fontWeight: FontWeight.w400,
                   ),
                 ),
@@ -626,9 +627,9 @@ class _CustomPersonalInfoContainerState
                               widget.personalInfoTexts![index].tr.capitalize as String,
                               style: AppFontStyle.cairoRegularStyle.copyWith(
                                 fontSize: FontConstants.fontSize020.h,
-                                color: themeController.currentTheme == MyThemeData.lightTheme
-                                    ? MyThemeData.colorDarkGrey
-                                    : MyThemeData.colorGreydark,
+                                color: themeController.currentTheme == AppColors.lightTheme
+                                    ? AppColors.colorDarkGrey
+                                    : AppColors.colorGreydark,
                                 height: 1.4,
                                 fontWeight: FontWeight.w400,
                               ),
@@ -676,9 +677,9 @@ class _CustomPersonalInfoContainerState
               widget.personalInfoTexts![index].tr.capitalize as String,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize017.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorDarkGrey
-                    : MyThemeData.colorGreydark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorDarkGrey
+                    : AppColors.colorGreydark,
                 height: 1.4,
                 fontWeight: FontWeight.w400,
               ),
@@ -696,9 +697,9 @@ class _CustomPersonalInfoContainerState
               overflow: TextOverflow.ellipsis,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize017.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorBlack
-                    : MyThemeData.colorWhiteDark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorBlack
+                    : AppColors.colorWhiteDark,
                 fontWeight: FontWeight.w400,
                 height: 1.4,
               ),
@@ -732,9 +733,9 @@ class _CustomPersonalInfoContainerState
               widget.personalInfoTexts![index].tr.capitalize as String,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize017.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorDarkGrey
-                    : MyThemeData.colorGreydark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorDarkGrey
+                    : AppColors.colorGreydark,
                 height: 1.4,
                 fontWeight: FontWeight.w400,
               ),
@@ -752,9 +753,9 @@ class _CustomPersonalInfoContainerState
               overflow: TextOverflow.ellipsis,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize017.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorBlack
-                    : MyThemeData.colorWhiteDark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorBlack
+                    : AppColors.colorWhiteDark,
                 fontWeight: FontWeight.w400,
                 height: 1.4,
               ),
@@ -789,9 +790,9 @@ class _CustomPersonalInfoContainerState
               widget.personalInfoTexts![index].tr.capitalize as String,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize017.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorDarkGrey
-                    : MyThemeData.colorGreydark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorDarkGrey
+                    : AppColors.colorGreydark,
                 height: 1.4,
                 fontWeight: FontWeight.w400,
               ),
@@ -816,9 +817,9 @@ class _CustomPersonalInfoContainerState
                 overflow: TextOverflow.ellipsis,
                 style: AppFontStyle.cairoRegularStyle.copyWith(
                   fontSize: FontConstants.fontSize017.h,
-                  color: themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorBlack
-                      : MyThemeData.colorWhiteDark,
+                  color: themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorBlack
+                      : AppColors.colorWhiteDark,
                   fontWeight: FontWeight.w400,
                   height: 1.4,
                 ),
@@ -860,9 +861,9 @@ class _CustomPersonalInfoContainerState
                 widget.personalInfoTexts![index].tr.capitalize as String,
                 style: AppFontStyle.cairoRegularStyle.copyWith(
                   fontSize: FontConstants.fontSize017.h,
-                  color: themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorDarkGrey
-                      : MyThemeData.colorGreydark,
+                  color: themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorDarkGrey
+                      : AppColors.colorGreydark,
                   height: 1.4,
                   fontWeight: FontWeight.w400,
                 ),
@@ -872,9 +873,9 @@ class _CustomPersonalInfoContainerState
               '-',
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize017.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorBlack
-                    : MyThemeData.colorWhiteDark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorBlack
+                    : AppColors.colorWhiteDark,
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -909,9 +910,9 @@ class _CustomPersonalInfoContainerState
                 widget.personalInfoTexts![index].tr.capitalize as String,
                 style: AppFontStyle.cairoRegularStyle.copyWith(
                   fontSize: FontConstants.fontSize017.h,
-                  color: themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorDarkGrey
-                      : MyThemeData.colorGreydark,
+                  color: themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorDarkGrey
+                      : AppColors.colorGreydark,
                   height: 1.4,
                   fontWeight: FontWeight.w400,
                 ),
@@ -921,9 +922,9 @@ class _CustomPersonalInfoContainerState
               '-',
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize017.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorBlack
-                    : MyThemeData.colorWhiteDark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorBlack
+                    : AppColors.colorWhiteDark,
                 fontWeight: FontWeight.w400,
               ),
             ),
@@ -957,9 +958,9 @@ class _CustomPersonalInfoContainerState
                   widget.personalInfoTexts![index].tr.capitalize as String,
                   style: AppFontStyle.cairoRegularStyle.copyWith(
                     fontSize: FontConstants.fontSize017.h,
-                    color: themeController.currentTheme == MyThemeData.lightTheme
-                        ? MyThemeData.colorDarkGrey
-                        : MyThemeData.colorGreydark,
+                    color: themeController.currentTheme == AppColors.lightTheme
+                        ? AppColors.colorDarkGrey
+                        : AppColors.colorGreydark,
                     height: 1.4,
                     fontWeight: FontWeight.w400,
                   ),
@@ -985,9 +986,9 @@ class _CustomPersonalInfoContainerState
                       item.capitalize ?? item,
                       style: AppFontStyle.cairoRegularStyle.copyWith(
                         fontSize: FontConstants.fontSize017.h,
-                        color: themeController.currentTheme == MyThemeData.lightTheme
-                            ? MyThemeData.colorBlack
-                            : MyThemeData.colorWhiteDark,
+                        color: themeController.currentTheme == AppColors.lightTheme
+                            ? AppColors.colorBlack
+                            : AppColors.colorWhiteDark,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -1020,9 +1021,9 @@ class _CustomPersonalInfoContainerState
               widget.personalInfoTexts![index].tr.capitalize as String,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize015.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorDarkGrey
-                    : MyThemeData.colorGreydark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorDarkGrey
+                    : AppColors.colorGreydark,
                 height: 1.4,
                 fontWeight: FontWeight.w400,
               ),
@@ -1040,9 +1041,9 @@ class _CustomPersonalInfoContainerState
               overflow: TextOverflow.ellipsis,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize015.h,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorBlack
-                    : MyThemeData.colorWhiteDark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorBlack
+                    : AppColors.colorWhiteDark,
                 fontWeight: FontWeight.w400,
                 height: 1.4,
               ),

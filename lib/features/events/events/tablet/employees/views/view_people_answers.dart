@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/home/app_drawer/presentation/ui/pages/custom_drawer.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/constants/image_paths.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/tablet/employees/views/employee_home_screen.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/components/page_screenstop_level.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/views/survey/participants_screen.dart';

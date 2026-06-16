@@ -251,7 +251,7 @@ class _ChartSettingsDialogState extends State<ChartSettingsDialog> {
                     spaceHeight: 8,
                     dropdownColor: lightMode
                         ? Color(0xFFF5F5F5)
-                        : ColorAppDark.background.withOpacity(0.5),
+                        : AppColors.background.withOpacity(0.5),
                   ),
                 ),
 
@@ -283,7 +283,7 @@ class _ChartSettingsDialogState extends State<ChartSettingsDialog> {
                     ),
                     dropdownColor: lightMode
                         ? Color(0xFFF5F5F5)
-                        : ColorAppDark.background.withOpacity(0.5),
+                        : AppColors.background.withOpacity(0.5),
                   ),
                 ),
               ],
@@ -308,7 +308,7 @@ class _ChartSettingsDialogState extends State<ChartSettingsDialog> {
               decoration: BoxDecoration(
                 color: lightMode
                     ? Color(0xFFFAFAFA)
-                    : ColorAppDark.background.withOpacity(0.3),
+                    : AppColors.background.withOpacity(0.3),
                 borderRadius: BorderRadius.circular(8.r),
                 border: Border.all(
                   color: lightMode
@@ -435,7 +435,7 @@ class _ChartSettingsDialogState extends State<ChartSettingsDialog> {
                   ? AppColors.primary
                   : (lightMode
                   ? Colors.grey.shade500
-                  : ColorAppDark.titleValue.withOpacity(0.5)),
+                  : AppColors.white.withOpacity(0.5)),
             ),
             SizedBox(height: 12.h),
             Text(
@@ -446,7 +446,7 @@ class _ChartSettingsDialogState extends State<ChartSettingsDialog> {
                     ? AppColors.primary
                     : (lightMode
                     ? Colors.grey.shade700
-                    : ColorAppDark.titleValue),
+                    : AppColors.white),
               ),
             ),
           ],

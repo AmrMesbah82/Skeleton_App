@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart';
 import 'package:flutter/material.dart';
@@ -11,9 +12,9 @@ import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/employee_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
@@ -203,7 +204,7 @@ class _FilterEventDialogState extends State<FilterEventDialog> {
               FiltersAppBar(
                 imageUrl: "assets/images/filter_table.svg",
                 title: "Filter",
-                iconColor: MyThemeData().contrastColor(),
+                iconColor: AppColors.textButton,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -227,13 +228,13 @@ class _FilterEventDialogState extends State<FilterEventDialog> {
                                   : dropdownWidthHori)
                               : 0.75.w,
                           buttonColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
+                                  AppColors.lightTheme
                               ? null
-                              : MyThemeData.colorBlack,
+                              : AppColors.colorBlack,
                           backColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
+                                  AppColors.lightTheme
                               ? Colors.transparent
-                              : MyThemeData.colorBlack,
+                              : AppColors.colorBlack,
                           buttonWidth: isTablet
                               ? (isPortrait
                                   ? dropdownWidthVert
@@ -285,13 +286,13 @@ class _FilterEventDialogState extends State<FilterEventDialog> {
                                       : dropdownWidthHori)
                                   : 0.35.w,
                               buttonColor: themeController.currentTheme ==
-                                      MyThemeData.lightTheme
+                                      AppColors.lightTheme
                                   ? null
-                                  : MyThemeData.colorBlack,
+                                  : AppColors.colorBlack,
                               backColor: themeController.currentTheme ==
-                                      MyThemeData.lightTheme
+                                      AppColors.lightTheme
                                   ? Colors.transparent
-                                  : MyThemeData.colorBlack,
+                                  : AppColors.colorBlack,
                               buttonPadding: EdgeInsets.symmetric(
                                   horizontal: isTablet ? 0.01.w : 0.02.w),
                               value: tempEnglishType != null
@@ -338,13 +339,13 @@ class _FilterEventDialogState extends State<FilterEventDialog> {
                                   : dropdownWidthHori)
                               : double.infinity,
                           buttonColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
+                                  AppColors.lightTheme
                               ? null
-                              : MyThemeData.colorBlack,
+                              : AppColors.colorBlack,
                           backColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
+                                  AppColors.lightTheme
                               ? Colors.transparent
-                              : MyThemeData.colorBlack,
+                              : AppColors.colorBlack,
                           buttonPadding: EdgeInsets.symmetric(
                               horizontal: isTablet ? 0.01.w : 0.02.w),
                           value: tempEnglishType != null
@@ -457,13 +458,13 @@ class _FilterEventDialogState extends State<FilterEventDialog> {
                                           : dropdownWidthHori)
                                       : double.infinity,
                                   buttonColor: themeController.currentTheme ==
-                                          MyThemeData.lightTheme
+                                          AppColors.lightTheme
                                       ? null
-                                      : MyThemeData.colorBlack,
+                                      : AppColors.colorBlack,
                                   backColor: themeController.currentTheme ==
-                                          MyThemeData.lightTheme
+                                          AppColors.lightTheme
                                       ? Colors.transparent
-                                      : MyThemeData.colorBlack,
+                                      : AppColors.colorBlack,
                                   buttonPadding: EdgeInsets.symmetric(
                                       horizontal: isTablet ? 0.01.w : 0.02.w),
                                   value: tempEnglishStatus != null
@@ -639,7 +640,7 @@ class _FilterEventDialogState extends State<FilterEventDialog> {
                                 : Size(0.07.w, 0.05.h)
                             : Size(0.36.w, 0.05.h),
                         backgroundColor:
-                                MyThemeData.GreyBack,
+                                AppColors.GreyBack,
                         shape: RoundedRectangleBorder(
                           borderRadius: const BorderRadius.all(
                             Radius.circular(8),
@@ -678,7 +679,7 @@ class _FilterEventDialogState extends State<FilterEventDialog> {
                                 ? Size(0.15.w, 0.045.h)
                                 : Size(0.07.w, 0.05.h)
                             : Size(0.36.w, 0.05.h),
-                        backgroundColor: MyThemeData.signOut,
+                        backgroundColor: AppColors.signOut,
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                             Radius.circular(8),

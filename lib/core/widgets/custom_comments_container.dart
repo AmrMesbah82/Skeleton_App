@@ -1,5 +1,6 @@
 /*
 import 'dart:io';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
@@ -17,8 +18,8 @@ import 'package:demo_app/features/knowledge_hub/feature/document_details/data/mo
 import 'package:demo_app/features/knowledge_hub/feature/home/presentation/controller/knowledge_hub_controller.dart';
 
 import 'package:demo_app/core/widgets/sort_option_widget.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
+
 import 'package:demo_app/features/knowledge_hub/core/constant/screen_size.dart';
 import 'dart:io';
 import 'package:http/http.dart' as http;
@@ -148,9 +149,9 @@ class _CustomCommentsContainerState extends State<CustomCommentsContainer> {
                                       ? FontConstants.fontSize015.h
                                       : FontConstants.fontSize015.h,
                               color: mainCoreThemeController.currentTheme ==
-                                      MyThemeData.lightTheme
-                                  ? MyThemeData.colorBlack
-                                  : MyThemeData.colorWhiteDark,
+                                      AppColors.lightTheme
+                                  ? AppColors.colorBlack
+                                  : AppColors.colorWhiteDark,
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -170,7 +171,7 @@ class _CustomCommentsContainerState extends State<CustomCommentsContainer> {
                                   : isTablet
                                       ? FontConstants.fontSize014.h
                                       : FontConstants.fontSize014.h,
-                              color: MyThemeData.textdeactivecolor,
+                              color: AppColors.textdeactivecolor,
                               fontWeight: FontWeight.w600,
                             ),
                           )
@@ -186,7 +187,7 @@ class _CustomCommentsContainerState extends State<CustomCommentsContainer> {
                         fontSize: isPortrait
                             ? FontConstants.fontSize012.h
                             : FontConstants.fontSize011.w,
-                        color: MyThemeData.textdeactivecolor,
+                        color: AppColors.textdeactivecolor,
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -273,9 +274,9 @@ class _CustomCommentsContainerState extends State<CustomCommentsContainer> {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8),
                       color: (mainCoreThemeController.currentTheme ==
-                              MyThemeData.lightTheme
-                          ? MyThemeData.colorLightGrey
-                          : MyThemeData.darkBackGround),
+                              AppColors.lightTheme
+                          ? AppColors.colorLightGrey
+                          : AppColors.darkBackGround),
                     ),
                     child: Padding(
                       padding: EdgeInsets.symmetric(
@@ -318,9 +319,9 @@ class _CustomCommentsContainerState extends State<CustomCommentsContainer> {
                                     ? FontConstants.fontSize025.h
                                     : FontConstants.fontSize016.h,
                                 color: mainCoreThemeController.currentTheme ==
-                                        MyThemeData.lightTheme
-                                    ? MyThemeData.colorDarkGrey
-                                    : MyThemeData.colorGreydark,
+                                        AppColors.lightTheme
+                                    ? AppColors.colorDarkGrey
+                                    : AppColors.colorGreydark,
                                 fontWeight: FontWeight.w600,
                                 height: isTablet
                                     ? (isPortrait ? 1.6 : 0.0018.h)
@@ -387,7 +388,7 @@ void _showSortMenu(
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
         side: BorderSide(
-          color: MyThemeData.signOut,
+          color: AppColors.signOut,
         )),
     items: comment.isPdf
         ? sortOptions2.map((option) {
@@ -574,7 +575,7 @@ class _EditCommentDialogState extends State<EditCommentDialog> {
               children: [
                 FiltersAppBar(
                     imageUrl: 'assets/images/pen_service.svg',
-                    iconColor: MyThemeData().contrastColor(),
+                    iconColor: AppColors.textButton,
                     title: "Edit Comment"),
                 ColumnRequestData(
                   title: "Comment",

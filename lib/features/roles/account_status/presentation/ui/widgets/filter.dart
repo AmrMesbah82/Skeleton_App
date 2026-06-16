@@ -49,7 +49,7 @@ class _FilterState extends State<Filter> {
     return Container(
       padding: EdgeInsets.all(15.sp),
       decoration: BoxDecoration(
-        color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+        color:  AppColors.card,
         borderRadius: BorderRadius.circular(8.sp),
       ),
       width: isTablet ? 400.sp : 300.sp,
@@ -75,7 +75,7 @@ class _FilterState extends State<Filter> {
                 ),
               ),
               Text('Filter'.tr, style: AppTextStyles.font12BlackCairoRegular.copyWith(
-                color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                color: AppColors.text
               )),
             ],
           ),
@@ -85,7 +85,7 @@ class _FilterState extends State<Filter> {
             child: AppDropdown(
               value: selectedDepartment,
               width: double.infinity,
-              fillColor: lightMode ? ColorAppLight.whiteOp : ColorAppDark.background,
+              fillColor: AppColors.background,
               textButton: 'Department'.tr,
               customButton: Padding(
                 padding:  EdgeInsets.symmetric(horizontal: 8.sp),

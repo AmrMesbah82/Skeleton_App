@@ -1,13 +1,14 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/country_picker_dialog.dart';
 
 import 'package:demo_app/core/widgets/intl_phone_field.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/settings/settings_screen/views/owner_screens/company_info_update_dialog/company_contact_info.dart';
@@ -56,9 +57,9 @@ class _ContactInfoCompanyUpdateState extends State<ContactInfoCompanyUpdate> {
                     ? FontConstants.fontSize014.h
                     : FontConstants.fontSize020.h),
             fontWeight: FontWeight.w400,
-            color: themeController.currentTheme == MyThemeData.lightTheme
+            color: themeController.currentTheme == AppColors.lightTheme
                 ? Theme.of(context).colorScheme.scrim
-                : MyThemeData.colorWhite,
+                : AppColors.colorWhite,
           ),
         ),
         width: .45.w,
@@ -68,18 +69,18 @@ class _ContactInfoCompanyUpdateState extends State<ContactInfoCompanyUpdate> {
               ? FontConstants.fontSize014.h
               : FontConstants.fontSize020.h,
           fontWeight: FontWeight.w400,
-          color: themeController.currentTheme == MyThemeData.lightTheme
-              ? MyThemeData.colorBlack
-              : MyThemeData.colorWhite,
+          color: themeController.currentTheme == AppColors.lightTheme
+              ? AppColors.colorBlack
+              : AppColors.colorWhite,
         ),
         countryNameStyle: TextStyle(
           fontSize: !isTablet
               ? FontConstants.fontSize014.h
               : FontConstants.fontSize020.h,
           fontWeight: FontWeight.w400,
-          color: themeController.currentTheme == MyThemeData.lightTheme
-              ? MyThemeData.colorBlack
-              : MyThemeData.colorWhite,
+          color: themeController.currentTheme == AppColors.lightTheme
+              ? AppColors.colorBlack
+              : AppColors.colorWhite,
         ));
     InputDecoration inputDecoration = InputDecoration(
       filled: true,
@@ -99,7 +100,7 @@ class _ContactInfoCompanyUpdateState extends State<ContactInfoCompanyUpdate> {
                   ? FontConstants.fontSize014.h
                   : FontConstants.fontSize020.h,
           height: 1.4,
-          color: MyThemeData.colorGrey,
+          color: AppColors.colorGrey,
           fontWeight: FontWeight.w400),
       border: OutlineInputBorder(
         borderSide: BorderSide.none,
@@ -121,9 +122,9 @@ class _ContactInfoCompanyUpdateState extends State<ContactInfoCompanyUpdate> {
         borderSide: BorderSide.none,
         borderRadius: BorderRadius.circular(8.0),
       ),
-      fillColor: themeController.currentTheme == MyThemeData.lightTheme
+      fillColor: themeController.currentTheme == AppColors.lightTheme
           ? const Color(0xFFF6F6F6)
-          : MyThemeData.colorBlack,
+          : AppColors.colorBlack,
     );
     double widthSpace = 0.02.w;
     return Column(
@@ -305,18 +306,18 @@ class _ContactInfoCompanyUpdateState extends State<ContactInfoCompanyUpdate> {
                         fontSize:  FontConstants.fontSize016.h
                             ,
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorBlack
-                            : MyThemeData.colorWhite,
+                                AppColors.lightTheme
+                            ? AppColors.colorBlack
+                            : AppColors.colorWhite,
                         fontWeight: FontWeight.w400),
                    dropdownTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
                         height:   1.2,
                         fontSize:   FontConstants.fontSize016.h
                             ,
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorBlack
-                            : MyThemeData.colorWhite,
+                                AppColors.lightTheme
+                            ? AppColors.colorBlack
+                            : AppColors.colorWhite,
                         fontWeight: FontWeight.w400),
                   decoration: InputDecoration(
                     prefix: const SizedBox(
@@ -353,9 +354,9 @@ class _ContactInfoCompanyUpdateState extends State<ContactInfoCompanyUpdate> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     fillColor:
-                        themeController.currentTheme == MyThemeData.lightTheme
+                        themeController.currentTheme == AppColors.lightTheme
                             ? const Color(0xFFF6F6F6)
-                            : MyThemeData.colorBlack,
+                            : AppColors.colorBlack,
                   ),
                   onCountryChanged: (value) {},
                   initialCountryCode: addCompanyController
@@ -395,9 +396,9 @@ class _ContactInfoCompanyUpdateState extends State<ContactInfoCompanyUpdate> {
                                     ? FontConstants.fontSize014.h
                                     : FontConstants.fontSize020.h,
                             color: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhite,
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhite,
                             fontWeight: FontWeight.w400),
                         dropdownTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
                             height: isTablet ? (isVertical ? 1.6 : 1.6) : 1.2,
@@ -407,9 +408,9 @@ class _ContactInfoCompanyUpdateState extends State<ContactInfoCompanyUpdate> {
                                     ? FontConstants.fontSize014.h
                                     : FontConstants.fontSize020.h,
                             color: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhite,
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhite,
                             fontWeight: FontWeight.w400),
                         decoration: inputDecoration,
                         onCountryChanged: (value) {},
@@ -440,7 +441,7 @@ class _ContactInfoCompanyUpdateState extends State<ContactInfoCompanyUpdate> {
                               fontSize:  isVertical
                                   ? FontConstants.fontSize014.h
                                   : FontConstants.fontSize018.h,
-                              color: MyThemeData.delete,
+                              color: AppColors.delete,
                               fontWeight: FontWeight.w500,
                             ),
                           ),

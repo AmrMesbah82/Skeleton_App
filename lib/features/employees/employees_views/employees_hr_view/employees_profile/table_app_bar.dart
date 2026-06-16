@@ -4,14 +4,15 @@
 // Date of Last Edit :14/November/2023
 // Objectives: this is a widget to customize the app bar of the table in track time screen
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 // ignore: must_be_immutable
 class TableContainerAppBar extends StatefulWidget {
@@ -55,11 +56,11 @@ class _TableContainerAppBarState extends State<TableContainerAppBar> {
           : widget.isEmployeesScreen
               ? FontConstants.fontSize025.h
               : FontConstants.fontSize018.h,
-      color: MyThemeData.colorGrey,
+      color: AppColors.colorGrey,
       fontWeight: FontWeight.w400,
     );
     final TextStyle selectedStyle = AppFontStyle.cairoRegularStyle.copyWith(
-      color: MyThemeData.lightPrimary,
+      color: AppColors.lightPrimary,
       /*Theme.of(context).colorScheme.onInverseSurface,*/
       fontWeight: widget.isEmployeeProfile == true
           ? FontWeight.w500
@@ -116,12 +117,12 @@ class _TableContainerAppBarState extends State<TableContainerAppBar> {
                               height: 1.8,
                               shadows: [
                                 Shadow(
-                                    color: MyThemeData.lightPrimary,
+                                    color: AppColors.lightPrimary,
                                     offset: Offset(0, -5))
                               ],
                               color: Colors.transparent,
                               decoration: TextDecoration.underline,
-                              decorationColor: MyThemeData.lightPrimary,
+                              decorationColor: AppColors.lightPrimary,
                               decorationThickness: 2.5)
                       : isTablet
                           ? unselectedStyle
@@ -162,12 +163,12 @@ class _TableContainerAppBarState extends State<TableContainerAppBar> {
                               height: 1.8,
                               shadows: [
                                 Shadow(
-                                    color: MyThemeData.lightPrimary,
+                                    color: AppColors.lightPrimary,
                                     offset: Offset(0, -5))
                               ],
                               color: Colors.transparent,
                               decoration: TextDecoration.underline,
-                              decorationColor: MyThemeData.lightPrimary,
+                              decorationColor: AppColors.lightPrimary,
                               decorationThickness: 2.5)
                       : isTablet
                           ? unselectedStyle
@@ -220,7 +221,7 @@ class _TableContainerAppBarState extends State<TableContainerAppBar> {
           //                     : 0.325.w
           //                 : 0.095.w,
           //         color: widget.selectedIndex == 0
-          //             ? MyThemeData.lightPrimary
+          //             ? AppColors.lightPrimary
           //             : Colors.transparent,
           //       ),
           //       Container(
@@ -242,7 +243,7 @@ class _TableContainerAppBarState extends State<TableContainerAppBar> {
           //                     ? 0.13.w
           //                     : 0.2.h),
           //         color: widget.selectedIndex == 1
-          //             ? MyThemeData.lightPrimary
+          //             ? AppColors.lightPrimary
           //             : Colors.transparent,
           //       ),
           //       Container(
@@ -270,7 +271,7 @@ class _TableContainerAppBarState extends State<TableContainerAppBar> {
           //                             ? 0.13.w
           //                             : 0.2.h),
           //                 color: widget.selectedIndex == 2
-          //                     ? MyThemeData.lightPrimary
+          //                     ? AppColors.lightPrimary
           //                     : Colors.transparent,
           //               ),
           //             )

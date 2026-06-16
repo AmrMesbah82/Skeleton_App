@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/point.dart';
  import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/features/settings/settings_screen/views/owner_screens/plan_details_screen.dart';
 
@@ -17,7 +18,7 @@ enum Plans { professional, premium, elite }
 
 ///  Developer's Name: Bassel Attia
 ///  Date: 10/7/2023
-///  App Version : Knowticed V1
+///  App Version : demo_app V1
 ///  Date of Last Edit: 10/8/2023
 ///
 /// This screen shows membership plans for the user when they press on
@@ -83,7 +84,7 @@ class PlanCard extends StatelessWidget {
   final List<String> points;
   final BorderRadius borderRadius = BorderRadius.circular(9);
   bool isLightTheme =
-      Get.put(ThemeController()).currentTheme.value == MyThemeData.lightTheme;
+      Get.put(ThemeController()).currentTheme.value == AppColors.lightTheme;
   final HapticController hapticController = Get.put(HapticController());
   @override
   Widget build(BuildContext context) {
@@ -117,10 +118,10 @@ class PlanCard extends StatelessWidget {
                       width: isSubscribed && !isLightTheme ? 1.9 : 0,
                       color: Colors.transparent),
                   boxShadow: Get.put(ThemeController()).currentTheme.value ==
-                          MyThemeData.lightTheme
+                          AppColors.lightTheme
                       ? [
                           BoxShadow(
-                            color: MyThemeData.colorGrey.withOpacity(0.2),
+                            color: AppColors.colorGrey.withOpacity(0.2),
                             spreadRadius: 2,
                             blurRadius: 7,
                             offset: const Offset(0, 3), // Offset of the shadow
@@ -138,7 +139,7 @@ class PlanCard extends StatelessWidget {
                         color: isSubscribed & isLightTheme
                             ? Colors.transparent
                             : isSubscribed
-                                ? MyThemeData.dark
+                                ? AppColors.dark
                                 : Colors.transparent),
                   ),
                   child: IntrinsicHeight(
@@ -198,7 +199,7 @@ class PlanCard extends StatelessWidget {
 class _IsSelectedCard extends StatelessWidget {
   _IsSelectedCard();
   final bool isLightTheme =
-      Get.put(ThemeController()).currentTheme.value == MyThemeData.lightTheme;
+      Get.put(ThemeController()).currentTheme.value == AppColors.lightTheme;
   @override
   Widget build(BuildContext context) {
     final isTablet = MediaQuery.of(context).size.shortestSide > 600;
@@ -211,10 +212,10 @@ class _IsSelectedCard extends StatelessWidget {
               border: isLightTheme
                   ? null
                   : Border.all(
-                      color: MyThemeData.darkBackGround,
+                      color: AppColors.darkBackGround,
                       width: 1.8,
                     ),
-              color: isLightTheme ? MyThemeData.colorBlack : MyThemeData.dark,
+              color: isLightTheme ? AppColors.colorBlack : AppColors.dark,
               borderRadius: BorderRadius.circular(11)),
           child: Align(
             alignment: Alignment.bottomLeft,
@@ -225,7 +226,7 @@ class _IsSelectedCard extends StatelessWidget {
               child: Text(
                 "Selected".tr,
                 style: AppFontStyle.cairoRegularStyle.copyWith(
-                    color: MyThemeData.bubbleColor,
+                    color: AppColors.bubbleColor,
                     fontSize: isTablet ? null : FontConstants.fontSize016.h),
               ),
             ),
@@ -303,7 +304,7 @@ class _LeftPolygon extends StatelessWidget {
                   'assets/images/Polygon 1.svg',
                   fit: BoxFit.fill,
                   // ignore: deprecated_member_use
-                  color: isSubscribed ? MyThemeData.colorBlack : null,
+                  color: isSubscribed ? AppColors.colorBlack : null,
                 ),
               ),
             ),
@@ -315,7 +316,7 @@ class _LeftPolygon extends StatelessWidget {
             SvgPicture.asset(
               imageAddress,
               // ignore: deprecated_member_use
-              color: isSubscribed ? MyThemeData.bubbleColor : null,
+              color: isSubscribed ? AppColors.bubbleColor : null,
             ),
             SizedBox(
               height: 0.018.h,
@@ -325,8 +326,8 @@ class _LeftPolygon extends StatelessWidget {
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: 0.048.w,
                 color: isSubscribed
-                    ? MyThemeData.bubbleColor
-                    : MyThemeData.colorBlack,
+                    ? AppColors.bubbleColor
+                    : AppColors.colorBlack,
                 fontWeight: FontWeight.w500,
               ),
             ),

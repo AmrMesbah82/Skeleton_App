@@ -1,7 +1,7 @@
 import 'package:demo_app/features/qiyas/domain/entity/qiyas_tracker_entity.dart';
 
 // REMOVED_MODULE: qiyas module was removed from demo_app.
-// When adding the qiyas module, restore the full implementation from Knowticed_plus.
+// When adding the qiyas module, restore the full implementation from demo_app_plus.
 
 class QiyasInterfaceConsumer {
   /// Returns empty tracker entity until qiyas module is added.

@@ -7,7 +7,7 @@ import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/notification/notification_controller.dart';
 import 'package:demo_app/features/events/controllers/employee_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';

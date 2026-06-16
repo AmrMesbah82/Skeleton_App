@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 
-import '../theme/my_theme.dart';
 
 ///  Developer's Name: Bassel Attia
 ///  Date: 5/8/2023
-///  App Version : Knowticed V1
+///  App Version : demo_app V1
 ///  Date of Last Edit: 5/8/2023
 ///
 /// It's a radio button that's either selected or not. On property isBlack: true,
@@ -25,12 +25,12 @@ class MySwitch extends StatelessWidget {
   Widget build(BuildContext context) {
     late final Color selectedColor = isBlack
         ? Theme.of(context).colorScheme.onInverseSurface
-        : MyThemeData.lightPrimary;
+        : AppColors.lightPrimary;
     return Container(
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           border: Border.all(
-              color: isSelected ? selectedColor : MyThemeData.colorGrey,
+              color: isSelected ? selectedColor : AppColors.colorGrey,
               width: 2.2),
         ),
         child: Icon(Icons.circle,

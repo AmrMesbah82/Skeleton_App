@@ -1,4 +1,5 @@
 import 'package:demo_app/core/custom/35-custom_search_widget_custom.dart';
+import 'package:demo_app/core/custom_knowticed_dropdwon.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/extension/context_extensions.dart';
@@ -10,7 +11,6 @@ import 'package:demo_app/core/widgets/app_search_text_field.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/theming/new_theme.dart';
 import 'package:demo_app/features/department/presentation/controller/add_department_controller.dart';
 
-import '../../../../../../core/custom_knowticed_dropdwon.dart';
 import '../../../../../../core/helper/format_helper.dart';
 import '../../../../../../core/widgets/app_dropdown.dart';
 import '../../../../../../core/widgets/small_drop_down.dart';
@@ -62,7 +62,7 @@ class _AccessSearchAndFilterState extends State<AccessSearchAndFilter> {
 
     final width = ContextExtension(context).isTablet ? 180.sp : 120.sp;
 
-    return CustomKnowticedDropdown<String>(
+    return Customdemo_appDropdown<String>(
       width: width,
       height: 35.h,
       language: context.isArabic ? AppLanguage.arabic : AppLanguage.english,

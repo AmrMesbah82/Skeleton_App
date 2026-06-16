@@ -7,7 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class SortOptionWidget extends StatelessWidget {
   const SortOptionWidget(

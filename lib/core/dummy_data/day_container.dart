@@ -4,11 +4,12 @@
 // Date of Last Edit :22/November/2023
 // Objectives: this is a widget to customize day container in the meetings screen
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/shared_components/title_time_meeting.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class DayContainer extends StatefulWidget {
   const DayContainer({
@@ -62,7 +63,7 @@ class _DayContainerState extends State<DayContainer> {
                                         : FontConstants.fontSize011.w
                                     : FontConstants.fontSize016.h,
                                 fontWeight: FontWeight.w500,
-                                color: MyThemeData.colorWhite),
+                                color: AppColors.colorWhite),
                           ),
                         ),
                       )
@@ -77,7 +78,7 @@ class _DayContainerState extends State<DayContainer> {
                         : FontConstants.fontSize050.h,
                     fontWeight: FontWeight.w600,
                     color: widget.isToday
-                        ? MyThemeData.signOut
+                        ? AppColors.signOut
                         : Theme.of(context).colorScheme.inverseSurface,
                   ),
                 ),

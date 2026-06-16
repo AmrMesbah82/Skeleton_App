@@ -9,9 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 import '../theme/app_colors.dart';
 
@@ -124,7 +124,7 @@ class FiltersAppBar extends StatelessWidget {
           // Padding(
           //   padding: EdgeInsets.symmetric(vertical:isTablet? 0.005.h:0),
           //   child: Divider(
-          //     color: MyThemeData.divider,
+          //     color: AppColors.divider,
           //     thickness: 1.5,
           //   ),
           // ),

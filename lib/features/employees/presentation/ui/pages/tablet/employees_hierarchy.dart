@@ -383,7 +383,7 @@ class _TabletEmployeesHierarchyState extends State<TabletEmployeesHierarchy> {
           //         });
           //       },
           //       textStyle: StyleText.fontSize15Weight400.copyWith(
-          //         color: ColorAppLight.buttonTextColor,
+          //         color: AppColors.textButton,
           //       ),
           //       height: 38.h,
           //       width: isMobile ? 38.w : 135.w,
@@ -393,7 +393,7 @@ class _TabletEmployeesHierarchyState extends State<TabletEmployeesHierarchy> {
           //       image: "assets/employee_assets/new_department.svg",
           //       widthImage: 23,
           //       heightImage: 23,
-          //       svgColor: ColorAppLight.buttonTextColor,
+          //       svgColor: AppColors.textButton,
           //       colorBorder: Colors.transparent,
           //     ),
           //   ],

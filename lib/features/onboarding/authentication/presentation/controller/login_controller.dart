@@ -11,9 +11,6 @@
   import 'package:cloud_firestore/cloud_firestore.dart';
   import 'package:dartz/dartz.dart';
 import 'package:demo_app/features/notification/notification_controller.dart';
-import 'package:demo_app/features/todo_module/features/todo_list/data/data_source/todo_remote_data_source.dart';
-import 'package:demo_app/features/todo_module/features/todo_list/data/repo/todo_repo_impl.dart';
-import 'package:demo_app/features/todo_module/features/todo_list/presentation/controllers/todo_controller.dart';
 import 'package:demo_app/features/roles/presentation/controller/user_role_controller.dart';
   import 'package:firebase_core/firebase_core.dart';
   import 'package:flutter/material.dart';
@@ -1380,11 +1377,7 @@ import 'package:demo_app/features/events/controllers/events_controllers/event_co
       Get.find<MainCoreDepartmentController>().getAllDepartments();
       configurationDependencies(); // form_builder
       // Register todo + role controllers needed by home/roles screens
-      if (!Get.isRegistered<TodoController>()) {
-        Get.put(TodoController(
-            todoRepo: TodoRepoImpl(
-                todoRemoteDataSource: TodoRemoteDataSource())));
-      }
+
       if (!Get.isRegistered<EmployeeRoleController>()) {
         Get.put(EmployeeRoleController());
       }

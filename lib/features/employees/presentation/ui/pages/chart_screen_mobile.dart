@@ -4,7 +4,7 @@ import 'package:demo_app/features/employees/presentation/ui/widgets/custom_colum
 import 'package:demo_app/features/employees/presentation/ui/widgets/custom_employee_chart.dart';
 import 'package:demo_app/features/employees/presentation/ui/widgets/custom_vertical_chart.dart';
 import 'package:demo_app/core/widgets/circle_progress.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/employees/attendance_controller.dart';
 import 'package:demo_app/features/employees/presentation/ui/pages/employee_hr_charts_screen.dart';

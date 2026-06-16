@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // Subscription dialogs (stubs — subscription module not included in demo_app)
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
@@ -91,7 +91,7 @@ class _SettingsHeaderState extends State<SettingsHeader> {
                               : 0.045.h,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: MyThemeData.signOut),
+                              color: AppColors.signOut),
                           child: !isTablet
                               ? Padding(
                                   padding:
@@ -107,7 +107,7 @@ class _SettingsHeaderState extends State<SettingsHeader> {
                                     children: [
                                       SvgPicture.asset(
                                         "assets/images/plus.svg",
-                                        color: MyThemeData().contrastColor(),
+                                        color: AppColors.textButton,
                                       ),
                                       SizedBox(
                                         width: 0.007.w,
@@ -121,7 +121,7 @@ class _SettingsHeaderState extends State<SettingsHeader> {
                                               : FontConstants.fontSize022.h,
                                           fontWeight: FontWeight.w500,
                                           height: 1.5,
-                                          color: MyThemeData().contrastColor(),
+                                          color: AppColors.textButton,
                                         ),
                                       )
                                     ],
@@ -193,7 +193,7 @@ void _showSortMenu(BuildContext context, Offset iconPosition) async {
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
         side: BorderSide(
-          color: MyThemeData.signOut,
+          color: AppColors.signOut,
         )),
     items: sortOptions.map((option) {
       return CustomPopupMenuItem<StatusWant>(

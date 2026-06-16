@@ -167,15 +167,15 @@ class _BulletPointsFieldsAlertState extends State<BulletPointsFieldsAlert> {
                   ),
                   TextBulletFields(
                     bullet1,
-                    'Shared Info Back Of Knowticed...'.tr,
+                    'Shared Info Back Of demo_app...'.tr,
                   ),
                   TextBulletFields(
                     bullet2,
-                    'Shared Info Back Of Knowticed...'.tr,
+                    'Shared Info Back Of demo_app...'.tr,
                   ),
                   TextBulletFields(
                     bullet3,
-                    'Shared Info Back Of Knowticed...'.tr,
+                    'Shared Info Back Of demo_app...'.tr,
                   ),
                 ],
               ),

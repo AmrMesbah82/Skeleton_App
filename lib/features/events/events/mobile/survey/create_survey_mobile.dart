@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/views/survey/survey_body.dart';
 
 class CreateSurveyMobile extends StatefulWidget {

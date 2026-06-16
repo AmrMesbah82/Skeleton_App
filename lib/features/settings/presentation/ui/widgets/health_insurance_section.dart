@@ -11,11 +11,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/settings/presentation/controller/settings_controller.dart';
 
-import '../../../../../core/theme/font_manager.dart';
-import '../../../../../core/theme/my_theme.dart';
+
 import '../../../../../core/widgets/country_picker_dialog.dart';
 import '../../../../../core/widgets/intl_phone_field.dart';
 // REMOVED: import '../../../../authentication/welcome_screen/views/mobile_view/nav_bar.dart';

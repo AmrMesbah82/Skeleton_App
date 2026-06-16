@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/home/app_drawer/presentation/ui/pages/custom_drawer.dart';
@@ -7,10 +8,10 @@ import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 
 import 'package:demo_app/core/widgets/title_row.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/constants/image_paths.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/employee_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/components/page_screenstop_level.dart';
@@ -115,8 +116,8 @@ class _CreateEventState extends State<CreateEvent> {
                           eventController.perviousStepCreateEvent();
                         },
                         hasIcon: false,
-                        buttonColor: MyThemeData.colorWhiteDark,
-                        textColor: MyThemeData.colorBlack,
+                        buttonColor: AppColors.colorWhiteDark,
+                        textColor: AppColors.colorBlack,
                       ),
                       Row(
                         children: [
@@ -162,8 +163,8 @@ class _CreateEventState extends State<CreateEvent> {
                                           }
                                         },
                                   hasIcon: false,
-                                  buttonColor: MyThemeData.colorWhiteDark,
-                                  textColor: MyThemeData.colorBlack,
+                                  buttonColor: AppColors.colorWhiteDark,
+                                  textColor: AppColors.colorBlack,
                                 ),
                           SizedBox(width: 0.02.w),
                           CustomIconButton(
@@ -253,8 +254,8 @@ class _CreateEventState extends State<CreateEvent> {
                                       }
                                     },
                               hasIcon: false,
-                              buttonColor: MyThemeData.colorWhiteDark,
-                              textColor: MyThemeData.colorBlack,
+                              buttonColor: AppColors.colorWhiteDark,
+                              textColor: AppColors.colorBlack,
                             ),
                       CustomIconButton(
                         buttonText: eventController.createEventpageIndex == 2

@@ -12,9 +12,9 @@ import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/helper/functions.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/helper/validator.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
 import 'package:demo_app/core/widgets/dialogs/forgot_pass_dialog.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
@@ -149,7 +149,7 @@ class _StartSignInMobileState extends State<StartSignInMobile> {
                                         crossAxisAlignment: CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                              'Knowticed Plus'.tr,
+                                              'demo_app Plus'.tr,
                                               style: StyleText.fontSize20Weight600.copyWith(
                                                   color: AppColors.text
                                               )
@@ -275,7 +275,7 @@ class _StartSignInMobileState extends State<StartSignInMobile> {
                       height: storage.read('logo') == null ? .06.h : 0.08.h,
                       child: storage.read('logo') == null
                           ? SvgPicture.asset(
-                        'assets/images/knowticed_logo.svg',
+                        'assets/images/demo_app_logo.svg',
                         fit: BoxFit.fill,
                       )
                           : SvgPicture.network(
@@ -291,7 +291,7 @@ class _StartSignInMobileState extends State<StartSignInMobile> {
                     right: Get.locale.toString().contains('ar') ? 0 : 0,
                     child: Center(
                       child: Text(
-                          '${'Copyright'.tr}© ${DateTime.now().year} Knowticed. ${"ALL RIGHTS RESERVED".tr}',
+                          '${'Copyright'.tr}© ${DateTime.now().year} demo_app. ${"ALL RIGHTS RESERVED".tr}',
                           style: StyleText.fontSize14Weight500.copyWith(
                               color: AppColors.text
                           )

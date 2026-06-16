@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomTableAppBar extends StatelessWidget {
   const CustomTableAppBar(
@@ -37,7 +38,7 @@ class CustomTableAppBar extends StatelessWidget {
                     ? FontConstants.fontSize017.h
                     : FontConstants.fontSize016.w,
                 fontWeight: FontWeight.w500,
-                color: MyThemeData.colorWhite,
+                color: AppColors.colorWhite,
               ),
             ),
           ));
@@ -54,7 +55,7 @@ class CustomTableAppBar extends StatelessWidget {
                       : FontConstants.fontSize015.w
                   : FontConstants.fontSize030.w,
               fontWeight: FontWeight.w500,
-              color: MyThemeData.colorWhite,
+              color: AppColors.colorWhite,
             ),
           ),
         ));
@@ -72,7 +73,7 @@ class CustomTableAppBar extends StatelessWidget {
                       ? FontConstants.fontSize017.h
                       : FontConstants.fontSize015.w,
                   fontWeight: FontWeight.w500,
-                  color: MyThemeData.colorWhite,
+                  color: AppColors.colorWhite,
                 ),
               ),
             ));
@@ -87,7 +88,7 @@ class CustomTableAppBar extends StatelessWidget {
                     ? FontConstants.fontSize017.h
                     : FontConstants.fontSize015.w,
                 fontWeight: FontWeight.w500,
-                color: MyThemeData.colorWhite,
+                color: AppColors.colorWhite,
               ),
             ),
           ));
@@ -107,7 +108,7 @@ class CustomTableAppBar extends StatelessWidget {
                       : FontConstants.fontSize015.w
                   : FontConstants.fontSize030.w,
           fontWeight: FontWeight.w500,
-          color: MyThemeData.colorWhite,
+          color: AppColors.colorWhite,
         ),
       ));
     }

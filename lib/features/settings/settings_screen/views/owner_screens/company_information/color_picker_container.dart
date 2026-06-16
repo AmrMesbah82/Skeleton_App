@@ -7,9 +7,9 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/shared_components/timeline_widget.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
@@ -223,7 +223,7 @@ class _ColorPickerContainerState extends State<ColorPickerContainer> {
                           ? Size(0.15.w, 0.045.h)
                           : Size(0.07.w, 0.05.h)
                           : Size(0.2.w, 0.05.h),
-                      backgroundColor: MyThemeData.signOut,
+                      backgroundColor: AppColors.signOut,
                       shape: RoundedRectangleBorder(
                         borderRadius: const BorderRadius.all(
                           Radius.circular(8),

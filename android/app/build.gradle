@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.knowticed.plus"
+    namespace = "com.demo_app.plus"
     compileSdk = 36
     ndkVersion = flutter.ndkVersion
 
@@ -21,7 +21,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.knowticed.plus"
+        applicationId = "com.demo_app.plus"
         minSdkVersion = flutter.minSdkVersion
         targetSdk = 35
         versionCode = flutter.versionCode

@@ -1,14 +1,15 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomDialogBox extends StatelessWidget {
   final String title;
@@ -213,7 +214,7 @@ class CustomDialogBox extends StatelessWidget {
                                               : isPortrait == true
                                                   ? FontConstants.fontSize019.h
                                                   : FontConstants.fontSize028.h,
-                                          color: MyThemeData.colorGrey,
+                                          color: AppColors.colorGrey,
                                           fontWeight: FontWeight.w500,
                                           height: 0.0014.h),
                                 ),
@@ -255,7 +256,7 @@ class CustomDialogBox extends StatelessWidget {
                               fontSize: isPortrait == true
                                   ? FontConstants.fontSize019.h
                                   : FontConstants.fontSize023.h,
-                              color: MyThemeData.colorLightGrey,
+                              color: AppColors.colorLightGrey,
                               fontWeight: FontWeight.w500),
                         ),
                       ),

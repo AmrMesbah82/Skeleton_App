@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:lottie/lottie.dart';
 
-import '../theme/font_manager.dart';
-import '../theme/my_theme.dart';
+
 
 ///  Developer's Name: Bassel Attia
 ///  Date: 5/8/2023
-///  App Version : Knowticed V1
+///  App Version : demo_app V1
 ///  Date of Last Edit: 5/8/2023
 ///
 /// This mixin shows a modal bottom sheet with a check mark and a thank you after
@@ -23,7 +23,7 @@ mixin ModalBottomSheets {
     final HapticController hapticController = Get.put(HapticController());
     showModalBottomSheet(
       context: context,
-      barrierColor: MyThemeData.colorGrey.withOpacity(0.5),
+      barrierColor: AppColors.colorGrey.withOpacity(0.5),
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
       builder: (context) {
@@ -49,7 +49,7 @@ mixin ModalBottomSheets {
                 textAlign: TextAlign.center,
                 style: AppFontStyle.cairoRegularStyle.copyWith(
                   fontSize: FontConstants.fontSize020.h,
-                  color: MyThemeData.colorDarkGrey,
+                  color: AppColors.colorDarkGrey,
                   fontWeight: FontWeight.w500,
                 ),
               ),

@@ -4,10 +4,11 @@
 /// AUTHOR: Mohamed Elrashidy
 /// REFACTORED AT: 2/2/2025
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/circle_progress.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
@@ -93,11 +94,11 @@ class _SystemLogsTableState extends State<SystemLogsTable> {
           return Container(
             decoration: BoxDecoration(
               color: index % 2 == 0
-                  ? themeController.currentTheme == MyThemeData.lightTheme
+                  ? themeController.currentTheme == AppColors.lightTheme
                       ? const Color(0xFFf1f1f1)
-                      : MyThemeData.darkBackGround
-                  : themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorWhite
+                      : AppColors.darkBackGround
+                  : themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorWhite
                       : const Color(0xFF28282B),
             ),
             child: Padding(

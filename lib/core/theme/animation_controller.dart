@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:demo_app/core/theme/grc_theme_controller.dart';
+import 'package:demo_app/features/data_grc_module/feature/nav_bar.dart';
 
 ///Youssef Ashraf:
 ///Adding Horizontal animation  to a given child, used in message bubble
@@ -61,7 +60,7 @@ class SlideAnimationState extends State<SlideAnimation>
   /// Start the animation. If animations are enabled, reset and play the animation.
   /// Otherwise, set the animation to the final state (i.e. the end of the animation).
   void startAnimation() {
-    if (Get.find<GRCThemeController>().animationsEnabled.value) {
+    if (themeController.animationsEnabled.value) {
       // Enable animation: reset and play
       controller
         ..reset()

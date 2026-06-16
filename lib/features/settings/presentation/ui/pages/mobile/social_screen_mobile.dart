@@ -21,12 +21,12 @@ import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/shared_components/request_escalate_dialog.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
 
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/constants/system_actions.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';

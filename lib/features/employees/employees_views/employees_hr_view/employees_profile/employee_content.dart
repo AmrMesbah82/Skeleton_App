@@ -5,8 +5,8 @@
 // Objectives: this is a widget to customize the title and the value in the employee content container
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class EmployeeContent extends StatelessWidget {
   const EmployeeContent(

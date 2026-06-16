@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
-import '../theme/font_manager.dart';
+
 ///  Developer's Name: Bassel Attia
 ///  Date: 21/7/2023
-///  App Version : Knowticed V1
+///  App Version : demo_app V1
 ///  Date of Last Edit: 27/7/2023
 ///
 /// Shows text with a tick beside it. Each point describes the plan.

@@ -172,7 +172,7 @@ class CustomValidatedTextField extends StatelessWidget {
           textDirection: textDirection,
           style: StyleText.fontSize14Weight400.copyWith(
             color:
-                lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+            AppColors.text
           ),
         ),
         SizedBox(height: 4.h),
@@ -188,9 +188,7 @@ class CustomValidatedTextField extends StatelessWidget {
             keyboardType: _getKeyboardType(),
             style: textStyle ??
                 StyleText.fontSize12Weight400.copyWith(
-                  color: lightMode
-                      ? ColorAppLight.blackButton
-                      : ColorAppDark.titleValue,
+                  color: AppColors.text
                 ),
             onChanged: (val) {
               if (onChanged != null) onChanged!(val);
@@ -203,13 +201,11 @@ class CustomValidatedTextField extends StatelessWidget {
               hoverColor: Colors.transparent,
               hintText: hint,
               hintStyle: StyleText.fontSize10Weight500.copyWith(
-                color: lightMode
-                    ? ColorAppLight.grayTextSla
-                    : ColorAppDark.titleKey,
+                color: AppColors.secondaryText
               ),
               filled: true,
               fillColor: fillColor ??
-                  (lightMode ? ColorAppLight.whiteOp : ColorAppDark.background),
+                  (AppColors.background),
               isDense: true,
               counterText: '',
               prefixIcon: buildPrefixIcon(),

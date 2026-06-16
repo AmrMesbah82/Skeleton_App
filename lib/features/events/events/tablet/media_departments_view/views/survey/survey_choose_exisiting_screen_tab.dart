@@ -1,4 +1,5 @@
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart' show SurveyController;
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -7,10 +8,10 @@ import 'package:demo_app/features/home/app_drawer/presentation/ui/pages/custom_d
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/form_fields/custom_search.dart';
 import 'package:demo_app/core/widgets/title_row.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/constants/image_paths.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/filter_event_dialog.dart';
 import 'package:demo_app/features/events/components/reusable_icon_container.dart';
 import 'package:demo_app/features/events/components/survey_card.dart';
@@ -36,7 +37,7 @@ class _SurveyChooseExisitingTabState extends State<SurveyChooseExisitingTab> {
   ButtonStyle buttonStyle(Color buttonColor) {
     bool isTablet = MediaQuery.of(context).size.shortestSide > 600;
     return ElevatedButton.styleFrom(
-        backgroundColor: buttonColor, //MyThemeData.bubbleColor,
+        backgroundColor: buttonColor, //AppColors.bubbleColor,
         minimumSize: isTablet ? Size(0.1.w, 0.053.h) : Size(0.4.w, 0.042.h),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)));
   }
@@ -85,8 +86,8 @@ class _SurveyChooseExisitingTabState extends State<SurveyChooseExisitingTab> {
                         height: isPortrait ? 0.04.h : 0.052.h,
                         child: CustomSearchFiled2(
                             fillColor: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorWhite
+                                    AppColors.lightTheme
+                                ? AppColors.colorWhite
                                 : Theme.of(context).colorScheme.inversePrimary,
                             hint: "Search".tr,
                             onChanged: surveyController.onSearchTextChanged,
@@ -215,7 +216,7 @@ class _SurveyChooseExisitingTabState extends State<SurveyChooseExisitingTab> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: <Widget>[
                       // CustomElevatedButton(
-                      //   buttonStyle: buttonStyle(MyThemeData.colorGreydark),
+                      //   buttonStyle: buttonStyle(AppColors.colorGreydark),
                       //   onPressed: () {
                       //     Navigator.pop(context);
                       //   },
@@ -223,11 +224,11 @@ class _SurveyChooseExisitingTabState extends State<SurveyChooseExisitingTab> {
                       //       ? FontConstants.fontSize022.h
                       //       : FontConstants.fontSize025.h),
                       //   buttonText: "Save for later".tr,
-                      //   textColor: MyThemeData.colorWhite,
+                      //   textColor: AppColors.colorWhite,
                       //   fontweight: FontWeight.w600,
                       // ),
                       MainCustomIconButton(
-                        buttonStyle: buttonStyle(MyThemeData.bubbleColor),
+                        buttonStyle: buttonStyle(AppColors.bubbleColor),
                         onPressed: selectedIndex == null
                             ? () {}
                             : () {

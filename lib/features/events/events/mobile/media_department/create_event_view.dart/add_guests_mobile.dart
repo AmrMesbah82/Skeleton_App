@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
 import 'package:flutter/material.dart';
@@ -11,9 +12,9 @@ import 'package:demo_app/core/widgets/cupertino_time_picker.dart';
 import 'package:demo_app/core/shared_components/custom_black_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/components/guests_container.dart';
@@ -231,9 +232,9 @@ class _AddGuestsMobileState extends State<AddGuestsMobile> {
                     child: SvgPicture.asset(
                       'assets/images/Search.svg',
                       color: (themeController.currentTheme ==
-                              MyThemeData.lightTheme
+                              AppColors.lightTheme
                           ? Theme.of(context).colorScheme.scrim.withOpacity(0.6)
-                          : MyThemeData.colorWhite),
+                          : AppColors.colorWhite),
                     ),
                   ),
                   textController: eventController.inviteController,
@@ -463,7 +464,7 @@ class _AddGuestsMobileState extends State<AddGuestsMobile> {
                           ? 'assets/icons/CheckListOn.svg'
                           : 'assets/icons/CheckListOff.svg',
                       color: eventController.sendReminders
-                          ? MyThemeData.signOut
+                          ? AppColors.signOut
                           : null,
                       //  width: 0.070.w,
                       height: isVertical ? 0.025.h : 0.035.h,
@@ -479,7 +480,7 @@ class _AddGuestsMobileState extends State<AddGuestsMobile> {
                           fontSize: FontConstants.fontSize015.h,
                           color: eventController.sendReminders
                               ? Theme.of(context).colorScheme.secondaryContainer
-                              : MyThemeData.colorGrey,
+                              : AppColors.colorGrey,
                           height: 1.2,
                           fontWeight: eventController.sendReminders
                               ? FontWeight.w400
@@ -675,7 +676,7 @@ padding: EdgeInsets.zero,
                                               child: SvgPicture.asset(
                                                 "assets/icons/trashIcon.svg",
                                                 height: 0.03.h,
-                                                color: MyThemeData.block,
+                                                color: AppColors.block,
                                               )),
                                         ),
                                       ],
@@ -722,7 +723,7 @@ padding: EdgeInsets.zero,
                           ? 'assets/icons/CheckListOn.svg'
                           : 'assets/icons/CheckListOff.svg',
                       color: eventController.requiredApproval
-                          ? MyThemeData.signOut
+                          ? AppColors.signOut
                           : null,
                       //  width: 0.070.w,
                       height: isVertical ? 0.025.h : 0.035.h,
@@ -738,7 +739,7 @@ padding: EdgeInsets.zero,
                           fontSize: FontConstants.fontSize015.h,
                           color: eventController.requiredApproval
                               ? Theme.of(context).colorScheme.secondaryContainer
-                              : MyThemeData.colorGrey,
+                              : AppColors.colorGrey,
                           height: 1.2,
                           fontWeight: eventController.requiredApproval
                               ? FontWeight.w400
@@ -774,12 +775,12 @@ padding: EdgeInsets.zero,
                               child: SvgPicture.asset(
                                 'assets/images/Search.svg',
                                 color: (themeController.currentTheme ==
-                                        MyThemeData.lightTheme
+                                        AppColors.lightTheme
                                     ? Theme.of(context)
                                         .colorScheme
                                         .scrim
                                         .withOpacity(0.6)
-                                    : MyThemeData.colorWhite),
+                                    : AppColors.colorWhite),
                               ),
                             ),
                             textController:

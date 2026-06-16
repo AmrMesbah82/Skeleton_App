@@ -6,7 +6,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:demo_app/core/widgets/bread_scrum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
+
 
 
 Row titleRow(

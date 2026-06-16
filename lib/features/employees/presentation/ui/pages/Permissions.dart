@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/employees/employees_views/employees_hr_view/employees_profile/custom_expandable_container.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/employees_views/employees_hr_view/permissions/permissions_widgets.dart';
 
 class PermissionsView extends StatefulWidget {
@@ -22,8 +23,8 @@ class _PermissionsViewState extends State<PermissionsView> {
   bool expanded4 = false;
   bool expanded5 = false;
   bool expanded6 = false;
-  Color containerColor = MyThemeData.signOut;
-  Color textColor = MyThemeData().contrastColor();
+  Color containerColor = AppColors.signOut;
+  Color textColor = AppColors.textButton;
   final HapticController hapticController = Get.put(HapticController());
   @override
   Widget build(BuildContext context) {

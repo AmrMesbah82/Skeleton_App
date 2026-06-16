@@ -11,17 +11,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/custom_validate_textfield.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
-// REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/theming/new_theme.dart';
-import 'package:demo_app/features/roles/account_status/presentation/controller/account_status_controller.dart';
-import 'package:demo_app/features/onboarding/authentication/domain/enums/employee_status_enum.dart';
 
-import '../../../../../../core/enumeration/enum.dart';
-import '../../../../../../core/theme/app_text_styles.dart';
-import '../../../../../../core/theme/font_manager.dart';
-import '../../../../../../core/theme/my_theme.dart';
-import '../../../../../../core/widgets/app_dropdown.dart';
-import '../../../../../../core/widgets/dialogs/user_access_filter_dialog.dart';
 
 import '../../../utils/account_status_helper.dart';
 import '../../controller/account_status_cubit.dart';
@@ -47,9 +37,9 @@ class SearchAndFilter extends StatelessWidget {
         crossAxisAlignment:
         isPortrait ? CrossAxisAlignment.start : CrossAxisAlignment.center,
         children: [
-          // ✅ Replace AppSearchTextField with CustomKnowticedTextField
+          // ✅ Replace AppSearchTextField with Customdemo_appTextField
           Expanded(
-            child: CustomKnowticedTextField(
+            child: Customdemo_appTextField(
               labelEn: '',
               labelAr: '',
               hintEn: 'Search',

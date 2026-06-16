@@ -1,12 +1,13 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/model/survey_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/row_icon_text.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/components/survey_pop_menu.dart';
@@ -217,8 +218,8 @@ class _EventContainerHistoryState extends State<EventContainerHistory> {
                                           ? 'Accepted'
                                           : 'Rejected') ==
                                       'Accepted'
-                                  ? MyThemeData.unBlock
-                                  : MyThemeData.colorRed,
+                                  ? AppColors.unBlock
+                                  : AppColors.colorRed,
                               fontWeight: FontWeight.w600),
                         ),
                       ],

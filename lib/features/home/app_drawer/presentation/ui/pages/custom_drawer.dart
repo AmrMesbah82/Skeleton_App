@@ -15,8 +15,8 @@ import 'package:demo_app/core/constants/image_paths.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/custom_appbar.dart';
 import 'package:demo_app/core/widgets/dialogs/custom_logout_dialog.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/employees/employees_views/employee_attendance.dart';
@@ -146,7 +146,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
             showButtons: true,
             buttonText: 'Yes',
             buttoncolor: AppColors.primary,
-            buttonFontColor: MyThemeData().contrastColor(),
+            buttonFontColor: AppColors.textButton,
             onConfirm: () {
               hapticController.triggerHapticFeedback(
                   vibration: VibrateType.heavyImpact,
@@ -313,8 +313,8 @@ class _CustomDrawerState extends State<CustomDrawer> {
                                 style: StyleText.fontSize12Weight500.copyWith(
                                   color: Theme.of(context).brightness ==
                                       Brightness.light
-                                      ? ColorAppLight.blackButton
-                                      : ColorAppDark.titleValue,
+                                      ? AppColors.blackButton
+                                      : AppColors.white,
                                 ),
                               ),
                             ),
@@ -370,7 +370,7 @@ class _CustomDrawerState extends State<CustomDrawer> {
               ? SvgPicture.asset(
             lightMode
                 ? "assets/new_size_logo.svg"
-                : "assets/images/knowticed_logo_dark.svg",
+                : "assets/images/demo_app_logo_dark.svg",
             width: 60.w,
             height: 60.w,
             fit: BoxFit.contain,

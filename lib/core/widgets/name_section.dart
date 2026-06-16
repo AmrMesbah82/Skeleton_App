@@ -3,11 +3,12 @@ import 'package:demo_app/features/services_mangment_module/core/custom_textformf
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 
 import '../../generated/l10n.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class NameSection extends StatefulWidget {
   final Function(String)? firstNameOnChanged;
@@ -197,7 +198,7 @@ class _NameSectionState extends State<NameSection> {
           Text(
             widget.title!,
             style: StyleText.fontSize16Weight600.copyWith(
-              color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+              color: AppColors.text
             ),
           ),
           SizedBox(height: 16.h),

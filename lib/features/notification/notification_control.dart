@@ -2617,7 +2617,7 @@ class _NotificationControlPageState extends State<NotificationControlPage> {
             label,
             style: StyleText.fontSize12Weight500.copyWith(
               color:
-              isSelected ? ColorAppLight.buttonTextColor : AppColors.text,
+              isSelected ? AppColors.textButton : AppColors.text,
             ),
           ),
         ),

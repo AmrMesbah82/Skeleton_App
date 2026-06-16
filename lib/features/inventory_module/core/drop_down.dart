@@ -335,7 +335,7 @@ class _CustomDropdownFormFieldFinalState extends State<CustomDropdownFormFieldFi
                                   assetPath: "assets/images/plus.svg",
                                   width: 15.w,
                                   height: 15.h,
-                                  color: ColorAppLight.buttonTextColor,
+                                  color: AppColors.textButton,
                               ),
                             ),
                           ),
@@ -393,7 +393,7 @@ class _CustomDropdownFormFieldFinalState extends State<CustomDropdownFormFieldFi
                             height: 30.h,
                             color: AppColors.primary,
                             textStyle: StyleText.fontSize14Weight500.copyWith(
-                              color: ColorAppLight.buttonTextColor,
+                              color: AppColors.textButton,
                             ),
                           ),
                         ],
@@ -725,7 +725,7 @@ class _CustomDropdownFormFieldFinalState extends State<CustomDropdownFormFieldFi
                         child: Icon(
                           Icons.add,
                           size: 18.sp,
-                          color: ColorAppLight.buttonTextColor,
+                          color: AppColors.textButton,
                         ),
                       ),
                     ),
@@ -970,8 +970,8 @@ class _CustomDropdownFormFieldCalenderState
             widget.label!,
             style: StyleText.fontSize14Weight400.copyWith(
               color: lightMode
-                  ? ColorAppLight.blackButton
-                  : ColorAppDark.titleValue,
+                  ? AppColors.blackButton
+                  : AppColors.white,
             ),
           ),
           SizedBox(height: (widget.spaceHeight ?? 8.sp)),
@@ -986,7 +986,7 @@ class _CustomDropdownFormFieldCalenderState
             decoration: BoxDecoration(
               color:
                   widget.dropdownColor ??
-                  (lightMode ? ColorAppLight.whiteOp : ColorAppDark.background),
+                  (lightMode ? AppColors.background : AppColors.background),
               borderRadius: BorderRadius.circular(4.r),
               border: Border.all(color: Colors.transparent),
             ),
@@ -1002,11 +1002,11 @@ class _CustomDropdownFormFieldCalenderState
                     style: StyleText.fontSize12Weight400.copyWith(
                       color: internalSelectedValue != null
                           ? (lightMode
-                                ? ColorAppLight.blackButton
-                                : ColorAppDark.titleValue)
+                                ? AppColors.blackButton
+                                : AppColors.white)
                           : (lightMode
-                                ? ColorAppLight.grayTextSla
-                                : ColorAppDark.whiteShadow),
+                                ? AppColors.secondaryText
+                                : AppColors.whiteShadow),
                     ),
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -1017,8 +1017,8 @@ class _CustomDropdownFormFieldCalenderState
                   height: widget.heightIcon,
                   fit: BoxFit.scaleDown,
                   color: lightMode
-                      ? ColorAppLight.grayTextSla
-                      : ColorAppDark.whiteShadow,
+                      ? AppColors.secondaryText
+                      : AppColors.whiteShadow,
                 ),
               ],
             ),
@@ -1146,8 +1146,8 @@ class _CustomDropdownFormFieldDateRangeState
             widget.label!,
             style: StyleText.fontSize14Weight400.copyWith(
               color: lightMode
-                  ? ColorAppLight.blackButton
-                  : ColorAppDark.titleValue,
+                  ? AppColors.blackButton
+                  : AppColors.white,
             ),
           ),
           SizedBox(height: (widget.spaceHeight ?? 8.sp)),

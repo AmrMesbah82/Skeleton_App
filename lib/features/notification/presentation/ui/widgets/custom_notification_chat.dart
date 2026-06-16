@@ -1,12 +1,13 @@
-import 'package:demo_app/core/theme/font_manager.dart';
+
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
 import '../../../../../core/helper/date_time_in_arabic.dart';
-import '../../../../../core/theme/my_theme.dart';
+
 import '../../../data/models/notification_model_main_core.dart';
 
 class CustomNotificationChatMobile extends StatefulWidget {
@@ -30,7 +31,7 @@ class _CustomNotificationChatMobileState
     bool isPortrait =
         MediaQuery.of(context).orientation == Orientation.portrait;
     return ElevatedButton.styleFrom(
-        backgroundColor: buttonColor, //MyThemeData.bubbleColor,
+        backgroundColor: buttonColor, //AppColors.bubbleColor,
         minimumSize: isPortrait ? Size(0.1.w, 0.045.h) : Size(0.2.w, 0.055.h),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)));
   }
@@ -54,7 +55,7 @@ class _CustomNotificationChatMobileState
               width: 0.01.h,
               height: (isTablet ? (isPortrait ? 0.14.h : 0.18.h) : 0.15.h),
               decoration: BoxDecoration(
-                color: MyThemeData.lightPrimary,
+                color: AppColors.lightPrimary,
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(
                       Get.locale.toString().contains('en') ? 7.0 : 0),
@@ -86,9 +87,9 @@ class _CustomNotificationChatMobileState
                                 : FontConstants.fontSize022.h
                             : FontConstants.fontSize016.h,
                         color: mainCoreThemeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorDarkGrey
-                            : MyThemeData.colorGreydark,
+                                AppColors.lightTheme
+                            ? AppColors.colorDarkGrey
+                            : AppColors.colorGreydark,
                         fontWeight: FontWeight.w500,
                       ),
                     ),
@@ -108,14 +109,14 @@ class _CustomNotificationChatMobileState
                           isTablet ? (isPortrait ? 0.045.h : 0.05.h) : 0.04.h,
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(6),
-                          color: MyThemeData.bubbleColor),
+                          color: AppColors.bubbleColor),
                       child: Transform.scale(
                           scale: isTablet ? (isPortrait ? 0.6 : 0.7) : 0.6,
                           child: SvgPicture.asset(
                             widget.isChat == false
                                 ? "assets/images/service_notification.svg"
                                 : "assets/images/chat_notifi_mob.svg",
-                            color: MyThemeData().contrastColor(),
+                            color: AppColors.textButton,
                           )),
                     ),
                     Column(
@@ -141,9 +142,9 @@ class _CustomNotificationChatMobileState
                                           : FontConstants.fontSize027.h
                                       : FontConstants.fontSize022.h,
                                   color: mainCoreThemeController.currentTheme ==
-                                          MyThemeData.lightTheme
-                                      ? MyThemeData.colorBlack
-                                      : MyThemeData.colorWhiteDark,
+                                          AppColors.lightTheme
+                                      ? AppColors.colorBlack
+                                      : AppColors.colorWhiteDark,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
@@ -183,9 +184,9 @@ class _CustomNotificationChatMobileState
                                                         .fontSize020.h,
                                                 color: mainCoreThemeController
                                                             .currentTheme ==
-                                                        MyThemeData.lightTheme
-                                                    ? MyThemeData.colorDarkGrey
-                                                    : MyThemeData.colorGreydark,
+                                                        AppColors.lightTheme
+                                                    ? AppColors.colorDarkGrey
+                                                    : AppColors.colorGreydark,
                                                 fontWeight: FontWeight.w500,
                                                 height: 1.4),
                                       ),
@@ -206,9 +207,9 @@ class _CustomNotificationChatMobileState
                               //             : FontConstants.fontSize022.h
                               //         : FontConstants.fontSize017.h,
                               //     color: themeController.currentTheme ==
-                              //             MyThemeData.lightTheme
-                              //         ? MyThemeData.colorDarkGrey
-                              //         : MyThemeData.colorGreydark,
+                              //             AppColors.lightTheme
+                              //         ? AppColors.colorDarkGrey
+                              //         : AppColors.colorGreydark,
                               //     fontWeight: FontWeight.w500,
                               //   ),
                               // )

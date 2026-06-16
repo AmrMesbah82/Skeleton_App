@@ -15,7 +15,7 @@ enum AppLanguage {
 }
 
 /// Custom Dropdown Form Field with Bilingual Support (AR/EN) and Hover Effects
-class CustomKnowticedDropdown<T> extends StatefulWidget {
+class Customdemo_appDropdown<T> extends StatefulWidget {
   // Basic Properties
   final String labelEn;
   final String labelAr;
@@ -70,7 +70,7 @@ class CustomKnowticedDropdown<T> extends StatefulWidget {
   final String? errorMessageRequiredEn;
   final String? errorMessageRequiredAr;
 
-  const CustomKnowticedDropdown({
+  const Customdemo_appDropdown({
     Key? key,
     required this.labelEn,
     required this.labelAr,
@@ -111,12 +111,12 @@ class CustomKnowticedDropdown<T> extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  State<CustomKnowticedDropdown<T>> createState() =>
-      _CustomKnowticedDropdownState<T>();
+  State<Customdemo_appDropdown<T>> createState() =>
+      _Customdemo_appDropdownState<T>();
 }
 
-class _CustomKnowticedDropdownState<T>
-    extends State<CustomKnowticedDropdown<T>> {
+class _Customdemo_appDropdownState<T>
+    extends State<Customdemo_appDropdown<T>> {
   late FocusNode _focusNode;
   String? _errorMessage;
   int? _hoveredIndex;

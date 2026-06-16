@@ -1,8 +1,10 @@
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
+
 
 import '../../features/onboarding/presentation/ui/pages/onboarding.dart';
 
@@ -65,8 +67,8 @@ class AttachmentPdfContainer extends StatelessWidget {
             color: Theme.of(context).colorScheme.inversePrimary,
             borderRadius: BorderRadius.circular(8),
             border: Border.all(
-              color: mainCoreThemeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.colorBlack
+              color: mainCoreThemeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.colorBlack
                   : Colors.transparent,
               width: 1.0,
             )),
@@ -103,9 +105,9 @@ class AttachmentPdfContainer extends StatelessWidget {
                                     : FontConstants.fontSize018.h)
                                 : FontConstants.fontSize016.h,
                             color: mainCoreThemeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhiteDark,
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhiteDark,
                             fontWeight: FontWeight.w600,
                             height: isTablet ? 1.6 : 1.3),
                         maxLines: 1,
@@ -132,9 +134,9 @@ class AttachmentPdfContainer extends StatelessWidget {
                                       : FontConstants.fontSize016.h)
                                   : FontConstants.fontSize014.h,
                               color: mainCoreThemeController.currentTheme ==
-                                      MyThemeData.lightTheme
-                                  ? MyThemeData.colorDarkGrey
-                                  : MyThemeData.colorGreydark,
+                                      AppColors.lightTheme
+                                  ? AppColors.colorDarkGrey
+                                  : AppColors.colorGreydark,
                               fontWeight: FontWeight.w400,
                               height: isPortrait ? 2 : 2),
                           maxLines: 1,
@@ -150,9 +152,9 @@ class AttachmentPdfContainer extends StatelessWidget {
                         width: 0.02.h,
                         height: 0.02.h,
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorBlack
-                            : MyThemeData.colorWhiteDark,
+                                AppColors.lightTheme
+                            ? AppColors.colorBlack
+                            : AppColors.colorWhiteDark,
                       )*/
                     ],
                   ),

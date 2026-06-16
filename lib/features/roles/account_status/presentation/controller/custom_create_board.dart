@@ -1,6 +1,7 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 /// Date Created :14/November/2023
 /// Developer Name : Bassem Mohamed
@@ -81,9 +82,9 @@ class _CustomCreateBoardContainerState
               decoration: BoxDecoration(
                 // ignore: unrelated_type_equality_checks
                 color: isTablet
-                    ? themeController.currentTheme == MyThemeData.lightTheme
-                        ? MyThemeData.colorLightGrey
-                        : MyThemeData.darkBackGround
+                    ? themeController.currentTheme == AppColors.lightTheme
+                        ? AppColors.colorLightGrey
+                        : AppColors.darkBackGround
                     : Theme.of(context).colorScheme.inversePrimary,
                 borderRadius: BorderRadius.circular(8.0),
               ),
@@ -100,7 +101,7 @@ class _CustomCreateBoardContainerState
                         taskController.imageUrl == ""
                             ? CircleAvatar(
                                 radius: 0.04.h,
-                                backgroundColor: MyThemeData.barrierColor,
+                                backgroundColor: AppColors.barrierColor,
                                 child: Center(
                                   child: Transform.scale(
                                       scale: isTablet ? 1.2 : 0.8,
@@ -110,7 +111,7 @@ class _CustomCreateBoardContainerState
                               )
                             : CircleAvatar(
                                 radius: 0.085.w,
-                                backgroundColor: MyThemeData.barrierColor,
+                                backgroundColor: AppColors.barrierColor,
                                 child: Center(
                                   child: Transform.scale(
                                     scale: 1.2,
@@ -130,11 +131,11 @@ class _CustomCreateBoardContainerState
                               child: Transform.scale(
                                 scale: 1.5,
                                 child: CircleAvatar(
-                                    backgroundColor: MyThemeData.signOut,
+                                    backgroundColor: AppColors.signOut,
                                     radius: 0.01.h,
                                     child: SvgPicture.asset(
                                       "assets/icons/CameraIcon.svg",
-                                      color: MyThemeData().contrastColor(),
+                                      color: AppColors.textButton,
                                       height: 0.015.h,
                                     )),
                               ),
@@ -146,9 +147,9 @@ class _CustomCreateBoardContainerState
                   SizedBox(height: space),
                   ColumnRequestData(
                     fillColor:
-                        themeController.currentTheme == MyThemeData.lightTheme
-                            ? MyThemeData.colorLightGrey
-                            : MyThemeData.colorBlack,
+                        themeController.currentTheme == AppColors.lightTheme
+                            ? AppColors.colorLightGrey
+                            : AppColors.colorBlack,
                     title: "Board Name",
                     isTextField: true,
                     hint: "Enter Board Name",
@@ -218,9 +219,9 @@ class _CustomCreateBoardContainerState
                     title: "Description",
                     isTextField: true,
                     fillColor:
-                        themeController.currentTheme == MyThemeData.lightTheme
-                            ? MyThemeData.colorLightGrey
-                            : MyThemeData.colorBlack,
+                        themeController.currentTheme == AppColors.lightTheme
+                            ? AppColors.colorLightGrey
+                            : AppColors.colorBlack,
                     hint: "Enter Board Description",
                     isOptional: false,
 
@@ -261,7 +262,7 @@ class _CustomCreateBoardContainerState
                   ? const Center(child: CircleProgress())
                   : MainCustomButton(
                       buttonColor:
-                          !isButtonEnabled ? MyThemeData.GreyBack : null,
+                          !isButtonEnabled ? AppColors.GreyBack : null,
                       buttonText: 'Create'.tr,
                       onPressed: isButtonEnabled
                           ? () {

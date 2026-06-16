@@ -1,9 +1,9 @@
 {
   "project_info": {
     "project_number": "662885989585",
-    "firebase_url": "https://knowticed-v2-scheme-default-rtdb.firebaseio.com",
-    "project_id": "knowticed-v2-scheme",
-    "storage_bucket": "knowticed-v2-scheme.appspot.com"
+    "firebase_url": "https://demo_app-v2-scheme-default-rtdb.firebaseio.com",
+    "project_id": "demo_app-v2-scheme",
+    "storage_bucket": "demo_app-v2-scheme.appspot.com"
   },
   "client": [
     {
@@ -48,7 +48,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:662885989585:android:bbec3e0093599f056fd9f0",
         "android_client_info": {
-          "package_name": "com.example.knowticed"
+          "package_name": "com.example.demo_app"
         }
       },
       "oauth_client": [],
@@ -67,7 +67,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:662885989585:android:d03601be31ea14c96fd9f0",
         "android_client_info": {
-          "package_name": "com.example.knowticed_admin"
+          "package_name": "com.example.demo_app_admin"
         }
       },
       "oauth_client": [],
@@ -86,7 +86,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:662885989585:android:dff5de95b83f5c2e6fd9f0",
         "android_client_info": {
-          "package_name": "com.example.knowticed_app"
+          "package_name": "com.example.demo_app_app"
         }
       },
       "oauth_client": [],
@@ -143,7 +143,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:662885989585:android:4b3c920092fbd8d16fd9f0",
         "android_client_info": {
-          "package_name": "com.knowticed.admin"
+          "package_name": "com.demo_app.admin"
         }
       },
       "oauth_client": [],
@@ -162,7 +162,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:662885989585:android:05a2dad6252d0e166fd9f0",
         "android_client_info": {
-          "package_name": "com.knowticed.app"
+          "package_name": "com.demo_app.app"
         }
       },
       "oauth_client": [],

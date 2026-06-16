@@ -1,10 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/settings/presentation/controller/settings_controller.dart';
@@ -46,7 +47,7 @@ class UpdateInformationButton extends StatelessWidget {
           print("pressed");
           await socialController.updateAllSocialInformation();
         },
-        buttonColor: MyThemeData.signOut,
+        buttonColor: AppColors.signOut,
         width: isPortrait ? double.infinity : null,
         padding: EdgeInsets.symmetric(
           vertical: isPortrait ? 0.01.h : 0.015.h,
@@ -57,7 +58,7 @@ class UpdateInformationButton extends StatelessWidget {
               ? FontConstants.fontSize020.h
               : FontConstants.fontSize025.h,
           fontWeight: FontWeight.w500,
-          color: MyThemeData().contrastColor(),
+          color: AppColors.textButton,
         ),
       ),
     );

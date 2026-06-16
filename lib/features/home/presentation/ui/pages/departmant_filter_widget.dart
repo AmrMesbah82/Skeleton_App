@@ -71,8 +71,8 @@ class CategoryFilterChips extends StatelessWidget {
             height: isMobile ? 35.sp : 45.sp,
             decoration: BoxDecoration(
               color: light
-                  ? (isSelected ? AppColors.primary : ColorAppLight.whiteColor)
-                  : (isSelected ? AppColors.primary : ColorAppDark.chatBackground),
+                  ? (isSelected ? AppColors.primary : AppColors.white)
+                  : (isSelected ? AppColors.primary : AppColors.chatBackground),
               borderRadius: BorderRadius.circular(4.r),
             ),
             child: Center(
@@ -81,17 +81,17 @@ class CategoryFilterChips extends StatelessWidget {
                 style: isMobile
                     ? StyleText.fontSize14Weight600.copyWith(
                   color: isSelected
-                      ? ColorAppLight.buttonTextColor
+                      ? AppColors.textButton
                       : (light
-                      ? ColorAppLight.grayTextSla
-                      : ColorAppDark.titleKey),
+                      ? AppColors.secondaryText
+                      : AppColors.grey),
                 )
                     : StyleText.fontSize20Weight500.copyWith(
                   color: isSelected
-                      ? ColorAppLight.buttonTextColor
+                      ? AppColors.textButton
                       : (light
-                      ? ColorAppLight.grayTextSla
-                      : ColorAppDark.titleKey),
+                      ? AppColors.secondaryText
+                      : AppColors.grey),
                 ),
               ),
             ),
@@ -104,21 +104,21 @@ class CategoryFilterChips extends StatelessWidget {
               color: labelColor ??
                   (light
                       ? (isSelected
-                      ? ColorAppLight.blackButton
-                      : ColorAppLight.grayTextSla)
+                      ? AppColors.blackButton
+                      : AppColors.secondaryText)
                       : (isSelected
-                      ? ColorAppDark.titleValue
-                      : ColorAppDark.titleKey)),
+                      ? AppColors.white
+                      : AppColors.grey)),
             )
                 : StyleText.fontSize16Weight500.copyWith(
               color: labelColor ??
                   (light
                       ? (isSelected
-                      ? ColorAppLight.blackButton
-                      : ColorAppLight.grayTextSla)
+                      ? AppColors.blackButton
+                      : AppColors.secondaryText)
                       : (isSelected
-                      ? ColorAppDark.titleValue
-                      : ColorAppDark.titleKey)),
+                      ? AppColors.white
+                      : AppColors.grey)),
             ),
           ),
           SizedBox(width: 30.sp),

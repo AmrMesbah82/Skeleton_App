@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -6,9 +7,9 @@ import 'package:demo_app/core/widgets/country_picker_dialog.dart';
 import 'package:demo_app/core/widgets/intl_phone_field.dart';
 import 'package:demo_app/core/shared_components/phone_number.dart';
 
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
@@ -58,9 +59,9 @@ class _CustomPhoneFieldState extends State<CustomPhoneField> {
                 ? FontConstants.fontSize016.h
                 : FontConstants.fontSize020.h,
             fontWeight: FontWeight.w400,
-            color: themeController.currentTheme == MyThemeData.lightTheme
+            color: themeController.currentTheme == AppColors.lightTheme
                 ? Theme.of(context).colorScheme.scrim
-                : MyThemeData.colorWhite,
+                : AppColors.colorWhite,
           ),
         ),
         width: .45.w,
@@ -70,18 +71,18 @@ class _CustomPhoneFieldState extends State<CustomPhoneField> {
               ? FontConstants.fontSize016.h
               : FontConstants.fontSize020.h,
           fontWeight: FontWeight.w400,
-          color: themeController.currentTheme == MyThemeData.lightTheme
-              ? MyThemeData.colorBlack
-              : MyThemeData.colorWhite,
+          color: themeController.currentTheme == AppColors.lightTheme
+              ? AppColors.colorBlack
+              : AppColors.colorWhite,
         ),
         countryNameStyle: TextStyle(
           fontSize: isVertical
               ? FontConstants.fontSize016.h
               : FontConstants.fontSize020.h,
           fontWeight: FontWeight.w400,
-          color: themeController.currentTheme == MyThemeData.lightTheme
-              ? MyThemeData.colorBlack
-              : MyThemeData.colorWhite,
+          color: themeController.currentTheme == AppColors.lightTheme
+              ? AppColors.colorBlack
+              : AppColors.colorWhite,
         ),
       ),
       flagsButtonPadding: const EdgeInsets.only(left: 5),
@@ -91,18 +92,18 @@ class _CustomPhoneFieldState extends State<CustomPhoneField> {
         fontSize: isVertical
             ? FontConstants.fontSize016.h
             : FontConstants.fontSize020.h,
-        color: themeController.currentTheme == MyThemeData.lightTheme
-            ? MyThemeData.colorBlack
-            : MyThemeData.colorWhite,
+        color: themeController.currentTheme == AppColors.lightTheme
+            ? AppColors.colorBlack
+            : AppColors.colorWhite,
         fontWeight: FontWeight.w400,
       ),
       dropdownTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
         fontSize: isVertical
             ? FontConstants.fontSize016.h
             : FontConstants.fontSize020.h,
-        color: themeController.currentTheme == MyThemeData.lightTheme
-            ? MyThemeData.colorBlack
-            : MyThemeData.colorWhite,
+        color: themeController.currentTheme == AppColors.lightTheme
+            ? AppColors.colorBlack
+            : AppColors.colorWhite,
         fontWeight: FontWeight.w400,
       ),
       decoration: InputDecoration(
@@ -124,7 +125,7 @@ class _CustomPhoneFieldState extends State<CustomPhoneField> {
               : FontConstants.fontSize020.h,
           height:  isTablet?
           (isVertical ? 1.2 : 1 ) : 1.2,
-          color: MyThemeData.colorGrey,
+          color: AppColors.colorGrey,
           fontWeight: FontWeight.w400,
         ),
         border: OutlineInputBorder(
@@ -146,16 +147,16 @@ class _CustomPhoneFieldState extends State<CustomPhoneField> {
         errorStyle: AppFontStyle.cairoRegularStyle.copyWith(
           fontSize:   FontConstants.fontSize018.h,
           height: isVertical ? 1.2 : 1.4,
-          color: MyThemeData.delete,
+          color: AppColors.delete,
           fontWeight: FontWeight.w400,
         ),
         disabledBorder: OutlineInputBorder(
           borderSide: BorderSide.none,
           borderRadius: BorderRadius.circular(8.0),
         ),
-        fillColor: themeController.currentTheme == MyThemeData.lightTheme
+        fillColor: themeController.currentTheme == AppColors.lightTheme
             ? const Color(0xFFF6F6F6)
-            :  MyThemeData.colorBlack,
+            :  AppColors.colorBlack,
       ),
       onCountryChanged: (value) {},
      // initialCountryCode: widget.initialCountryCode,

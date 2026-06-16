@@ -1,12 +1,13 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/shared_components/countries.dart';
 import 'package:demo_app/core/widgets/helpers.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class PickerDialogStyle {
@@ -132,7 +133,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                   focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(8),
                       borderSide: BorderSide(
-                        color: MyThemeData.bubbleColor,
+                        color: AppColors.bubbleColor,
                         width: 1.0,
                       )),
                   enabledBorder: OutlineInputBorder(
@@ -147,9 +148,9 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                     fontWeight: FontWeight.w400,
                     height:isTablet?2.1 :1.8,
                     color:
-                        themeController.currentTheme == MyThemeData.lightTheme
+                        themeController.currentTheme == AppColors.lightTheme
                             ? Theme.of(context).colorScheme.scrim
-                            : MyThemeData.colorWhite,
+                            : AppColors.colorWhite,
                   ),
                 ),
                 onChanged: (value) {
@@ -194,9 +195,9 @@ padding: EdgeInsets.zero,
                                 fontWeight: FontWeight.w400,
                                 height: isTablet?isPortrait?2: 2.3:null,
                                 color: themeController.currentTheme ==
-                                        MyThemeData.lightTheme
-                                    ? MyThemeData.colorBlack
-                                    : MyThemeData.colorWhite,
+                                        AppColors.lightTheme
+                                    ? AppColors.colorBlack
+                                    : AppColors.colorWhite,
                               ),
                       ),
                       trailing: Text(
@@ -206,9 +207,9 @@ padding: EdgeInsets.zero,
                                 fontWeight: FontWeight.w400,
                                height: isTablet?isPortrait?2: 2.3:null,
                                 color: themeController.currentTheme ==
-                                        MyThemeData.lightTheme
-                                    ? MyThemeData.colorBlack
-                                    : MyThemeData.colorWhite,
+                                        AppColors.lightTheme
+                                    ? AppColors.colorBlack
+                                    : AppColors.colorWhite,
                               ),
                       ),
                       onTap: () {

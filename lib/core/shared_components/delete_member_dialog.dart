@@ -1,15 +1,16 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/shared_components/custom_teams_table_members.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/constants/system_actions.dart';
 import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
@@ -45,7 +46,7 @@ class _DeleteMemberDialogState extends State<DeleteMemberDialog> {
     bool isPortrait =
         MediaQuery.of(context).orientation == Orientation.portrait;
     return ElevatedButton.styleFrom(
-        backgroundColor: buttonColor, //MyThemeData.bubbleColor,
+        backgroundColor: buttonColor, //AppColors.bubbleColor,
         minimumSize: isTablet
             ? isPortrait
                 ? Size(0.2.w, 0.045.h)
@@ -135,7 +136,7 @@ class _DeleteMemberDialogState extends State<DeleteMemberDialog> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     MainCustomIconButton(
-                      buttonStyle: buttonStyle(MyThemeData.bubbleColor),
+                      buttonStyle: buttonStyle(AppColors.bubbleColor),
                       onPressed: () async {
                         hapticController.triggerHapticFeedback(
                             vibration: VibrateType.heavyImpact,
@@ -155,7 +156,7 @@ class _DeleteMemberDialogState extends State<DeleteMemberDialog> {
                     ),
                     Container(width: 0.025.w),
                     MainCustomIconButton(
-                      buttonStyle: buttonStyle(MyThemeData.colorGreydark),
+                      buttonStyle: buttonStyle(AppColors.colorGreydark),
                       onPressed: () {
                         hapticController.triggerHapticFeedback(
                             vibration: VibrateType.lightImpact,

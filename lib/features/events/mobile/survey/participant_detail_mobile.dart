@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_instance/src/extension_instance.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/test_question_container.dart';
 import 'package:demo_app/features/events/models/more_models/employee_submission_model.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/views/survey/participant_detail_screen.dart';

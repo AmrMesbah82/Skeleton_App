@@ -5,6 +5,7 @@
 // Objectives:Used to show the on boarding images and texts
 // ignore_for_file: unrelated_type_equality_checks, prefer_const_constructors, unused_field
 import 'package:demo_app/features/onboarding/authentication/presentation/ui/pages/mobile_sign_in.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/onboarding/authentication/presentation/ui/pages/start_sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -13,14 +14,13 @@ import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/page_onBoarding.dart';
 // import 'package:demo_app/components/on_boarding_components.dart/page_onboarding.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/mobile_sign_in.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/start_sign_in.dart';
-import 'package:demo_app/core/theme/main_core_theme_controller.dart';
 
 import 'package:demo_app/core/nav_bar_package.dart/functions.dart';
 
@@ -40,8 +40,8 @@ class WelcomeView extends StatefulWidget {
 
 final ThemeController themeController = Get.find();
 final ThemeController themeControllerCheck = Get.put(ThemeController());
-final MainCoreThemeController mainCoreThemeController =
-    Get.put(MainCoreThemeController());
+final ThemeController mainCoreThemeController =
+    Get.put(ThemeController());
 double screenWidth =
     WidgetsBinding.instance.platformDispatcher.views.first.physicalSize.width /
         WidgetsBinding.instance.platformDispatcher.views.first.devicePixelRatio;
@@ -206,7 +206,7 @@ class _OnboardScreenState extends State<WelcomeView> {
                     : 'Get Start'.tr,
                 buttonStyle: ElevatedButton.styleFrom(
                   minimumSize: Size(0.035.w, 0.057.h),
-                  backgroundColor: MyThemeData.signOut,
+                  backgroundColor: AppColors.signOut,
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(
                     Radius.circular(8.0),
@@ -250,7 +250,7 @@ class _OnboardScreenState extends State<WelcomeView> {
                     fontSize: isTablet
                         ? FontConstants.fontSize022.h
                         : FontConstants.fontSize020.h,
-                    color: MyThemeData.textdeactivecolor,
+                    color: AppColors.textdeactivecolor,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -277,10 +277,10 @@ class _OnboardScreenState extends State<WelcomeView> {
               : 0.02.w,
       decoration: BoxDecoration(
         color: currentIndex == index
-            ? MyThemeData.signOut
-            : themeControllerCheck.currentTheme == MyThemeData.lightTheme
-                ? MyThemeData.colorBlack.withOpacity(0.2)
-                : MyThemeData.colorWhiteDark,
+            ? AppColors.signOut
+            : themeControllerCheck.currentTheme == AppColors.lightTheme
+                ? AppColors.colorBlack.withOpacity(0.2)
+                : AppColors.colorWhiteDark,
         borderRadius: BorderRadius.circular(15),
       ),
     );

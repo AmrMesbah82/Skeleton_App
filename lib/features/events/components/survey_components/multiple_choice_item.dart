@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/core/theme/grc_theme_controller.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
+
 
 import '../../../onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
@@ -30,12 +31,12 @@ class MultipleChoiceItem extends StatelessWidget {
         children: [
           SvgPicture.asset(
             isSelected
-                ? themeController.currentTheme == MyThemeData.lightTheme
+                ? themeController.currentTheme == AppColors.lightTheme
                     ? 'assets/icons/checkedCheckBox.svg'
                     : 'assets/icons/checkBoxCheckedDark1.svg'
                 : 'assets/icons/notCheckedCheckBox.svg',
             color: isSelected
-                ? MyThemeData.lightPrimary
+                ? AppColors.lightPrimary
                 : Theme.of(context).colorScheme.tertiaryContainer,
             height: isTablet ? (isPortrait ? 0.035.w : 0.02.w) : 0.025.h,
           ),

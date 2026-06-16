@@ -226,13 +226,13 @@ class _MyRequestPageState extends State<MyRequestPage> {
   Color _getStatusColor(String status) {
     switch (status.toLowerCase()) {
       case 'approved':
-        return ColorAppLight.greenColor;
+        return AppColors.lightGreen;
       case 'pending':
-        return ColorAppLight.yellowColor;
+        return AppColors.yellow;
       case 'rejected':
         return Colors.red[500]!;
       default:
-        return ColorAppLight.grayTextSla;
+        return AppColors.secondaryText;
     }
   }
 
@@ -286,8 +286,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(8.r),
                       color: lightMode
-                          ? ColorAppLight.whiteColor
-                          : ColorAppDark.chatBackground),
+                          ? AppColors.white
+                          : AppColors.chatBackground),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -299,8 +299,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                             height: 20.h,
                             fit: BoxFit.scaleDown,
                             color: lightMode
-                                ? ColorAppLight.grayTextSla
-                                : ColorAppDark.titleKey ,
+                                ? AppColors.secondaryText
+                                : AppColors.grey ,
                           ))
                           : Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -312,8 +312,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                               height: 20.h,
                               fit: BoxFit.scaleDown,
                               color: lightMode
-                                  ? ColorAppLight.grayTextSla
-                                  : ColorAppDark.titleKey ,
+                                  ? AppColors.secondaryText
+                                  : AppColors.grey ,
 
                             ),
                           ),
@@ -322,8 +322,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                             S.of(context).sort,
                             style: StyleText.fontSize16Weight500.copyWith(
                                 color: lightMode
-                                    ? ColorAppLight.grayTextSla
-                                    : ColorAppDark.titleKey),
+                                    ? AppColors.secondaryText
+                                    : AppColors.grey),
                           )
                         ],
                       )
@@ -391,8 +391,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8.r),
                             color: lightMode
-                                ? ColorAppLight.whiteColor
-                                : ColorAppDark.chatBackground),
+                                ? AppColors.white
+                                : AppColors.chatBackground),
                         child: Padding(
                           padding: EdgeInsets.all(15.sp),
                           child: Column(
@@ -405,8 +405,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                                       decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(4.r),
                                           color: lightMode
-                                              ? ColorAppLight.whiteOp
-                                              : ColorAppDark.background),
+                                              ? AppColors.background
+                                              : AppColors.background),
                                       child: Center(
                                         child: CustomSvg(
                                           assetPath: "assets/employee_request.svg",
@@ -414,8 +414,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                                           height: 28.h,
                                           fit: BoxFit.scaleDown,
                                           color: lightMode
-                                              ? ColorAppLight.blackButton
-                                              : ColorAppDark.titleValue,
+                                              ? AppColors.blackButton
+                                              : AppColors.white,
                                         ),
                                       )),
                                   SizedBox(width: 5.w),
@@ -425,8 +425,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                                       _translateTitle(request['title'] ?? 'Request'),
                                       style: StyleText.fontSize14Weight500.copyWith(
                                           color: lightMode
-                                              ? ColorAppLight.blackButton
-                                              : ColorAppDark.titleValue),
+                                              ? AppColors.blackButton
+                                              : AppColors.white),
                                       overflow: TextOverflow.ellipsis,
                                       maxLines: 2,
                                     ),
@@ -450,15 +450,15 @@ class _MyRequestPageState extends State<MyRequestPage> {
                                     "${S.of(context).dateRequested}: ",
                                     style: StyleText.fontSize12Weight400.copyWith(
                                         color: lightMode
-                                            ? ColorAppLight.grayTextSla
-                                            : ColorAppDark.titleKey),
+                                            ? AppColors.secondaryText
+                                            : AppColors.grey),
                                   ),
                                   Text(
                                     _formatDate(request['dateRequested']),
                                     style: StyleText.fontSize12Weight400.copyWith(
                                         color: lightMode
-                                            ? ColorAppLight.blackButton
-                                            : ColorAppDark.titleValue),
+                                            ? AppColors.blackButton
+                                            : AppColors.white),
                                   ),
                                 ],
                               ),
@@ -478,8 +478,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                                     "${S.of(context).status}: ",
                                     style: StyleText.fontSize12Weight400.copyWith(
                                         color: lightMode
-                                            ? ColorAppLight.grayTextSla
-                                            : ColorAppDark.titleKey),
+                                            ? AppColors.secondaryText
+                                            : AppColors.grey),
                                   ),
                                   Text(
                                     _getStatusLabel(status),
@@ -550,8 +550,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                           height: 20.h,
                           fit: BoxFit.scaleDown,
                           color: lightMode
-                              ? ColorAppLight.grayTextSla
-                              : ColorAppDark.titleKey ,
+                              ? AppColors.secondaryText
+                              : AppColors.grey ,
                         ))
                         : Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -563,8 +563,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                             height: 20.h,
                             fit: BoxFit.scaleDown,
                             color: lightMode
-                                ? ColorAppLight.grayTextSla
-                                : ColorAppDark.titleKey ,
+                                ? AppColors.secondaryText
+                                : AppColors.grey ,
 
                           ),
                         ),
@@ -573,8 +573,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                           S.of(context).sort,
                           style: StyleText.fontSize16Weight500.copyWith(
                               color: lightMode
-                                  ? ColorAppLight.grayTextSla
-                                  : ColorAppDark.titleKey),
+                                  ? AppColors.secondaryText
+                                  : AppColors.grey),
                         )
                       ],
                     )
@@ -763,8 +763,8 @@ class _MyRequestPageState extends State<MyRequestPage> {
                   });
                 },
                 labelColor: Theme.of(context).brightness == Brightness.light
-                    ? ColorAppLight.grayTextSla
-                    : ColorAppDark.titleKey),
+                    ? AppColors.secondaryText
+                    : AppColors.grey),
             _statusChip("$approvedCount", s.Approved,
                 isSelected: selectStatus == s.Approved,
                 onTap: () {
@@ -773,7 +773,7 @@ class _MyRequestPageState extends State<MyRequestPage> {
                     _filterRequests();
                   });
                 },
-                labelColor: ColorAppLight.greenColor),
+                labelColor: AppColors.lightGreen),
             _statusChip("$pendingCount", s.pending,
                 isSelected: selectStatus == s.pending,
                 onTap: () {
@@ -782,7 +782,7 @@ class _MyRequestPageState extends State<MyRequestPage> {
                     _filterRequests();
                   });
                 },
-                labelColor: ColorAppLight.yellowColor),
+                labelColor: AppColors.yellow),
             _statusChip("$rejectedCount", s.rejected,
                 isSelected: selectStatus == s.rejected,
                 onTap: () {
@@ -826,20 +826,20 @@ class _MyRequestPageState extends State<MyRequestPage> {
                     ? StyleText.fontSize14Weight400.copyWith(
                   color: light
                       ? isSelected
-                      ? ColorAppLight.buttonTextColor
-                      : ColorAppLight.grayTextSla
+                      ? AppColors.textButton
+                      : AppColors.secondaryText
                       : isSelected
-                      ? ColorAppLight.buttonTextColor
-                      : ColorAppDark.titleKey,
+                      ? AppColors.textButton
+                      : AppColors.grey,
                 )
                     : StyleText.fontSize20Weight500.copyWith(
                   color: light
                       ? isSelected
-                      ? ColorAppLight.buttonTextColor
-                      : ColorAppLight.grayTextSla
+                      ? AppColors.textButton
+                      : AppColors.secondaryText
                       : isSelected
-                      ? ColorAppLight.buttonTextColor
-                      : ColorAppDark.titleKey,
+                      ? AppColors.textButton
+                      : AppColors.grey,
                 ),
               ),
             ),

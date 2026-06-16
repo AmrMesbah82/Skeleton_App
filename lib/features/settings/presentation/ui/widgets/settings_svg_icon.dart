@@ -2,6 +2,7 @@
 /// Author : Mohamed Elrashidy
 /// Created At: 11/11/2024
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:demo_app/features/services_mangment_module/core/new_theme.dart';
@@ -16,7 +17,7 @@ class SettingsSvgIcon extends StatelessWidget {
         height: 16.h,
         fit: BoxFit.scaleDown,
         path,
-        color: ColorAppLight.buttonTextColor
+        color: AppColors.textButton
     );
   }
 }

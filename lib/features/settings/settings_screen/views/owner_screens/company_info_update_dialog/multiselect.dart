@@ -1,6 +1,7 @@
 library multiselect_dropdown;
 
 import 'dart:convert';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:flutter/foundation.dart';
@@ -8,9 +9,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:http/http.dart';
 import 'package:demo_app/features/settings/settings_screen/views/owner_screens/company_info_update_dialog/selection_chip.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:multi_dropdown/enum/app_enums.dart';
 import 'package:multi_dropdown/models/chip_config.dart';
@@ -575,9 +576,9 @@ class _MultiSelectDropDownState<T> extends State<MultiSelectDropDown<T>> {
     return widget.inputDecoration ??
         BoxDecoration(
           color: widget.fieldBackgroundColor ??
-              (themeController.currentTheme == MyThemeData.lightTheme
+              (themeController.currentTheme == AppColors.lightTheme
                   ? Theme.of(context).colorScheme.inversePrimary
-                  : MyThemeData.colorBlack),
+                  : AppColors.colorBlack),
           borderRadius: widget.radiusGeometry ??
               BorderRadius.circular(widget.borderRadius ?? 8.0),
           // border: _selectionMode
@@ -777,9 +778,9 @@ class _MultiSelectDropDownState<T> extends State<MultiSelectDropDown<T>> {
                           : widget.dropdownMargin!)
                   : Offset.zero,
               child: Material(
-                  color: themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorWhite
-                      : MyThemeData.colorBlack,
+                  color: themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorWhite
+                      : AppColors.colorBlack,
                   // borderRadius: widget.dropdownBorderRadius != null
                   //     ? BorderRadius.circular(widget.dropdownBorderRadius!)
                   //     : null,

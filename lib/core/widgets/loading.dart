@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
 
 Future showLoadingIndicator() {
   double size = 70;
@@ -12,7 +13,7 @@ Future showLoadingIndicator() {
           width: size,
           height: size,
           child: CircularProgressIndicator(
-            valueColor: AlwaysStoppedAnimation<Color>(MyThemeData.lightPrimary),
+            valueColor: AlwaysStoppedAnimation<Color>(AppColors.lightPrimary),
             backgroundColor: Colors.white60,
             strokeWidth: 2.0,
           ),

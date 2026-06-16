@@ -6,11 +6,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/generated/l10n.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
@@ -120,12 +120,12 @@ class _LanguageScreenState extends State<LanguageScreen> {
         padding: EdgeInsets.symmetric(horizontal: 0.04.w, vertical: 0.015.h),
         decoration: BoxDecoration(
           color: selected
-              ? MyThemeData.lightPrimary.withOpacity(0.1)
+              ? AppColors.lightPrimary.withOpacity(0.1)
               : Theme.of(context).colorScheme.inversePrimary,
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color:
-                selected ? MyThemeData.lightPrimary : Colors.transparent,
+                selected ? AppColors.lightPrimary : Colors.transparent,
           ),
         ),
         child: Row(
@@ -138,13 +138,13 @@ class _LanguageScreenState extends State<LanguageScreen> {
                 fontWeight:
                     selected ? FontWeight.w600 : FontWeight.w400,
                 color: selected
-                    ? MyThemeData.lightPrimary
+                    ? AppColors.lightPrimary
                     : AppColors.text,
               ),
             ),
             if (selected)
               Icon(Icons.check_circle,
-                  color: MyThemeData.lightPrimary, size: 20.sp),
+                  color: AppColors.lightPrimary, size: 20.sp),
           ],
         ),
       ),

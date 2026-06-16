@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/multiple_choice_item.dart';
 import 'package:demo_app/features/events/components/survey_components/radio_button_item.dart';
 
@@ -116,7 +117,7 @@ class _TestQuestionContainerState extends State<TestQuestionContainer> {
                                     ? FontConstants.fontSize018.h
                                     : FontConstants.fontSize014.w,
                                 fontWeight: FontWeight.w600,
-                                color: MyThemeData.delete,
+                                color: AppColors.delete,
                               ))
                           : const WidgetSpan(child: SizedBox.shrink()),
                     ])),
@@ -260,7 +261,7 @@ class _TestQuestionContainerState extends State<TestQuestionContainer> {
                                 });
                               },
                               maxLength: 50,
-                              cursorColor: MyThemeData.signOut,
+                              cursorColor: AppColors.signOut,
                               style: AppFontStyle.cairoRegularStyle.copyWith(
                                   fontSize: isTablet
                                       ? isPortrait
@@ -276,7 +277,7 @@ class _TestQuestionContainerState extends State<TestQuestionContainer> {
                                 counter: const SizedBox.shrink(),
                                 focusedBorder: UnderlineInputBorder(
                                     borderSide:
-                                        BorderSide(color: MyThemeData.signOut)),
+                                        BorderSide(color: AppColors.signOut)),
                                 hintStyle: AppFontStyle.cairoRegularStyle
                                     .copyWith(
                                         fontSize: isTablet

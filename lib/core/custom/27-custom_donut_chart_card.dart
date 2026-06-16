@@ -1,6 +1,7 @@
 // Figma: donut charts — "Demands", "Order Fulfillment Status".
 // fl_chart PieChart with center total + legend with amounts.
 import 'package:fl_chart/fl_chart.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

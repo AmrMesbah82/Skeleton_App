@@ -6,10 +6,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
@@ -283,7 +283,7 @@ class _SettingsAppBarState extends State<SettingsAppBar> {
                           Text(
                             capitalize(widget.name ?? ''),
                             style: StyleText.fontSize18Weight500.copyWith(
-                                color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                                color: lightMode ? AppColors.blackButton : AppColors.white
                             )
                           ),
                           SizedBox(height: 10.h),
@@ -296,7 +296,7 @@ class _SettingsAppBarState extends State<SettingsAppBar> {
                                   : employee!.title?.lastOrNull ?? '',
                             ),
                             style: StyleText.fontSize16Weight400.copyWith(
-                              color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey
+                              color: lightMode ? AppColors.secondaryText : AppColors.grey
                             )
                           ),
                         ],
@@ -325,13 +325,13 @@ class _SettingsAppBarState extends State<SettingsAppBar> {
                       Text(
                         "${S.of(context).start_date}: ",
                         style: StyleText.fontSize14Weight400.copyWith(
-                            color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey
+                            color: lightMode ? AppColors.secondaryText : AppColors.grey
                         ),
                       ),
                       Text(
                         _formatDate(widget.startDate!),
                         style: StyleText.fontSize14Weight400.copyWith(
-                            color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                            color: lightMode ? AppColors.blackButton : AppColors.white
                         ),
                       ),
                     ],
@@ -354,13 +354,13 @@ class _SettingsAppBarState extends State<SettingsAppBar> {
                       Text(
                         "${S.of(context).start_date}: ",
                         style: StyleText.fontSize14Weight400.copyWith(
-                            color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey
+                            color: lightMode ? AppColors.secondaryText : AppColors.grey
                         ),
                       ),
                       Text(
                         _formatDate(widget.startDate!),
                         style: StyleText.fontSize14Weight400.copyWith(
-                            color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                            color: lightMode ? AppColors.blackButton : AppColors.white
                         ),
                       ),
                     ],

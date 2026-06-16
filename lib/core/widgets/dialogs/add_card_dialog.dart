@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_yellow_button copy.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 
@@ -76,7 +77,7 @@ class _AddCardDialogState extends State<AddCardDialog> {
                               controller.imageUrl == ""
                                   ? CircleAvatar(
                                       radius: isPortrait? 0.06.w: 0.036.w,
-                                      backgroundColor: MyThemeData.barrierColor,
+                                      backgroundColor: AppColors.barrierColor,
                                       child: Center(
                                         child: Transform.scale(
                                             scale: 1.3,
@@ -86,7 +87,7 @@ class _AddCardDialogState extends State<AddCardDialog> {
                                     )
                                   : CircleAvatar(
                                       radius: isPortrait? 0.06.w: 0.036.w,
-                                      backgroundColor: MyThemeData.barrierColor,
+                                      backgroundColor: AppColors.barrierColor,
                                       child: Center(
                                         child: Transform.scale(
                                           scale: 1,
@@ -104,11 +105,11 @@ class _AddCardDialogState extends State<AddCardDialog> {
                                   child: Transform.scale(
                                     scale: isTablet ? 1.5 : 0.9,
                                     child: CircleAvatar(
-                                        backgroundColor: MyThemeData.signOut,
+                                        backgroundColor: AppColors.signOut,
                                         radius: isPortrait ? 0.01.h : 0.013.h,
                                         child: SvgPicture.asset(
                                           "assets/icons/CameraIcon.svg",
-                                          color: MyThemeData().contrastColor(),
+                                          color: AppColors.textButton,
                                           height: 0.015.h,
                                         )),
                                   ),
@@ -149,9 +150,9 @@ class _AddCardDialogState extends State<AddCardDialog> {
                         isOptional: false,
                         isExpanded: true,
                            fillColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorLightGrey
-                              : MyThemeData.colorBlack,
+                                  AppColors.lightTheme
+                              ? AppColors.colorLightGrey
+                              : AppColors.colorBlack,
               isDescription: true,
                         maxlines: 2,
                         maxlength: 120,

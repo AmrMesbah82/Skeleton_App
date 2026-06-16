@@ -279,7 +279,7 @@ class _RoleInformationState extends State<RoleInformation> {
         Text(
           'Created By'.tr,
           style: StyleText.fontSize10Weight400.copyWith(
-              color: Theme.of(context).brightness == Brightness.light ? ColorAppLight.blackButton:ColorAppDark.titleValue
+              color: Theme.of(context).brightness == Brightness.light ? AppColors.blackButton:AppColors.white
           ),
         ),
         SizedBox(height: 10.sp),

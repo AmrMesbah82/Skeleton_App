@@ -9,9 +9,9 @@ import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/features/settings/settings_screen/views/owner_screens/company_info_update_dialog/multiselect.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
 import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';

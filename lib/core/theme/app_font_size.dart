@@ -1,10 +1,11 @@
 import 'dart:math';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:demo_app/core/helper/biometric_controller.dart';
-import 'package:demo_app/core/theme/app_text_styles.dart';
+import '../../../../../core/helper/biometric_controller.dart';
+import 'app_text_styles.dart';
 
 class FontConstants {
   // Uses AppTextStyles which reads from storage, same as AppColors.font

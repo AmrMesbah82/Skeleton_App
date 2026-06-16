@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -8,9 +9,9 @@ import 'package:demo_app/core/shared_components/timeline_widget.dart';
 import 'package:demo_app/core/shared_components/custom_black_button.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomRejectDialog extends StatefulWidget {
   final List<String> options;
@@ -56,7 +57,7 @@ class _CustomRejectDialogState extends State<CustomRejectDialog> {
                   width: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8),
-                    color: MyThemeData.colorWhiteDark,
+                    color: AppColors.colorWhiteDark,
                   ),
                   child: SvgPicture.asset(
                     "assets/images/rejected.svg",
@@ -198,7 +199,7 @@ padding: EdgeInsets.zero,
                     children: [
                       Expanded(
                         child: MainCustomButton(
-                          buttonColor: MyThemeData.colorWhiteDark,
+                          buttonColor: AppColors.colorWhiteDark,
                           buttonText: 'Cancel',
                           onPressed: () {
                              Navigator.of(context).pop();

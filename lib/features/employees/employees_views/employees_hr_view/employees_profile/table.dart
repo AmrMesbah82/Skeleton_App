@@ -3,7 +3,8 @@
 //App Version : Version 2
 // Date of Last Edit :15/November/2023
 // Objectives: this is a widget to customize the table of attendance
-import 'package:demo_app/core/theme/grc_theme_controller.dart';
+
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -13,10 +14,10 @@ import 'package:demo_app/core/shared_components/custom_table_appbar.dart';
 import 'package:demo_app/core/shared_components/request_escalate_dialog.dart';
 import 'package:demo_app/core/dummy_data/chats_lists.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/attendance_controller.dart';
 import 'package:demo_app/features/requests/leave_request_controller.dart';
 import 'package:demo_app/features/home/data/models/attendance_model.dart';
@@ -125,12 +126,12 @@ padding: EdgeInsets.zero,
                             // borderRadius: BorderRadius.circular(8),
                             color: index % 2 == 0
                                 ? themeController.currentTheme ==
-                                        MyThemeData.lightTheme
+                                        AppColors.lightTheme
                                     ? Color(0xFFf1f1f1)
-                                    : MyThemeData.darkBackGround
+                                    : AppColors.darkBackGround
                                 : themeController.currentTheme ==
-                                        MyThemeData.lightTheme
-                                    ? MyThemeData.colorWhite
+                                        AppColors.lightTheme
+                                    ? AppColors.colorWhite
                                     : Color(0xFF28282B),),
                         child: Padding(
                           padding: EdgeInsets.symmetric(
@@ -218,14 +219,14 @@ padding: EdgeInsets.zero,
                                                                   index]
                                                               .status!) ==
                                                       "Approved"
-                                                  ? MyThemeData.unBlock
+                                                  ? AppColors.unBlock
                                                   : capitalize(leaveRequestController
                                                               .leaveRequestsList[
                                                                   index]
                                                               .status!) ==
                                                           "Rejected"
-                                                      ? MyThemeData.colorRed
-                                                      : MyThemeData.warning,
+                                                      ? AppColors.colorRed
+                                                      : AppColors.warning,
                                             )
                                           : tableDataTextStyle.copyWith(
                                               color: capitalize(
@@ -234,14 +235,14 @@ padding: EdgeInsets.zero,
                                                                   index]
                                                               .status!) ==
                                                       "Attendance"
-                                                  ? MyThemeData.unBlock
+                                                  ? AppColors.unBlock
                                                   : capitalize(attendanceController
                                                               .employeeAttendances[
                                                                   index]
                                                               .status!) ==
                                                           "Absent"
-                                                      ? MyThemeData.colorRed
-                                                      : MyThemeData.warning,
+                                                      ? AppColors.colorRed
+                                                      : AppColors.warning,
                                             )),
                                 ),
                               ),
@@ -363,7 +364,7 @@ padding: EdgeInsets.zero,
                                                 ? Size(0.04.w, 0.043.h)
                                                 : Size(0.06.w, 0.043.h),
                                             backgroundColor:
-                                                MyThemeData.signOut,
+                                                AppColors.signOut,
                                             shape: const RoundedRectangleBorder(
                                               borderRadius: BorderRadius.all(
                                                 Radius.circular(8),

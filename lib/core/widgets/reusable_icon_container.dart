@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
 
 class ReusableIconContainer extends StatelessWidget {
   final String imagePath;
@@ -41,7 +42,7 @@ class ReusableIconContainer extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(8),
           color: filterColor == true
-              ? MyThemeData.signOut
+              ? AppColors.signOut
               : isDarkBackground == true
                   ? Theme.of(context).colorScheme.surfaceVariant
                   : Theme.of(context).colorScheme.inversePrimary,
@@ -52,7 +53,7 @@ class ReusableIconContainer extends StatelessWidget {
             child: SvgPicture.asset(
               imagePath,
               color: filterColor == true
-                  ? MyThemeData().contrastColor()
+                  ? AppColors.textButton
                   : Theme.of(context).colorScheme.inverseSurface,
             ),
           ),

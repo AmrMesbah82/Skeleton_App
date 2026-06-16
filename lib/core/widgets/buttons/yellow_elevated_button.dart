@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 
-import '../../theme/my_theme.dart';
+
 
 class YellowElevatedButton extends StatelessWidget {
   const YellowElevatedButton(
@@ -15,7 +16,7 @@ class YellowElevatedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-          backgroundColor: MyThemeData.bubbleColor, elevation: 0.8),
+          backgroundColor: AppColors.bubbleColor, elevation: 0.8),
       onPressed: onPressed,
       child: text,
     );

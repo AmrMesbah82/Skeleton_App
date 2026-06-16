@@ -13,11 +13,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:flutter/src/services/haptic_feedback.dart';
 import 'package:demo_app/core/shared_components/request_escalate_dialog.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/requests/request_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/responsive_side_frame.dart';
@@ -121,11 +121,11 @@ class _TabletPersonalInfoScreenState extends State<TabletPersonalInfoScreen> {
                     width: 300.w,
                     height: 36.h,
                     textStyle: StyleText.fontSize16Weight500.copyWith(
-                        color: ColorAppLight.buttonTextColor
+                        color: AppColors.textButton
                     ),
                     image: 'assets/request_chnage.svg',
                     radius: 4.r,
-                    svgColor: ColorAppLight.buttonTextColor,
+                    svgColor: AppColors.textButton,
                     widthImage: 16,
                     heightImage: 23,
                   ),
@@ -182,11 +182,11 @@ class _TabletPersonalInfoScreenState extends State<TabletPersonalInfoScreen> {
                       width: 340.w,
                       height: 36.h,
                       textStyle: StyleText.fontSize16Weight500.copyWith(
-                          color: ColorAppLight.buttonTextColor
+                          color: AppColors.textButton
                       ),
                       image: 'assets/request_chnage.svg',
                       radius: 4.r,
-                      svgColor: ColorAppLight.buttonTextColor,
+                      svgColor: AppColors.textButton,
                       widthImage: 16.w,
                       heightImage: 23.h,
                     ),

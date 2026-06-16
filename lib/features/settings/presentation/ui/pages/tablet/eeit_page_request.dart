@@ -18,7 +18,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/requests/request_controller.dart';
 import 'package:demo_app/core/shared_components/countries.dart';
@@ -497,7 +497,7 @@ class _EditPageRequestState extends State<EditPageRequest> {
                   width: 411.w,
                   padding: EdgeInsets.all(24.sp),
                   decoration: BoxDecoration(
-                    color: lightMode ? Colors.white : ColorAppDark.chatBackground,
+                    color: lightMode ? Colors.white : AppColors.chatBackground,
                     borderRadius: BorderRadius.circular(16.r),
                   ),
                   child: Column(
@@ -516,8 +516,8 @@ class _EditPageRequestState extends State<EditPageRequest> {
                         textAlign: TextAlign.center,
                         style: StyleText.fontSize16Weight500.copyWith(
                           color: lightMode
-                              ? ColorAppLight.blackButton
-                              : ColorAppDark.titleValue,
+                              ? AppColors.blackButton
+                              : AppColors.white,
                         ),
                       ),
                     ],
@@ -965,7 +965,7 @@ class _EditPageRequestState extends State<EditPageRequest> {
                       textStyle: StyleText.fontSize16Weight500.copyWith(
                         color: changes.isEmpty
                             ? lightMode ? Colors.black : Colors.white // Lighter text when disabled
-                            : ColorAppLight.buttonTextColor,
+                            : AppColors.textButton,
                       ),
                     ),
                   ],
@@ -1097,8 +1097,8 @@ class _EditPageRequestState extends State<EditPageRequest> {
               S.of(context).phoneNumber,
               style: StyleText.fontSize14Weight400.copyWith(
                 color: lightMode
-                    ? ColorAppLight.blackButton
-                    : ColorAppDark.titleValue,
+                    ? AppColors.blackButton
+                    : AppColors.white,
               ),
             ),
             // Removed the outer Row wrapper - just use the inner Row directly

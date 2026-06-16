@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
+
+
 
 class CustomTableBody extends StatefulWidget {
   final String text;
@@ -61,33 +63,33 @@ class _CustomTableBodyState extends State<CustomTableBody> {
         lowerCaseText == 'approved' ||
         lowerCaseText == 'active' ||
         lowerCaseText == 'done') {
-      textColor = MyThemeData.unBlock;
+      textColor = AppColors.unBlock;
     } else if (lowerCaseText == 'closed' ||
         lowerCaseText == 'rejected' ||
         lowerCaseText == 'not assigned' ||
         lowerCaseText == 'canceled' ||
         lowerCaseText == 'expired' ||
         lowerCaseText == 'exceeded deadline') {
-      textColor = MyThemeData.delete;
+      textColor = AppColors.delete;
     } else if (lowerCaseText == 'in progress') {
-      textColor = MyThemeData.warning;
+      textColor = AppColors.warning;
     } else if (lowerCaseText == 'not started') {
-      textColor = MyThemeData.secondaryColor;
+      textColor = AppColors.secondaryColor;
     } else if (lowerCaseText == 'pending') {
-      textColor = MyThemeData.warning;
+      textColor = AppColors.warning;
     } else if (lowerCaseText.contains('@') && lowerCaseText.contains('.')) {
-      textColor = MyThemeData.blue;
+      textColor = AppColors.blue;
       tableDataTextStyle =
           tableDataTextStyle.copyWith(decoration: TextDecoration.underline);
     } else if (lowerCaseText.contains('.pdf') ||
         lowerCaseText.contains('.docx')) {
-      textColor = MyThemeData.blue;
+      textColor = AppColors.blue;
       tableDataTextStyle =
           tableDataTextStyle.copyWith(decoration: TextDecoration.underline);
     } else if (lowerCaseText == "deactivated") {
-      textColor = MyThemeData.lightPrimary;
+      textColor = AppColors.lightPrimary;
     } else if (lowerCaseText == "draft") {
-      textColor = MyThemeData.textGrey;
+      textColor = AppColors.textGrey;
     } else {
       textColor = Theme.of(context).colorScheme.inverseSurface;
     }

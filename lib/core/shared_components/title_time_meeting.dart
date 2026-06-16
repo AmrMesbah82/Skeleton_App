@@ -4,11 +4,12 @@
 // Date of Last Edit :22/November/2023
 // Objectives: this is a widget to title time in emeetings screen
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class TitleTimeColumn extends StatelessWidget {
   const TitleTimeColumn({
@@ -44,7 +45,7 @@ class TitleTimeColumn extends StatelessWidget {
                       : FontConstants.fontSize012.w
                   : FontConstants.fontSize016.h,
               color: soonListMeetings
-                  ? MyThemeData.colorWhite
+                  ? AppColors.colorWhite
                   : Theme.of(context).colorScheme.inverseSurface,
               fontWeight: FontWeight.w600,
             ),
@@ -74,7 +75,7 @@ class TitleTimeColumn extends StatelessWidget {
                                     ? FontConstants.fontSize014.h
                                     : FontConstants.fontSize010.w
                                 : FontConstants.fontSize013.h,
-                            color: MyThemeData.block,
+                            color: AppColors.block,
                             fontWeight: FontWeight.w500),
                       )
                     ],
@@ -90,7 +91,7 @@ class TitleTimeColumn extends StatelessWidget {
                                     : FontConstants.fontSize010.w
                                 : FontConstants.fontSize015.h,
                             color: soonListMeetings
-                                ? MyThemeData.colorWhite
+                                ? AppColors.colorWhite
                                 : Theme.of(context).colorScheme.scrim,
                             fontWeight: FontWeight.w500),
                       ),
@@ -101,7 +102,7 @@ class TitleTimeColumn extends StatelessWidget {
                           "assets/images/dots.svg",
                           // ignore: deprecated_member_use
                           color: soonListMeetings
-                              ? MyThemeData.colorWhite
+                              ? AppColors.colorWhite
                               : Theme.of(context).colorScheme.scrim,
                         ),
                       ),
@@ -114,7 +115,7 @@ class TitleTimeColumn extends StatelessWidget {
                                     : FontConstants.fontSize010.w
                                 : FontConstants.fontSize015.h,
                             color: soonListMeetings
-                                ? MyThemeData.colorWhite
+                                ? AppColors.colorWhite
                                 : Theme.of(context).colorScheme.scrim,
                             fontWeight: FontWeight.w500),
                       )

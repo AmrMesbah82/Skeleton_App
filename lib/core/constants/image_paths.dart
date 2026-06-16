@@ -1,27 +1,28 @@
 // ignore_for_file: unrelated_type_equality_checks
 
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
-import '../theme/my_theme.dart';
+
 
 class ImagePaths {
   static String getImagePath(BuildContext context, String imageName) {
     final ThemeController themeController = Get.put(ThemeController());
 
-    bool isDarkMode = themeController.currentTheme == MyThemeData.darkTheme;
+    bool isDarkMode = themeController.currentTheme == AppColors.darkTheme;
     return isDarkMode
         ? getDarkModeImagePath(imageName)
         : getLightModeImagePath(imageName);
   }
 
   static String getLightModeImagePath(String imageName) {
-    String logo = 'assets/images/knowticed_logo.svg';
+    String logo = 'assets/images/demo_app_logo.svg';
     // 'assets/images/bmw.svg';
     if (imageName == 'logo') {
       return logo;
-      // return 'assets/images/knowticed_logo.svg';
+      // return 'assets/images/demo_app_logo.svg';
     } else if (imageName == 'edit_data') {
       return 'assets/icons/dialog_card_icon.svg';
     } else if (imageName == 'social_icon') {
@@ -53,7 +54,7 @@ class ImagePaths {
 
   static String getDarkModeImagePath(String imageName) {
     if (imageName == 'logo') {
-      return 'assets/images/knowticed_logo_dark.svg';
+      return 'assets/images/demo_app_logo_dark.svg';
     } else if (imageName == 'edit_data') {
       return 'assets/icons/dialog_card_icon_dark.svg';
     } else if (imageName == 'social_icon') {

@@ -2,13 +2,14 @@
 // ignore_for_file: deprecated_member_use
 
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 
 class CustomizedDropdownButton2 extends StatefulWidget {
@@ -103,7 +104,7 @@ class _CustomizedDropdownButton2State extends State<CustomizedDropdownButton2> {
   final HapticController hapticController = Get.put(HapticController());
 
   bool filled = false;
-  Color _borderColor = MyThemeData.colorGrey;
+  Color _borderColor = AppColors.colorGrey;
   final FocusNode _focusNode = FocusNode();
   ThemeController themeController = Get.put(ThemeController());
   @override
@@ -114,7 +115,7 @@ class _CustomizedDropdownButton2State extends State<CustomizedDropdownButton2> {
     bool isTablet = MediaQuery.of(context).size.shortestSide > 600;
     _borderColor = widget.borded == true || filled == true
         ? Theme.of(context).colorScheme.onInverseSurface
-        : MyThemeData.colorGrey;
+        : AppColors.colorGrey;
     return DropdownButtonHideUnderline(
       child: DropdownButton2(
         //To avoid long text overflowing.
@@ -141,8 +142,8 @@ class _CustomizedDropdownButton2State extends State<CustomizedDropdownButton2> {
                       ? _borderColor =
                           Theme.of(context).colorScheme.onInverseSurface
                       : _borderColor = hasFocus
-                          ? MyThemeData.lightPrimary
-                          : MyThemeData.colorGrey;
+                          ? AppColors.lightPrimary
+                          : AppColors.colorGrey;
                 });
               },
               child: Container(
@@ -171,7 +172,7 @@ class _CustomizedDropdownButton2State extends State<CustomizedDropdownButton2> {
                                 : 1.5
                             : 1.3,
                         color: widget.isSignUpMobile == false
-                            ? MyThemeData.colorGrey
+                            ? AppColors.colorGrey
                             : Theme.of(context).colorScheme.scrim,
                       ),
                 ),
@@ -221,8 +222,8 @@ class _CustomizedDropdownButton2State extends State<CustomizedDropdownButton2> {
                               : 1.7
                           : 1.6, //1.6
                       color: item == 'Accepted'.tr
-                          ? MyThemeData.unBlock
-                          : MyThemeData.colorRed,
+                          ? AppColors.unBlock
+                          : AppColors.colorRed,
                       fontWeight: FontWeight.w500,
                     ),
                   ),
@@ -251,7 +252,7 @@ class _CustomizedDropdownButton2State extends State<CustomizedDropdownButton2> {
                               ? Theme.of(context).colorScheme.errorContainer
                               // ignore: unrelated_type_equality_checks
                               : themeController.currentTheme ==
-                                      MyThemeData.darkTheme
+                                      AppColors.darkTheme
                                   ? widget.isBottomSheet == true
                                       ? Theme.of(context)
                                           .colorScheme
@@ -298,7 +299,7 @@ class _CustomizedDropdownButton2State extends State<CustomizedDropdownButton2> {
                   color: Colors
                       .transparent, //Theme.of(context).colorScheme.onInverseSurface,
                 ),
-                // color: MyThemeData.colorWhite,
+                // color: AppColors.colorWhite,
               ),
           elevation: widget.dropdownElevation ?? 8,
           //Null or Offset(0, 0) will open just under the button. You can edit as you want.

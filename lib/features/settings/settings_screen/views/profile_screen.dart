@@ -2,6 +2,7 @@
 
 //import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'dart:io';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
@@ -26,12 +27,12 @@ import 'package:demo_app/core/shared_components/custom_icon_container.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/shared_components/request_escalate_dialog.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
 import 'package:demo_app/core/constants/nationalities_list.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/requests/request_controller.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
@@ -274,7 +275,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               ),
                         child: ElevatedButton(
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: MyThemeData.signOut,
+                            backgroundColor: AppColors.signOut,
                             padding: EdgeInsets.symmetric(
                               vertical: orientation == Orientation.portrait
                                   ? 0.01.h
@@ -549,7 +550,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                   ? FontConstants.fontSize020.h
                                   : FontConstants.fontSize025.h,
                               fontWeight: FontWeight.w500,
-                              color: MyThemeData
+                              color: AppColors
                                   .colorWhite, //Theme.of(context).colorScheme.secondaryContainer,
                             ),
                           ),
@@ -625,7 +626,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: MyThemeData.signOut,
+                              backgroundColor: AppColors.signOut,
                               padding: EdgeInsets.symmetric(
                                 vertical: orientation == Orientation.portrait
                                     ? 0.013.h
@@ -660,7 +661,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                                 fontSize: FontConstants.fontSize022.h,
 
                                 fontWeight: FontWeight.w500,
-                                color: MyThemeData
+                                color: AppColors
                                     .colorBlack, //Theme.of(context).colorScheme.secondaryContainer,
                               ),
                             ),
@@ -731,11 +732,11 @@ class _PersonalInformationFieldsState extends State<PersonalInformationFields> {
     }
 
     final orientation = MediaQuery.of(context).orientation;
-    Color backColor = themeController.currentTheme == MyThemeData.lightTheme
+    Color backColor = themeController.currentTheme == AppColors.lightTheme
         ? const Color(0xFFF6F6F6)
         : const Color(0xFF545454);
 
-    Color buttonColor = themeController.currentTheme == MyThemeData.lightTheme
+    Color buttonColor = themeController.currentTheme == AppColors.lightTheme
         ? const Color(0xFFF6F6F6)
         : const Color(0xFF545454);
 
@@ -747,7 +748,7 @@ class _PersonalInformationFieldsState extends State<PersonalInformationFields> {
       fontSize: orientation == Orientation.portrait
           ? FontConstants.fontSize016.h
           : FontConstants.fontSize023.h,
-      color: MyThemeData.colorGrey,
+      color: AppColors.colorGrey,
       fontWeight: FontWeight.w400,
       height: orientation == Orientation.portrait ? 0.0014.h : 0.002.h,
     );
@@ -989,9 +990,9 @@ class _PersonalInformationFieldsState extends State<PersonalInformationFields> {
                           child: Image.asset(
                             'assets/images/calendar.png',
                             color: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhite,
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhite,
                             height: 0.022.h,
                           ),
                         ),
@@ -1108,9 +1109,9 @@ class _PersonalInformationFieldsState extends State<PersonalInformationFields> {
                                 fontSize: FontConstants.fontSize020.h,
                                 fontWeight: FontWeight.w400,
                                 color: themeController.currentTheme ==
-                                        MyThemeData.lightTheme
+                                        AppColors.lightTheme
                                     ? Theme.of(context).colorScheme.scrim
-                                    : MyThemeData.colorWhite,
+                                    : AppColors.colorWhite,
                               ),
                             ),
                             width: .45.w,
@@ -1119,17 +1120,17 @@ class _PersonalInformationFieldsState extends State<PersonalInformationFields> {
                               fontSize: FontConstants.fontSize020.h,
                               fontWeight: FontWeight.w400,
                               color: themeController.currentTheme ==
-                                      MyThemeData.lightTheme
-                                  ? MyThemeData.colorBlack
-                                  : MyThemeData.colorWhite,
+                                      AppColors.lightTheme
+                                  ? AppColors.colorBlack
+                                  : AppColors.colorWhite,
                             ),
                             countryNameStyle: TextStyle(
                               fontSize: FontConstants.fontSize020.h,
                               fontWeight: FontWeight.w400,
                               color: themeController.currentTheme ==
-                                      MyThemeData.lightTheme
-                                  ? MyThemeData.colorBlack
-                                  : MyThemeData.colorWhite,
+                                      AppColors.lightTheme
+                                  ? AppColors.colorBlack
+                                  : AppColors.colorWhite,
                             )),
                         flagsButtonPadding: const EdgeInsets.only(left: 5),
                         showDropdownIcon: false,
@@ -1137,17 +1138,17 @@ class _PersonalInformationFieldsState extends State<PersonalInformationFields> {
                         style: AppFontStyle.cairoRegularStyle.copyWith(
                             fontSize: FontConstants.fontSize020.h,
                             color: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhite,
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhite,
                             fontWeight: FontWeight.w400),
                         dropdownTextStyle: AppFontStyle.cairoRegularStyle
                             .copyWith(
                                 fontSize: FontConstants.fontSize020.h,
                                 color: themeController.currentTheme ==
-                                        MyThemeData.lightTheme
-                                    ? MyThemeData.colorBlack
-                                    : MyThemeData.colorWhite,
+                                        AppColors.lightTheme
+                                    ? AppColors.colorBlack
+                                    : AppColors.colorWhite,
                                 fontWeight: FontWeight.w400),
                         decoration: InputDecoration(
                           filled: true,
@@ -1163,7 +1164,7 @@ class _PersonalInformationFieldsState extends State<PersonalInformationFields> {
                           hintStyle: AppFontStyle.cairoRegularStyle.copyWith(
                               fontSize: FontConstants.fontSize020.h,
                               height: 2.6,
-                              color: MyThemeData.colorGrey,
+                              color: AppColors.colorGrey,
                               fontWeight: FontWeight.w400),
                           border: OutlineInputBorder(
                             borderSide: BorderSide.none,
@@ -1186,7 +1187,7 @@ class _PersonalInformationFieldsState extends State<PersonalInformationFields> {
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           fillColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
+                                  AppColors.lightTheme
                               ? const Color(0xFFF6F6F6)
                               : const Color(0xFF545454),
                         ),
@@ -1582,9 +1583,9 @@ class _HealthInsuranceFieldsState extends State<HealthInsuranceFields> {
                 hintStyle: TextStyle(
                   fontSize: FontConstants.fontSize020.h,
                   fontWeight: FontWeight.w400,
-                  color: themeController.currentTheme == MyThemeData.lightTheme
+                  color: themeController.currentTheme == AppColors.lightTheme
                       ? Theme.of(context).colorScheme.scrim
-                      : MyThemeData.colorWhite,
+                      : AppColors.colorWhite,
                 ),
               ),
               width: .45.w,
@@ -1592,31 +1593,31 @@ class _HealthInsuranceFieldsState extends State<HealthInsuranceFields> {
               countryCodeStyle: TextStyle(
                 fontSize: FontConstants.fontSize020.h,
                 fontWeight: FontWeight.w400,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorBlack
-                    : MyThemeData.colorWhite,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorBlack
+                    : AppColors.colorWhite,
               ),
               countryNameStyle: TextStyle(
                 fontSize: FontConstants.fontSize020.h,
                 fontWeight: FontWeight.w400,
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorBlack
-                    : MyThemeData.colorWhite,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorBlack
+                    : AppColors.colorWhite,
               )),
           flagsButtonPadding: const EdgeInsets.only(left: 5),
           showDropdownIcon: false,
           disableLengthCheck: true,
           style: AppFontStyle.cairoRegularStyle.copyWith(
               fontSize: FontConstants.fontSize020.h,
-              color: themeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.colorBlack
-                  : MyThemeData.colorWhite,
+              color: themeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.colorBlack
+                  : AppColors.colorWhite,
               fontWeight: FontWeight.w400),
           dropdownTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
               fontSize: FontConstants.fontSize020.h,
-              color: themeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.colorBlack
-                  : MyThemeData.colorWhite,
+              color: themeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.colorBlack
+                  : AppColors.colorWhite,
               fontWeight: FontWeight.w400),
           decoration: InputDecoration(
             filled: true,
@@ -1632,7 +1633,7 @@ class _HealthInsuranceFieldsState extends State<HealthInsuranceFields> {
             hintStyle: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize020.h,
                 height: 2.2,
-                color: MyThemeData.colorGrey,
+                color: AppColors.colorGrey,
                 fontWeight: FontWeight.w400),
             border: OutlineInputBorder(
               borderSide: BorderSide.none,
@@ -1654,7 +1655,7 @@ class _HealthInsuranceFieldsState extends State<HealthInsuranceFields> {
               borderSide: BorderSide.none,
               borderRadius: BorderRadius.circular(8.0),
             ),
-            fillColor: themeController.currentTheme == MyThemeData.lightTheme
+            fillColor: themeController.currentTheme == AppColors.lightTheme
                 ? const Color(0xFFF6F6F6)
                 : const Color(0xFF545454),
           ),
@@ -1874,9 +1875,9 @@ class _HealthInsuranceFieldsState extends State<HealthInsuranceFields> {
                           fontSize: FontConstants.fontSize020.h,
                           fontWeight: FontWeight.w400,
                           color: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
+                                  AppColors.lightTheme
                               ? Theme.of(context).colorScheme.scrim
-                              : MyThemeData.colorWhite,
+                              : AppColors.colorWhite,
                         ),
                       ),
                       width: .45.w,
@@ -1885,17 +1886,17 @@ class _HealthInsuranceFieldsState extends State<HealthInsuranceFields> {
                         fontSize: FontConstants.fontSize020.h,
                         fontWeight: FontWeight.w400,
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorBlack
-                            : MyThemeData.colorWhite,
+                                AppColors.lightTheme
+                            ? AppColors.colorBlack
+                            : AppColors.colorWhite,
                       ),
                       countryNameStyle: TextStyle(
                         fontSize: FontConstants.fontSize020.h,
                         fontWeight: FontWeight.w400,
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorBlack
-                            : MyThemeData.colorWhite,
+                                AppColors.lightTheme
+                            ? AppColors.colorBlack
+                            : AppColors.colorWhite,
                       )),
                   flagsButtonPadding: const EdgeInsets.only(left: 5),
                   showDropdownIcon: false,
@@ -1903,16 +1904,16 @@ class _HealthInsuranceFieldsState extends State<HealthInsuranceFields> {
                   style: AppFontStyle.cairoRegularStyle.copyWith(
                       fontSize: FontConstants.fontSize020.h,
                       color:
-                          themeController.currentTheme == MyThemeData.lightTheme
-                              ? MyThemeData.colorBlack
-                              : MyThemeData.colorWhite,
+                          themeController.currentTheme == AppColors.lightTheme
+                              ? AppColors.colorBlack
+                              : AppColors.colorWhite,
                       fontWeight: FontWeight.w400),
                   dropdownTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
                       fontSize: FontConstants.fontSize020.h,
                       color:
-                          themeController.currentTheme == MyThemeData.lightTheme
-                              ? MyThemeData.colorBlack
-                              : MyThemeData.colorWhite,
+                          themeController.currentTheme == AppColors.lightTheme
+                              ? AppColors.colorBlack
+                              : AppColors.colorWhite,
                       fontWeight: FontWeight.w400),
                   decoration: InputDecoration(
                     filled: true,
@@ -1930,7 +1931,7 @@ class _HealthInsuranceFieldsState extends State<HealthInsuranceFields> {
                             ? FontConstants.fontSize016.h
                             : FontConstants.fontSize020.h,
                         height: 2.2,
-                        color: MyThemeData.colorGrey,
+                        color: AppColors.colorGrey,
                         fontWeight: FontWeight.w400),
                     border: OutlineInputBorder(
                       borderSide: BorderSide.none,
@@ -1954,9 +1955,9 @@ class _HealthInsuranceFieldsState extends State<HealthInsuranceFields> {
                       borderRadius: BorderRadius.circular(8.0),
                     ),
                     fillColor:
-                        themeController.currentTheme == MyThemeData.lightTheme
+                        themeController.currentTheme == AppColors.lightTheme
                             ? const Color(0xFFF6F6F6)
-                            : MyThemeData.colorBlack,
+                            : AppColors.colorBlack,
                   ),
                   onCountryChanged: (value) {},
                   initialCountryCode:

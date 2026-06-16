@@ -1,6 +1,7 @@
 // ignore_for_file: sdk_version_since
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/notification/notification_controller.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
@@ -14,8 +15,8 @@ import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
+
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/data_grc_module/core/extensions/extensions.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
@@ -102,7 +103,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                             fit: BoxFit.fill,
                             'assets/notification_svg_new.svg',
                             color: drawerController.selectedIndex == 19
-                                ? MyThemeData().contrastColor()
+                                ? AppColors.textButton
                                 : Theme.of(context).colorScheme.scrim,
                           ),
                         );
@@ -115,7 +116,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                             fit: BoxFit.fill,
                             'assets/notification_svg_new.svg',
                             // color: drawerController.selectedIndex == 19
-                            //     ? MyThemeData().contrastColor()
+                            //     ? AppColors.textButton
                             //     : Theme.of(context).colorScheme.scrim,
                           ),
                         );
@@ -147,7 +148,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                               fit: BoxFit.fill,
                               'assets/icons/Bell.svg',
                               // color: drawerController.selectedIndex == 19
-                              //     ? MyThemeData().contrastColor()
+                              //     ? AppColors.textButton
                               //     : Theme.of(context).colorScheme.scrim,
                             ),
                           ),
@@ -169,7 +170,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                       Text(
                         '${Get.locale.toString().contains('en') ? employee!.firstName!.last!.capitalize : employee!.firstNameInArabic!.last!} ${Get.locale.toString().contains('en') ? employee!.lastName!.last!.capitalize : employee!.lastNameInArabic!.last!}',
                           style:StyleText.fontSize18Weight500.copyWith(
-                              color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                              color: AppColors.text
                           )
                       ),
                       Text(
@@ -181,7 +182,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
                               : employee!.title?.lastOrNull ?? '',
                         ),
                         style:StyleText.fontSize16Weight500.copyWith(
-                          color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                          color: AppColors.text
                         )
                       ),
                     ],

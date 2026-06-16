@@ -1,11 +1,12 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_utils/src/extensions/string_extensions.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class InfoWithBulletList extends StatefulWidget {
@@ -50,9 +51,9 @@ class _InfoWithBulletListState extends State<InfoWithBulletList> {
                         style: AppFontStyle.cairoRegularStyle.copyWith(
                           fontSize: FontConstants.fontSize015.h,
                           color: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorDarkGrey
-                              : MyThemeData.colorGreydark,
+                                  AppColors.lightTheme
+                              ? AppColors.colorDarkGrey
+                              : AppColors.colorGreydark,
                           fontWeight: FontWeight.w400,
                            height:  1.6
                         ),
@@ -68,9 +69,9 @@ class _InfoWithBulletListState extends State<InfoWithBulletList> {
                           style: TextStyle(
                             fontSize: FontConstants.fontSize015.h,
                             color: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhiteDark,
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhiteDark,
                             fontWeight: FontWeight.w400,
                             height:  1.8,
                           ),
@@ -113,9 +114,9 @@ padding: EdgeInsets.zero,
                       style: AppFontStyle.cairoRegularStyle.copyWith(
                         fontSize: FontConstants.fontSize020.h,
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorDarkGrey
-                            : MyThemeData.colorGreydark,
+                                AppColors.lightTheme
+                            ? AppColors.colorDarkGrey
+                            : AppColors.colorGreydark,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
@@ -130,9 +131,9 @@ padding: EdgeInsets.zero,
                         style: TextStyle(
                           fontSize: FontConstants.fontSize020.h,
                           color: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorBlack
-                              : MyThemeData.colorWhiteDark,
+                                  AppColors.lightTheme
+                              ? AppColors.colorBlack
+                              : AppColors.colorWhiteDark,
                           fontWeight: FontWeight.w400,
                           height: 1.8,
                         ),

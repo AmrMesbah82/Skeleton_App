@@ -9,9 +9,9 @@ import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 import 'package:demo_app/core/widgets/form_fields/custom_search.dart';
 import 'package:demo_app/core/widgets/custom_upper_filter.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/notification/notification_controller.dart';
 import 'package:demo_app/features/events/components/survey_components/delete_member_dialog.dart';
 import 'package:demo_app/features/events/components/survey_components/participants_container.dart';

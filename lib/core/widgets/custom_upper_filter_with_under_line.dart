@@ -1,10 +1,11 @@
+import 'package:demo_app/core/theme/app_colors.dart';
 // //App Version : Version 2
 // // Date of Last Edit :4/March/2024
 // // Objectives: this is a widget to customize the fikter if the messages
 // import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 // import 'package:get/get.dart';
-// import 'package:demo_app/core/theme/font_manager.dart';
+//
 // import 'package:demo_app/features/external/main_core/core/theme/my_theme.dart';
 //
 // // ignore: must_be_immutable
@@ -30,11 +31,11 @@
 // class _UpperFiltersState extends State<UpperFiltersWithUnderLine> {
 //   final TextStyle unselectedStyle = AppFontStyle.cairoRegularStyle.copyWith(
 //     fontSize: FontConstants.fontSize032.h,
-//     color: MyThemeData.colorGrey,
+//     color: AppColors.colorGrey,
 //     fontWeight: FontWeight.w400,
 //   );
 //   final TextStyle selectedStyle = AppFontStyle.cairoRegularStyle.copyWith(
-//     color: MyThemeData.lightPrimary,
+//     color: AppColors.lightPrimary,
 //     /*Theme.of(context).colorScheme.onInverseSurface,*/
 //     fontWeight: FontWeight.w800,
 //     fontSize: FontConstants.fontSize032.h,
@@ -73,24 +74,24 @@
 //                     height: 1.6,
 //                     shadows: [
 //                       Shadow(
-//                           color: MyThemeData.lightPrimary,
+//                           color: AppColors.lightPrimary,
 //                           offset: Offset(0, -5))
 //                     ],
 //                     color: Colors.transparent,
 //                     decoration: TextDecoration.underline,
-//                     decorationColor: MyThemeData.lightPrimary,
+//                     decorationColor: AppColors.lightPrimary,
 //                     decorationThickness: 2.5)
 //                 : selectedStyle.copyWith(
 //                     fontSize: FontConstants.fontSize021.h,
 //                     height: 1.8,
 //                     shadows: [
 //                       Shadow(
-//                           color: MyThemeData.lightPrimary,
+//                           color: AppColors.lightPrimary,
 //                           offset: Offset(0, -5))
 //                     ],
 //                     color: Colors.transparent,
 //                     decoration: TextDecoration.underline,
-//                     decorationColor: MyThemeData.lightPrimary,
+//                     decorationColor: AppColors.lightPrimary,
 //                     decorationThickness: 2.5)
 //             : isTablet
 //                 ? unselectedStyle.copyWith(
@@ -112,7 +113,7 @@
 //     return Container(
 //       width: width,
 //       color: widget.selectedIndex == index
-//           ? MyThemeData.lightPrimary
+//           ? AppColors.lightPrimary
 //           : Colors.transparent,
 //     );
 //   }

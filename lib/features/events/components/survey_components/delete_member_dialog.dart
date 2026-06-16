@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:lottie/lottie.dart';
 
 // ignore: must_be_immutable
@@ -40,12 +41,12 @@ class DeleteMemberDialog extends StatefulWidget {
 class _DeleteMemberDialogState extends State<DeleteMemberDialog> {
   ButtonStyle buttonStyle(Color buttonColor) {
     return ElevatedButton.styleFrom(
-        backgroundColor: buttonColor, //MyThemeData.bubbleColor,
+        backgroundColor: buttonColor, //AppColors.bubbleColor,
         minimumSize: Size(0.1.w, 0.053.h),
         shape: RoundedRectangleBorder(
-            side: buttonColor == MyThemeData.lightPrimary
+            side: buttonColor == AppColors.lightPrimary
                 ? BorderSide.none
-                : BorderSide(color: MyThemeData.colorBlack, width: 1.5),
+                : BorderSide(color: AppColors.colorBlack, width: 1.5),
             borderRadius: BorderRadius.circular(8)));
   }
 
@@ -100,7 +101,7 @@ class _DeleteMemberDialogState extends State<DeleteMemberDialog> {
                     fontSize: isTablet? (isPortrait ? FontConstants.fontSize018.h : FontConstants.fontSize025.h): FontConstants.fontSize018.h,
                     fontWeight: FontWeight.w600,
                     height: 1.2,
-                    color: MyThemeData.colorGrey),
+                    color: AppColors.colorGrey),
               ),
               Padding(
                 padding: EdgeInsets.only(top: 0.025.h),
@@ -112,9 +113,9 @@ class _DeleteMemberDialogState extends State<DeleteMemberDialog> {
                       child: MainCustomIconButton(
                         buttonStyle: ElevatedButton.styleFrom(
                           minimumSize: Size(0.7.w, isTablet? (isPortrait? 0.045.h : 0.055.h) : 0.045.h),
-                          backgroundColor: MyThemeData.colorWhite,
+                          backgroundColor: AppColors.colorWhite,
                           shape: RoundedRectangleBorder(
-                              side: BorderSide(color: MyThemeData.lightPrimary,),
+                              side: BorderSide(color: AppColors.lightPrimary,),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(6),
                               )),
@@ -134,9 +135,9 @@ class _DeleteMemberDialogState extends State<DeleteMemberDialog> {
                       child: MainCustomIconButton(
                           buttonStyle: ElevatedButton.styleFrom(
                           minimumSize: Size(0.7.w, isTablet? (isPortrait? 0.045.h : 0.055.h) : 0.045.h),
-                          backgroundColor: MyThemeData.lightPrimary,
+                          backgroundColor: AppColors.lightPrimary,
                           shape: RoundedRectangleBorder(
-                              side: BorderSide(color: MyThemeData.lightPrimary,),
+                              side: BorderSide(color: AppColors.lightPrimary,),
                               borderRadius: BorderRadius.all(
                                 Radius.circular(6),
                               )),

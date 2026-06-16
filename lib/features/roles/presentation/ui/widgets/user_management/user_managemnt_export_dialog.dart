@@ -443,7 +443,7 @@ class _UserManagementExportDialogState extends State<UserManagementExportDialog>
                     color: _isExporting ? Colors.grey : AppColors.primary,
                     height: 38.sp,
                     textStyle: StyleText.fontSize16Weight500.copyWith(
-                      color: ColorAppLight.buttonTextColor,
+                      color: AppColors.textButton,
                     ),
                     radius: 8.r,
                     function: () {

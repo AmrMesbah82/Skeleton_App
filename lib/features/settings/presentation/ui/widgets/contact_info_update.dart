@@ -1,4 +1,5 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/country_picker_dialog.dart';
@@ -6,9 +7,9 @@ import 'package:demo_app/core/widgets/intl_phone_field.dart';
 import 'package:demo_app/core/shared_components/phone_number.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/location_info_update.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/tablet/tablet_personal_info_screen.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
@@ -60,9 +61,9 @@ class _ContactInfoUpdateState extends State<ContactInfoUpdate> {
                     ? FontConstants.fontSize014.h
                     : FontConstants.fontSize020.h),
             fontWeight: FontWeight.w400,
-            color: themeController.currentTheme == MyThemeData.lightTheme
+            color: themeController.currentTheme == AppColors.lightTheme
                 ? Theme.of(context).colorScheme.scrim
-                : MyThemeData.colorWhite,
+                : AppColors.colorWhite,
           ),
         ),
         width: .45.w,
@@ -72,18 +73,18 @@ class _ContactInfoUpdateState extends State<ContactInfoUpdate> {
               ? FontConstants.fontSize014.h
               : FontConstants.fontSize020.h,
           fontWeight: FontWeight.w400,
-          color: themeController.currentTheme == MyThemeData.lightTheme
-              ? MyThemeData.colorBlack
-              : MyThemeData.colorWhite,
+          color: themeController.currentTheme == AppColors.lightTheme
+              ? AppColors.colorBlack
+              : AppColors.colorWhite,
         ),
         countryNameStyle: TextStyle(
           fontSize: widget.isRequestMobile == true
               ? FontConstants.fontSize014.h
               : FontConstants.fontSize020.h,
           fontWeight: FontWeight.w400,
-          color: themeController.currentTheme == MyThemeData.lightTheme
-              ? MyThemeData.colorBlack
-              : MyThemeData.colorWhite,
+          color: themeController.currentTheme == AppColors.lightTheme
+              ? AppColors.colorBlack
+              : AppColors.colorWhite,
         ));
     InputDecoration inputDecoration = InputDecoration(
       filled: true,
@@ -103,7 +104,7 @@ class _ContactInfoUpdateState extends State<ContactInfoUpdate> {
                   ? FontConstants.fontSize014.h
                   : FontConstants.fontSize020.h,
           height: 1.4,
-          color: MyThemeData.colorGrey,
+          color: AppColors.colorGrey,
           fontWeight: FontWeight.w400),
       border: OutlineInputBorder(
         borderSide: BorderSide.none,
@@ -125,9 +126,9 @@ class _ContactInfoUpdateState extends State<ContactInfoUpdate> {
         borderSide: BorderSide.none,
         borderRadius: BorderRadius.circular(8.0),
       ),
-      fillColor: themeController.currentTheme == MyThemeData.lightTheme
+      fillColor: themeController.currentTheme == AppColors.lightTheme
           ? const Color(0xFFF6F6F6)
-          : MyThemeData.colorBlack,
+          : AppColors.colorBlack,
     );
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -204,9 +205,9 @@ class _ContactInfoUpdateState extends State<ContactInfoUpdate> {
                                 ? FontConstants.fontSize014.h
                                 : FontConstants.fontSize020.h,
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorBlack
-                            : MyThemeData.colorWhite,
+                                AppColors.lightTheme
+                            ? AppColors.colorBlack
+                            : AppColors.colorWhite,
                         fontWeight: FontWeight.w400),
                 
                     dropdownTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
@@ -217,9 +218,9 @@ class _ContactInfoUpdateState extends State<ContactInfoUpdate> {
                                 ? FontConstants.fontSize014.h
                                 : FontConstants.fontSize020.h,
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorBlack
-                            : MyThemeData.colorWhite,
+                                AppColors.lightTheme
+                            ? AppColors.colorBlack
+                            : AppColors.colorWhite,
                         fontWeight: FontWeight.w400),
                     decoration: inputDecoration,
                     onCountryChanged: (value) {},
@@ -260,9 +261,9 @@ class _ContactInfoUpdateState extends State<ContactInfoUpdate> {
                                     ? FontConstants.fontSize014.h
                                     : FontConstants.fontSize020.h,
                             color: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhite,
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhite,
                             fontWeight: FontWeight.w400),
                     
                         dropdownTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
@@ -273,9 +274,9 @@ class _ContactInfoUpdateState extends State<ContactInfoUpdate> {
                                     ? FontConstants.fontSize014.h
                                     : FontConstants.fontSize020.h,
                             color: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhite,
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhite,
                             fontWeight: FontWeight.w400),
                         decoration: inputDecoration,
                         onCountryChanged: (value) {},
@@ -306,7 +307,7 @@ class _ContactInfoUpdateState extends State<ContactInfoUpdate> {
                               fontSize: isVertical 
                                   ? FontConstants.fontSize014.h
                                   : FontConstants.fontSize018.h,
-                              color: MyThemeData.delete,
+                              color: AppColors.delete,
                               fontWeight: FontWeight.w500,
                             ),
                           ),

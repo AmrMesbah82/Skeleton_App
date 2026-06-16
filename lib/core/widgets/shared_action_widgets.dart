@@ -100,17 +100,13 @@ class CustomPopupMenuButton extends StatelessWidget {
       onSelected: onSelected,
       offset: Offset(0, height + 2),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.r)),
-      color: Theme.of(context).brightness == Brightness.light
-          ? Colors.white
-          : ColorAppDark.chatBackground,
+      color: AppColors.card,
       itemBuilder: (context) => options
           .map((o) => PopupMenuItem<String>(
                 value: o.value,
                 child: Text(o.label,
                     style: StyleText.fontSize14Weight500.copyWith(
-                        color: Theme.of(context).brightness == Brightness.light
-                            ? ColorAppLight.blackButton
-                            : ColorAppDark.titleValue)),
+                        color: AppColors.text)),
               ))
           .toList(),
       child: Container(
@@ -218,14 +214,14 @@ class CustomConfirmationDialog extends StatelessWidget {
                     width: 120.sp,
                     height: 38.sp,
                     radius: 4.r,
-                    color: cancelButtonColor ?? ColorAppLight.grayNoButton,
+                    color: cancelButtonColor ?? AppColors.grey,
                   ),
                   SizedBox(width: 15.sp),
                   customButton(
                     title: confirmText,
                     function: onConfirm ?? () => Navigator.pop(context, true),
                     textStyle: StyleText.fontSize15Weight500.copyWith(
-                        color: ColorAppLight.buttonTextColor),
+                        color: AppColors.textButton),
                     width: 120.sp,
                     height: 38.sp,
                     radius: 4.r,
@@ -313,7 +309,7 @@ Future<bool?> showSuccessMaster(
                     title: 'OK',
                     function: onConfirm ?? () => Navigator.pop(context, true),
                     textStyle: StyleText.fontSize15Weight500.copyWith(
-                        color: ColorAppLight.buttonTextColor),
+                        color: AppColors.textButton),
                     width: 120.sp,
                     height: 38.sp,
                     radius: 4.r,

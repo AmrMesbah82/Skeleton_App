@@ -6,9 +6,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/constants/image_paths.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
 import 'package:demo_app/core/widgets/dialogs/custom_logout_dialog.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/mobile_sign_in.dart';
@@ -63,11 +63,11 @@ class MorePage extends StatelessWidget {
                             title: "Sign Out",
                             subtitle: "Are You Sure You Want To Sign Out?",
                             imagePath: "assets/images/newLogOut.json",
-                            backgroundColor: MyThemeData.signOut,
+                            backgroundColor: AppColors.signOut,
                             showButtons: true,
                             buttonText: 'Yes',
                             buttoncolor: AppColors.text,
-                            buttonFontColor: MyThemeData().contrastColor(),
+                            buttonFontColor: AppColors.textButton,
                             onConfirm: () {
                               hapticController.triggerHapticFeedback(
                                   vibration: VibrateType.heavyImpact,
@@ -90,7 +90,7 @@ class MorePage extends StatelessWidget {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                              color: MyThemeData.lightPrimary.withOpacity(0.2),
+                              color: AppColors.lightPrimary.withOpacity(0.2),
                               borderRadius: BorderRadius.circular(8.r)),
                           padding: EdgeInsets.symmetric(
                               horizontal: 10.w, vertical: 10.h),

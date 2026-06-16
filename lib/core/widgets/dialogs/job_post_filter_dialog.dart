@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -11,10 +12,10 @@ import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 // ignore: must_be_immutable
 class JobPostFilterDialog extends StatefulWidget {
@@ -107,7 +108,7 @@ class _JobPostFilterDialogState extends State<JobPostFilterDialog> {
               FiltersAppBar(
                 imageUrl: "assets/icons/headerFilterIcon.svg",
                 title: "Filter",
-                iconColor: MyThemeData.colorWhite,
+                iconColor: AppColors.colorWhite,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -271,7 +272,7 @@ class _JobPostFilterDialogState extends State<JobPostFilterDialog> {
                                       ? Size(0.15.w, 0.045.h)
                                       : Size(0.07.w, 0.05.h)
                                   : Size(0.36.w, 0.05.h),
-                              backgroundColor: MyThemeData.GreyBack,
+                              backgroundColor: AppColors.GreyBack,
                               shape: RoundedRectangleBorder(
                                 borderRadius: const BorderRadius.all(
                                   Radius.circular(8),
@@ -287,7 +288,7 @@ class _JobPostFilterDialogState extends State<JobPostFilterDialog> {
                                       ? Size(0.15.w, 0.045.h)
                                       : Size(0.07.w, 0.05.h)
                                   : Size(0.36.w, 0.05.h),
-                              backgroundColor: MyThemeData.signOut,
+                              backgroundColor: AppColors.signOut,
                               shape: RoundedRectangleBorder(
                                 borderRadius: const BorderRadius.all(
                                   Radius.circular(8),

@@ -8,7 +8,7 @@ import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:demo_app/core/shared_components/calender_package/src/models/calendar_date_picker2_config.dart';
 import 'package:demo_app/core/shared_components/date_picker_class.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/responsive_side_frame.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/tablet/tablet_personal_info_screen.dart';
 import '../../../../../generated/l10n.dart';

@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors
 /// File: request_to_change_dialog_mobile.dart
-/// Migrated from Knowticed_plus — themeController replaced with Theme.of(context)
+/// Migrated from demo_app_plus — themeController replaced with Theme.of(context)
 
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,8 +14,8 @@ import 'package:multi_dropdown/models/chip_config.dart';
 import 'package:multi_dropdown/models/value_item.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
+
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/additional_info_update.dart';
@@ -169,7 +171,7 @@ class _RequestToChangeDialogMobileState
                               hintStyle: AppFontStyle.cairoRegularStyle.copyWith(
                                 fontSize: FontConstants.fontSize016.h,
                                 height: 1.8,
-                                color: MyThemeData.colorGrey,
+                                color: AppColors.colorGrey,
                               ),
                               controller: _controller,
                               onOptionSelected: (options) {
@@ -177,8 +179,8 @@ class _RequestToChangeDialogMobileState
                               },
                               radiusGeometry: BorderRadius.circular(8),
                               fieldBackgroundColor: lightMode
-                                  ? MyThemeData.colorLightGrey
-                                  : MyThemeData.colorBlack,
+                                  ? AppColors.colorLightGrey
+                                  : AppColors.colorBlack,
                               dropdownBackgroundColor:
                                   Theme.of(context).colorScheme.inversePrimary,
                               selectedOptionBackgroundColor: Colors.transparent,
@@ -200,9 +202,9 @@ class _RequestToChangeDialogMobileState
                               chipConfig: ChipConfig(
                                 deleteIcon: Icon(Icons.cancel,
                                     size: 0.02.h,
-                                    color: MyThemeData().contrastColor()),
+                                    color: AppColors.textButton),
                                 labelStyle: AppFontStyle.cairoRegularStyle.copyWith(
-                                  color: MyThemeData().contrastColor(),
+                                  color: AppColors.textButton,
                                   fontSize: FontConstants.fontSize016.h,
                                   height: Get.locale.toString().contains('en') ? 1.5 : 1.2,
                                 ),
@@ -258,8 +260,8 @@ class _RequestToChangeDialogMobileState
                           buttonText: "Send".tr,
                           buttonStyle: widget.isSetting == false &&
                                   requestType == null
-                              ? buttonStyle(MyThemeData.GreyBack)
-                              : buttonStyle(MyThemeData.signOut),
+                              ? buttonStyle(AppColors.GreyBack)
+                              : buttonStyle(AppColors.signOut),
                         ),
                       ],
                     ),

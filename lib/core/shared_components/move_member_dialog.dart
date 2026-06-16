@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -6,10 +7,10 @@ import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/constants/system_actions.dart';
 import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
 import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
@@ -201,7 +202,7 @@ class _MoveMemberDialogState extends State<MoveMemberDialog> {
                         minimumSize: isTablet
                             ? Size(0.08.w, 0.05.h)
                             : Size(0.75.w, 0.05.h),
-                        backgroundColor: MyThemeData.signOut,
+                        backgroundColor: AppColors.signOut,
                         shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(
                           Radius.circular(8),

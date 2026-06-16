@@ -1,6 +1,7 @@
 // ignore_for_file: unrelated_type_equality_checks, unnecessary_string_interpolations
 
 import 'package:flutter/cupertino.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
@@ -14,10 +15,10 @@ import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/expiration_calculation.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:demo_app/features/roles/account_status/presentation/ui/widgets/custom_user_access_menu.dart';
@@ -58,9 +59,9 @@ class _CustomUserAccessContainerVerticalState
         fontSize: isPortrait
             ? FontConstants.fontSize015.h
             : FontConstants.fontSize020.h,
-        color: themeController.currentTheme == MyThemeData.lightTheme
-            ? MyThemeData.colorBlack
-            : MyThemeData.colorWhiteDark,
+        color: themeController.currentTheme == AppColors.lightTheme
+            ? AppColors.colorBlack
+            : AppColors.colorWhiteDark,
         fontWeight: Get.locale.toString().contains('en')
             ? FontWeight.w400
             : FontWeight.w300,
@@ -70,9 +71,9 @@ class _CustomUserAccessContainerVerticalState
       fontSize: isPortrait
           ? FontConstants.fontSize015.h
           : FontConstants.fontSize024.h,
-      color: themeController.currentTheme == MyThemeData.lightTheme
-          ? MyThemeData.colorDarkGrey
-          : MyThemeData.colorGreydark,
+      color: themeController.currentTheme == AppColors.lightTheme
+          ? AppColors.colorDarkGrey
+          : AppColors.colorGreydark,
       fontWeight: Get.locale.toString().contains('en')
           ? FontWeight.w600
           : FontWeight.w500,
@@ -82,9 +83,9 @@ class _CustomUserAccessContainerVerticalState
         fontSize: isPortrait
             ? FontConstants.fontSize016.h
             : FontConstants.fontSize026.h,
-        color: themeController.currentTheme == MyThemeData.lightTheme
-            ? MyThemeData.colorBlack
-            : MyThemeData.colorWhiteDark,
+        color: themeController.currentTheme == AppColors.lightTheme
+            ? AppColors.colorBlack
+            : AppColors.colorWhiteDark,
         fontWeight: FontWeight.w600,
         height: 1.4);
     return Padding(
@@ -132,9 +133,9 @@ class _CustomUserAccessContainerVerticalState
                                                 : FontConstants.fontSize030.h,
                                             color: themeController
                                                         .currentTheme ==
-                                                    MyThemeData.lightTheme
-                                                ? MyThemeData.colorBlack
-                                                : MyThemeData.colorWhiteDark,
+                                                    AppColors.lightTheme
+                                                ? AppColors.colorBlack
+                                                : AppColors.colorWhiteDark,
                                             fontWeight: FontWeight.w600,
                                             height: 1.8),
                                   ),
@@ -148,8 +149,8 @@ class _CustomUserAccessContainerVerticalState
                                       style: blackTextStyle.copyWith(
                                           color: widget.accountStatusEntity
                                                   .isInactive
-                                              ? MyThemeData.colorDarkGrey
-                                              : MyThemeData.unBlock),
+                                              ? AppColors.colorDarkGrey
+                                              : AppColors.unBlock),
                                     ),
                                   ),
                                 if(widget.accountStatusEntity.willBeActivated)
@@ -168,14 +169,14 @@ class _CustomUserAccessContainerVerticalState
                                             : null,
                                         color: widget
                                                 .accountStatusEntity.isInactive
-                                            ? MyThemeData.colorDarkGrey
+                                            ? AppColors.colorDarkGrey
                                             : widget.accountStatusEntity
                                                     .isActive
-                                                ? MyThemeData.unBlock
+                                                ? AppColors.unBlock
                                                 : widget.accountStatusEntity
                                                         .willBeDeactivated
-                                                    ? MyThemeData.warning
-                                                    : MyThemeData.delete),
+                                                    ? AppColors.warning
+                                                    : AppColors.delete),
                                   ),
                                 ),
                                 if (widget.accountStatusEntity.willBeActivated)
@@ -185,7 +186,7 @@ class _CustomUserAccessContainerVerticalState
                                       '\u2022 ${"Will Be Reactivated At".tr} ${Get.locale.toString().contains('en') ? widget.accountStatusEntity.reactivationDate ?? "" : widget.accountStatusEntity.reactivationDate != null ? dateforamtToArabic(widget.accountStatusEntity.reactivationDate.toString()) : ''}',
                                       style: blackTextStyle.copyWith(
                                           height: 1.6,
-                                          color: MyThemeData.warning),
+                                          color: AppColors.warning),
                                     ),
                                   ),
                               ],
@@ -242,9 +243,9 @@ class _CustomUserAccessContainerVerticalState
                                   child: SvgPicture.asset(
                                     'assets/icons/threeDotsDialog.svg',
                                     color: themeController.currentTheme ==
-                                            MyThemeData.lightTheme
-                                        ? MyThemeData.colorBlack
-                                        : MyThemeData.colorWhiteDark,
+                                            AppColors.lightTheme
+                                        ? AppColors.colorBlack
+                                        : AppColors.colorWhiteDark,
                                     height: 0.007.h,
                                   ),
                                 ),

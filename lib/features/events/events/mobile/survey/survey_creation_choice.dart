@@ -1,13 +1,14 @@
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/home/app_drawer/presentation/ui/pages/custom_drawer.dart';
 import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 
 
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/mobile/survey/create_survey_mobile.dart';
 import 'package:demo_app/features/events/mobile/survey/survey_choose_exisiting_screen.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/views/survey/create_survey.dart';
@@ -29,7 +30,7 @@ class _SurveyCreationChoiceState extends State<SurveyCreationChoice> {
   ButtonStyle buttonStyle(Color buttonColor) {
     bool isTablet = MediaQuery.of(context).size.shortestSide > 600;
     return ElevatedButton.styleFrom(
-        backgroundColor: buttonColor, //MyThemeData.bubbleColor,
+        backgroundColor: buttonColor, //AppColors.bubbleColor,
         minimumSize: isTablet ? Size(0.1.w, 0.053.h) : Size(0.4.w, 0.042.h),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)));
   }
@@ -115,9 +116,9 @@ class _SurveyCreationChoiceState extends State<SurveyCreationChoice> {
                               },
                               imagePath: "",
                               hasIcon: false,
-                              buttonColor: MyThemeData.colorGreydark,
+                              buttonColor: AppColors.colorGreydark,
                               buttonText: "Choose from Existing".tr,
-                              textColor: MyThemeData.colorBlack,
+                              textColor: AppColors.colorBlack,
                             ),
                             Container(width: 0.045.w),
                             CustomIconButton(
@@ -143,7 +144,7 @@ class _SurveyCreationChoiceState extends State<SurveyCreationChoice> {
                               buttonText: "Create New Survey".tr,
                               imagePath: "",
                               hasIcon: false,
-                              textColor: MyThemeData().contrastColor(),
+                              textColor: AppColors.textButton,
                             ),
                           ],
                         ),

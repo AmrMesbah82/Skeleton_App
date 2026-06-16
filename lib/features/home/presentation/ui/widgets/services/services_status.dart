@@ -70,8 +70,8 @@ class _ServicesStatusState extends State<ServicesStatus> {
                       style: isMobile
                           ? StyleText.fontSize12Weight500.copyWith(
                           color: lightMode
-                              ? ColorAppLight.blackButton
-                              : ColorAppDark.titleValue)
+                              ? AppColors.blackButton
+                              : AppColors.white)
                           : AppTextStyles.font14BlackCairoMedium
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
@@ -427,8 +427,8 @@ class _ServicesStatusState extends State<ServicesStatus> {
                 style: isMobile
                     ? StyleText.fontSize10Weight500.copyWith(
                     color: lightMode
-                        ? ColorAppLight.grayTextSla
-                        : ColorAppDark.titleValue)
+                        ? AppColors.secondaryText
+                        : AppColors.white)
                     : AppTextStyles.font12SecondaryBlackCairoRegular),
             Spacer(),
             Text(
@@ -436,8 +436,8 @@ class _ServicesStatusState extends State<ServicesStatus> {
               style: isMobile
                   ? StyleText.fontSize10Weight500.copyWith(
                   color: lightMode
-                      ? ColorAppLight.grayTextSla
-                      : ColorAppDark.titleValue)
+                      ? AppColors.secondaryText
+                      : AppColors.white)
                   : AppTextStyles.font12BlackCairoBold,
             ),
           ],

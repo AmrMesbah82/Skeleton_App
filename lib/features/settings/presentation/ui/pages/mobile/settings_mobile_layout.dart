@@ -1,4 +1,5 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 // import 'package:flutter/material.dart';
 // import 'package:flutter/services.dart';
 // import 'package:get/get.dart';
@@ -6,8 +7,8 @@ import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.da
 // import 'package:demo_app/core/widgets/custom_cards.dart';
 // import 'package:demo_app/core/helper/biometric_controller.dart';
 // import 'package:demo_app/core/helper/haptic_controller.dart';
-// import 'package:demo_app/core/theme/my_theme.dart';
-// import 'package:demo_app/core/theme/screen_size.dart';
+// 
+// import 'package:demo_app/core/theme/app_font_size.dart';
 // import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
 // import 'package:demo_app/core/widgets/dialogs/custom_logout_dialog.dart';
 // import 'package:demo_app/core/widgets/restart_widget.dart';
@@ -233,7 +234,7 @@ import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.da
 //                               isSwitchTile: true,
 //                               currentValue:
 //                                   themeController.currentTheme.value ==
-//                                       MyThemeData.darkTheme,
+//                                       AppColors.darkTheme,
 //                               onSwitchChanged: (Value) {
 //                                 themeController.toggleTheme();
 //                                 RestartWidget.restartApp(context);
@@ -281,12 +282,12 @@ import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.da
 //                                     subtitle:
 //                                         "Are You Sure You Want To Sign Out?",
 //                                     imagePath: "assets/images/newLogOut.json",
-//                                     backgroundColor: MyThemeData.signOut,
+//                                     backgroundColor: AppColors.signOut,
 //                                     showButtons: true,
 //                                     buttonText: 'Yes',
-//                                     buttoncolor: MyThemeData.signOut,
+//                                     buttoncolor: AppColors.signOut,
 //                                     buttonFontColor:
-//                                         MyThemeData().contrastColor(),
+//                                         AppColors.textButton,
 //                                     onConfirm: () {
 //                                       hapticController.triggerHapticFeedback(
 //                                           vibration: VibrateType.heavyImpact,
@@ -330,7 +331,7 @@ import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.da
 //           0.06.w, // set an indent to match the leading padding of the ListTile
 //       endIndent: 0.0
 //           .w, // set an end indent to match the trailing padding of the ListTile
-//       color: MyThemeData.dividerGrey, // set the color of the divider
+//       color: AppColors.dividerGrey, // set the color of the divider
 //     );
 //   }
 // }

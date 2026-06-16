@@ -1,13 +1,14 @@
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/form_fields/custom_search.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/filter_event_dialog.dart';
 import 'package:demo_app/features/events/components/reusable_icon_container.dart';
 import 'package:demo_app/features/events/components/survey_card.dart';
@@ -28,7 +29,7 @@ class _SurveyChooseExisitingState extends State<SurveyChooseExisiting> {
   ButtonStyle buttonStyle(Color buttonColor) {
     bool isTablet = MediaQuery.of(context).size.shortestSide > 600;
     return ElevatedButton.styleFrom(
-        backgroundColor: buttonColor, //MyThemeData.bubbleColor,
+        backgroundColor: buttonColor, //AppColors.bubbleColor,
         minimumSize: isTablet ? Size(0.1.w, 0.053.h) : Size(0.4.w, 0.042.h),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)));
   }
@@ -72,8 +73,8 @@ class _SurveyChooseExisitingState extends State<SurveyChooseExisiting> {
                         Expanded(
                           child: CustomSearchFiled2(
                               fillColor: themeController.currentTheme ==
-                                      MyThemeData.lightTheme
-                                  ? MyThemeData.colorWhite
+                                      AppColors.lightTheme
+                                  ? AppColors.colorWhite
                                   : Theme.of(context)
                                       .colorScheme
                                       .inversePrimary,
@@ -164,7 +165,7 @@ padding: EdgeInsets.zero,
                           // Expanded(
                           //   child: Container(),
                           //   // child: CustomElevatedButton(
-                          //   //   buttonStyle: buttonStyle(MyThemeData.colorGreydark),
+                          //   //   buttonStyle: buttonStyle(AppColors.colorGreydark),
                           //   //   onPressed: () {
                           //   //     Navigator.pop(context);
                           //   //   },
@@ -174,13 +175,13 @@ padding: EdgeInsets.zero,
                           //   //           : FontConstants.fontSize025.h)
                           //   //       : FontConstants.fontSize014.h,
                           //   //   buttonText: "Save for later".tr,
-                          //   //   textColor: MyThemeData.colorWhite,
+                          //   //   textColor: AppColors.colorWhite,
                           //   //   fontweight: FontWeight.w600,
                           //   // ),
                           // ),
 
                           MainCustomIconButton(
-                            buttonStyle: buttonStyle(MyThemeData.bubbleColor),
+                            buttonStyle: buttonStyle(AppColors.bubbleColor),
                             onPressed: selectedIndex == null
                                 ? () {}
                                 : () {

@@ -232,7 +232,7 @@ class HomePreview extends StatelessWidget {
       key: key,
       device: device,
       screen: Container(
-        color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.background,
+        color: lightMode ? AppColors.white : AppColors.background,
         child: MediaQuery(
           data: MediaQuery.of(context).copyWith(
             size: Size(deviceWidth, deviceHeight),
@@ -329,7 +329,7 @@ class HomePreview extends StatelessWidget {
         Text(
           "Upcoming Schedule".tr,
           style: StyleText.fontSize22Weight700.copyWith(
-            color: lightMode  ? ColorAppLight.redColor : ColorAppDark.red
+            color: lightMode  ? AppColors.red : AppColors.red
           ),
         ),
         Container(

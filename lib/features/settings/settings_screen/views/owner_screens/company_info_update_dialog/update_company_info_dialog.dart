@@ -1,4 +1,5 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -10,9 +11,9 @@ import 'package:demo_app/features/settings/settings_screen/views/owner_screens/c
 import 'package:demo_app/features/settings/presentation/ui/widgets/settings_header.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:multi_dropdown/enum/app_enums.dart';
 import 'package:multi_dropdown/models/chip_config.dart';
@@ -101,7 +102,7 @@ class _UpdateCompanyInfoDialogState extends State<UpdateCompanyInfoDialog> {
                           dropdownBorderRadius: 8,
                           selectedOptionIcon: SvgPicture.asset(
                                'assets/icons/CheckListOn.svg',
-                                              color: MyThemeData.lightPrimary,
+                                              color: AppColors.lightPrimary,
                               ),
                           clearIcon:
                               SvgPicture.asset("assets/images/closefield.svg"),
@@ -130,7 +131,7 @@ class _UpdateCompanyInfoDialogState extends State<UpdateCompanyInfoDialog> {
                                 ? FontConstants.fontSize017.h
                                 : FontConstants.fontSize021.h): (FontConstants.fontSize016.h),
                                height: isVertical ? 1.8 : 1.2,
-                                color: MyThemeData.colorGrey,
+                                color: AppColors.colorGrey,
                               ),
                           // controller: _controller,
                           onOptionSelected: (options) {
@@ -141,9 +142,9 @@ class _UpdateCompanyInfoDialogState extends State<UpdateCompanyInfoDialog> {
                           radiusGeometry: BorderRadius.circular(8),
                           fieldBackgroundColor:
                              themeController.currentTheme ==
-                                          MyThemeData.lightTheme
-                                      ? MyThemeData.colorLightGrey
-                                      : MyThemeData.colorBlack,
+                                          AppColors.lightTheme
+                                      ? AppColors.colorLightGrey
+                                      : AppColors.colorBlack,
                           dropdownBackgroundColor:
                               Theme.of(context).colorScheme.inversePrimary,
                           selectedOptionBackgroundColor: Colors.transparent,
@@ -162,11 +163,11 @@ class _UpdateCompanyInfoDialogState extends State<UpdateCompanyInfoDialog> {
                                               Icons.cancel,
                                               size: 0.02.h,
                                               color:
-                                                  MyThemeData().contrastColor(),
+                                                  AppColors.textButton,
                                             ),
                                   labelStyle:
                                       AppFontStyle.cairoRegularStyle.copyWith(
-                                    color: MyThemeData().contrastColor(),
+                                    color: AppColors.textButton,
                                     fontSize: FontConstants.fontSize016.h,
                                     height: Get.locale.toString().contains('en') ?   1.5 : 1.2,  
                                   ),
@@ -304,7 +305,7 @@ class _UpdateCompanyInfoDialogState extends State<UpdateCompanyInfoDialog> {
                             },
                             buttonText: "Submit".tr,
                            
-                            buttonStyle: buttonStyle(MyThemeData.signOut),
+                            buttonStyle: buttonStyle(AppColors.signOut),
                           )
                         ],
                       ),

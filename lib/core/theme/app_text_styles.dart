@@ -9,7 +9,7 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import 'app_colors.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'app_font_weights.dart';
 
 abstract class AppTextStyles {

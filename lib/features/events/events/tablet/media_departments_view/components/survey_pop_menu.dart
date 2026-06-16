@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/home/app_drawer/presentation/ui/pages/custom_drawer.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/employee_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/events/mobile/employee/take_survey_screen_mobile.dart';

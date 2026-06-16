@@ -8,6 +8,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 
 class CustomDropdownFormFieldAmr extends StatefulWidget {
@@ -146,9 +147,7 @@ class _CustomDropdownFormFieldAmrState extends State<CustomDropdownFormFieldAmr>
           width: widget.width,
           height: widget.height?.h,
           decoration: BoxDecoration(
-            color: lightMode
-                ? ColorAppLight.whiteColor
-                : ColorAppDark.background,
+            color: AppColors.background,
             borderRadius: BorderRadius.circular(4.r),
           ),
           child: FormField<String>(

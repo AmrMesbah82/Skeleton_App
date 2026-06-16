@@ -10,12 +10,12 @@ import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/functions.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/constants/system_actions.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
@@ -40,7 +40,7 @@ class _ForgotPassDialogState extends State<ForgotPassDialog> {
   ButtonStyle buttonStyle(Color buttonColor) {
     bool isTablet = MediaQuery.of(context).size.shortestSide > 600;
     return ElevatedButton.styleFrom(
-        backgroundColor: buttonColor, //MyThemeData.bubbleColor,
+        backgroundColor: buttonColor, //AppColors.bubbleColor,
         minimumSize: isTablet ? Size(0.1.w, 0.053.h) : Size(0.3.w, 0.05.h),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)));
   }
@@ -114,7 +114,7 @@ class _ForgotPassDialogState extends State<ForgotPassDialog> {
                   });
                 },
 
-                fillColor: lightMode ? ColorAppLight.whiteColor : ColorAppDark.background,
+                fillColor: AppColors.background,
 
 
               ),
@@ -217,7 +217,7 @@ class _ForgotPassDialogState extends State<ForgotPassDialog> {
 
                   // Expanded(
                   //   child: MainCustomIconButton(
-                  //     buttonStyle: buttonStyle(MyThemeData.bubbleColor),
+                  //     buttonStyle: buttonStyle(AppColors.bubbleColor),
                   //     onPressed: () async {
                   //       if (await checkInternet()) {
                   //         showLoadingIndicator();

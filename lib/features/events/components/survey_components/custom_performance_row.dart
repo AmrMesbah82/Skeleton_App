@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 //Date Created :14/November/2023
 // Developer Name : Bassem Mohamed
@@ -119,7 +120,7 @@ class _CustomPerformaceDataRowState extends State<CustomPerformaceDataRow> {
               hoursAndMinutesString.tr, // widget.texts[i].tr,
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize020.h,
-                color: MyThemeData.colorBlack,
+                color: AppColors.colorBlack,
                 fontWeight: FontWeight.w600,
                 // height: 0.001.h
               ),

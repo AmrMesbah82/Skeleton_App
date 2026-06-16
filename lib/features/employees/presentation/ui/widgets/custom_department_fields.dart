@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomDepartmentFields extends StatefulWidget {
   TextEditingController depNameController;

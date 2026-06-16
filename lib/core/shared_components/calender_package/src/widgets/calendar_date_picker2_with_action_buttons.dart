@@ -1,10 +1,11 @@
+import 'package:demo_app/core/theme/app_font_size.dart' show AppFontStyle;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/shared_components/calender_package/src/models/calendar_date_picker2_config.dart';
 import 'package:demo_app/core/shared_components/calender_package/src/widgets/calendar_date_picker2.dart';
 import 'package:demo_app/core/enumeration/enum.dart';import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 
 class CalendarDatePicker2WithActionButtons extends StatefulWidget {
   const CalendarDatePicker2WithActionButtons({

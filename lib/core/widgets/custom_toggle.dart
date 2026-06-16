@@ -2,11 +2,12 @@
 // ignore_for_file: must_be_immutable, unused_field, deprecated_member_use, avoid_print
 
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomToggle extends StatefulWidget {
   final String? toggleName;
@@ -63,7 +64,7 @@ class CustomToggleState extends State<CustomToggle> {
   double radius = 8;
   final FocusNode _focusNode = FocusNode();
   bool filled = false;
-  Color _borderColor = MyThemeData.colorGrey;
+  Color _borderColor = AppColors.colorGrey;
   void toggle() {
     setState(() {
       widget.onToggleChanged();
@@ -86,7 +87,7 @@ class CustomToggleState extends State<CustomToggle> {
   Widget build(BuildContext context) {
     _borderColor = widget.isEdit == true
         ? Theme.of(context).colorScheme.onInverseSurface
-        : MyThemeData.colorGrey;
+        : AppColors.colorGrey;
     bool isPortrait =
         MediaQuery.of(context).orientation == Orientation.portrait;
     bool isTablet = MediaQuery.of(context).size.shortestSide > 600;
@@ -123,10 +124,10 @@ class CustomToggleState extends State<CustomToggle> {
                 focusNode: _focusNode,
                 onFocusChange: (hasFocus) {
                   setState(() {
-                    // filled==true?_borderColor= MyThemeData.colorBlack :
+                    // filled==true?_borderColor= AppColors.colorBlack :
                     _borderColor = _focusNode.hasFocus
-                        ? MyThemeData.lightPrimary
-                        : MyThemeData.colorGrey;
+                        ? AppColors.lightPrimary
+                        : AppColors.colorGrey;
                   });
                 },
                 child: Padding(
@@ -146,12 +147,12 @@ class CustomToggleState extends State<CustomToggle> {
                                 width: 1)
                             : Border.all(
                                 color: Colors
-                                    .transparent, //MyThemeData.colorGrey /*MyThemeData.colorBlack*/,
+                                    .transparent, //AppColors.colorGrey /*AppColors.colorBlack*/,
                                 width: 1),
                         boxShadow: [
                           BoxShadow(
                             offset: Offset(0.0.h, 0.01.h),
-                            color: MyThemeData.colorGrey.withOpacity(0.05),
+                            color: AppColors.colorGrey.withOpacity(0.05),
                             blurRadius: 18,
                           )
                         ]),
@@ -181,7 +182,7 @@ class CustomToggleState extends State<CustomToggle> {
                                   fontSize: FontConstants.fontSize015.h,
                                   fontWeight: FontWeight.w500,
                                   color: widget.counterStyle ??
-                                      MyThemeData.colorGreydark),
+                                      AppColors.colorGreydark),
                           hintStyle: widget.hintStyle ??
                               AppFontStyle.cairoRegularStyle.copyWith(
                                   fontSize: isPortrait == true
@@ -291,7 +292,7 @@ class CustomToggleState2 extends State<CustomToggle2> {
                 widget.toggleName,
                 style: AppFontStyle.cairoRegularStyle.copyWith(
                   fontSize: FontConstants.fontSize020.h,
-                  color: MyThemeData.colorBlack,
+                  color: AppColors.colorBlack,
                   fontWeight: FontWeight.w500,
                 ),
               ),

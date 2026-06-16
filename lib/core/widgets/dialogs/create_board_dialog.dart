@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
@@ -8,8 +9,8 @@ import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/widgets/circle_progress.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
 
 
@@ -115,7 +116,7 @@ class _CreateBoardDialogState extends State<CreateBoardDialog> {
                             controller.imageUrl == ""
                                 ? CircleAvatar(
                                     radius: isVertical ? 0.06.w : 0.036.w,
-                                    backgroundColor: MyThemeData.barrierColor,
+                                    backgroundColor: AppColors.barrierColor,
                                     child: Center(
                                       child: Transform.scale(
                                           scale: 1.3,
@@ -125,7 +126,7 @@ class _CreateBoardDialogState extends State<CreateBoardDialog> {
                                   )
                                 : CircleAvatar(
                                     radius: isVertical ? 0.06.w : 0.036.w,
-                                    backgroundColor: MyThemeData.barrierColor,
+                                    backgroundColor: AppColors.barrierColor,
                                     child: Center(
                                       child: Transform.scale(
                                         scale: 1,
@@ -143,11 +144,11 @@ class _CreateBoardDialogState extends State<CreateBoardDialog> {
                                 child: Transform.scale(
                                   scale: isTablet ? 1.5 : 0.9,
                                   child: CircleAvatar(
-                                      backgroundColor: MyThemeData.signOut,
+                                      backgroundColor: AppColors.signOut,
                                       radius: isVertical ? 0.01.h : 0.013.h,
                                       child: SvgPicture.asset(
                                         "assets/icons/CameraIcon.svg",
-                                        color: MyThemeData().contrastColor(),
+                                        color: AppColors.textButton,
                                         height: 0.015.h,
                                       )),
                                 ),
@@ -261,7 +262,7 @@ class _CreateBoardDialogState extends State<CreateBoardDialog> {
                           padding: EdgeInsets.only(top: 0.02.h, bottom: 0.01.h),
                           child: MainCustomButton(
                             buttonColor:
-                                !isButtonEnabled ? MyThemeData.GreyBack : null,
+                                !isButtonEnabled ? AppColors.GreyBack : null,
                             buttonText: 'Create'.tr,
                             onPressed: isButtonEnabled
                                 ? () async {

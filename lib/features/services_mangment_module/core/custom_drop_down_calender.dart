@@ -129,7 +129,7 @@ class _CustomDropdownFormFieldCalenderState extends State<CustomDropdownFormFiel
                     maxHeight: 230.sp,
                     offset: const Offset(0, 0),
                     decoration: BoxDecoration(
-                      color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.background,
+                      color: lightMode ? AppColors.white : AppColors.background,
                       border: Border.all(color: Colors.transparent),
                       borderRadius: BorderRadius.circular(4.r),
                     ),
@@ -167,7 +167,7 @@ class _CustomDropdownFormFieldCalenderState extends State<CustomDropdownFormFiel
                               width: 14.w,
                               height: 14.h,
                               fit: BoxFit.fill,
-                              color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.darkGrey,
+                              color: lightMode ? AppColors.secondaryText : AppColors.darkGrey,
                             ),
                           ),
                         );
@@ -175,7 +175,7 @@ class _CustomDropdownFormFieldCalenderState extends State<CustomDropdownFormFiel
                     ),
                   ),
                   style: StyleText.fontSize12Weight400.copyWith(
-                    color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                    color: lightMode ? AppColors.blackButton : AppColors.white,
                   ),
                   items: widget.items.map((unit) {
                     return DropdownMenuItem<String>(
@@ -183,7 +183,7 @@ class _CustomDropdownFormFieldCalenderState extends State<CustomDropdownFormFiel
                       child: Text(
                         FormatHelper.capitalize(unit["value"] ?? '',),
                         style: StyleText.fontSize12Weight400.copyWith(
-                          color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                          color: lightMode ? AppColors.blackButton : AppColors.white,
                           overflow: TextOverflow.ellipsis,
                         ),
                       ),

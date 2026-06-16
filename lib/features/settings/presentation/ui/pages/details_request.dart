@@ -431,7 +431,7 @@ class _DetailsRequestSettingsState extends State<DetailsRequestSettings> {
       case 'rejected':
         return Colors.red[500]!;
       default:
-        return ColorAppLight.grayTextSla;
+        return AppColors.secondaryText;
     }
   }
 
@@ -635,8 +635,8 @@ class _DetailsRequestSettingsState extends State<DetailsRequestSettings> {
                         lightMode: lightMode,
                         title: S.of(context).current_details,
                         titleColor: lightMode
-                            ? ColorAppLight.blackButton
-                            : ColorAppDark.titleValue,
+                            ? AppColors.blackButton
+                            : AppColors.white,
                         value: oldValue,
                         fieldName: fieldName,
                       ),
@@ -723,7 +723,7 @@ class _DetailsRequestSettingsState extends State<DetailsRequestSettings> {
           enabled: false,
           submitted: submitted,
           fillColor: title.contains('current') || title.contains('الحالية')
-              ? (lightMode ? ColorAppLight.whiteOp : ColorAppDark.background)
+              ? (lightMode ? AppColors.background : AppColors.background)
               : null,
         ),
       ],

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
@@ -116,9 +117,9 @@ class _EventInformationMobileState extends State<EventInformationMobile> {
                 isTextField: true,
                 hint: "Text Here",
                 fillColor: themeController.currentTheme ==
-                                            MyThemeData.lightTheme
-                                        ? MyThemeData.colorLightGrey
-                                        : MyThemeData.colorBlack,
+                                            AppColors.lightTheme
+                                        ? AppColors.colorLightGrey
+                                        : AppColors.colorBlack,
                 isRequired: true,
                 isOptional: false,
                 isExpanded: true,
@@ -147,9 +148,9 @@ class _EventInformationMobileState extends State<EventInformationMobile> {
                 isRequired: true,
                 isArabic: true,
                  fillColor: themeController.currentTheme ==
-                                            MyThemeData.lightTheme
-                                        ? MyThemeData.colorLightGrey
-                                        : MyThemeData.colorBlack,
+                                            AppColors.lightTheme
+                                        ? AppColors.colorLightGrey
+                                        : AppColors.colorBlack,
                 isOptional: false,
                 isExpanded: true,
                 isSetting: true,
@@ -178,9 +179,9 @@ class _EventInformationMobileState extends State<EventInformationMobile> {
                 isRequired: true,
                 isExpanded: true,
                  fillColor: themeController.currentTheme ==
-                                            MyThemeData.lightTheme
-                                        ? MyThemeData.colorLightGrey
-                                        : MyThemeData.colorBlack,
+                                            AppColors.lightTheme
+                                        ? AppColors.colorLightGrey
+                                        : AppColors.colorBlack,
                 isSetting: true,
                 textController: eventController.agenda,
                 // textController: widget.isGroupEdit == true
@@ -204,9 +205,9 @@ class _EventInformationMobileState extends State<EventInformationMobile> {
                 isTextField: true,
                 hint: "اكتب هنا",
                  fillColor: themeController.currentTheme ==
-                                            MyThemeData.lightTheme
-                                        ? MyThemeData.colorLightGrey
-                                        : MyThemeData.colorBlack,
+                                            AppColors.lightTheme
+                                        ? AppColors.colorLightGrey
+                                        : AppColors.colorBlack,
                 isOptional: false,
                 isRequired: true,
                 isExpanded: true,
@@ -229,9 +230,9 @@ class _EventInformationMobileState extends State<EventInformationMobile> {
                SizedBox(height: 0.01.h,),
               ColumnRequestData(
                 fillColor:
-                    themeController.currentTheme == MyThemeData.lightTheme
-                        ? MyThemeData.colorLightGrey
-                        : MyThemeData.colorBlack,
+                    themeController.currentTheme == AppColors.lightTheme
+                        ? AppColors.colorLightGrey
+                        : AppColors.colorBlack,
                 title: "Department Owner",
                 isTextField: false,
                 buttonWidth: double.infinity,

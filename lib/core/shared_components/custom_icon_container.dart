@@ -1,11 +1,12 @@
 import 'dart:io';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
 class CustomIconContainer extends StatelessWidget {
@@ -43,7 +44,7 @@ class CustomIconContainer extends StatelessWidget {
         color: Theme.of(context).colorScheme.inversePrimary,
         borderRadius: BorderRadius.circular(8.0),
         border: Border.all(
-          color: MyThemeData.colorGreydark,
+          color: AppColors.colorGreydark,
           width: 1.0,
         ),
       ),
@@ -55,7 +56,7 @@ class CustomIconContainer extends StatelessWidget {
             child: Container(
               width: double.infinity,
               decoration: BoxDecoration(
-                color: MyThemeData.barrierColor,
+                color: AppColors.barrierColor,
                 borderRadius: BorderRadius.circular(8.0),
               ),
               height: 0.17.h,
@@ -67,7 +68,7 @@ class CustomIconContainer extends StatelessWidget {
                       Container(
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: MyThemeData.barrierColor,
+                            color: AppColors.barrierColor,
                             borderRadius: BorderRadius.circular(8.0),
                           ),
                           height: 0.17.h,
@@ -100,13 +101,13 @@ class CustomIconContainer extends StatelessWidget {
                         child: Container(
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
-                              color: MyThemeData.bubbleColor),
+                              color: AppColors.bubbleColor),
                           child: Padding(
                             padding:   EdgeInsets.all(orientation == Orientation.portrait? 4 : 2),
                             child: Center(
                               child: SvgPicture.asset(
                                 "assets/icons/plusIconButton.svg",
-                                color: MyThemeData().contrastColor(),
+                                color: AppColors.textButton,
                               ),
                             ),
                           ),
@@ -117,8 +118,8 @@ class CustomIconContainer extends StatelessWidget {
                           color: isEditIcon
                               ? null
                               : image != null
-                                  ? MyThemeData.barrierColor
-                                  : MyThemeData.colorBlack,
+                                  ? AppColors.barrierColor
+                                  : AppColors.colorBlack,
                           height: 0.035.h,
                         )*/
                         ,
@@ -141,9 +142,9 @@ class CustomIconContainer extends StatelessWidget {
                       : isSmallerFont
                           ? FontConstants.fontSize016.h
                           : FontConstants.fontSize017.h,
-                  color: themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorBlack
-                      : MyThemeData.colorWhiteDark,
+                  color: themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorBlack
+                      : AppColors.colorWhiteDark,
                   fontWeight: FontWeight.w500),
             ),
           ),

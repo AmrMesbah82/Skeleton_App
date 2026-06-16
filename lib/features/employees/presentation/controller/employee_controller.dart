@@ -615,12 +615,12 @@ class EmployeeController extends GetxController with StateMixin {
       return null;
     }
   }
-  /// function name: removeKnowticedCompanyAccountsDirect
-  /// function purpose: Remove all accounts with @knowticedcompany domain from Demo_Users_Accounts
+  /// function name: removedemo_appCompanyAccountsDirect
+  /// function purpose: Remove all accounts with @demo_appcompany domain from Demo_Users_Accounts
   /// Uses direct path: Demo_Users_Accounts
-  Future<void> removeKnowticedCompanyAccountsDirect() async {
+  Future<void> removedemo_appCompanyAccountsDirect() async {
     print("\n╔════════════════════════════════════════════════════════════╗");
-    print("║  REMOVING @knowticedcompany ACCOUNTS                       ║");
+    print("║  REMOVING @demo_appcompany ACCOUNTS                       ║");
     print("╚════════════════════════════════════════════════════════════╝\n");
 
     try {
@@ -645,7 +645,7 @@ class EmployeeController extends GetxController with StateMixin {
           String docId = doc.id;
 
           // Document ID is the email itself (based on your screenshot)
-          if (docId.contains('@knowticedcompany')) {
+          if (docId.contains('@demo_appcompany')) {
             print("🗑️  Deleting: $docId");
             await doc.reference.delete();
             deletedCount++;

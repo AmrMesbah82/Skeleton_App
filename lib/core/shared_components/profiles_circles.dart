@@ -4,8 +4,9 @@
 // Date of Last Edit :22/November/2023
 // Objectives: this is a widget to customize circle of the people will be in the meeting on meeting screen
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class ProfilesCircles extends StatelessWidget {
   const ProfilesCircles({
@@ -21,7 +22,7 @@ class ProfilesCircles extends StatelessWidget {
       height: 0.03.h,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
-        color: MyThemeData.lightPrimary,
+        color: AppColors.lightPrimary,
       ),
       child: Center(
         child: CircleAvatar(

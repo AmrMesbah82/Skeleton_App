@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/custom_chart.dart';
 
 class QuestionCardAnalytic extends StatefulWidget {
@@ -31,10 +32,10 @@ class _QuestionCardAnalyticState extends State<QuestionCardAnalytic> {
   List<ChartData> getChartData() {
     List<ChartData>? temp = [];
     List<Color> assignmnetsColors = [
-      MyThemeData.signOut,
-      MyThemeData.bubbleColor,
-      MyThemeData.blue,
-      MyThemeData.red
+      AppColors.signOut,
+      AppColors.bubbleColor,
+      AppColors.blue,
+      AppColors.red
     ];
     for (int i = 0; i < widget.optionsCount!.length; i++) {
       temp.add(ChartData(widget.options![i],

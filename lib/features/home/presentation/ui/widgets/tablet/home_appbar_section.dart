@@ -59,7 +59,7 @@ class HomeAppbarSection extends StatelessWidget {
                       child: SvgPicture.asset(
                         "assets/icons/homeCalen.svg",
                         height: orientation ? 20.h : 25.h,
-                        color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                        color: lightMode ? AppColors.blackButton : AppColors.white
                       ),
                     ),
                     SizedBox(width: 10.sp),
@@ -70,7 +70,7 @@ class HomeAppbarSection extends StatelessWidget {
                       child: Text(
                         controller.getCurrentDate(),
                         style: StyleText.fontSize20Weight600.copyWith(
-                          color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                          color: lightMode ? AppColors.blackButton : AppColors.white
                         )
                       ),
                     ),
@@ -104,7 +104,7 @@ class HomeAppbarSection extends StatelessWidget {
                           child: CustomSvg(
                             assetPath: icon.svgPath,
                             fit: BoxFit.contain,
-                            color: ColorAppLight.buttonTextColor,
+                            color: AppColors.textButton,
                           ),
                         ),
                       ),
@@ -123,7 +123,7 @@ class HomeAppbarSection extends StatelessWidget {
             child: Text(
               "${DateTime.now().hour < 12 ? 'Good Morning'.tr : DateTime.now().hour < 14 ? 'Good Afternoon'.tr : 'Good Evening'.tr} ${Get.locale.toString().contains('en') ? employee!.firstName!.last!.capitalize : employee!.firstNameInArabic!.last!}",
               style: StyleText.fontSize24Weight600.copyWith(
-                color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                color: lightMode ? AppColors.blackButton : AppColors.white
               )
             ),
           ),

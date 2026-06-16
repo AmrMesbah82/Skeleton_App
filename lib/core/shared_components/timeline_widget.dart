@@ -4,6 +4,7 @@
 // Date of Last Edit :22/November/2023
 // Objectives: this is a widget to customize widget that ocntain time line of the day in meetings screen
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -13,10 +14,10 @@ import 'package:demo_app/core/shared_components/profiles_circles.dart';
 import 'package:demo_app/core/shared_components/title_time_meeting.dart';
 
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class TimelineWidget extends StatefulWidget {
   final List<Meeting> data;
@@ -144,7 +145,7 @@ class _TimelineWidgetState extends State<TimelineWidget> {
                                             child: SvgPicture.asset(
                                               'assets/icons/threeDots.svg',
                                               // ignore: deprecated_member_use
-                                              color: MyThemeData.colorWhite,
+                                              color: AppColors.colorWhite,
                                             ),
                                           ),
                                         ),
@@ -200,7 +201,7 @@ class _TimelineWidgetState extends State<TimelineWidget> {
                                           fontSize: FontConstants.fontSize010.w,
                                           fontWeight: FontWeight.w600,
                                           color: isHappening
-                                              ? MyThemeData.colorWhite
+                                              ? AppColors.colorWhite
                                               : Theme.of(context)
                                                   .colorScheme
                                                   .inverseSurface),

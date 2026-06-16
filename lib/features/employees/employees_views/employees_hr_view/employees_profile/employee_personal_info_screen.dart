@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/employees/employees_views/employees_hr_view/employees_profile/custom_personal_Info_Container.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 
 /// Date Created :3/Dec/2023

@@ -376,7 +376,7 @@ class _AddDepartmentDialogNewState extends State<AddDepartmentDialogNew> {
                     height: 38,
                     buttonColor: AppColors.primary,
                     textStyle: StyleText.fontSize18Weight500.copyWith(
-                      color: ColorAppLight.buttonTextColor,
+                      color: AppColors.textButton,
                     ),
                   ),
                 ],

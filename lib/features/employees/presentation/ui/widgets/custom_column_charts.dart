@@ -1,14 +1,15 @@
 // ignore_for_file: unrelated_type_equality_checks, sized_box_for_whitespace, unused_local_variable
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
 import 'package:demo_app/core/shared_components/custom_chart_data.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -133,14 +134,14 @@ class _CustomColumnChartContainerState
   List<NewEmployeeModelHistory>? employeesWithoutFilter = [];
 
   final List<Color> customColors = [
-    MyThemeData.signOut,
-    MyThemeData.colorGrey,
-    MyThemeData.lightPrimary,
-    MyThemeData.colorGreydark,
-    MyThemeData.colorLightGrey,
-    MyThemeData.colorWhiteDark,
-    MyThemeData.colorGreyDisabled,
-    MyThemeData.colorDarkGrey,
+    AppColors.signOut,
+    AppColors.colorGrey,
+    AppColors.lightPrimary,
+    AppColors.colorGreydark,
+    AppColors.colorLightGrey,
+    AppColors.colorWhiteDark,
+    AppColors.colorGreyDisabled,
+    AppColors.colorDarkGrey,
   ];
 
   final List<String> period = [
@@ -408,11 +409,11 @@ class _CustomColumnChartContainerState
             ? Theme.of(context).colorScheme.inversePrimary
             : Theme.of(context).colorScheme.inversePrimary,
         borderRadius: BorderRadius.circular(9),
-        boxShadow: themeController.currentTheme == MyThemeData.lightTheme
+        boxShadow: themeController.currentTheme == AppColors.lightTheme
             ? [
           if (widget.isTransparent == false)
             BoxShadow(
-              color: MyThemeData.colorGrey.withOpacity(0.2),
+              color: AppColors.colorGrey.withOpacity(0.2),
               blurRadius: 18,
             ),
         ]
@@ -429,7 +430,7 @@ class _CustomColumnChartContainerState
             child: Row(
               children: [
                 CircleAvatar(
-                  backgroundColor: MyThemeData.bubbleColor,
+                  backgroundColor: AppColors.bubbleColor,
                   radius: isTablet
                       ? isPortrait
                       ? 0.015.h
@@ -438,7 +439,7 @@ class _CustomColumnChartContainerState
                   child: SvgPicture.asset(
                     widget.imagePath,
                     height: isTablet ? (isPortrait ? 0.02.h : 0.025.h) : 0.02.h,
-                    color: MyThemeData().contrastColor(),
+                    color: AppColors.textButton,
                   ),
                 ),
                 SizedBox(width: 0.01.h),
@@ -449,9 +450,9 @@ class _CustomColumnChartContainerState
                           ? FontConstants.fontSize018.h
                           : FontConstants.fontSize022.h,
                       color:
-                      themeController.currentTheme == MyThemeData.lightTheme
-                          ? MyThemeData.colorBlack
-                          : MyThemeData.colorWhiteDark,
+                      themeController.currentTheme == AppColors.lightTheme
+                          ? AppColors.colorBlack
+                          : AppColors.colorWhiteDark,
                       fontWeight: FontWeight.w600,
                       height: isTablet ? 1.8 : 0.002.h),
                 ),

@@ -1,10 +1,11 @@
 // ignore: must_be_immutable
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 // ignore: must_be_immutable
 class RadioButtonitem extends StatefulWidget {
@@ -40,11 +41,11 @@ class _RadioButtonitemState extends State<RadioButtonitem> {
                     widget.type != widget.correctAnswer)
                 ? widget.type == widget.connectionType //Connectiontype.text
                     ? widget.type == widget.correctAnswer
-                        ? MyThemeData.signOut
-                        : MyThemeData.colorRed
+                        ? AppColors.signOut
+                        : AppColors.colorRed
                     : Theme.of(context).colorScheme.tertiaryContainer
                 : widget.type == widget.connectionType //Connectiontype.text
-                    ? MyThemeData.signOut
+                    ? AppColors.signOut
                     : Theme.of(context).colorScheme.tertiaryContainer,
           ),
           value: widget.connectionType!, //Connectiontype.text,

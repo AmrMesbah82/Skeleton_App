@@ -200,7 +200,7 @@ class DefaultFormField extends StatelessWidget {
                   child: suffixIcon,
                 )
                     : null,
-                fillColor: backGroundColor ?? (lightMode ? ColorAppLight.whiteColor : ColorAppDark.background),                filled: true,
+                fillColor: backGroundColor ?? (AppColors.background),                filled: true,
               ),
               obscureText: isObscureText ?? false,
               style: style ??

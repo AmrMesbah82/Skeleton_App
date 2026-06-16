@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
-import 'app_colors.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'app_text_styles.dart';
 
 abstract class AppTheme {
@@ -347,11 +347,28 @@ abstract class AppTheme {
     'darkDashboardTable': const Color(0xFF28282B),
     'drawerColor': const Color(0xFFCCCCCC),
     'blackButton': Colors.white,
+    // Keys present in lightThemeColors that must also exist in dark to prevent null crashes:
+    'barrierColor': const Color(0xFFD9D9D9),
+    'pending': const Color(0xffFF814A),
+    'totalBlack': const Color(0xFF000000),
+    'whiteDark': const Color(0xFFF2F2F2),
+    'block': const Color(0xFFDF0C0C),
+    'warning': const Color(0xffFF814A),
+    'delete': const Color(0xFFDF1C1C),
+    'differentGrey': const Color(0xFF9E9E9E),
+    'unBlock': const Color(0xFF4BB609),
+    'greyBack': const Color(0xFFBCCCCC),
+    'darkBackGround': const Color(0xFF545454),
+    'lightRed': const Color(0xffFF0000),
   };
 
   static void setCurrentThemeColors() {
+    print('🎨 [MainCore AppTheme] setCurrentThemeColors — isDark: $isDark, '
+        'barrierColor before: ${AppColors.currentThemeColors['barrierColor']}');
     AppColors.currentThemeColors =
         isDark ?? false ? darkThemeColors : lightThemeColors;
+    print('🎨 [MainCore AppTheme] setCurrentThemeColors — barrierColor after: '
+        '${AppColors.currentThemeColors['barrierColor']}');
     Get.forceAppUpdate();
   }
 
@@ -374,6 +391,12 @@ abstract class AppTheme {
 
     setCurrentThemeColors();
   }
+
+  static void interfaceInitTheme(
+      Color primaryColor, Color secondaryColor, bool isDarkMode) =>
+      initTheme(primaryColor, secondaryColor, isDarkMode);
+
+  static void interfaceToggleTheme() => toggleTheme();
 
   static void toggleTheme() async {
     isDark = !isDark!;

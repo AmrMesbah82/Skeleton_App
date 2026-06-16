@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 const double bubbleRadius = 16;
 
@@ -25,7 +26,7 @@ class BubbleText extends StatelessWidget {
   final double bubbleRadius;
   final bool isSender;
   late final Color color =
-      isSender ? MyThemeData.bubbleColor : MyThemeData.colorGrey;
+      isSender ? AppColors.bubbleColor : AppColors.colorGrey;
   final String text;
   //final String time;
   final bool tail;

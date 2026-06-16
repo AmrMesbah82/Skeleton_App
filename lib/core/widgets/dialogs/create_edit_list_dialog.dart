@@ -1,4 +1,5 @@
-import 'package:demo_app/core/theme/grc_theme_controller.dart';
+
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,9 +10,9 @@ import 'package:demo_app/core/widgets/cupertino_time_picker.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class CreateEditListDialog extends StatefulWidget {
@@ -103,9 +104,9 @@ class _CreateEditListDialogState extends State<CreateEditListDialog> {
                           hasPrefix: true,
                           isTextField: true,
                              fillColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorLightGrey
-                              : MyThemeData.colorBlack,
+                                  AppColors.lightTheme
+                              ? AppColors.colorLightGrey
+                              : AppColors.colorBlack,
                           textController: name,
                           controllerState: (value) {
                             setState(() {});
@@ -149,9 +150,9 @@ class _CreateEditListDialogState extends State<CreateEditListDialog> {
                       },
                       child: ColumnRequestData(
                           fillColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorLightGrey
-                              : MyThemeData.colorBlack,
+                                  AppColors.lightTheme
+                              ? AppColors.colorLightGrey
+                              : AppColors.colorBlack,
                         title: "Due Date",
                         isTextField: true,
                         hint: "DD/MM/YYYY",
@@ -186,9 +187,9 @@ class _CreateEditListDialogState extends State<CreateEditListDialog> {
                       },
                       child: ColumnRequestData(
                           fillColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorLightGrey
-                              : MyThemeData.colorBlack,
+                                  AppColors.lightTheme
+                              ? AppColors.colorLightGrey
+                              : AppColors.colorBlack,
                         title: "Time",
                         isTextField: true,
                         hint: "12:00 PM",

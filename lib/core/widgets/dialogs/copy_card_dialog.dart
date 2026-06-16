@@ -4,6 +4,7 @@
 /// Date of Last Edit :23/April/2024 By Abdullah Ibrahim
 // Objectives: this is a widget to customize create,edit,reschedule.cancel  meeting dialogues in meetings  screen
 import 'package:flutter/cupertino.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -17,8 +18,8 @@ import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 import '../../../features/task_management_module/task/data/model/board_model/board_model.dart';
@@ -187,9 +188,9 @@ class _CopyCardDialougeState extends State<CopyCardDialouge> {
                     widget.isMove == true
                         ? ColumnRequestData(
                             fillColor: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorLightGrey
-                                : MyThemeData.colorBlack,
+                                    AppColors.lightTheme
+                                ? AppColors.colorLightGrey
+                                : AppColors.colorBlack,
                             title: "Choose list to move the card to",
                             isTextField: false,
                             hint: "Choose List",
@@ -227,9 +228,9 @@ class _CopyCardDialougeState extends State<CopyCardDialouge> {
                                           child: ColumnRequestData(
                                             fillColor:
                                                 themeController.currentTheme ==
-                                                        MyThemeData.lightTheme
-                                                    ? MyThemeData.colorLightGrey
-                                                    : MyThemeData.colorBlack,
+                                                        AppColors.lightTheme
+                                                    ? AppColors.colorLightGrey
+                                                    : AppColors.colorBlack,
                                             title: "Start Date",
                                             isTextField: true,
                                             hint: hintStartDate,
@@ -268,9 +269,9 @@ class _CopyCardDialougeState extends State<CopyCardDialouge> {
                                           child: ColumnRequestData(
                                             fillColor:
                                                 themeController.currentTheme ==
-                                                        MyThemeData.lightTheme
-                                                    ? MyThemeData.colorLightGrey
-                                                    : MyThemeData.colorBlack,
+                                                        AppColors.lightTheme
+                                                    ? AppColors.colorLightGrey
+                                                    : AppColors.colorBlack,
                                             title: "",
                                             isTextField: true,
                                             textController: controllerStartTime,
@@ -305,9 +306,9 @@ class _CopyCardDialougeState extends State<CopyCardDialouge> {
                                           child: ColumnRequestData(
                                             fillColor:
                                                 themeController.currentTheme ==
-                                                        MyThemeData.lightTheme
-                                                    ? MyThemeData.colorLightGrey
-                                                    : MyThemeData.colorBlack,
+                                                        AppColors.lightTheme
+                                                    ? AppColors.colorLightGrey
+                                                    : AppColors.colorBlack,
                                             title: "End Date",
                                             isTextField: true,
                                             hint: hintEndDate,
@@ -347,9 +348,9 @@ class _CopyCardDialougeState extends State<CopyCardDialouge> {
                                           child: ColumnRequestData(
                                             fillColor:
                                                 themeController.currentTheme ==
-                                                        MyThemeData.lightTheme
-                                                    ? MyThemeData.colorLightGrey
-                                                    : MyThemeData.colorBlack,
+                                                        AppColors.lightTheme
+                                                    ? AppColors.colorLightGrey
+                                                    : AppColors.colorBlack,
                                             title: "",
                                             isTextField: true,
                                             hint: "12:00 PM",
@@ -389,9 +390,9 @@ class _CopyCardDialougeState extends State<CopyCardDialouge> {
                                           ColumnRequestData(
                                             fillColor:
                                                 themeController.currentTheme ==
-                                                        MyThemeData.lightTheme
-                                                    ? MyThemeData.colorLightGrey
-                                                    : MyThemeData.colorBlack,
+                                                        AppColors.lightTheme
+                                                    ? AppColors.colorLightGrey
+                                                    : AppColors.colorBlack,
                                             title: widget.isCheckList == true
                                                 ? "List Name".tr
                                                 : widget.isAttachment == true

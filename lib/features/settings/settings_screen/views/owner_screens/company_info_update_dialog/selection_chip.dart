@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 /// [SelectionChip] is a selected option chip builder.
@@ -44,12 +45,12 @@ class SelectionChip<T> extends StatelessWidget {
               ),
           child: chipConfig.deleteIcon,
         ),
-        deleteIconColor: MyThemeData().contrastColor(),
+        deleteIconColor: AppColors.textButton,
         labelPadding: chipConfig.labelPadding,
-        backgroundColor: chipConfig.backgroundColor ?? MyThemeData.lightPrimary,
+        backgroundColor: chipConfig.backgroundColor ?? AppColors.lightPrimary,
         labelStyle: chipConfig.labelStyle ??
             TextStyle(
-                color: MyThemeData().contrastColor(),
+                color: AppColors.textButton,
                 fontSize: isTablet
                     ? (isPortrait
                         ? FontConstants.fontSize016.h

@@ -1,11 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/model/survey_model.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/row_icon_text.dart';
 
 class SurveyCard extends StatefulWidget {
@@ -36,7 +37,7 @@ class _SurveyCardState extends State<SurveyCard> {
           borderRadius: BorderRadius.circular(8),
           border: widget.isSelction
               ? widget.isSelcted
-                  ? Border.all(color: MyThemeData.bubbleColor, width: 1.3)
+                  ? Border.all(color: AppColors.bubbleColor, width: 1.3)
                   : null
               : null,
           color: Theme.of(context).colorScheme.inversePrimary),
@@ -187,8 +188,8 @@ class _SurveyCardState extends State<SurveyCard> {
                                           ? "Published".tr
                                           : "Saved".tr) ==
                                       'Published'.tr
-                                  ? MyThemeData.unBlock
-                                  : MyThemeData.warning,
+                                  ? AppColors.unBlock
+                                  : AppColors.warning,
                               fontWeight: FontWeight.w600),
                         )
                       ],

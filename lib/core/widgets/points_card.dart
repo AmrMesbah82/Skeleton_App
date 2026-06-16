@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/my_switch.dart';
 import 'package:demo_app/core/widgets/point.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/settings/settings_screen/views/owner_screens/subscribes_and_services_screen.dart';
 
-import '../theme/font_manager.dart';
-import '../theme/my_theme.dart';
+
 import '../theme/theme_controller.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 ///  Developer's Name: Bassel Attia
 ///  Date: 21/7/2023
-///  App Version : Knowticed V1
+///  App Version : demo_app V1
 ///  Date of Last Edit: 27/7/2023
 ///
 /// Shows the Points (description points) of a plan in SubscribesAndServicesScreen
@@ -64,7 +65,7 @@ class PointsCard extends StatelessWidget {
               Text("${planName!.capitalizeFirst!} Plan",
                   style: AppFontStyle.cairoRegularStyle.copyWith(
                     fontSize: 0.056.w,
-                    color: MyThemeData.colorGrey,
+                    color: AppColors.colorGrey,
                     fontWeight: FontWeight.w500,
                   )),
               SizedBox(height: 0.013.h),
@@ -93,7 +94,7 @@ class PointsCard extends StatelessWidget {
         "You're now getting more features at App",
         style: AppFontStyle.cairoRegularStyle.copyWith(
           fontSize: 0.034.w,
-          color: MyThemeData.colorGrey,
+          color: AppColors.colorGrey,
           fontWeight: FontWeight.w300,
         ),
       ),

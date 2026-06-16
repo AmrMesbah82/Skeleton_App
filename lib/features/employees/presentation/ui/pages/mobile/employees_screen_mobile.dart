@@ -7,8 +7,8 @@ import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/employees/presentation/ui/widgets/add_depratment_dialog.dart';
 import 'package:demo_app/core/shared_components/buttons_beside_title_row.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/employees/employees_views/employee_hr_mobile_add_employee.dart';
@@ -183,7 +183,7 @@ void _showSortMenu(BuildContext context, Offset iconPosition) async {
     position: position,
     shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
-        side: BorderSide(color: MyThemeData.signOut)),
+        side: BorderSide(color: AppColors.signOut)),
     items: sortOptions.map((option) {
       return CustomPopupMenuItem<StatusWant>(
           first: option.index == 0,

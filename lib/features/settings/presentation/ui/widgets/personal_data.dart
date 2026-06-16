@@ -18,8 +18,8 @@ import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/helper/string_formatter.dart';
 import 'package:demo_app/core/helper/validator.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import '../../../../../core/constants/skeleton_assets.dart';
 import '../../../../../core/enumeration/enum.dart';
@@ -153,9 +153,9 @@ class PersonalData extends StatelessWidget {
                 bottom: 0.012.h),
             child: SvgPicture.asset(
               'assets/icons/newCalenderFixed.svg',
-              color: themeController.currentTheme.value == MyThemeData.lightTheme
-                  ? MyThemeData.colorBlack
-                  : MyThemeData.colorWhite,
+              color: themeController.currentTheme.value == AppColors.lightTheme
+                  ? AppColors.colorBlack
+                  : AppColors.colorWhite,
               height: 0.022.h,
             ),
           ),

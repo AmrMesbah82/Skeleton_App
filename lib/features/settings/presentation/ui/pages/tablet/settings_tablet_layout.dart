@@ -11,8 +11,8 @@ import 'package:demo_app/core/dummy_data/mode_changer.dart';
 import 'package:demo_app/core/helper/biometric_controller.dart';
 import 'package:demo_app/core/helper/format_helper.dart';
 import 'package:demo_app/core/services/notifications/firebase_notification_handler.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/core/widgets/custom_appbar.dart';
 import 'package:demo_app/core/widgets/restart_widget.dart';
@@ -612,7 +612,7 @@ class _SettingsTabletLayoutState extends State<SettingsTabletLayout> {
                                           ),
                                           name: 'Dark Mode'.tr,
                                           isSwitchTile: true,
-                                          currentValue: themeController.currentTheme.value == MyThemeData.darkTheme,
+                                          currentValue: themeController.currentTheme.value == AppColors.darkTheme,
                                           onSwitchChanged: (Value) {
                                             if (!mounted) return; // ✅ Add mounted check
 
@@ -621,7 +621,7 @@ class _SettingsTabletLayoutState extends State<SettingsTabletLayout> {
                                                 hapticFeedback: HapticFeedback.mediumImpact
                                             );
                                             // Only toggle if the value actually changed
-                                            bool isDarkMode = themeController.currentTheme.value == MyThemeData.darkTheme;
+                                            bool isDarkMode = themeController.currentTheme.value == AppColors.darkTheme;
                                             if (Value != isDarkMode) {
                                               themeController.toggleTheme();
                                               // Consider removing RestartWidget if not necessary

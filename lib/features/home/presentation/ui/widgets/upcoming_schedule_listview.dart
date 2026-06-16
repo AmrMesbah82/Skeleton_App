@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/employee_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
 import 'package:demo_app/features/events/mobile/employee/take_survey_screen_mobile.dart';
@@ -21,7 +21,6 @@ import 'package:page_transition/page_transition.dart';
 import '../../../../task_management_module/task/data/model/card_model/checklist_item.dart';
 import '../../../../task_management_module/task/view/task_details_screen_mobile.dart';
 import '../../../../task_management_module/task/view/task_details_screen_tablet.dart';
-import '../../../../todo_module/features/todo_list/presentation/controllers/todo_controller.dart';
 import '../../../utils/helper.dart';
 import '../../controller/schedule_controller.dart';
 
@@ -440,7 +439,7 @@ class _UpcomingScheduleListviewState extends State<UpcomingScheduleListview> {
   }
 
   Widget todoItemsBuilder(bool isTablet) {
-    return GetBuilder<TodoController>(builder: (todoController) {
+    return GetBuilder(builder: (todoController) {
       return ListView.builder(
         padding: EdgeInsets.zero,
         physics: const NeverScrollableScrollPhysics(),

@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable, unused_local_variable, prefer_const_constructors_in_immutables, unrelated_type_equality_checks, avoid_print, non_constant_identifier_names,, avoid_types_as_parameter_names
 
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_offline/flutter_offline.dart';
 import 'package:get/get.dart';
@@ -13,8 +14,8 @@ import 'package:demo_app/core/widgets/circle_progress.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 
-import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
+
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/features/employees/employees_views/employees_hr_view/employees_profile/employee_attendance_screen.dart';
 import 'package:demo_app/features/employees/employees_views/employees_hr_view/employees_profile/employee_performance_screen.dart';
@@ -222,7 +223,7 @@ class employeeProfileState extends State<employeeProfile> {
                                                 minimumSize:
                                                     Size(0.02.w, 0.055.h),
                                                 backgroundColor:
-                                                    MyThemeData.signOut,
+                                                    AppColors.signOut,
                                                 shape:
                                                     const RoundedRectangleBorder(
                                                         borderRadius:

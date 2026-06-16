@@ -1,5 +1,6 @@
 // ignore_for_file: unrelated_type_equality_checks
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/core/widgets/navigation.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:demo_app/core/nav_bar_package.dart/functions.dart';
@@ -10,10 +11,10 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/constants/image_paths.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
 // REMOVED_MODULE: import 'package:demo_app/feature/notification/notification_screen_mobile.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
@@ -22,7 +23,7 @@ import '../../features/home/nav_bar/presentation/controller/nav_bar_controller.d
 import '../../features/notification/notification_page.dart';
 import '../../features/roles/domain/enums/modules_enum.dart';
 import '../../features/settings/presentation/controller/add_company_controller.dart';
-import '../theme/screen_size.dart';
+
 
 //Date:April/3/2023
 //by: Bassem Mohamed
@@ -231,9 +232,9 @@ class _CustomAppBarMobileState extends State<CustomAppBarMobile> {
                               child: SvgPicture.asset(
                                 Modules.events.iconPath,
                                 color:
-                                themeController.currentTheme == MyThemeData.lightTheme
+                                themeController.currentTheme == AppColors.lightTheme
                                     ? null
-                                    : MyThemeData.colorGreydark,
+                                    : AppColors.colorGreydark,
                               ),
                             ),
                             SizedBox(width: 10.w)
@@ -252,9 +253,9 @@ class _CustomAppBarMobileState extends State<CustomAppBarMobile> {
                         child: SvgPicture.asset(
                           "assets/settings.svg",
                           color:
-                          themeController.currentTheme == MyThemeData.lightTheme
+                          themeController.currentTheme == AppColors.lightTheme
                               ? null
-                              : MyThemeData.colorGreydark,
+                              : AppColors.colorGreydark,
                         ),
                       ),
                       if (widget.showNotification)
@@ -267,9 +268,9 @@ class _CustomAppBarMobileState extends State<CustomAppBarMobile> {
                             child: SvgPicture.asset(
                               "assets/noti.svg",
                               color: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
+                                  AppColors.lightTheme
                                   ? null
-                                  : MyThemeData.colorGreydark,
+                                  : AppColors.colorGreydark,
                               fit: BoxFit.fill,
                             ),
                           ),

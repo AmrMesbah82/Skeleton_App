@@ -5,7 +5,8 @@
 // Objectives: this is a widget to customize the table of attendance
 // ignore_for_file: use_build_context_synchronously
 
-import 'package:demo_app/core/theme/grc_theme_controller.dart';
+
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -17,9 +18,9 @@ import 'package:demo_app/core/dummy_data/chats_lists.dart';
 import 'package:demo_app/core/widgets/circle_progress.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/employees/attendance_controller.dart';
 import 'package:demo_app/features/employees/employees_views/employee_detailed_info/employee_detailed_info_screen.dart';
@@ -358,12 +359,12 @@ class _EmployeeTableDataHrState extends State<EmployeeTableDataHr> {
                                   // borderRadius: BorderRadius.circular(8),
                                   color: index % 2 == 0
                                       ? themeController.currentTheme ==
-                                              MyThemeData.lightTheme
+                                              AppColors.lightTheme
                                           ? Color(0xFFf1f1f1)
-                                          : MyThemeData.darkBackGround
+                                          : AppColors.darkBackGround
                                       : themeController.currentTheme ==
-                                              MyThemeData.lightTheme
-                                          ? MyThemeData.colorWhite
+                                              AppColors.lightTheme
+                                          ? AppColors.colorWhite
                                           : Color(0xFF28282B),
                                 ),
                                 child: Padding(
@@ -388,13 +389,13 @@ class _EmployeeTableDataHrState extends State<EmployeeTableDataHr> {
                                                       .allAttendances[index]
                                                       .status ==
                                                   "attendance"
-                                              ? MyThemeData.unBlock
+                                              ? AppColors.unBlock
                                               : attendanceController
                                                           .allAttendances[index]
                                                           .status ==
                                                       "absent"
-                                                  ? MyThemeData.colorRed
-                                                  : MyThemeData.warning,
+                                                  ? AppColors.colorRed
+                                                  : AppColors.warning,
                                         ),
                                         CustomTableBody(
                                           text: Get.locale
@@ -462,7 +463,7 @@ class _EmployeeTableDataHrState extends State<EmployeeTableDataHr> {
                                           },
                                           child: CustomTableBody(
                                             text: emploData[index].action.tr,
-                                            textColor: MyThemeData.colorBlue,
+                                            textColor: AppColors.colorBlue,
                                           ),
                                         ),
                                       ],

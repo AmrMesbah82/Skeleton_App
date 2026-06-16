@@ -10,14 +10,13 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'dart:math' as math;
 import 'package:demo_app/core/constants/image_paths.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
 
-import 'package:demo_app/core/theme/screen_size.dart';
-import 'package:demo_app/core/theme/switch_sizes.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
@@ -264,7 +263,7 @@ class CustomCardState extends State<CustomCard> {
                         decoration: BoxDecoration(
                           color: MediaQuery.of(context).size.shortestSide > 600
                               ? Colors.transparent
-                              : MyThemeData.signOut,
+                              : AppColors.signOut,
                           borderRadius: BorderRadius.circular(2),
                           border: Border.all(
                             color:

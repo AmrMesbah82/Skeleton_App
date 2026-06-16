@@ -2,9 +2,9 @@ import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
@@ -108,7 +108,7 @@ class _CustomFieldState extends State<CustomField> {
           focusedBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
             borderSide: BorderSide(
-              color: MyThemeData.lightPrimary,
+              color: AppColors.lightPrimary,
               width: 1,
             ),
           ),
@@ -128,7 +128,7 @@ class _CustomFieldState extends State<CustomField> {
             ),
             child: SvgPicture.asset(
               widget.imagePath,
-              color: MyThemeData.lightPrimary,
+              color: AppColors.lightPrimary,
               height: 0.025.h,
             ),
           ),
@@ -145,7 +145,7 @@ class _CustomFieldState extends State<CustomField> {
               child: Icon(
                 _obscureText ? Icons.visibility_off : Icons.visibility,
                 size: 0.027.h,
-                color: MyThemeData.lightPrimary,
+                color: AppColors.lightPrimary,
               ),
             ),
           )
@@ -156,7 +156,7 @@ class _CustomFieldState extends State<CustomField> {
           contentPadding: EdgeInsets.symmetric(vertical: 0.01.h),
         ),
         onTap: widget.onTap,
-        cursorColor: MyThemeData.colorGrey,
+        cursorColor: AppColors.colorGrey,
       ),
     );
   }

@@ -288,7 +288,7 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                       width: isMobile ? double.infinity : 150.sp,
                       color: AppColors.primary,
                       textStyle: StyleText.fontSize16Weight500.copyWith(
-                        color: ColorAppLight.buttonTextColor,
+                        color: AppColors.textButton,
                       ),
                     ),
                   ),
@@ -1098,8 +1098,8 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
             builder: (BuildContext dialogContext) {
               return Dialog(
                 backgroundColor: Theme.of(context).brightness == Brightness.light
-                    ? ColorAppLight.whiteColor
-                    : ColorAppDark.background,
+                    ? AppColors.white
+                    : AppColors.background,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(4.r),
                 ),
@@ -1121,8 +1121,8 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                           'Error',
                           style: StyleText.fontSize20Weight500.copyWith(
                             color: Theme.of(context).brightness == Brightness.light
-                                ? ColorAppLight.blackButton
-                                : ColorAppDark.titleValue,
+                                ? AppColors.blackButton
+                                : AppColors.white,
                           ),
                         ),
                         SizedBox(height: 18.sp),
@@ -1131,8 +1131,8 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                           textAlign: TextAlign.center,
                           style: StyleText.fontSize14Weight500.copyWith(
                             color: Theme.of(context).brightness == Brightness.light
-                                ? ColorAppLight.grayTextSla
-                                : ColorAppDark.titleKey,
+                                ? AppColors.secondaryText
+                                : AppColors.grey,
                           ),
                         ),
                         SizedBox(height: 15.sp),
@@ -1140,7 +1140,7 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                           title: 'Close',
                           function: () => Navigator.pop(dialogContext),
                           textStyle: StyleText.fontSize16Weight500.copyWith(
-                            color: ColorAppLight.buttonTextColor,
+                            color: AppColors.textButton,
                           ),
                           width: 135.sp,
                           height: 38.sp,
@@ -1171,8 +1171,8 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
       barrierDismissible: true,
       builder: (context) => Dialog(
         backgroundColor: Theme.of(context).brightness == Brightness.light
-            ? ColorAppLight.whiteColor
-            : ColorAppDark.background,
+            ? AppColors.white
+            : AppColors.background,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4.r),
         ),
@@ -1196,8 +1196,8 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                   title,
                   style: StyleText.fontSize20Weight500.copyWith(
                     color: Theme.of(context).brightness == Brightness.light
-                        ? ColorAppLight.blackButton
-                        : ColorAppDark.titleValue,
+                        ? AppColors.blackButton
+                        : AppColors.white,
                   ),
                 ),
                 SizedBox(height: 18.sp),
@@ -1206,8 +1206,8 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                   textAlign: TextAlign.center,
                   style: StyleText.fontSize14Weight500.copyWith(
                     color: Theme.of(context).brightness == Brightness.light
-                        ? ColorAppLight.grayTextSla
-                        : ColorAppDark.titleKey,
+                        ? AppColors.secondaryText
+                        : AppColors.grey,
                   ),
                 ),
                 SizedBox(height: 15.sp),
@@ -1225,7 +1225,7 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                         width: isPhone ? 120.sp : 135.sp,
                         height: 38.sp,
                         radius: 4.r,
-                        color: ColorAppLight.grayNoButton,
+                        color: AppColors.secondaryButton,
                       ),
                       SizedBox(width: 20.sp),
                       customButton(
@@ -1235,7 +1235,7 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                           onConfirm();
                         },
                         textStyle: StyleText.fontSize16Weight500.copyWith(
-                          color: ColorAppLight.buttonTextColor,
+                          color: AppColors.textButton,
                         ),
                         width: isPhone ?120.sp : 135.sp,                        height: 38.sp,
                         radius: 4.r,
@@ -1262,8 +1262,8 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
       barrierDismissible: true,
       builder: (context) => Dialog(
         backgroundColor: Theme.of(context).brightness == Brightness.light
-            ? ColorAppLight.whiteColor
-            : ColorAppDark.background,
+            ? AppColors.white
+            : AppColors.background,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4.r),
         ),
@@ -1285,8 +1285,8 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                   title,
                   style: StyleText.fontSize20Weight500.copyWith(
                     color: Theme.of(context).brightness == Brightness.light
-                        ? ColorAppLight.blackButton
-                        : ColorAppDark.titleValue,
+                        ? AppColors.blackButton
+                        : AppColors.white,
                   ),
                 ),
                 SizedBox(height: 18.sp),

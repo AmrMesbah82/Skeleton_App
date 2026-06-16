@@ -1,10 +1,11 @@
-import 'package:demo_app/core/theme/font_manager.dart';
+
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 
 class RowIconText extends StatefulWidget {
@@ -69,9 +70,9 @@ class _RowIconTextState extends State<RowIconText> {
                     ? FontConstants.fontSize016.h
                     : FontConstants.fontSize013.w
                 : FontConstants.fontSize018.h,
-        color: themeController.currentTheme == MyThemeData.lightTheme
-            ? MyThemeData.colorDarkGrey
-            : MyThemeData.colorGreydark,
+        color: themeController.currentTheme == AppColors.lightTheme
+            ? AppColors.colorDarkGrey
+            : AppColors.colorGreydark,
         fontWeight: FontWeight.w500,
         overflow: TextOverflow.ellipsis,
         height: isTablet ? 1.8 : 1.5);
@@ -88,9 +89,9 @@ class _RowIconTextState extends State<RowIconText> {
                     : FontConstants.fontSize013.w
                 : FontConstants.fontSize018.h,
         color: widget.valueColor ??
-            (themeController.currentTheme == MyThemeData.lightTheme
-                ? MyThemeData.colorBlack
-                : MyThemeData.colorWhiteDark),
+            (themeController.currentTheme == AppColors.lightTheme
+                ? AppColors.colorBlack
+                : AppColors.colorWhiteDark),
         fontWeight: FontWeight.w500,
         height: isTablet ? 1.8 : 1.5);
     return widget.isDescribtion
@@ -101,7 +102,7 @@ class _RowIconTextState extends State<RowIconText> {
                 children: [
                   SvgPicture.asset(
                     widget.iconUrl,
-                    color: MyThemeData.signOut,
+                    color: AppColors.signOut,
                     height: isPortrait
                         ? 0.025.h
                         : widget.isSmall == true
@@ -137,7 +138,7 @@ class _RowIconTextState extends State<RowIconText> {
                   ? SizedBox.shrink()
                   : SvgPicture.asset(
                       widget.iconUrl,
-                      color: MyThemeData.signOut,
+                      color: AppColors.signOut,
                       height: isPortrait
                           ? isTablet
                               ? 0.02.h

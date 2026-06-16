@@ -1,4 +1,5 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -12,10 +13,10 @@ import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 // ignore: must_be_immutable
@@ -265,9 +266,9 @@ class _FilterDialogState extends State<FilterDialog> {
                                 },
                                 child: ColumnRequestData(
                                      fillColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorLightGrey
-                              : MyThemeData.colorBlack,
+                                  AppColors.lightTheme
+                              ? AppColors.colorLightGrey
+                              : AppColors.colorBlack,
                                   title: "Start Date",
                                   textController: startDate,
                                   isTextField: true,
@@ -294,9 +295,9 @@ class _FilterDialogState extends State<FilterDialog> {
                                 },
                                 child: ColumnRequestData(
                                      fillColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorLightGrey
-                              : MyThemeData.colorBlack,
+                                  AppColors.lightTheme
+                              ? AppColors.colorLightGrey
+                              : AppColors.colorBlack,
                                   title: "End Date",
                                   textController: endDate,
                                   hideTitle: true,
@@ -441,7 +442,7 @@ class _FilterDialogState extends State<FilterDialog> {
                                       ? Size(0.15.w, 0.045.h)
                                       : Size(0.07.w, 0.05.h)
                                   : Size(0.36.w, 0.05.h),
-                              backgroundColor: MyThemeData.GreyBack,
+                              backgroundColor: AppColors.GreyBack,
                               shape: RoundedRectangleBorder(
                                 borderRadius: const BorderRadius.all(
                                   Radius.circular(8),
@@ -455,7 +456,7 @@ class _FilterDialogState extends State<FilterDialog> {
                                       ? Size(0.15.w, 0.045.h)
                                       : Size(0.07.w, 0.05.h)
                                   : Size(0.36.w, 0.05.h),
-                              backgroundColor: MyThemeData.signOut,
+                              backgroundColor: AppColors.signOut,
                               shape: RoundedRectangleBorder(
                                 borderRadius: const BorderRadius.all(
                                   Radius.circular(8),

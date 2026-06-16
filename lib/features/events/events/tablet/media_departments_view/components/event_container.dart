@@ -1,11 +1,12 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/row_icon_text.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/components/survey_pop_menu.dart';
@@ -105,8 +106,8 @@ class _EventContainerState extends State<EventContainer> {
                                         ? FontConstants.fontSize013.h
                                         : FontConstants.fontSize013.w,
                                     color: widget.event.status == 'Accepted'
-                                        ? MyThemeData.unBlock
-                                        : MyThemeData.colorRed,
+                                        ? AppColors.unBlock
+                                        : AppColors.colorRed,
                                     fontWeight: FontWeight.w600),
                               )
                             : InkWell(
@@ -233,7 +234,7 @@ class _EventContainerState extends State<EventContainer> {
                         height: isTablet ? null : 0.035.h,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: MyThemeData.blueNew),
+                            color: AppColors.blueNew),
                         child: Center(
                           child: Text(
                             "${'Invited'.tr} : ${Get.locale.toString().contains('en') ? widget.event.invited : convertNumberToArabic(widget.event.invited)}",
@@ -247,7 +248,7 @@ class _EventContainerState extends State<EventContainer> {
                                         ? 2.1
                                         : 1.7
                                     : 1.7,
-                                color: MyThemeData.colorWhite),
+                                color: AppColors.colorWhite),
                           ),
                         ),
                       ),
@@ -260,7 +261,7 @@ class _EventContainerState extends State<EventContainer> {
                         height: isTablet ? null : 0.035.h,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: MyThemeData.unBlock),
+                            color: AppColors.unBlock),
                         child: Center(
                           child: Text(
                             "${'Accepted'.tr} : ${Get.locale.toString().contains('en') ? widget.event.accepted : convertNumberToArabic(widget.event.accepted)}",
@@ -274,7 +275,7 @@ class _EventContainerState extends State<EventContainer> {
                                         ? 2.1
                                         : 1.7
                                     : 1.7,
-                                color: MyThemeData.colorWhite),
+                                color: AppColors.colorWhite),
                           ),
                         ),
                       ),
@@ -287,7 +288,7 @@ class _EventContainerState extends State<EventContainer> {
                         height: isTablet ? null : 0.035.h,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: MyThemeData.delete),
+                            color: AppColors.delete),
                         child: Center(
                           child: Text(
                             "${'Rejected'.tr} : ${Get.locale.toString().contains('en') ? widget.event.rejected : convertNumberToArabic(widget.event.rejected)}",
@@ -301,7 +302,7 @@ class _EventContainerState extends State<EventContainer> {
                                         ? 2.1
                                         : 1.7
                                     : 1.7,
-                                color: MyThemeData.colorWhite),
+                                color: AppColors.colorWhite),
                           ),
                         ),
                       )

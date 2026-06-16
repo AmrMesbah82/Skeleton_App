@@ -1,13 +1,14 @@
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/model/question_model.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/model/survey_model.dart';
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/employee_detail_row.dart';
 import 'package:demo_app/features/events/components/survey_components/question_card_analytic.dart';
 
@@ -317,7 +318,7 @@ class _ShowAnalyticsScreenState extends State<ShowAnalyticsScreen> {
                                     : FontConstants.fontSize022.h,
                                 fontWeight: FontWeight.w500,
                                 height: 1.8,
-                                color: MyThemeData.GreyBack,
+                                color: AppColors.GreyBack,
                               ),
                             ),
                             SizedBox(

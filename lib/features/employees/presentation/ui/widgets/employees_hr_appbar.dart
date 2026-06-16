@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -6,9 +7,9 @@ import 'package:demo_app/core/shared_components/filter_dialog.dart';
 import 'package:demo_app/core/dummy_data/chats_lists.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
@@ -150,7 +151,7 @@ class _EmployeeHrAppBarState extends State<EmployeeHrAppBar> {
                       widgetIcon: "assets/images/case.svg",
                       buttonStyle: ElevatedButton.styleFrom(
                         minimumSize: Size(0.018.w, 0.055.h),
-                        backgroundColor: MyThemeData.signOut,
+                        backgroundColor: AppColors.signOut,
                         shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(
                           Radius.circular(8),
@@ -219,10 +220,10 @@ class _EmployeeHrAppBarState extends State<EmployeeHrAppBar> {
                       //           ? Colors.transparent
                       //           : Theme.of(context).colorScheme.scrim,
                       //       backColor: widget.isSort
-                      //           ? MyThemeData.signOut
+                      //           ? AppColors.signOut
                       //           : Theme.of(context).colorScheme.inversePrimary,
                       //       photoColor: widget.isSort
-                      //           ? MyThemeData.colorBlack
+                      //           ? AppColors.colorBlack
                       //           : Theme.of(context).colorScheme.scrim),
                       // ),
                       GestureDetector(
@@ -259,7 +260,7 @@ class _EmployeeHrAppBarState extends State<EmployeeHrAppBar> {
                           width: isPortrait ? 0.15.w : 0.1.w,
                           decoration: BoxDecoration(
                               color: widget.isFilterDataShow
-                                  ? MyThemeData.signOut
+                                  ? AppColors.signOut
                                   : Theme.of(context)
                                       .colorScheme
                                       .inversePrimary,
@@ -275,7 +276,7 @@ class _EmployeeHrAppBarState extends State<EmployeeHrAppBar> {
                               SvgPicture.asset("assets/images/filter_table.svg",
                                   // ignore: deprecated_member_use
                                   color: widget.isFilterDataShow
-                                      ? MyThemeData.colorBlack
+                                      ? AppColors.colorBlack
                                       : Theme.of(context).colorScheme.scrim),
                               Text(
                                 "Filter".tr,
@@ -286,7 +287,7 @@ class _EmployeeHrAppBarState extends State<EmployeeHrAppBar> {
                                     fontWeight: FontWeight.w500,
                                     height: isPortrait ? 1.6 : 0.0018.h,
                                     color: widget.isFilterDataShow
-                                        ? MyThemeData.colorBlack
+                                        ? AppColors.colorBlack
                                         : Theme.of(context).colorScheme.scrim),
                               )
                             ],
@@ -320,7 +321,7 @@ class _EmployeeHrAppBarState extends State<EmployeeHrAppBar> {
                           minimumSize: isPortrait
                               ? Size(0.04.w, 0.035.h)
                               : Size(0.018.w, 0.055.h),
-                          backgroundColor: MyThemeData.signOut,
+                          backgroundColor: AppColors.signOut,
                           shape: const RoundedRectangleBorder(
                               borderRadius: BorderRadius.all(
                             Radius.circular(8),

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 // ignore: must_be_immutable
 class IndicatorColumn extends StatefulWidget {
@@ -52,8 +53,8 @@ class _IndicatorColumnState extends State<IndicatorColumn> {
               value: widget.value,
               minHeight: 0.015.h,
               borderRadius: BorderRadius.circular(64),
-              valueColor: AlwaysStoppedAnimation<Color>(MyThemeData.signOut),
-              backgroundColor: MyThemeData.indicatorColor.withOpacity(0.1),
+              valueColor: AlwaysStoppedAnimation<Color>(AppColors.signOut),
+              backgroundColor: AppColors.indicatorColor.withOpacity(0.1),
             ),
           ),
         )

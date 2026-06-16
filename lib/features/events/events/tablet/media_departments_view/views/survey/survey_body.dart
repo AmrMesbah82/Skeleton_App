@@ -1,4 +1,5 @@
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,11 +10,11 @@ import 'package:demo_app/core/shared_components/custom_black_button.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/employee_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/events/tablet/media_departments_view/views/events_home_screen.dart';
@@ -166,9 +167,9 @@ class _SurveyBodyState extends State<SurveyBody> {
               isExpanded: true,
               isDescription: true,
               textDirection: TextDirection.ltr,
-              fillColor: themeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.colorLightGrey
-                  : MyThemeData.colorBlack,
+              fillColor: themeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.colorLightGrey
+                  : AppColors.colorBlack,
               mainAxisAlignment: Get.locale.toString().contains('en')
                   ? MainAxisAlignment.start
                   : MainAxisAlignment.end,
@@ -200,9 +201,9 @@ class _SurveyBodyState extends State<SurveyBody> {
               maxlines: 16,
               controllerfinishState: (value) {},
               textDirection: TextDirection.rtl,
-              fillColor: themeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.colorLightGrey
-                  : MyThemeData.colorBlack,
+              fillColor: themeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.colorLightGrey
+                  : AppColors.colorBlack,
               mainAxisAlignment: Get.locale.toString().contains('en')
                   ? MainAxisAlignment.end
                   : MainAxisAlignment.start,
@@ -300,10 +301,10 @@ padding: EdgeInsets.zero,
                       minimumSize: isPortrait
                           ? Size(0.18.w, 0.04.h)
                           : Size(0.1.w, 0.065.h),
-                      backgroundColor: MyThemeData.colorWhite,
+                      backgroundColor: AppColors.colorWhite,
                       shape: RoundedRectangleBorder(
                         side: BorderSide(
-                          color: MyThemeData.lightPrimary,
+                          color: AppColors.lightPrimary,
                         ),
                         borderRadius: const BorderRadius.all(
                           Radius.circular(6),
@@ -366,7 +367,7 @@ padding: EdgeInsets.zero,
                       minimumSize: isPortrait
                           ? Size(0.18.w, 0.04.h)
                           : Size(0.1.w, 0.065.h),
-                      backgroundColor: MyThemeData.signOut,
+                      backgroundColor: AppColors.signOut,
                       shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(
                           Radius.circular(8),

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomColoredContainer extends StatelessWidget {
   final bool isSelected;
@@ -28,7 +29,7 @@ class CustomColoredContainer extends StatelessWidget {
     final HapticController hapticController = Get.put(HapticController());
 
     final backgroundColor = isSelected
-        ? MyThemeData.signOut
+        ? AppColors.signOut
         : Theme.of(context).colorScheme.inversePrimary;
     final textColor = Colors.black;
     final orientation = MediaQuery.of(context).orientation;
@@ -69,7 +70,7 @@ class CustomColoredContainer extends StatelessWidget {
                           style: AppFontStyle.cairoRegularStyle.copyWith(
                             fontSize: FontConstants.fontSize022.h,
                             color: isSelected == true
-                                ? MyThemeData.colorBlack
+                                ? AppColors.colorBlack
                                 : Theme.of(context)
                                     .colorScheme
                                     .secondaryContainer,

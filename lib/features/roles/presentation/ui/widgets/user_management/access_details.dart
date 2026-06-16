@@ -1,4 +1,5 @@
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
+import 'package:demo_app/core/custom_knowticed_dropdwon.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/extension/context_extensions.dart';
@@ -7,7 +8,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:demo_app/core/custom_knowticed_dropdwon.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
 import 'package:demo_app/core/widgets/DatePicker.dart';
 import 'package:demo_app/core/widgets/expanded_content.dart';
@@ -117,7 +117,7 @@ class _AccessDetailsState extends State<AccessDetails> {
     // Get current language
     bool isArabic = Get.locale?.languageCode == 'ar';
 
-    return CustomKnowticedDropdown<String>(
+    return Customdemo_appDropdown<String>(
       labelEn: 'Role Type',
       labelAr: 'نوع الدور',
       hintEn: 'Select Role Type',

@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/text_field.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/custom_validated_text_field_master.dart';
@@ -163,7 +163,7 @@ class _SkillsState extends State<Skills> {
                         },
                         fillColor: lightMode
                             ? const Color(0xFFF6F6F6)
-                            : MyThemeData.colorBlack,
+                            : AppColors.colorBlack,
                         label: '',
                       ),
                     ),

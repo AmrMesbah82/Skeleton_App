@@ -3,16 +3,13 @@
 // import 'package:flutter/services.dart';
 // import 'package:get/get.dart';
 // import 'package:get_storage/get_storage.dart';
-// import 'package:demo_app/core/theme/font_manager.dart';
-// import 'package:demo_app/core/theme/my_theme.dart';
-// import 'package:demo_app/features/skeleton/onboarding/presentation/ui/pages/onboarding.dart';
-// import 'package:demo_app/features/skeleton/settings/presentation/controller/add_company_controller.dart';
-// // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
-// import '../../features/external/main_core/core/theme/app_theme.dart'
-// as mainCoreAppTheme;
-// // REMOVED_MODULE: import '../../features/external/messaging_package/interface/controller/messaging_init_controller.dart';
+//import 'package:demo_app/core/theme/app_font_size.dart';
+//import 'package:demo_app/core/theme/app_colors.dart';
+// import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+// import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
+// import 'package:demo_app/features/onboarding/welcome_screen/views/mobile_view/nav_bar.dart';
+// // import '../../features/messaging/interface/controller/messaging_init_controller.dart';
 // import 'app_theme.dart';
-import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
 //
 // class ThemeController extends GetxController {
 //   final storage = GetStorage();
@@ -22,7 +19,7 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //   @override
 //   void onInit() {
 //     super.onInit();
-//     currentTheme = MyThemeData.lightTheme.obs;
+//     currentTheme = AppColors.lightTheme.obs;
 //
 //     // Load theme data synchronously first
 //     _loadThemeDataSync();
@@ -49,42 +46,42 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //
 //     if (savedTheme != null) {
 //       if (savedTheme == 'darkMode') {
-//         currentTheme.value = MyThemeData.darkTheme;
+//         currentTheme.value = AppColors.darkTheme;
 //         AppTheme.isDark = true;
-//         mainCoreAppTheme.AppTheme.isDark = true; // ✅ Sync main core
+//         AppTheme.isDark = true; // ✅ Sync main core
 //         print('🎨 [ThemeController] Loaded DARK theme from storage');
 //       } else {
-//         currentTheme.value = MyThemeData.lightTheme;
+//         currentTheme.value = AppColors.lightTheme;
 //         AppTheme.isDark = false;
-//         mainCoreAppTheme.AppTheme.isDark = false; // ✅ Sync main core
+//         AppTheme.isDark = false; // ✅ Sync main core
 //         print('🎨 [ThemeController] Loaded LIGHT theme from storage');
 //       }
 //     } else {
-//       currentTheme.value = MyThemeData.lightTheme;
+//       currentTheme.value = AppColors.lightTheme;
 //       AppTheme.isDark = false;
-//       mainCoreAppTheme.AppTheme.isDark = false; // ✅ Sync main core
+//       AppTheme.isDark = false; // ✅ Sync main core
 //       print('🎨 [ThemeController] No saved theme, using LIGHT theme');
 //     }
 //
 //     // Load and apply colors
 //     final primaryColor = storage.read('primaryColor');
 //     if (primaryColor != null) {
-//       MyThemeData.lightPrimary = Color(int.parse(primaryColor));
-//       MyThemeData.switchSettings = Color(int.parse(primaryColor));
+//       AppColors.lightPrimary = Color(int.parse(primaryColor));
+//       AppColors.switchSettings = Color(int.parse(primaryColor));
 //       print('🎨 [ThemeController] Loaded primary color: $primaryColor');
 //     }
 //
 //     final secondaryColor = storage.read('secondaryColor');
 //     if (secondaryColor != null) {
-//       MyThemeData.signOut = Color(int.parse(secondaryColor));
-//       MyThemeData.barColor = Color(int.parse(secondaryColor));
-//       MyThemeData.bubbleColor = Color(int.parse(secondaryColor));
+//       AppColors.signOut = Color(int.parse(secondaryColor));
+//       AppColors.barColor = Color(int.parse(secondaryColor));
+//       AppColors.bubbleColor = Color(int.parse(secondaryColor));
 //       print('🎨 [ThemeController] Loaded secondary color: $secondaryColor');
 //     }
 //
 //     // ✅ CRITICAL: Synchronize AppTheme with loaded state
 //     AppTheme.setCurrentThemeColors();
-//     mainCoreAppTheme.AppTheme.setCurrentThemeColors(); // ✅ Sync main core colors
+//     AppTheme.setCurrentThemeColors(); // ✅ Sync main core colors
 //
 //     print('🎨 [ThemeController] Theme sync completed - isDark: ${AppTheme.isDark}');
 //   }
@@ -101,10 +98,10 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //   }
 //
 //   void updateSystemUIOverlayStyleMobile() {
-//     if (currentTheme.value == MyThemeData.lightTheme) {
+//     if (currentTheme.value == AppColors.lightTheme) {
 //       SystemChrome.setSystemUIOverlayStyle(
 //         SystemUiOverlayStyle(
-//           statusBarColor: MyThemeData.colorLightGrey,
+//           statusBarColor: AppColors.colorLightGrey,
 //           statusBarIconBrightness: Brightness.dark,
 //           statusBarBrightness: Brightness.light,
 //         ),
@@ -112,7 +109,7 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //     } else {
 //       SystemChrome.setSystemUIOverlayStyle(
 //         SystemUiOverlayStyle(
-//           statusBarColor: MyThemeData.colorBlack,
+//           statusBarColor: AppColors.colorBlack,
 //           statusBarIconBrightness: Brightness.light,
 //           statusBarBrightness: Brightness.dark,
 //         ),
@@ -121,10 +118,10 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //   }
 //
 //   void updateSystemUIOverlayStyleTablet() {
-//     if (currentTheme.value == MyThemeData.lightTheme) {
+//     if (currentTheme.value == AppColors.lightTheme) {
 //       SystemChrome.setSystemUIOverlayStyle(
 //         SystemUiOverlayStyle(
-//           statusBarColor: MyThemeData.colorWhite,
+//           statusBarColor: AppColors.colorWhite,
 //           statusBarIconBrightness: Brightness.dark,
 //           statusBarBrightness: Brightness.light,
 //         ),
@@ -132,7 +129,7 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //     } else {
 //       SystemChrome.setSystemUIOverlayStyle(
 //         SystemUiOverlayStyle(
-//           statusBarColor: MyThemeData.dark,
+//           statusBarColor: AppColors.dark,
 //           statusBarIconBrightness: Brightness.light,
 //           statusBarBrightness: Brightness.dark,
 //         ),
@@ -141,20 +138,20 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //   }
 //
 //   void toggleTheme() {
-//     print('🎨 [ThemeController] Theme toggle started - Current: ${currentTheme.value == MyThemeData.lightTheme ? "Light" : "Dark"}');
+//     print('🎨 [ThemeController] Theme toggle started - Current: ${currentTheme.value == AppColors.lightTheme ? "Light" : "Dark"}');
 //
 //     // Toggle theme mode
-//     if (currentTheme.value == MyThemeData.lightTheme) {
-//       currentTheme.value = MyThemeData.darkTheme;
+//     if (currentTheme.value == AppColors.lightTheme) {
+//       currentTheme.value = AppColors.darkTheme;
 //       storage.write('theme', 'darkMode');
 //       AppTheme.isDark = true;
-//       mainCoreAppTheme.AppTheme.isDark = true; // ✅ Sync main core
+//       AppTheme.isDark = true; // ✅ Sync main core
 //       print('🎨 [ThemeController] Switched to DARK theme');
 //     } else {
-//       currentTheme.value = MyThemeData.lightTheme;
+//       currentTheme.value = AppColors.lightTheme;
 //       storage.write('theme', 'lightMode');
 //       AppTheme.isDark = false;
-//       mainCoreAppTheme.AppTheme.isDark = false; // ✅ Sync main core
+//       AppTheme.isDark = false; // ✅ Sync main core
 //       print('🎨 [ThemeController] Switched to LIGHT theme');
 //     }
 //
@@ -163,7 +160,7 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //
 //     // ✅ Update color maps
 //     AppTheme.setCurrentThemeColors();
-//     mainCoreAppTheme.AppTheme.setCurrentThemeColors();
+//     AppTheme.setCurrentThemeColors();
 //     print('🎨 Color map updated - isDark: ${AppTheme.isDark}');
 //
 // // Log action
@@ -175,12 +172,12 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //     // ✅ CRITICAL: Update color maps BEFORE toggling other modules
 //     print('🎨 [ThemeController] Updating color maps...');
 //     AppTheme.setCurrentThemeColors();
-//     mainCoreAppTheme.AppTheme.setCurrentThemeColors();
+//     AppTheme.setCurrentThemeColors();
 //
 //     // Synchronize all theme systems
 //     print('🎨 [ThemeController] Updating theme in all modules...');
-//     mainCoreThemeController.toggleTheme();
-//     AppTheme.interfaceToggleTheme();
+//
+//     AppTheme.toggleTheme();
 //
 //     try {
 //       if (Get.isRegistered<MessagingInitController>()) {
@@ -193,7 +190,7 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //     }
 //
 //     // Note: This toggles isDark again, but we already set it above
-//     // mainCoreAppTheme.AppTheme.toggleTheme();
+//     // AppTheme.toggleTheme();
 //
 //     // Update UI in post frame callback
 //     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -214,21 +211,21 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //     Color secondary = Color(secondaryColor);
 //
 //     // ✅ FIX: Use the actual theme state from currentTheme
-//     bool isDark = currentTheme.value == MyThemeData.darkTheme;
+//     bool isDark = currentTheme.value == AppColors.darkTheme;
 //
 //     print('🎨 [ThemeController] Primary color: $primary');
 //     print('🎨 [ThemeController] Secondary color: $secondary');
 //     print('🎨 [ThemeController] Dark mode: $isDark (from currentTheme)');
 //     print('🎨 [ThemeController] AppTheme.isDark: ${AppTheme.isDark}');
-//     print('🎨 [ThemeController] mainCoreAppTheme.AppTheme.isDark: ${mainCoreAppTheme.AppTheme.isDark}');
+//     print('🎨 [ThemeController] AppTheme.isDark: ${AppTheme.isDark}');
 //
 //     // ✅ Ensure all theme systems are in sync
 //     AppTheme.isDark = isDark;
-//     mainCoreAppTheme.AppTheme.isDark = isDark;
+//     AppTheme.isDark = isDark;
 //
 //     // Initialize messaging module if needed
 //     if (withMessage) {
-//       // REMOVED_MODULE: try {
+//       try {
 //         if (Get.isRegistered<MessagingInitController>()) {
 //           Get.find<MessagingInitController>()
 //               .messagingConfigurations
@@ -240,12 +237,12 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //     }
 //
 //     // Initialize other theme systems with correct dark mode state
-//     AppTheme.interfaceInitTheme(primary, secondary, isDark);
-//     mainCoreAppTheme.AppTheme.initTheme(primary, secondary, isDark);
+//     AppTheme.initTheme(primary, secondary, isDark);
+//     AppTheme.initTheme(primary, secondary, isDark);
 //
 //     // ✅ CRITICAL: Update color maps after init
 //     AppTheme.setCurrentThemeColors();
-//     mainCoreAppTheme.AppTheme.setCurrentThemeColors();
+//     AppTheme.setCurrentThemeColors();
 //
 //     print('🎨 [ThemeController] Theme initialization completed');
 //   }
@@ -265,23 +262,23 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //
 //     storage.write('primaryColor', colorValue);
 //
-//     MyThemeData.lightPrimary = colorValue != null
+//     AppColors.lightPrimary = colorValue != null
 //         ? Color(int.parse(colorValue))
 //         : const Color(0xFFFFDE59);
 //
-//     MyThemeData.switchSettings = colorValue != null
+//     AppColors.switchSettings = colorValue != null
 //         ? Color(int.parse(colorValue))
 //         : const Color(0xFFFFDE59);
 //
-//     print('🎨 [ThemeController] Primary color set to: ${MyThemeData.lightPrimary}');
+//     print('🎨 [ThemeController] Primary color set to: ${AppColors.lightPrimary}');
 //
 //     // Refresh current theme to apply new color
-//     if (currentTheme.value == MyThemeData.lightTheme) {
-//       currentTheme.value = MyThemeData.lightTheme;
-//       MyThemeData().contrastColor();
+//     if (currentTheme.value == AppColors.lightTheme) {
+//       currentTheme.value = AppColors.lightTheme;
+//       AppColors.textButton;
 //     } else {
-//       currentTheme.value = MyThemeData.darkTheme;
-//       MyThemeData().contrastColor();
+//       currentTheme.value = AppColors.darkTheme;
+//       AppColors.textButton;
 //     }
 //
 //     // Update modules AFTER setting the storage values
@@ -307,25 +304,25 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //
 //     storage.write('secondaryColor', colorValue);
 //
-//     MyThemeData.signOut = colorValue != null
+//     AppColors.signOut = colorValue != null
 //         ? Color(int.parse(colorValue))
 //         : const Color(0xFFE5B800);
 //
-//     MyThemeData.barColor = colorValue != null
+//     AppColors.barColor = colorValue != null
 //         ? Color(int.parse(colorValue))
 //         : const Color(0xFFE5B800);
 //
-//     MyThemeData.bubbleColor = colorValue != null
+//     AppColors.bubbleColor = colorValue != null
 //         ? Color(int.parse(colorValue))
 //         : const Color(0xFFE5B800);
 //
-//     print('🎨 [ThemeController] Secondary color set to: ${MyThemeData.signOut}');
+//     print('🎨 [ThemeController] Secondary color set to: ${AppColors.signOut}');
 //
 //     // Refresh current theme to apply new color
-//     if (currentTheme.value == MyThemeData.lightTheme) {
-//       currentTheme.value = MyThemeData.lightTheme;
+//     if (currentTheme.value == AppColors.lightTheme) {
+//       currentTheme.value = AppColors.lightTheme;
 //     } else {
-//       currentTheme.value = MyThemeData.darkTheme;
+//       currentTheme.value = AppColors.darkTheme;
 //     }
 //
 //     // Update modules AFTER setting the storage values
@@ -357,14 +354,14 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //       print('⚠️ [ThemeController] Error updating messaging branding: $e');
 //     }
 //
-//     mainCoreAppTheme.AppTheme.interfaceUpdateBrandingColors(
+//     AppTheme.interfaceUpdateBrandingColors(
 //         Color(primaryColor), Color(secondaryColor));
 //     AppTheme.interfaceUpdateBrandingColors(
 //         Color(primaryColor), Color(secondaryColor));
 //
 //     // ✅ Update color maps after branding changes
 //     AppTheme.setCurrentThemeColors();
-//     mainCoreAppTheme.AppTheme.setCurrentThemeColors();
+//     AppTheme.setCurrentThemeColors();
 //
 //     print('🎨 [ThemeController] Modules branding updated');
 //   }
@@ -416,11 +413,11 @@ import 'package:demo_app/features/roles/system_logs/presentation/controller/syst
 //     print('🎨 Current locale: ${Get.locale.toString()}');
 //     print('🎨 Is Arabic: ${Get.locale.toString().contains('ar')}');
 //
-//     MyThemeData.font = Get.locale.toString().contains('ar')
+//     AppColors.font = Get.locale.toString().contains('ar')
 //         ? currentArabicFontInStorage ?? 'Vazirmatn'
 //         : currentFontInStorage ?? 'Cairo';
 //
-//     print('🎨 MyThemeData.font set to: ${MyThemeData.font}');
+//     print('🎨 AppColors.font set to: ${AppColors.font}');
 //
 //     AppFontStyle.cairoRegularStyle = TextStyle(
 //       color: Colors.black,
@@ -456,35 +453,41 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
-// REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
-import 'app_theme.dart'
-as mainCoreAppTheme;
-// REMOVED_MODULE: import '../../features/external/messaging_package/interface/controller/messaging_init_controller.dart';
+import '../../features/messaging/interface/controller/messaging_init_controller.dart';
+import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
 import 'app_theme.dart';
-
+import 'package:demo_app/core/theme/app_text_styles.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 class ThemeController extends GetxController {
-  SystemLogsController get systemLogsController => Get.find<SystemLogsController>();
   final storage = GetStorage();
   late Rx<ThemeData> currentTheme;
   final RxBool isInitialized = false.obs;
 
+  /// Whether UI animations (e.g. slide/fade transitions) are enabled.
+  /// Toggle this to globally disable animations.
+  final RxBool animationsEnabled = true.obs;
+
   @override
   void onInit() {
     super.onInit();
-    currentTheme = MyThemeData.lightTheme.obs;
 
-    // Load theme data synchronously first
-    _loadThemeDataSync();
+    // ⚠️ AppColors.lightTheme / darkTheme use .sp (ScreenUtil) which requires
+    // ScreenUtilInit to be mounted. ThemeController is created in main() before
+    // the widget tree, so we can't call AppColors.lightTheme here.
+    // Use a plain placeholder; _applyRealTheme() swaps it in post-frame.
+    currentTheme = ThemeData
+        .light()
+        .obs;
 
-    // Then initialize theme systems
-    Future.microtask(() {
-      initTheme(withMessage: false);
-      isInitialized.value = true;
-    });
+    // Load isDark + brand colors from storage (no .sp calls)
+    _loadThemePrefsSync();
+
+    // After ScreenUtilInit mounts, apply the real themed ThemeData.
+    // _applyRealTheme() will call initTheme + set isInitialized once it succeeds.
+    WidgetsBinding.instance.addPostFrameCallback((_) => _applyRealTheme());
 
     // Setup listener for system UI updates
     ever(currentTheme, (_) {
@@ -494,57 +497,84 @@ class ThemeController extends GetxController {
     });
   }
 
-  void _loadThemeDataSync() {
-    print('🎨 [ThemeController] Loading theme from storage...');
+  /// Applies the real AppColors.lightTheme / darkTheme once ScreenUtil is ready.
+  /// If ScreenUtil hasn't been initialized yet (LateInitializationError from .sp
+  /// calls), retries on the next frame. initTheme + isInitialized are only set
+  /// after a successful apply so they never run with a half-built theme.
+  void _applyRealTheme() {
+    try {
+      currentTheme.value =
+          AppTheme.isDark ? AppColors.darkTheme : AppColors.lightTheme;
+      AppTheme.isDark = AppTheme.isDark;
+      AppTheme.setCurrentThemeColors();
+      AppTheme.setCurrentThemeColors();
+      update();
+      print(
+          '🎨 [ThemeController] Real theme applied — isDark: ${AppTheme.isDark}');
+      // Only mark as initialized after the theme is fully applied
+      initTheme(withMessage: false);
+      isInitialized.value = true;
+    } catch (e) {
+      // ScreenUtil not initialized yet — retry on the next frame
+      print('🎨 [ThemeController] ScreenUtil not ready, retrying next frame: $e');
+      WidgetsBinding.instance.addPostFrameCallback((_) => _applyRealTheme());
+    }
+  }
 
-    // Load theme mode
+  /// Loads isDark + brand colors from storage. Does NOT access AppColors.lightTheme
+  /// or darkTheme — those use .sp and require ScreenUtil to be ready.
+  void _loadThemePrefsSync() {
+    print('🎨 [ThemeController] Loading theme prefs from storage...');
+
+    // Load theme mode (sets isDark flags only — ThemeData set post-frame)
     final savedTheme = storage.read('theme');
-
-    if (savedTheme != null) {
-      if (savedTheme == 'darkMode') {
-        currentTheme.value = MyThemeData.darkTheme;
-        AppTheme.isDark = true;
-        mainCoreAppTheme.AppTheme.isDark = true; // ✅ Sync main core
-        print('🎨 [ThemeController] Loaded DARK theme from storage');
-      } else {
-        currentTheme.value = MyThemeData.lightTheme;
-        AppTheme.isDark = false;
-        mainCoreAppTheme.AppTheme.isDark = false; // ✅ Sync main core
-        print('🎨 [ThemeController] Loaded LIGHT theme from storage');
-      }
+    if (savedTheme == 'darkMode') {
+      AppTheme.isDark = true;
+      AppTheme.isDark = true;
+      print('🎨 [ThemeController] Pref: DARK');
     } else {
-      currentTheme.value = MyThemeData.lightTheme;
       AppTheme.isDark = false;
-      mainCoreAppTheme.AppTheme.isDark = false; // ✅ Sync main core
-      print('🎨 [ThemeController] No saved theme, using LIGHT theme');
+      AppTheme.isDark = false;
+      print('🎨 [ThemeController] Pref: LIGHT');
     }
 
-    // Load and apply colors
+    // Load and apply brand colors
     final primaryColor = storage.read('primaryColor');
     if (primaryColor != null) {
-      MyThemeData.lightPrimary = Color(int.parse(primaryColor));
-      MyThemeData.switchSettings = Color(int.parse(primaryColor));
+      final primary = Color(int.parse(primaryColor));
+      AppTheme.lightThemeColors['primary'] = primary;
+      AppTheme.lightThemeColors['lightPrimary'] = primary;
+      AppTheme.darkThemeColors['primary'] = primary;
+      AppTheme.darkThemeColors['lightPrimary'] = primary;
+      AppColors.currentThemeColors['primary'] = primary;
+      AppColors.currentThemeColors['lightPrimary'] = primary;
       print('🎨 [ThemeController] Loaded primary color: $primaryColor');
     }
 
     final secondaryColor = storage.read('secondaryColor');
     if (secondaryColor != null) {
-      MyThemeData.signOut = Color(int.parse(secondaryColor));
-      MyThemeData.barColor = Color(int.parse(secondaryColor));
-      MyThemeData.bubbleColor = Color(int.parse(secondaryColor));
+      final secondary = Color(int.parse(secondaryColor));
+      AppTheme.lightThemeColors['secondaryPrimary'] =
+          secondary;
+      AppTheme.darkThemeColors['secondaryPrimary'] = secondary;
+      AppColors.currentThemeColors['secondaryPrimary'] = secondary;
       print('🎨 [ThemeController] Loaded secondary color: $secondaryColor');
     }
 
-    // ✅ CRITICAL: Synchronize AppTheme with loaded state
+    // Sync color maps (no .sp calls here)
     AppTheme.setCurrentThemeColors();
-    mainCoreAppTheme.AppTheme.setCurrentThemeColors(); // ✅ Sync main core colors
+    AppTheme.setCurrentThemeColors();
 
-    print('🎨 [ThemeController] Theme sync completed - isDark: ${AppTheme.isDark}');
+    print(
+        '🎨 [ThemeController] Theme prefs loaded — isDark: ${AppTheme.isDark}');
   }
 
   void updateSystemUIOverlayStyle() {
     if (Get.context != null) {
-      bool isTablet = MediaQuery.of(Get.context!).size.shortestSide > 600;
+      bool isTablet = MediaQuery
+          .of(Get.context!)
+          .size
+          .shortestSide > 600;
       if (isTablet) {
         updateSystemUIOverlayStyleTablet();
       } else {
@@ -554,10 +584,10 @@ class ThemeController extends GetxController {
   }
 
   void updateSystemUIOverlayStyleMobile() {
-    if (currentTheme.value == MyThemeData.lightTheme) {
+    if (currentTheme.value == AppColors.lightTheme) {
       SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(
-          statusBarColor: MyThemeData.colorLightGrey,
+          statusBarColor: AppColors.colorLightGrey,
           statusBarIconBrightness: Brightness.dark,
           statusBarBrightness: Brightness.light,
         ),
@@ -565,7 +595,7 @@ class ThemeController extends GetxController {
     } else {
       SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(
-          statusBarColor: MyThemeData.colorBlack,
+          statusBarColor: AppColors.colorBlack,
           statusBarIconBrightness: Brightness.light,
           statusBarBrightness: Brightness.dark,
         ),
@@ -574,10 +604,10 @@ class ThemeController extends GetxController {
   }
 
   void updateSystemUIOverlayStyleTablet() {
-    if (currentTheme.value == MyThemeData.lightTheme) {
+    if (currentTheme.value == AppColors.lightTheme) {
       SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(
-          statusBarColor: MyThemeData.colorWhite,
+          statusBarColor: AppColors.colorWhite,
           statusBarIconBrightness: Brightness.dark,
           statusBarBrightness: Brightness.light,
         ),
@@ -585,7 +615,7 @@ class ThemeController extends GetxController {
     } else {
       SystemChrome.setSystemUIOverlayStyle(
         SystemUiOverlayStyle(
-          statusBarColor: MyThemeData.dark,
+          statusBarColor: AppColors.dark,
           statusBarIconBrightness: Brightness.light,
           statusBarBrightness: Brightness.dark,
         ),
@@ -594,20 +624,21 @@ class ThemeController extends GetxController {
   }
 
   void toggleTheme() {
-    print('🎨 [ThemeController] Theme toggle started - Current: ${currentTheme.value == MyThemeData.lightTheme ? "Light" : "Dark"}');
+    print('🎨 [ThemeController] Theme toggle started - Current: ${currentTheme
+        .value == AppColors.lightTheme ? "Light" : "Dark"}');
 
     // Toggle theme mode
-    if (currentTheme.value == MyThemeData.lightTheme) {
-      currentTheme.value = MyThemeData.darkTheme;
+    if (currentTheme.value == AppColors.lightTheme) {
+      currentTheme.value = AppColors.darkTheme;
       storage.write('theme', 'darkMode');
       AppTheme.isDark = true;
-      mainCoreAppTheme.AppTheme.isDark = true; // ✅ Sync main core
+      AppTheme.isDark = true; // ✅ Sync main core
       print('🎨 [ThemeController] Switched to DARK theme');
     } else {
-      currentTheme.value = MyThemeData.lightTheme;
+      currentTheme.value = AppColors.lightTheme;
       storage.write('theme', 'lightMode');
       AppTheme.isDark = false;
-      mainCoreAppTheme.AppTheme.isDark = false; // ✅ Sync main core
+      AppTheme.isDark = false; // ✅ Sync main core
       print('🎨 [ThemeController] Switched to LIGHT theme');
     }
 
@@ -617,18 +648,19 @@ class ThemeController extends GetxController {
     // ✅ CRITICAL: Update color maps BEFORE toggling other modules
     print('🎨 [ThemeController] Updating color maps...');
     AppTheme.setCurrentThemeColors();
-    mainCoreAppTheme.AppTheme.setCurrentThemeColors();
+    AppTheme.setCurrentThemeColors();
 
     // Synchronize all theme systems
     print('🎨 [ThemeController] Updating theme in all modules...');
-    mainCoreThemeController.toggleTheme();
     AppTheme.toggleTheme();
 
     try {
-      // REMOVED_MODULE: if (Get.isRegistered<MessagingInitController>()) {
-      // REMOVED_MODULE: Get.find<MessagingInitController>()
-      // REMOVED_MODULE: .messagingConfigurations
-      // REMOVED_MODULE: .toggleTheme();
+      if (Get.isRegistered<MessagingInitController>()) {
+        Get
+            .find<MessagingInitController>()
+            .messagingConfigurations
+            .toggleTheme();
+      }
     } catch (e) {
       print('⚠️ [ThemeController] Error updating messaging theme: $e');
     }
@@ -637,7 +669,8 @@ class ThemeController extends GetxController {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       updateSystemUIOverlayStyle();
       Get.forceAppUpdate();
-      print('🎨 [ThemeController] Theme toggle completed - isDark: ${AppTheme.isDark}');
+      print('🎨 [ThemeController] Theme toggle completed - isDark: ${AppTheme
+          .isDark}');
     });
   }
 
@@ -652,57 +685,64 @@ class ThemeController extends GetxController {
     Color secondary = Color(secondaryColor);
 
     // ✅ FIX: Use the actual theme state from currentTheme
-    bool isDark = currentTheme.value == MyThemeData.darkTheme;
+    bool isDark = currentTheme.value == AppColors.darkTheme;
 
     print('🎨 [ThemeController] Primary color: $primary');
     print('🎨 [ThemeController] Secondary color: $secondary');
     print('🎨 [ThemeController] Dark mode: $isDark (from currentTheme)');
     print('🎨 [ThemeController] AppTheme.isDark: ${AppTheme.isDark}');
-    print('🎨 [ThemeController] mainCoreAppTheme.AppTheme.isDark: ${mainCoreAppTheme.AppTheme.isDark}');
+
 
     // ✅ Ensure all theme systems are in sync
     AppTheme.isDark = isDark;
-    mainCoreAppTheme.AppTheme.isDark = isDark;
+    AppTheme.isDark = isDark;
 
     // Initialize messaging module if needed
     if (withMessage) {
-      // REMOVED_MODULE: try {
-      // REMOVED_MODULE: if (Get.isRegistered<MessagingInitController>()) {
-      // REMOVED_MODULE: Get.find<MessagingInitController>()
-      // REMOVED_MODULE: .messagingConfigurations
-      // REMOVED_MODULE: .initTheme(primary, secondary, isDark);
-      // REMOVED_MODULE: }
-      // REMOVED_MODULE: } catch (e) {
-      // REMOVED_MODULE: print('⚠️ [ThemeController] Error initializing messaging theme: $e');
-      // REMOVED_MODULE: }
+      try {
+        if (Get.isRegistered<MessagingInitController>()) {
+          Get
+              .find<MessagingInitController>()
+              .messagingConfigurations
+              .initTheme(primary, secondary, isDark);
+        }
+      } catch (e) {
+        print('⚠️ [ThemeController] Error initializing messaging theme: $e');
+      }
     }
 
     // Initialize other theme systems with correct dark mode state
-    mainCoreAppTheme.AppTheme.initTheme(primary, secondary, isDark);
+    AppTheme.initTheme(primary, secondary, isDark);
+    AppTheme.initTheme(primary, secondary, isDark);
 
     // ✅ CRITICAL: Update color maps after init
     AppTheme.setCurrentThemeColors();
-    mainCoreAppTheme.AppTheme.setCurrentThemeColors();
+    AppTheme.setCurrentThemeColors();
 
     print('🎨 [ThemeController] Theme initialization completed');
   }
 
   CompanyController addCompanyController = Get.put(CompanyController());
+  SystemLogsController get systemLogsController => Get.find();
 
   // ✅ FIXED: Check GetStorage FIRST for employee branding, fallback to company branding
   void updatePrimaryColor() {
-    print('🎨 [ThemeController] ========== UPDATE PRIMARY COLOR START ==========');
+    print(
+        '🎨 [ThemeController] ========== UPDATE PRIMARY COLOR START ==========');
 
     // Step 1: Check if there's already a value in GetStorage (employee branding)
     String? existingColorInStorage = storage.read('primaryColor');
-    print('🎨 [ThemeController] Step 1 - Existing primaryColor in storage: $existingColorInStorage');
+    print(
+        '🎨 [ThemeController] Step 1 - Existing primaryColor in storage: $existingColorInStorage');
 
     String? colorValue;
 
     // Step 2: If storage is empty, load from company branding
     if (existingColorInStorage == null || existingColorInStorage.isEmpty) {
-      print('🎨 [ThemeController] Step 2 - Storage is empty, loading from company branding...');
-      print('🎨 [ThemeController] Company status: ${addCompanyController.company?.status}');
+      print(
+          '🎨 [ThemeController] Step 2 - Storage is empty, loading from company branding...');
+      print('🎨 [ThemeController] Company status: ${addCompanyController.company
+          ?.status}');
 
       colorValue = addCompanyController.company?.status == 'active'
           ? addCompanyController.company?.primaryColor?.primaryColor?.lastOrNull
@@ -712,35 +752,39 @@ class ThemeController extends GetxController {
 
       if (colorValue != null && colorValue.isNotEmpty) {
         storage.write('primaryColor', colorValue);
-        print('🎨 [ThemeController] ✅ Wrote company color to storage: $colorValue');
+        print(
+            '🎨 [ThemeController] ✅ Wrote company color to storage: $colorValue');
       }
     } else {
       // Use existing storage value (employee branding)
       colorValue = existingColorInStorage;
-      print('🎨 [ThemeController] Step 2 - Using existing storage value (employee branding): $colorValue');
+      print(
+          '🎨 [ThemeController] Step 2 - Using existing storage value (employee branding): $colorValue');
     }
 
     // Step 3: Apply the color to theme
     print('🎨 [ThemeController] Step 3 - Applying color to theme...');
 
-    MyThemeData.lightPrimary = colorValue != null && colorValue.isNotEmpty
+
+    final _primaryColor = colorValue != null && colorValue.isNotEmpty
         ? Color(int.parse(colorValue))
         : const Color(0xFFFFDE59);
+    AppTheme.lightThemeColors['primary'] = _primaryColor;
+    AppTheme.lightThemeColors['lightPrimary'] = _primaryColor;
+    AppTheme.darkThemeColors['primary'] = _primaryColor;
+    AppTheme.darkThemeColors['lightPrimary'] = _primaryColor;
+    AppColors.currentThemeColors['primary'] = _primaryColor;
+    AppColors.currentThemeColors['lightPrimary'] = _primaryColor;
 
-    MyThemeData.switchSettings = colorValue != null && colorValue.isNotEmpty
-        ? Color(int.parse(colorValue))
-        : const Color(0xFFFFDE59);
-
-    print('🎨 [ThemeController] ✅ MyThemeData.lightPrimary set to: ${MyThemeData.lightPrimary}');
+    print('🎨 [ThemeController] ✅ AppColors.lightPrimary set to: ${AppColors
+        .lightPrimary}');
 
     // Step 4: Refresh current theme to apply new color
     print('🎨 [ThemeController] Step 4 - Refreshing theme...');
-    if (currentTheme.value == MyThemeData.lightTheme) {
-      currentTheme.value = MyThemeData.lightTheme;
-      MyThemeData().contrastColor();
+    if (currentTheme.value == AppColors.lightTheme) {
+      currentTheme.value = AppColors.lightTheme;
     } else {
-      currentTheme.value = MyThemeData.darkTheme;
-      MyThemeData().contrastColor();
+      currentTheme.value = AppColors.darkTheme;
     }
 
     // Step 5: Update modules AFTER setting the storage values
@@ -759,58 +803,63 @@ class ThemeController extends GetxController {
 
   // ✅ FIXED: Check GetStorage FIRST for employee branding, fallback to company branding
   void updateSecondaryColor() {
-    print('🎨 [ThemeController] ========== UPDATE SECONDARY COLOR START ==========');
+    print(
+        '🎨 [ThemeController] ========== UPDATE SECONDARY COLOR START ==========');
 
     // Step 1: Check if there's already a value in GetStorage (employee branding)
     String? existingColorInStorage = storage.read('secondaryColor');
-    print('🎨 [ThemeController] Step 1 - Existing secondaryColor in storage: $existingColorInStorage');
+    print(
+        '🎨 [ThemeController] Step 1 - Existing secondaryColor in storage: $existingColorInStorage');
 
     String? colorValue;
 
     // Step 2: If storage is empty, load from company branding
     if (existingColorInStorage == null || existingColorInStorage.isEmpty) {
-      print('🎨 [ThemeController] Step 2 - Storage is empty, loading from company branding...');
-      print('🎨 [ThemeController] Company status: ${addCompanyController.company?.status}');
+      print(
+          '🎨 [ThemeController] Step 2 - Storage is empty, loading from company branding...');
+      print('🎨 [ThemeController] Company status: ${addCompanyController.company
+          ?.status}');
 
       colorValue = addCompanyController.company?.status == 'active'
-          ? addCompanyController.company?.secondaryColor?.secondaryColor?.lastOrNull
+          ? addCompanyController.company?.secondaryColor?.secondaryColor
+          ?.lastOrNull
           : null;
 
       print('🎨 [ThemeController] Secondary color from company: $colorValue');
 
       if (colorValue != null && colorValue.isNotEmpty) {
         storage.write('secondaryColor', colorValue);
-        print('🎨 [ThemeController] ✅ Wrote company color to storage: $colorValue');
+        print(
+            '🎨 [ThemeController] ✅ Wrote company color to storage: $colorValue');
       }
     } else {
       // Use existing storage value (employee branding)
       colorValue = existingColorInStorage;
-      print('🎨 [ThemeController] Step 2 - Using existing storage value (employee branding): $colorValue');
+      print(
+          '🎨 [ThemeController] Step 2 - Using existing storage value (employee branding): $colorValue');
     }
 
     // Step 3: Apply the color to theme
     print('🎨 [ThemeController] Step 3 - Applying color to theme...');
 
-    MyThemeData.signOut = colorValue != null && colorValue.isNotEmpty
+    final _secondaryColor = colorValue != null && colorValue.isNotEmpty
         ? Color(int.parse(colorValue))
         : const Color(0xFFE5B800);
+    AppTheme.lightThemeColors['secondaryPrimary'] =
+        _secondaryColor;
+    AppTheme.darkThemeColors['secondaryPrimary'] =
+        _secondaryColor;
+    AppColors.currentThemeColors['secondaryPrimary'] = _secondaryColor;
 
-    MyThemeData.barColor = colorValue != null && colorValue.isNotEmpty
-        ? Color(int.parse(colorValue))
-        : const Color(0xFFE5B800);
-
-    MyThemeData.bubbleColor = colorValue != null && colorValue.isNotEmpty
-        ? Color(int.parse(colorValue))
-        : const Color(0xFFE5B800);
-
-    print('🎨 [ThemeController] ✅ MyThemeData.signOut set to: ${MyThemeData.signOut}');
+    print(
+        '🎨 [ThemeController] ✅ AppColors.signOut set to: ${AppColors.signOut}');
 
     // Step 4: Refresh current theme to apply new color
     print('🎨 [ThemeController] Step 4 - Refreshing theme...');
-    if (currentTheme.value == MyThemeData.lightTheme) {
-      currentTheme.value = MyThemeData.lightTheme;
+    if (currentTheme.value == AppColors.lightTheme) {
+      currentTheme.value = AppColors.lightTheme;
     } else {
-      currentTheme.value = MyThemeData.darkTheme;
+      currentTheme.value = AppColors.darkTheme;
     }
 
     // Step 5: Update modules AFTER setting the storage values
@@ -824,7 +873,8 @@ class ThemeController extends GetxController {
       print('🎨 [ThemeController] ✅ UI update forced');
     });
 
-    print('🎨 [ThemeController] ========== UPDATE SECONDARY COLOR END ==========');
+    print(
+        '🎨 [ThemeController] ========== UPDATE SECONDARY COLOR END ==========');
   }
 
   updateModulesBranding() {
@@ -836,23 +886,25 @@ class ThemeController extends GetxController {
     int.parse(storage.read('secondaryColor') ?? '0xFFE5B800');
 
     try {
-      // REMOVED_MODULE: if (Get.isRegistered<MessagingInitController>()) {
-      // REMOVED_MODULE: Get.find<MessagingInitController>()
-      // REMOVED_MODULE: .messagingConfigurations
-      // REMOVED_MODULE: .updateBrandingColors(
-      // REMOVED_MODULE: Color(primaryColor), Color(secondaryColor));
+      if (Get.isRegistered<MessagingInitController>()) {
+        Get
+            .find<MessagingInitController>()
+            .messagingConfigurations
+            .updateBrandingColors(
+            Color(primaryColor), Color(secondaryColor));
+      }
     } catch (e) {
       print('⚠️ [ThemeController] Error updating messaging branding: $e');
     }
 
-    mainCoreAppTheme.AppTheme.interfaceUpdateBrandingColors(
+    AppTheme.interfaceUpdateBrandingColors(
         Color(primaryColor), Color(secondaryColor));
     AppTheme.interfaceUpdateBrandingColors(
         Color(primaryColor), Color(secondaryColor));
 
     // ✅ Update color maps after branding changes
     AppTheme.setCurrentThemeColors();
-    mainCoreAppTheme.AppTheme.setCurrentThemeColors();
+    AppTheme.setCurrentThemeColors();
 
     print('🎨 [ThemeController] Modules branding updated');
   }
@@ -886,7 +938,8 @@ class ThemeController extends GetxController {
       print('🎨 Using existing storage font: $currentFontInStorage');
     }
 
-    if (currentArabicFontInStorage == null || currentArabicFontInStorage.isEmpty) {
+    if (currentArabicFontInStorage == null ||
+        currentArabicFontInStorage.isEmpty) {
       print('🎨 Storage Arabic font is empty, loading from company data...');
       storage.write(
           'font_arabic',
@@ -897,18 +950,17 @@ class ThemeController extends GetxController {
       currentArabicFontInStorage = storage.read('font_arabic');
       print('🎨 Loaded from company - font_arabic: $currentArabicFontInStorage');
     } else {
-      print('🎨 Using existing storage Arabic font: $currentArabicFontInStorage');
+      print(
+          '🎨 Using existing storage Arabic font: $currentArabicFontInStorage');
     }
 
     print('🎨 Step 3: Applying fonts to theme...');
     print('🎨 Current locale: ${Get.locale.toString()}');
     print('🎨 Is Arabic: ${Get.locale.toString().contains('ar')}');
 
-    MyThemeData.font = Get.locale.toString().contains('ar')
-        ? currentArabicFontInStorage ?? 'Vazirmatn'
-        : currentFontInStorage ?? 'Cairo';
-
-    print('🎨 MyThemeData.font set to: ${MyThemeData.font}');
+    // Font is read directly from storage by AppTextStyles.englishFontFamily / arabicFontFamily
+    // No assignment needed — storage was already written above.
+    print('🎨 Font applied via storage (read by AppTextStyles getters)');
 
     AppFontStyle.cairoRegularStyle = TextStyle(
       color: Colors.black,
@@ -932,8 +984,7 @@ class ThemeController extends GetxController {
   }
 
   void loadThemeFromStorage() {
-    // This method is now replaced by _loadThemeDataSync() in onInit
-    // Keep it for backward compatibility if called elsewhere
-    _loadThemeDataSync();
+    _loadThemePrefsSync();
+    _applyRealTheme();
   }
 }

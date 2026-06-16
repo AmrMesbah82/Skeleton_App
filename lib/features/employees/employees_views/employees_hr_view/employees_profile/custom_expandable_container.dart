@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
 class ExpandableContainer extends StatefulWidget {
@@ -47,7 +48,7 @@ class _ExpandableContainerState extends State<ExpandableContainer> {
                 bottomLeft: Radius.circular(4),
                  bottomRight: Radius.circular(4),
               ),
-        color: widget.color ?? MyThemeData.colorBlack,
+        color: widget.color ?? AppColors.colorBlack,
       ),
       padding: EdgeInsets.symmetric(
         horizontal: isPortrait ? 0.02.w : 0.02.h,
@@ -67,9 +68,9 @@ class _ExpandableContainerState extends State<ExpandableContainer> {
                       : FontConstants.fontSize018.h,
                   // ignore: unrelated_type_equality_checks
                   color: widget.textColor ??
-                      (themeController.currentTheme == MyThemeData.lightTheme
-                          ? MyThemeData.colorWhite
-                          : MyThemeData.colorGreydark),
+                      (themeController.currentTheme == AppColors.lightTheme
+                          ? AppColors.colorWhite
+                          : AppColors.colorGreydark),
                   fontWeight: FontWeight.w500,
                   height: 1.6),
             ),

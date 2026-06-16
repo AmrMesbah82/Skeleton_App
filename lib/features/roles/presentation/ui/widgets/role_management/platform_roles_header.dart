@@ -77,7 +77,7 @@ class _PlatformRolesHeaderState extends State<PlatformRolesHeader> {
               spacing: 15.sp,
               children: [
                 Expanded(
-                  child: CustomKnowticedTextField(
+                  child: Customdemo_appTextField(
                     height: 36.h,
                     labelEn: '',
                     labelAr: '',
@@ -124,7 +124,7 @@ class _PlatformRolesHeaderState extends State<PlatformRolesHeader> {
                   ),
                   buttonText: isTablet ? 'Role'.tr : "",
                   iconPath: SkeletonAssets.roleIcon,
-                  iconColor: ColorAppLight.buttonTextColor,
+                  iconColor: AppColors.textButton,
                   onTap: () {
                     hapticController.triggerHapticFeedback(
                         vibration: VibrateType.mediumImpact,

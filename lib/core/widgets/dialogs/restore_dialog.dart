@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:lottie/lottie.dart';
 
@@ -27,7 +28,7 @@ class _RestoreDialogState extends State<RestoreDialog> {
   ButtonStyle buttonStyle(Color buttonColor) {
     bool isTablet = MediaQuery.of(context).size.shortestSide > 600;
     return ElevatedButton.styleFrom(
-        backgroundColor: buttonColor, //MyThemeData.bubbleColor,
+        backgroundColor: buttonColor, //AppColors.bubbleColor,
         minimumSize: isTablet ? Size(0.1.w, 0.053.h) : Size(0.3.w, 0.05.h),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)));
   }
@@ -109,7 +110,7 @@ class _RestoreDialogState extends State<RestoreDialog> {
                   children: <Widget>[
                     Expanded(
                       child: MainCustomIconButton(
-                        buttonStyle: buttonStyle(MyThemeData.colorGreydark),
+                        buttonStyle: buttonStyle(AppColors.colorGreydark),
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
@@ -121,7 +122,7 @@ class _RestoreDialogState extends State<RestoreDialog> {
                     Container(width: 0.02.w),
                     Expanded(
                       child: MainCustomIconButton(
-                        buttonStyle: buttonStyle(MyThemeData.bubbleColor),
+                        buttonStyle: buttonStyle(AppColors.bubbleColor),
                         onPressed: widget.secondOnPressed,
                         buttonText: "Second Backup".tr,
           
@@ -130,7 +131,7 @@ class _RestoreDialogState extends State<RestoreDialog> {
                     Container(width: 0.02.w),
                     Expanded(
                       child: MainCustomIconButton(
-                        buttonStyle: buttonStyle(MyThemeData.bubbleColor),
+                        buttonStyle: buttonStyle(AppColors.bubbleColor),
                         onPressed: widget.firstOnPressed,
                         buttonText: "First Backup".tr,
                      

@@ -1,6 +1,6 @@
 /// ******************* FILE INFO *******************
 /// File Name: custom_button_with_image.dart
-/// Description: Custom button with SVG image — ported from Knowticed_plus grc module.
+/// Description: Custom button with SVG image — ported from demo_app_plus grc module.
 library;
 
 import 'package:flutter/material.dart';

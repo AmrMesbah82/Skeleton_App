@@ -163,7 +163,7 @@ class _ServiceOverviewState extends State<ServiceOverview> {
                   'Service'.tr,
                   style: isMobile
                       ? StyleText.fontSize12Weight500.copyWith(
-                      color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue)
+                      color: lightMode ? AppColors.blackButton : AppColors.white)
                       : AppTextStyles.font14BlackCairoMedium.copyWith(fontWeight: FontWeight.bold),
                 ),
                 SvgPicture.asset(
@@ -247,7 +247,7 @@ class _ServiceOverviewState extends State<ServiceOverview> {
                 title,
                 style: isMobile
                     ? StyleText.fontSize10Weight500.copyWith(
-                    color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue)
+                    color: lightMode ? AppColors.blackButton : AppColors.white)
                     : AppTextStyles.font14BlackCairoRegular,
                 maxLines: 1,
               ),
@@ -257,7 +257,7 @@ class _ServiceOverviewState extends State<ServiceOverview> {
               number.toString(),
               style: isMobile
                   ? StyleText.fontSize12Weight500.copyWith(
-                  color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue)
+                  color: lightMode ? AppColors.blackButton : AppColors.white)
                   : AppTextStyles.font14BlackSemiBoldCairo,
             ),
           ],

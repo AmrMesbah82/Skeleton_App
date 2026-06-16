@@ -4,15 +4,16 @@
 /// Refactored At: 13/11/2024
 
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/additional_info_content.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/settings_header.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/request_to_change_dialog_mobile.dart';
 import '../../../../../../core/enumeration/enum.dart';
 
@@ -79,7 +80,7 @@ class MobileSettingsAdditionalInfo extends StatelessWidget {
                             width: double.infinity,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: MyThemeData.signOut,
+                                backgroundColor: AppColors.signOut,
                                 padding: EdgeInsets.symmetric(
                                     vertical: 0.007.h,
                                     horizontal: isPortrait ? 0.22.w : 0.155.w),
@@ -108,7 +109,7 @@ class MobileSettingsAdditionalInfo extends StatelessWidget {
                                 style: AppFontStyle.cairoRegularStyle.copyWith(
                                     fontSize: FontConstants.fontSize022.h,
                                     fontWeight: FontWeight.w600,
-                                    color: MyThemeData().contrastColor()),
+                                    color: AppColors.textButton),
                               ),
                             ),
                           ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
 
 class GuestsContainer extends StatefulWidget {
@@ -98,7 +99,7 @@ class _GuestsContainerState extends State<GuestsContainer> {
                                 ? FontConstants.fontSize012.h
                                 : FontConstants.fontSize012.w
                             : FontConstants.fontSize016.h,
-                        color: MyThemeData.textGrey,
+                        color: AppColors.textGrey,
                         fontWeight: FontWeight.w600),
                   ),
                 ),
@@ -123,7 +124,7 @@ class _GuestsContainerState extends State<GuestsContainer> {
                                     ? FontConstants.fontSize012.h
                                     : FontConstants.fontSize012.w
                                 : FontConstants.fontSize014.h,
-                            color: MyThemeData.textGrey,
+                            color: AppColors.textGrey,
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -137,12 +138,12 @@ class _GuestsContainerState extends State<GuestsContainer> {
                                         : FontConstants.fontSize012.w
                                     : FontConstants.fontSize015.h,
                                 color: widget.status == null
-                                    ? MyThemeData.warning
+                                    ? AppColors.warning
                                     : (widget.status?.tr == "Pending".tr
-                                        ? MyThemeData.warning
+                                        ? AppColors.warning
                                         : widget.status?.tr == "Rejected".tr
-                                            ? MyThemeData.colorRed
-                                            : MyThemeData.unBlock),
+                                            ? AppColors.colorRed
+                                            : AppColors.unBlock),
                                 fontWeight: FontWeight.w600),
                           )
                         : const SizedBox.shrink()
@@ -175,7 +176,7 @@ class _GuestsContainerState extends State<GuestsContainer> {
                                         ? FontConstants.fontSize012.h
                                         : FontConstants.fontSize010.w,
                                     fontWeight: FontWeight.w500,
-                                    color: MyThemeData.unBlock),
+                                    color: AppColors.unBlock),
                               ),
                             )
                           : const SizedBox.shrink()
@@ -191,7 +192,7 @@ class _GuestsContainerState extends State<GuestsContainer> {
                                   ? FontConstants.fontSize012.h
                                   : FontConstants.fontSize010.w,
                               fontWeight: FontWeight.w500,
-                              color: MyThemeData.unBlock),
+                              color: AppColors.unBlock),
                         ),
                       )
                     : const SizedBox.shrink(),

@@ -17,11 +17,11 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/requests/request_controller.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/tablet/preview_health.dart';
@@ -452,7 +452,7 @@ class _EditPageRequestHealthState extends State<EditPageRequestHealth> {
                 width: 411.w,
                 padding: EdgeInsets.all(20.sp),
                 decoration: BoxDecoration(
-                  color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.background,
+                  color: lightMode ? AppColors.white : AppColors.background,
                   borderRadius: BorderRadius.circular(12.r),
                 ),
                 child: Column(
@@ -470,7 +470,7 @@ class _EditPageRequestHealthState extends State<EditPageRequestHealth> {
                     Text(
                       S.of(context).noChangeFound,
                       style: StyleText.fontSize18Weight500.copyWith(
-                        color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                        color: lightMode ? AppColors.blackButton : AppColors.white,
                       ),
                       textAlign: TextAlign.center,
                     ),
@@ -589,7 +589,7 @@ class _EditPageRequestHealthState extends State<EditPageRequestHealth> {
                       children: [
                         Container(
                           decoration: BoxDecoration(
-                            color: lightMode ? ColorAppLight.whiteOp : ColorAppDark.chatBackground,
+                            color: lightMode ? AppColors.background : AppColors.chatBackground,
                             borderRadius: BorderRadius.circular(8),
                           ),
                           child: Column(
@@ -601,7 +601,7 @@ class _EditPageRequestHealthState extends State<EditPageRequestHealth> {
                                 decoration: !isTablet
                                     ? BoxDecoration(
                                   borderRadius: BorderRadius.circular(8),
-                                  color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+                                  color: lightMode ? AppColors.white : AppColors.chatBackground,
                                 )
                                     : null,
                                 child: Padding(
@@ -628,7 +628,7 @@ class _EditPageRequestHealthState extends State<EditPageRequestHealth> {
                           decoration: !isTablet
                               ? BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+                            color: lightMode ? AppColors.white : AppColors.chatBackground,
                           )
                               : null,
                           child: EditableEmergencyContactInformationSection(
@@ -658,7 +658,7 @@ class _EditPageRequestHealthState extends State<EditPageRequestHealth> {
                           decoration: !isTablet
                               ? BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+                            color: lightMode ? AppColors.white : AppColors.chatBackground,
                           )
                               : null,
                           child: EditableEmergencyContactInformationSection(
@@ -706,7 +706,7 @@ class _EditPageRequestHealthState extends State<EditPageRequestHealth> {
                               width: 150.w,
                               height: 38.h,
                               textStyle: StyleText.fontSize16Weight500.copyWith(
-                                color: ColorAppLight.buttonTextColor,
+                                color: AppColors.textButton,
                               ),
                               radius: 8.r,
 
@@ -745,7 +745,7 @@ class _EditPageRequestHealthState extends State<EditPageRequestHealth> {
                         children: [
                           Container(
                             decoration: BoxDecoration(
-                              color: lightMode ? ColorAppLight.whiteOp : ColorAppDark.chatBackground,
+                              color: lightMode ? AppColors.background : AppColors.chatBackground,
                               borderRadius: BorderRadius.circular(8),
                             ),
                             child: Padding(
@@ -825,7 +825,7 @@ class _EditPageRequestHealthState extends State<EditPageRequestHealth> {
                                 width: 150.w,
                                 height: 38.h,
                                 textStyle: StyleText.fontSize16Weight500.copyWith(
-                                  color: ColorAppLight.buttonTextColor,
+                                  color: AppColors.textButton,
                                 ),
                                 radius: 8.r,
 

@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:flutter/cupertino.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
@@ -17,9 +18,9 @@ import 'package:demo_app/features/settings/presentation/ui/widgets/health_insura
 import 'package:demo_app/features/settings/presentation/ui/widgets/location_info_update.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/personal_data_update.dart';
 import 'package:demo_app/core/shared_components/exclate_photo_data_row.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/custom_container.dart';
@@ -77,7 +78,7 @@ class _RequestExcalateDialogState extends State<RequestExcalateDialog> {
     final bool lightMode = Theme.of(context).brightness == Brightness.light;
     bool isPortrait = MediaQuery.of(context).orientation == Orientation.portrait;
     bool isTablet = MediaQuery.of(context).size.shortestSide > 600;
-    Color fieldBg = lightMode ? MyThemeData.colorLightGrey : MyThemeData.colorBlack;
+    Color fieldBg = lightMode ? AppColors.colorLightGrey : AppColors.colorBlack;
 
     TextStyle headersStyle = AppFontStyle.cairoRegularStyle.copyWith(
       fontSize: isPortrait ? FontConstants.fontSize019.h : FontConstants.fontSize022.h,
@@ -176,7 +177,7 @@ class _RequestExcalateDialogState extends State<RequestExcalateDialog> {
                                       dropdownHeight: 0.18.h,
                                       suffixIcon: const Icon(Icons.arrow_drop_down),
                                       hintColor: Theme.of(context).colorScheme.scrim,
-                                      hintStyle: AppFontStyle.cairoRegularStyle.copyWith(color: MyThemeData.colorGrey, height: 1.2,
+                                      hintStyle: AppFontStyle.cairoRegularStyle.copyWith(color: AppColors.colorGrey, height: 1.2,
                                         fontSize: isPortrait ? FontConstants.fontSize016.h : FontConstants.fontSize022.h),
                                       controller: _controller,
                                       onOptionSelected: (opts) => setState(() => optionsD = opts),
@@ -193,7 +194,7 @@ class _RequestExcalateDialogState extends State<RequestExcalateDialog> {
                                                   ? [ValueItem(label: "Additional Information".tr, value: '1')]
                                                   : [ValueItem(label: "", value: '1')],
                                       selectionType: SelectionType.multi,
-                                      chipConfig: ChipConfig(deleteIcon: Icon(Icons.cancel, size: isPortrait ? 0.02.h : 0.03.h, color: MyThemeData().contrastColor()), wrapType: WrapType.scroll, radius: 12),
+                                      chipConfig: ChipConfig(deleteIcon: Icon(Icons.cancel, size: isPortrait ? 0.02.h : 0.03.h, color: AppColors.textButton), wrapType: WrapType.scroll, radius: 12),
                                       optionTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
                                         color: Theme.of(context).colorScheme.scrim,
                                         fontSize: isPortrait ? FontConstants.fontSize016.h : FontConstants.fontSize020.h, height: 1.8)),
@@ -224,7 +225,7 @@ class _RequestExcalateDialogState extends State<RequestExcalateDialog> {
                                     child: Custom_Container(height: isPortrait ? 0.045.h : 0.055.h,
                                       imageAddress: "assets/images/upload_pic.svg", text: "Upload Attachment",
                                       backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-                                      borderColor: MyThemeData.lightPrimary, iconColor: MyThemeData.lightPrimary, textColor: MyThemeData.lightPrimary))
+                                      borderColor: AppColors.lightPrimary, iconColor: AppColors.lightPrimary, textColor: AppColors.lightPrimary))
                                 : const SizedBox(height: 45),
                         if (widget.isExclate == false && optionsD.isNotEmpty)
                           Row(mainAxisAlignment: MainAxisAlignment.end, children: [
@@ -234,7 +235,7 @@ class _RequestExcalateDialogState extends State<RequestExcalateDialog> {
                                       ? () { Navigator.pop(context); showDialog(context: context, builder: (_) => const ResponseDialog(subtitle: "You Successful Send Leave Sick", title: '', lottieAsset: '')); }
                                       : widget.onPressed!,
                               buttonText: widget.isExclate ? "Escalates".tr : "Send".tr,
-                              buttonStyle: widget.isSetting == false && requestType == null ? btnStyle(MyThemeData.GreyBack) : btnStyle(MyThemeData.signOut))
+                              buttonStyle: widget.isSetting == false && requestType == null ? btnStyle(AppColors.GreyBack) : btnStyle(AppColors.signOut))
                           ]),
                         SizedBox(height: 0.015.h),
                       ],

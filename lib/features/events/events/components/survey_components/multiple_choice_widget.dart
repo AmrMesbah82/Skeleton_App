@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/custom_textfield_container.dart';
 
 class MultipleChoiceWidget extends StatefulWidget {
@@ -128,7 +129,7 @@ padding: EdgeInsets.zero,
                         },
                         child: SvgPicture.asset(
                           "assets/icons/trashIcon.svg",
-                          color: MyThemeData.colorRed,
+                          color: AppColors.colorRed,
                           height: isTablet
                               ? (isPortrait ? 0.035.w : 0.02.w)
                               : 0.025.h,

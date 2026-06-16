@@ -1,14 +1,15 @@
 // ignore_for_file: unrelated_type_equality_checks
 
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 
 // ignore: must_be_immutable
@@ -45,10 +46,10 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
       },
       child: widget.isChecked
           ? SvgPicture.asset(
-              themeController.currentTheme == MyThemeData.lightTheme
+              themeController.currentTheme == AppColors.lightTheme
                   ? 'assets/icons/CheckListOn.svg'
                   : 'assets/icons/CheckListOff.svg',
-                  color: MyThemeData.lightPrimary,
+                  color: AppColors.lightPrimary,
               height: isPortrait == true
                   ? widget.isBottomSheet == true
                       ? 0.023.h
@@ -57,7 +58,7 @@ class _CustomCheckboxState extends State<CustomCheckbox> {
             )
           : SvgPicture.asset(
               'assets/icons/checkBoxNotChecked.svg',
-              color: MyThemeData.lightPrimary,
+              color: AppColors.lightPrimary,
               height: isPortrait == true
                   ? widget.isBottomSheet == true
                       ? 0.023.h

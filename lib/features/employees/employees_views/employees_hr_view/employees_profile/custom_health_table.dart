@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
 class CustomTableWidget extends StatefulWidget {
@@ -48,18 +49,18 @@ class _CustomTableWidgetState extends State<CustomTableWidget> {
     TextStyle customTextStyle = AppFontStyle.cairoRegularStyle.copyWith(
         fontSize: FontConstants.fontSize022.h,
         // ignore: unrelated_type_equality_checks
-        color: themeController.currentTheme == MyThemeData.lightTheme
-            ? MyThemeData.colorWhiteDark
-            : MyThemeData.colorBlack,
+        color: themeController.currentTheme == AppColors.lightTheme
+            ? AppColors.colorWhiteDark
+            : AppColors.colorBlack,
         fontWeight: FontWeight.w400,
         height: 0.002.h);
 
     TextStyle customDataTextStyle = AppFontStyle.cairoRegularStyle.copyWith(
         fontSize: FontConstants.fontSize022.h,
         // ignore: unrelated_type_equality_checks
-        color: themeController.currentTheme == MyThemeData.lightTheme
-            ? MyThemeData.colorBlack
-            : MyThemeData.colorWhiteDark,
+        color: themeController.currentTheme == AppColors.lightTheme
+            ? AppColors.colorBlack
+            : AppColors.colorWhiteDark,
         fontWeight: FontWeight.w400,
         height: 0.002.h);
 
@@ -73,9 +74,9 @@ class _CustomTableWidgetState extends State<CustomTableWidget> {
             style: AppFontStyle.cairoRegularStyle.copyWith(
               fontSize: FontConstants.fontSize024.h,
               // ignore: unrelated_type_equality_checks
-              color: themeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.lightPrimary
-                  : MyThemeData.lightPrimary,
+              color: themeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.lightPrimary
+                  : AppColors.lightPrimary,
               fontWeight: FontWeight.w400,
             ),
           ),
@@ -86,14 +87,14 @@ class _CustomTableWidgetState extends State<CustomTableWidget> {
           Container(
             padding: EdgeInsets.symmetric(vertical: 0.01.h, horizontal: 0.01.h),
             decoration: BoxDecoration(
-              color: MyThemeData.colorBlack,
+              color: AppColors.colorBlack,
               borderRadius:const BorderRadius.only(
                 topLeft: Radius.circular(8.0),
                 topRight: Radius.circular(8.0),
               ),
               border: Border.all(
                 width: 0.001.h,
-                color: MyThemeData.colorGrey,
+                color: AppColors.colorGrey,
               ),
             ),
             child: Row(
@@ -123,7 +124,7 @@ class _CustomTableWidgetState extends State<CustomTableWidget> {
               ),
               border: Border.all(
                 width: 0.001.h,
-                color: MyThemeData.colorGrey,
+                color: AppColors.colorGrey,
               ),
             ),
             child: ListView.builder(
@@ -183,7 +184,7 @@ padding: EdgeInsets.zero,
                           ],
                         ),
                       ),
-                      //     if (index != tableData.length - 1) Divider(color: MyThemeData.colorBlack),
+                      //     if (index != tableData.length - 1) Divider(color: AppColors.colorBlack),
                     ],
                   ),
                 );

@@ -6,8 +6,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/employees/employees_views/employees_hr_view/employees_profile/employee_content.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class AssetsContainer extends StatelessWidget {
   const AssetsContainer({super.key, this.isEmployeeProfile = false});

@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
 import 'package:flutter/material.dart';
@@ -10,9 +11,9 @@ import 'package:demo_app/core/shared_components/date_picker_class.dart';
 import 'package:demo_app/core/widgets/cupertino_time_picker.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
@@ -190,9 +191,9 @@ class _AddInfoEventState extends State<AddInfoEvent> {
             children: [
               ColumnRequestData(
                 fillColor:
-                    themeController.currentTheme == MyThemeData.lightTheme
-                        ? MyThemeData.colorLightGrey
-                        : MyThemeData.colorBlack,
+                    themeController.currentTheme == AppColors.lightTheme
+                        ? AppColors.colorLightGrey
+                        : AppColors.colorBlack,
                 title: "Type",
                 isTextField: false,
                 buttonWidth: width,
@@ -241,12 +242,12 @@ class _AddInfoEventState extends State<AddInfoEvent> {
                       child: SvgPicture.asset(
                         "assets/images/attachsquare_field.svg",
                         color: (themeController.currentTheme ==
-                                MyThemeData.lightTheme
+                                AppColors.lightTheme
                             ? Theme.of(context)
                                 .colorScheme
                                 .scrim
                                 .withOpacity(0.6)
-                            : MyThemeData.colorWhite),
+                            : AppColors.colorWhite),
                       ),
                     ),
                     textController: eventController.flyer,
@@ -285,7 +286,7 @@ class _AddInfoEventState extends State<AddInfoEvent> {
                           ? FontConstants.fontSize019.h
                           : FontConstants.fontSize022.h,
                       fontWeight: FontWeight.w600,
-                      color: MyThemeData.delete,
+                      color: AppColors.delete,
                     ))
               ])),
           SizedBox(
@@ -311,7 +312,7 @@ class _AddInfoEventState extends State<AddInfoEvent> {
                             ? 'assets/icons/CheckListOn.svg'
                             : 'assets/icons/CheckListOff.svg',
                         color: eventController.isRemote
-                            ? MyThemeData.signOut
+                            ? AppColors.signOut
                             : null,
                         //  width: 0.070.w,
                         height: isVertical ? 0.025.h : 0.035.h,
@@ -329,7 +330,7 @@ class _AddInfoEventState extends State<AddInfoEvent> {
                                 ? Theme.of(context)
                                     .colorScheme
                                     .secondaryContainer
-                                : MyThemeData.colorGrey,
+                                : AppColors.colorGrey,
                             height: 1.2,
                             fontWeight: eventController.isRemote
                                 ? FontWeight.w400
@@ -362,7 +363,7 @@ class _AddInfoEventState extends State<AddInfoEvent> {
                             ? 'assets/icons/CheckListOn.svg'
                             : 'assets/icons/CheckListOff.svg',
                         color: eventController.isOnsite
-                            ? MyThemeData.signOut
+                            ? AppColors.signOut
                             : null,
                         //  width: 0.070.w,
                         height: isVertical ? 0.025.h : 0.035.h,
@@ -380,7 +381,7 @@ class _AddInfoEventState extends State<AddInfoEvent> {
                                 ? Theme.of(context)
                                     .colorScheme
                                     .secondaryContainer
-                                : MyThemeData.colorGrey,
+                                : AppColors.colorGrey,
                             height: 1.2,
                             fontWeight: eventController.isOnsite
                                 ? FontWeight.w400

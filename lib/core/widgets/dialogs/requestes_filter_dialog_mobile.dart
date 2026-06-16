@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
 import 'package:demo_app/core/shared_components/requests_filter_appbar.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
 
 class RequestesFilterDialogMobile extends StatefulWidget {
@@ -61,7 +62,7 @@ class _RequestesFilterDialogMobileState
               FiltersAppBar(
                 imageUrl: "assets/images/filter_table.svg",
                 title: "Filter",
-                iconColor: MyThemeData().contrastColor(),
+                iconColor: AppColors.textButton,
               ),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -183,14 +184,14 @@ class _RequestesFilterDialogMobileState
               //                   : FontConstants.fontSize022.h
               //               : FontConstants.fontSize016.h,
               //           fontweight: FontWeight.w600,
-              //           textColor: MyThemeData.colorWhite,
+              //           textColor: AppColors.colorWhite,
               //           buttonStyle: ElevatedButton.styleFrom(
               //             minimumSize: isTablet
               //                 ? isPortrait
               //                     ? Size(0.15.w, 0.045.h)
               //                     : Size(0.07.w, 0.05.h)
               //                 : Size(0.36.w, 0.05.h),
-              //             backgroundColor: MyThemeData.signOut,
+              //             backgroundColor: AppColors.signOut,
               //             shape: RoundedRectangleBorder(
               //               borderRadius: const BorderRadius.all(
               //                 Radius.circular(8),

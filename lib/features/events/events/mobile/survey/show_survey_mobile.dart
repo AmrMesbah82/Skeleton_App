@@ -1,4 +1,5 @@
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/model/survey_model.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -9,8 +10,8 @@ import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 import 'package:demo_app/core/widgets/custom_upper_filter.dart';
 import 'package:demo_app/core/widgets/dialogs/delete_dialog.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/dialogue_switchers_row.dart';
 import 'package:demo_app/features/events/mobile/media_department/media_department_home.dart';
 import 'package:demo_app/features/events/mobile/survey/edit_survey_mobile.dart';
@@ -71,9 +72,9 @@ class _ShowSurveyMobileState extends State<ShowSurveyMobile> {
                         CustomIconButton(
                   buttonText: "Delete",
                   smallHeight: true,
-                  buttonColor: MyThemeData.delete,
-                  textColor: MyThemeData.colorWhite,
-                  imageColor: MyThemeData.colorWhite,
+                  buttonColor: AppColors.delete,
+                  textColor: AppColors.colorWhite,
+                  imageColor: AppColors.colorWhite,
                   imagePath: "assets/icons/trashIcon.svg",
                   onPressed: () {
                     showDialog(

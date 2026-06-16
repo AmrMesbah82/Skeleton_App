@@ -1,5 +1,5 @@
 // Shared visual tokens & helpers for the reusable Figma card widgets.
-// Theme source: Knowticed app (AppColors / AppFontWeights).
+// Theme source: demo_app app (AppColors / AppFontWeights).
 // All sizes are responsive via flutter_screenutil (.sp / .w / .h / .r).
 
 import 'package:flutter/material.dart';

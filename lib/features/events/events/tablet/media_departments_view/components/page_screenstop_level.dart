@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_appbar.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class PageScreenTopLevel extends StatefulWidget {
   PageScreenTopLevel({super.key, required this.children,

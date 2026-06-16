@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/shared_components/calender_package/src/models/calendar_date_picker2_config.dart';
 import 'package:demo_app/core/shared_components/calender_package/src/widgets/calendar_date_picker2.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 // ignore: must_be_immutable
 class CustomCalendarPicker extends StatefulWidget {
@@ -52,7 +53,7 @@ class _CustomCalendarPickerState extends State<CustomCalendarPicker> {
           child: SvgPicture.asset(
             'assets/icons/back_icon.svg',
             // ignore: deprecated_member_use
-            color: MyThemeData.lightPrimary,
+            color: AppColors.lightPrimary,
           ),
         ),
         nextMonthIcon: Transform.rotate(
@@ -60,7 +61,7 @@ class _CustomCalendarPickerState extends State<CustomCalendarPicker> {
           child: SvgPicture.asset(
             'assets/icons/back_icon.svg',
             // ignore: deprecated_member_use
-            color: MyThemeData.lightPrimary,
+            color: AppColors.lightPrimary,
           ),
         ),
         weekdayLabelTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
@@ -68,14 +69,14 @@ class _CustomCalendarPickerState extends State<CustomCalendarPicker> {
               ? isReviewJob
               : FontConstants.fontSize015.w,
           fontWeight: FontWeight.w600,
-          color: MyThemeData.switchSettings,
+          color: AppColors.switchSettings,
         ),
         controlsTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
             fontSize: widget.isReviewJob == true
                 ? isReviewJob
                 : FontConstants.fontSize015.w,
             fontWeight: FontWeight.w600,
-            color: MyThemeData.switchSettings,
+            color: AppColors.switchSettings,
             height: 1.45),
         selectedYearTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
             fontSize: widget.isReviewJob == true
@@ -83,7 +84,7 @@ class _CustomCalendarPickerState extends State<CustomCalendarPicker> {
                 : FontConstants.fontSize015.w,
             fontWeight: FontWeight.w500,
             color: Theme.of(context).colorScheme.onInverseSurface),
-        selectedDayHighlightColor: MyThemeData.switchSettings,
+        selectedDayHighlightColor: AppColors.switchSettings,
         dayTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
             fontSize: widget.isReviewJob == true
                 ? isReviewJob
@@ -106,14 +107,14 @@ class _CustomCalendarPickerState extends State<CustomCalendarPicker> {
           fontWeight: FontWeight.w500,
           height:
               widget.isReviewJob == true ? 1.6 : (isLargeTablet ? 1.7 : 1.6),
-          color: MyThemeData().contrastColor(),
+          color: AppColors.textButton,
         ),
         selectedRangeDayTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
           fontSize: widget.isReviewJob == true
               ? isReviewJob
               : FontConstants.fontSize015.w,
           fontWeight: FontWeight.w500,
-          color: MyThemeData.colorWhite,
+          color: AppColors.colorWhite,
           height: 0.0019.h,
         ),
         yearTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
@@ -133,7 +134,7 @@ class _CustomCalendarPickerState extends State<CustomCalendarPicker> {
           height: isLargeTablet ? 1.6 : 1.6,
           color: Theme.of(context).colorScheme.inverseSurface,
         ),
-        selectedRangeHighlightColor: MyThemeData.bubbleColor,
+        selectedRangeHighlightColor: AppColors.bubbleColor,
         customModePickerIcon: Container(),
         calendarType: widget.calendarType,
       ),

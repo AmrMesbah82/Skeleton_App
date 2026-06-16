@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -51,7 +51,7 @@ class _CustomIconButtonState extends State<CustomIconButton> {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
         elevation: 0,
-        foregroundColor: MyThemeData.colorBlack,
+        foregroundColor: AppColors.colorBlack,
         backgroundColor: widget.buttonColor ?? AppColors.primary,
         padding: EdgeInsets.symmetric(
           horizontal: isTablet ? (orientation ? 0.015.w : 0.02.h) : 0.025.w,

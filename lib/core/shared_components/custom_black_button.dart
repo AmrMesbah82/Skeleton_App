@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomBlackButton extends StatefulWidget {
   final VoidCallback? onPressed;
@@ -33,10 +34,10 @@ class _CustomBlackButtonState extends State<CustomBlackButton> {
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all<Color>(
             widget.isYellow == true
-                ? MyThemeData.lightPrimary
-                : MyThemeData.colorTotalBlack),
+                ? AppColors.lightPrimary
+                : AppColors.colorTotalBlack),
         foregroundColor:
-            MaterialStateProperty.all<Color>(MyThemeData.colorWhite),
+            MaterialStateProperty.all<Color>(AppColors.colorWhite),
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(4),
@@ -53,7 +54,7 @@ class _CustomBlackButtonState extends State<CustomBlackButton> {
               "assets/icons/plusIcon.svg",
               height: isTablet? (orientation? 0.015.h: null): null,
               color: widget.isYellow == true
-                  ? MyThemeData().contrastColor() :MyThemeData.colorWhite,
+                  ? AppColors.textButton :AppColors.colorWhite,
             ),
             SizedBox(
               width:isTablet? (orientation? 0.015.w: 0.02.h): 0.02.w,
@@ -68,7 +69,7 @@ class _CustomBlackButtonState extends State<CustomBlackButton> {
                           : FontConstants.fontSize022.h)
                       : FontConstants.fontSize017.h,
                   color:  widget.isYellow == true
-                  ? MyThemeData().contrastColor() :MyThemeData.colorWhite,
+                  ? AppColors.textButton :AppColors.colorWhite,
                   fontWeight: FontWeight.w400),
             ),
           ],

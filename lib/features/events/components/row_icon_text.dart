@@ -1,10 +1,11 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class RowIconTextEvent extends StatefulWidget {
@@ -71,9 +72,9 @@ class _RowIconTextEventState extends State<RowIconTextEvent> {
                     ? FontConstants.fontSize013.h
                     : FontConstants.fontSize013.w
                 : FontConstants.fontSize018.h,
-        color: themeController.currentTheme == MyThemeData.lightTheme
-            ? MyThemeData.colorDarkGrey
-            : MyThemeData.colorGreydark,
+        color: themeController.currentTheme == AppColors.lightTheme
+            ? AppColors.colorDarkGrey
+            : AppColors.colorGreydark,
         fontWeight: FontWeight.w500,
         overflow: TextOverflow.ellipsis,
         height: isTablet ? 1.8 : 1.5);
@@ -90,9 +91,9 @@ class _RowIconTextEventState extends State<RowIconTextEvent> {
                     : FontConstants.fontSize013.w
                 : FontConstants.fontSize018.h,
         color: widget.valueColor ??
-            (themeController.currentTheme == MyThemeData.lightTheme
-                ? MyThemeData.colorBlack
-                : MyThemeData.colorWhiteDark),
+            (themeController.currentTheme == AppColors.lightTheme
+                ? AppColors.colorBlack
+                : AppColors.colorWhiteDark),
         overflow: TextOverflow.ellipsis,
         fontWeight: FontWeight.w500,
         height: isTablet ? 1.8 : 1.5);
@@ -104,7 +105,7 @@ class _RowIconTextEventState extends State<RowIconTextEvent> {
                 children: [
                   SvgPicture.asset(
                     widget.iconUrl,
-                    color: MyThemeData.colorDarkGrey,
+                    color: AppColors.colorDarkGrey,
                     height: isPortrait
                         ? 0.025.h
                         : widget.isSmall == true
@@ -140,7 +141,7 @@ class _RowIconTextEventState extends State<RowIconTextEvent> {
                   ? const SizedBox.shrink()
                   : SvgPicture.asset(
                       widget.iconUrl,
-                      color: MyThemeData.colorDarkGrey,
+                      color: AppColors.colorDarkGrey,
                       height: isPortrait
                           ? isTablet
                               ? 0.02.h

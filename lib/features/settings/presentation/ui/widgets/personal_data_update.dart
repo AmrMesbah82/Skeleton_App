@@ -1,4 +1,5 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -11,10 +12,10 @@ import 'package:demo_app/features/settings/presentation/ui/widgets/location_info
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
+
 import 'package:demo_app/core/constants/nationalities_list.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/tablet/tablet_personal_info_screen.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
@@ -85,11 +86,11 @@ class _PersonalDataUpdateState extends State<PersonalDataUpdate> {
     }
 
     final orientation = MediaQuery.of(context).orientation;
-    Color backColor = themeController.currentTheme == MyThemeData.lightTheme
+    Color backColor = themeController.currentTheme == AppColors.lightTheme
         ? const Color(0xFFF6F6F6)
         : const Color(0xFF545454);
 
-    Color buttonColor = themeController.currentTheme == MyThemeData.lightTheme
+    Color buttonColor = themeController.currentTheme == AppColors.lightTheme
         ? const Color(0xFFF6F6F6)
         : const Color(0xFF545454);
 
@@ -103,7 +104,7 @@ class _PersonalDataUpdateState extends State<PersonalDataUpdate> {
               ? FontConstants.fontSize016.h
               : FontConstants.fontSize023.h)
           : FontConstants.fontSize017.h,
-      color: MyThemeData.colorGrey,
+      color: AppColors.colorGrey,
       fontWeight: FontWeight.w400,
       height: orientation == Orientation.portrait ? 0.0014.h : 0.002.h,
     );
@@ -406,9 +407,9 @@ class _PersonalDataUpdateState extends State<PersonalDataUpdate> {
                                 true  
                             ? null
                             : (themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhite),
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhite),
                         height: isVertical ? 0.02.h : 0.03.h,
                       ),
                     ),

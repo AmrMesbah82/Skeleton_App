@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class NoResponseParticipantDialog extends StatelessWidget {
   NoResponseParticipantDialog(
@@ -64,7 +65,7 @@ class NoResponseParticipantDialog extends StatelessWidget {
                               : FontConstants.fontSize030.h)
                           : FontConstants.fontSize020.h,
                       fontWeight: FontWeight.w600,
-                      color: MyThemeData.colorDarkGrey),
+                      color: AppColors.colorDarkGrey),
                 ),
               ),
             ],

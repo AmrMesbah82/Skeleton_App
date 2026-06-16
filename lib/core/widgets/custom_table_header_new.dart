@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
 
-import 'package:demo_app/core/theme/font_manager.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
+
+
 
 class CustomTableHeaderNew extends StatefulWidget {
   const CustomTableHeaderNew({
@@ -29,7 +30,7 @@ class _CustomTableHeaderNewState extends State<CustomTableHeaderNew> {
       fontSize:
           isTablet ? FontConstants.fontSize015.w : FontConstants.fontSize030.w,
       fontWeight: FontWeight.w500,
-      color: MyThemeData.colorWhite,
+      color: AppColors.colorWhite,
       height: 1.6,
     );
     List<Widget> rowChildren = [];
@@ -47,7 +48,7 @@ class _CustomTableHeaderNewState extends State<CustomTableHeaderNew> {
                   ? FontConstants.fontSize017.h
                   : FontConstants.fontSize015.w,
               fontWeight: FontWeight.w500,
-              color: MyThemeData.colorWhite,
+              color: AppColors.colorWhite,
               height: 1.5,
             ),
           ),

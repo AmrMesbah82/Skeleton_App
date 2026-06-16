@@ -1,10 +1,11 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 // ignore: must_be_immutable
@@ -83,9 +84,9 @@ class _CustomTextFieldContainerState extends State<CustomTextFieldContainer> {
             : widget.isAssign == true
                 ? 0
                 : 8),
-        color: themeController.currentTheme == MyThemeData.lightTheme
-            ? MyThemeData.colorLightGrey
-            : MyThemeData.colorBlack,
+        color: themeController.currentTheme == AppColors.lightTheme
+            ? AppColors.colorLightGrey
+            : AppColors.colorBlack,
         // border: widget.isAssign
         //     ? Border(
         //         bottom: BorderSide(
@@ -120,7 +121,7 @@ class _CustomTextFieldContainerState extends State<CustomTextFieldContainer> {
               fontSize: orientation == Orientation.portrait
                   ? FontConstants.fontSize012.h
                   : FontConstants.fontSize018.h,
-              color: MyThemeData.colorGrey,
+              color: AppColors.colorGrey,
             ),
             hintText: widget.hint.tr,
             fillColor: widget.fillColor,
@@ -165,7 +166,7 @@ class _CustomTextFieldContainerState extends State<CustomTextFieldContainer> {
                 : null,
             hintStyle: widget.hintStyle ??
                 AppFontStyle.cairoRegularStyle.copyWith(
-                    color: MyThemeData.colorGrey,
+                    color: AppColors.colorGrey,
                     height: widget.hasPrefix == true
                         ? 1
                         : isTablet

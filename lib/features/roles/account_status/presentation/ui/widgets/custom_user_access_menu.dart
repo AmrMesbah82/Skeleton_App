@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/dialogs/reschedule_dialog.dart';
 import 'package:demo_app/core/shared_components/custom_schedule_or_now_dialog.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
 class CustomUserAccessMenu {
@@ -45,9 +46,9 @@ class CustomUserAccessMenu {
       elevation: 0,
       context: context,
       position: position,
-      color: themeController.currentTheme == MyThemeData.lightTheme
-          ? MyThemeData.colorLightGrey
-          : MyThemeData.colorBlack,
+      color: themeController.currentTheme == AppColors.lightTheme
+          ? AppColors.colorLightGrey
+          : AppColors.colorBlack,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10),
       ),

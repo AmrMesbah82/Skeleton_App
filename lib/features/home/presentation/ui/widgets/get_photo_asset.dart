@@ -1,14 +1,15 @@
  import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 
 /// Date Created :2/Sep/2023
 /// Developer Name : Bassem Mohamed
-/// App Version : Knowticed Plus
+/// App Version : demo_app Plus
 /// Date of Last Edit :2/Sep/2023 By Bassem
 /// Objectives: this widget responsible for showing the photo in upcoming schedule container,
 /// with its desired color according to the event type
@@ -23,23 +24,23 @@ Widget getPhotoAsset(String eventType) {
     switch (eventType.toLowerCase()) {
       case 'event':
         assetPath = 'assets/icons/eventIconHome.svg';
-        containerColor = MyThemeData.unBlock;
-        assetColor = MyThemeData.colorWhite;
+        containerColor = AppColors.unBlock;
+        assetColor = AppColors.colorWhite;
         break;
       case 'to do list':
         assetPath = 'assets/icons/todoListIconHome.svg';
-        containerColor = MyThemeData.warning;
-        assetColor = MyThemeData.colorWhite;
+        containerColor = AppColors.warning;
+        assetColor = AppColors.colorWhite;
         break;
       case 'board':
         assetPath = 'assets/icons/boardIcon.svg';
-        containerColor = MyThemeData.colorYellow;
-        assetColor = MyThemeData.colorBlack;
+        containerColor = AppColors.colorYellow;
+        assetColor = AppColors.colorBlack;
         break;
       case 'service':
         assetPath = 'assets/icons/serviceIconHomeNew.svg';
         containerColor = Color(0xFF73A2FF);
-        assetColor = MyThemeData.colorWhite;
+        assetColor = AppColors.colorWhite;
         break;
       default:
         return Container();

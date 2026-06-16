@@ -4,6 +4,7 @@
 // Date of Last Edit :
 // Objectives: this class  created to view the table of the employees
 import 'dart:isolate';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,10 +15,10 @@ import 'package:demo_app/core/shared_components/custom_table_appbar.dart';
 import 'package:demo_app/core/shared_components/delete_member_dialog.dart';
 import 'package:demo_app/core/shared_components/move_member_dialog.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
 import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
@@ -73,12 +74,12 @@ padding: EdgeInsets.zero,
                           // borderRadius: BorderRadius.circular(8),
                            color: index % 2 == 0
                                 ? themeController.currentTheme ==
-                                        MyThemeData.lightTheme
+                                        AppColors.lightTheme
                                     ? Color(0xFFf1f1f1)
-                                    : MyThemeData.darkBackGround
+                                    : AppColors.darkBackGround
                                 : themeController.currentTheme ==
-                                        MyThemeData.lightTheme
-                                    ? MyThemeData.colorWhite
+                                        AppColors.lightTheme
+                                    ? AppColors.colorWhite
                                     : Color(0xFF28282B),),
                       child: Padding(
                         padding: EdgeInsets.symmetric(
@@ -216,7 +217,7 @@ padding: EdgeInsets.zero,
                                       decoration: BoxDecoration(
                                           borderRadius:
                                               BorderRadius.circular(8),
-                                          color: MyThemeData.signOut),
+                                          color: AppColors.signOut),
                                       child: Padding(
                                         padding: EdgeInsets.symmetric(
                                             horizontal: 0.015.h,
@@ -263,7 +264,7 @@ padding: EdgeInsets.zero,
                                         decoration: BoxDecoration(
                                             borderRadius:
                                                 BorderRadius.circular(8),
-                                            color: MyThemeData.delete),
+                                            color: AppColors.delete),
                                         child: Padding(
                                           padding: EdgeInsets.symmetric(
                                               horizontal: 0.0155.h,

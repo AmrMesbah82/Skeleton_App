@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/ui/widgets/temp_upload_widget.dart';
 import '../../../../roles/presentation/controller/role_cubit.dart';
 import '../../../../roles/presentation/ui/pages/role_responsive_page.dart';
 import 'add_depratment_dialog.dart';
 import '../../../../../core/dummy_data/chats_lists.dart';
-import '../../../../../core/theme/font_manager.dart';
-import '../../../../../core/theme/my_theme.dart';
+
 import '../../../../../core/widgets/buttons/main_custom_icon_button.dart';
 import '../../../../roles/presentation/controller/role_controller.dart';
 import '../../../../roles/users_access_controller.dart';
@@ -50,7 +50,7 @@ class AddButtons extends StatelessWidget {
                   widgetIcon: "assets/images/case.svg",
              
                   buttonStyle: ElevatedButton.styleFrom(
-                    backgroundColor: MyThemeData.signOut,
+                    backgroundColor: AppColors.signOut,
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8))),
                   ),
@@ -103,7 +103,7 @@ class AddButtons extends StatelessWidget {
                   buttonText: "Add Employee".tr,
                  
                   buttonStyle: ElevatedButton.styleFrom(
-                    backgroundColor: MyThemeData.signOut,
+                    backgroundColor: AppColors.signOut,
                     shape: const RoundedRectangleBorder(
                         borderRadius: BorderRadius.all(Radius.circular(8))),
                   ),

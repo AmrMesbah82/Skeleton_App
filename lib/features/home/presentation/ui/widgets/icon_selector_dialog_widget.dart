@@ -176,8 +176,8 @@ class _IconSelectorDialogState extends State<IconSelectorDialog> {
         padding: EdgeInsets.all(15.sp),
         decoration: BoxDecoration(
           color: lightMode
-              ? ColorAppLight.whiteColor
-              : ColorAppDark.background,
+              ? AppColors.white
+              : AppColors.background,
           borderRadius: BorderRadius.circular(16.r),
         ),
         child: Column(
@@ -200,7 +200,7 @@ class _IconSelectorDialogState extends State<IconSelectorDialog> {
                       width: 14.sp,
                       height: 14.sp,
                       fit: BoxFit.scaleDown,
-                      color: ColorAppLight.buttonTextColor,
+                      color: AppColors.textButton,
                     ),
                   ),
                 ),
@@ -259,7 +259,7 @@ class _IconSelectorDialogState extends State<IconSelectorDialog> {
                               assetPath: icon.svgPath,
                               width: 24.w,
                               height: 24.h,
-                              color: ColorAppLight.buttonTextColor,
+                              color: AppColors.textButton,
                             ),
                             SizedBox(width: 12.w),
                             Expanded(

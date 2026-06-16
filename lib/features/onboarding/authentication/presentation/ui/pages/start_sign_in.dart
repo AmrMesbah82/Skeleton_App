@@ -17,9 +17,9 @@ import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/helper/functions.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/helper/validator.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/dialogs/forgot_pass_dialog.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/features/employees/biometrics_contoller.dart';
@@ -249,7 +249,7 @@ class _StartSignInState extends State<StartSignIn> {
             'Sign In'.tr,
             style: AppFontStyle.cairoRegularStyle.copyWith(
               fontSize: FontConstants.fontSize026.h,
-              color: MyThemeData().contrastColor(),
+              color: AppColors.textButton,
               fontWeight: FontWeight.w600,
             ),
           ),
@@ -281,7 +281,7 @@ class _StartSignInState extends State<StartSignIn> {
                   height: storage.read('logo') == null ? .05.h : .06.h,
                   child: storage.read('logo') == null
                       ? SvgPicture.asset(
-                    'assets/images/knowticed_logo.svg',
+                    'assets/images/demo_app_logo.svg',
                   )
                       : SvgPicture.network(
                     storage.read('logo'),
@@ -297,7 +297,7 @@ class _StartSignInState extends State<StartSignIn> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Knowticed Plus'.tr,
+                    'demo_app Plus'.tr,
                     style: StyleText.fontSize24Weight600?.copyWith(
                       fontSize: 36.sp,
                         color: AppColors.text
@@ -360,7 +360,7 @@ class _StartSignInState extends State<StartSignIn> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text(
-                      '${'Copyright'.tr}© ${DateTime.now().year} Knowticed. ${"ALL RIGHTS RESERVED".tr}',
+                      '${'Copyright'.tr}© ${DateTime.now().year} demo_app. ${"ALL RIGHTS RESERVED".tr}',
                       style:
                       AppFontStyle.cairoRegularStyle.copyWith(
                         fontSize: FontConstants.fontSize018.h,
@@ -445,7 +445,7 @@ class _StartSignInState extends State<StartSignIn> {
                                       CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                            'Knowticed Plus'.tr,
+                                            'demo_app Plus'.tr,
                                             style: StyleText.fontSize24Weight600.copyWith(
                                               fontSize: 36.sp,
                                                 color: AppColors.text
@@ -481,7 +481,7 @@ class _StartSignInState extends State<StartSignIn> {
               storage.read('logo') == null ? .07.h : .095.h,
               child: storage.read('logo') == null
                   ? SvgPicture.asset(
-                'assets/images/knowticed_logo.svg',
+                'assets/images/demo_app_logo.svg',
               )
                   : SvgPicture.network(
                 storage.read('logo'),
@@ -501,7 +501,7 @@ class _StartSignInState extends State<StartSignIn> {
                 ? 0.55.w
                 : 0.185.w,
             child: Text(
-              '${'Copyright'.tr}© ${DateTime.now().year} Knowticed. ${"ALL RIGHTS RESERVED".tr}',
+              '${'Copyright'.tr}© ${DateTime.now().year} demo_app. ${"ALL RIGHTS RESERVED".tr}',
               style: AppFontStyle.cairoRegularStyle.copyWith(
                 fontSize: FontConstants.fontSize018.h,
                 color: AppColors.text,

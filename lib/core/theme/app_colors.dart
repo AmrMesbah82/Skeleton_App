@@ -29,7 +29,13 @@ abstract class AppColors {
   static Color get darkBackGround => currentThemeColors['darkBackGround']!;
   static Color get warning => currentThemeColors['warning']!;
   static Color get greyBack => currentThemeColors['greyBack']!;
-  static Color get barrierColor => currentThemeColors['barrierColor']!;
+  static Color get barrierColor {
+    final v = currentThemeColors['barrierColor'];
+    if (v == null) {
+      print('❌ [AppColors] barrierColor is NULL — map keys: ${currentThemeColors.keys.toList()}');
+    }
+    return v ?? const Color(0xFFD9D9D9);
+  }
   static Color get unBlock => currentThemeColors['unBlock']!;
   static Color get delete => currentThemeColors['delete']!;
   static Color get differentGrey => currentThemeColors['differentGrey']!;
@@ -50,8 +56,6 @@ abstract class AppColors {
   static Color get icon => currentThemeColors['icon']!;
   static Color get card => currentThemeColors['card']!;
   static Color get field => currentThemeColors['field']!;
-  // Migrated from legacy AppColors; falls back to primary if key absent.
-  static Color get mainItemColor => currentThemeColors['mainItemColor'] ?? primary;
   static Color get appBar => currentThemeColors['appBar']!;
   static Color get dropShadow => currentThemeColors['dropShadow']!;
   static Color get borderCard => currentThemeColors['borderCard']!;
@@ -119,4 +123,94 @@ abstract class AppColors {
     AppColors.black,
     AppColors.secondaryPrimary,
   ];
+
+  // ----------------- MyThemeData backward-compat aliases -----------------
+  // These allow files that used to import MyThemeData but now import AppColors
+  // to compile without changes. Values match MyThemeData exactly.
+
+  /// Brand primary/action color — same as AppColors.signOut / barColor / bubbleColor
+  static Color get signOut => currentThemeColors['primary']!;
+  static Color get barColor => currentThemeColors['primary']!;
+  static Color get bubbleColor => currentThemeColors['primary']!;
+  static Color get mainColor => currentThemeColors['primary']!;
+  static Color get primaryYellow => currentThemeColors['primary']!;
+
+  /// Brand secondary color — same as AppColors.switchSettings / lightPrimary (secondary)
+  static Color get switchSettings => currentThemeColors['secondaryPrimary']!;
+
+  /// Fixed neutrals — theme-unaware (same in light and dark)
+  static const Color colorBlack = Color(0xFF2D2D2D);
+  static const Color colorWhite = Color(0xFFFFFFFF);
+  static const Color colorGrey = Color(0xFF9E9E9E);
+  static const Color colorGreyDark = Color(0xFF6F6F6F);
+  static const Color mainBlack = Color(0xFF2D2D2D);
+  static const Color offWhite = Color(0xFFF5F5F5);
+  static const Color textfieldColor = Color.fromRGBO(246, 246, 246, 1);
+  static const Color darkWhiteShadowDisabled = Color(0x9E9E9E9E);
+
+  /// Theme-aware neutral aliases
+  static Color get fieldBackGround => currentThemeColors['field']!;
+  static Color get lightGreyBg => currentThemeColors['background']!;
+
+  /// ThemeData forwarding — files using AppColors.lightTheme / darkTheme
+  static ThemeData get lightTheme => AppTheme.lightTheme;
+  static ThemeData get darkTheme => AppTheme.darkTheme;
+
+  // ----------------- Full MyThemeData aliases (for complete removal) -----------------
+  /// AppColors.action (was int primary/action, now a Color)
+  static Color get action => currentThemeColors['primary']!;
+
+  /// AppColors.colorWhiteDark
+  static Color get colorWhiteDark => currentThemeColors['whiteDark']!;
+
+  /// AppColors.colorLightGrey
+  static Color get colorLightGrey => currentThemeColors['lightGrey']!;
+
+  /// AppColors.colorRed
+  static Color get colorRed => currentThemeColors['red']!;
+
+  /// AppColors.colorTotalBlack
+  static Color get colorTotalBlack => currentThemeColors['totalBlack']!;
+
+  /// AppColors.colorGreydark (0xFFCCCCCC)
+  static Color get colorGreydark => currentThemeColors['darkerGrey']!;
+
+  /// AppColors.colorDarkGrey (0xFF797979)
+  static const Color colorDarkGrey = Color(0xFF797979);
+
+  /// AppColors.dark (0xFF4B4B4B)
+  static Color get dark => currentThemeColors['greyDark']!;
+
+  /// AppColors.dividerGrey (0xFFDBDCDD)
+  static Color get dividerGrey => currentThemeColors['border']!;
+
+  /// AppColors.dotBlack — colorBlack with 20% opacity
+  static Color get dotBlack => const Color(0xFF2D2D2D).withOpacity(.2);
+
+  /// AppColors.secondaryColor
+  static Color get secondaryColor => currentThemeColors['secondaryPrimary']!;
+
+  /// AppColors.textCal (0xFF19181A ≈ black)
+  static Color get textCal => currentThemeColors['black']!;
+
+  /// AppColors.textGrey (0xFF8D8D8D ≈ grey)
+  static Color get textGrey => currentThemeColors['grey']!;
+
+  /// AppColors.textdeactivecolor (0xFF797979 ≈ darkGrey)
+  static Color get textdeactivecolor => currentThemeColors['darkGrey']!;
+
+  /// AppColors.yellowColor (0xffFFCC00)
+  static Color get yellowColor => currentThemeColors['yellow']!;
+
+  // ----------------- Remaining MyThemeData fixed-value aliases -----------------
+  // These were defined as fixed (theme-unaware) Colors on MyThemeData.
+  // Values copied exactly from the original MyThemeData definition.
+  static const Color GreyBack = Color(0xFFBCCCCCCCC);
+  static const Color blueNew = Color(0xFF347AE2);
+  static const Color colorBlue = Color(0xFF1877F2);
+  static const Color colorGreyDisabled = Color(0xFF999999);
+  static const Color colorYellow = Color(0xFFFFDE59);
+  static const Color divider = Color(0xFFCFCAE4);
+  static const Color dividerColor = Color(0xFF959090);
+  static const Color indicatorColor = Color(0xFF0A0F0C);
 }

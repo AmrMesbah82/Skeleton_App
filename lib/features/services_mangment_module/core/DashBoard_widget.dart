@@ -889,7 +889,7 @@ class CustomHorizontalBarChartWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final defaultBarColor = barColor ?? AppColors.primary;
     final defaultBgColor = backgroundColor ??
-        (lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground);
+        (lightMode ? AppColors.white : AppColors.chatBackground);
 
     final axisParams = _calculateAxisParams();
     final calculatedMaxValue = axisParams['maxValue']!;
@@ -976,8 +976,8 @@ class CustomHorizontalBarChartWidget extends StatelessWidget {
                       label,
                       style: StyleText.fontSize14Weight600.copyWith(
                           color: lightMode
-                              ? ColorAppLight.grayTextSla
-                              : ColorAppDark.titleKey));
+                              ? AppColors.secondaryText
+                              : AppColors.grey));
                 }).toList(),
               ),
             ],
@@ -1011,8 +1011,8 @@ class CustomHorizontalBarChartWidget extends StatelessWidget {
                   title,
                   style: StyleText.fontSize14Weight700.copyWith(
                       color: lightMode
-                          ? ColorAppLight.blackButton
-                          : ColorAppDark.titleValue),
+                          ? AppColors.blackButton
+                          : AppColors.white),
                 ),
             ],
           ),
@@ -1050,15 +1050,15 @@ class CustomHorizontalBarChartWidget extends StatelessWidget {
                     child: Text(label,
                         style: StyleText.fontSize14Weight400.copyWith(
                             color: lightMode
-                                ? ColorAppLight.grayTextSla
-                                : ColorAppDark.titleKey))),
+                                ? AppColors.secondaryText
+                                : AppColors.grey))),
                 SizedBox(width: 8.w),
                 if (value > 0)
                   Text(value.toInt().toString(),
                       style: StyleText.fontSize12Weight500.copyWith(
                           color: lightMode
-                              ? ColorAppLight.grayTextSla
-                              : ColorAppDark.titleKey)),
+                              ? AppColors.secondaryText
+                              : AppColors.grey)),
               ],
             ),
 
@@ -1123,7 +1123,7 @@ class CustomPieChartWithLabelsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 600;
-    final defaultBgColor = lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground;
+    final defaultBgColor = lightMode ? AppColors.white : AppColors.chatBackground;
 
     final int itemCount = data.length;
     final double labelRowHeight = 26.sp;
@@ -1169,7 +1169,7 @@ class CustomPieChartWithLabelsWidget extends StatelessWidget {
                         iconAsset!,
                         width: 16.sp,
                         height: 16.sp,
-                        color: ColorAppLight.buttonTextColor
+                        color: AppColors.textButton
                       ),
                     ),
                   ),
@@ -1364,7 +1364,7 @@ class CustomPieChartGraphicWithLabelsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isMobile = MediaQuery.of(context).size.width < 600;
-    final defaultBgColor = lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground;
+    final defaultBgColor = lightMode ? AppColors.white : AppColors.chatBackground;
 
     return Container(
       height: height ?? (isMobile ? 220.sp : 200.sp),

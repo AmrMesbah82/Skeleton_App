@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 
 import '../../../features/employee/presentation/controller/main_core_employee_controller.dart';
@@ -91,7 +91,7 @@ class _CustomFloatingButtonState extends State<CustomFloatingButton> {
             decoration: BoxDecoration(
              // border: Border.all(color: _isExpanded ? Colors.transparent : Colors.grey),
               color: _isExpanded
-                  ? MyThemeData.signOut
+                  ? AppColors.signOut
                   : AppColors.card,
               borderRadius: BorderRadius.circular(8),
             ),
@@ -106,7 +106,7 @@ class _CustomFloatingButtonState extends State<CustomFloatingButton> {
                   child: SvgPicture.asset(
                     widget.imagePath,
                     color:  _isExpanded
-                        ? MyThemeData().contrastColor()
+                        ? AppColors.textButton
                         : AppColors.secondaryText,
                   ),
                 ),

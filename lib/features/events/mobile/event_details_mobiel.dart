@@ -1,4 +1,5 @@
 import 'package:demo_app/core/nav_bar_package.dart/model.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
@@ -6,9 +7,9 @@ import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 
 
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/row_icon_text.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
@@ -185,7 +186,7 @@ class _EventDetailsMobileState extends State<EventDetailsMobile> {
                                                 "assets/images/attachsquare_field.svg",
                                             text: "Flyer",
                                             isFlexible: true,
-                                            valueColor: MyThemeData.blue,
+                                            valueColor: AppColors.blue,
                                             value: widget.event.flyer),
                                       ),
                                     ],
@@ -216,7 +217,7 @@ class _EventDetailsMobileState extends State<EventDetailsMobile> {
                                         decoration: BoxDecoration(
                                           borderRadius: BorderRadius.circular(8),
                                           border: Border.all(
-                                              color: MyThemeData.colorLightGrey,
+                                              color: AppColors.colorLightGrey,
                                               width: 1.4),
                                         ),
                                         child: Padding(
@@ -244,7 +245,7 @@ class _EventDetailsMobileState extends State<EventDetailsMobile> {
                                                           .fontSize014.h,
                                                       fontWeight: FontWeight.w500,
                                                       height: 1.3,
-                                                      color: MyThemeData.blue),
+                                                      color: AppColors.blue),
                                             ),
                                           ),
                                         ))
@@ -646,7 +647,7 @@ class _EventDetailsMobileState extends State<EventDetailsMobile> {
                                   value: widget.event.requiredApproval
                                       ? "Needs Approval From"
                                       : "No Approval Required",
-                                  valueColor: MyThemeData.unBlock,
+                                  valueColor: AppColors.unBlock,
                                 ),
                                 SizedBox(
                                   height: 0.015.h,
@@ -699,15 +700,15 @@ class _EventDetailsMobileState extends State<EventDetailsMobile> {
                                                                         .status!
                                                                         .tr ==
                                                                     "Accepted".tr
-                                                                ? MyThemeData
+                                                                ? AppColors
                                                                     .unBlock
-                                                                : MyThemeData
+                                                                : AppColors
                                                                     .colorRed))
                                               ]
                                             : [
                                                 Expanded(
                                                   child: CustomIconButton(
-                                                    textColor: MyThemeData.delete,
+                                                    textColor: AppColors.delete,
                                                     buttonColor: Theme.of(context)
                                                         .colorScheme
                                                         .inversePrimary,
@@ -715,10 +716,10 @@ class _EventDetailsMobileState extends State<EventDetailsMobile> {
                                                     imagePath:
                                                         'assets/icons/RejectionIcon.svg',
                                                     imageColor:
-                                                        MyThemeData.delete,
+                                                        AppColors.delete,
                                                     radius: 8,
                                                     borderColor:
-                                                        MyThemeData.delete,
+                                                        AppColors.delete,
                                                     onPressed: () {},
                                                   ),
                                                 ),
@@ -729,11 +730,11 @@ class _EventDetailsMobileState extends State<EventDetailsMobile> {
                                                         .colorScheme
                                                         .inversePrimary,
                                                     textColor:
-                                                        MyThemeData.unBlock,
+                                                        AppColors.unBlock,
                                                     borderColor:
-                                                        MyThemeData.unBlock,
+                                                        AppColors.unBlock,
                                                     imageColor:
-                                                        MyThemeData.unBlock,
+                                                        AppColors.unBlock,
                                                     buttonText: 'Approve',
                                                     radius: 8,
                                                     imagePath:

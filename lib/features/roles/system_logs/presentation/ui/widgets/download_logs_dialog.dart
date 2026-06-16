@@ -1,11 +1,12 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
 import 'package:demo_app/features/roles/system_logs/data/models/system_logs_model.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
@@ -72,9 +73,9 @@ class _SystemLogsDownloadDialogState extends State<SystemLogsDownloadDialog> {
                 child: ColumnRequestData(
                     title: "File Name",
                     fillColor:
-                        themeController.currentTheme == MyThemeData.lightTheme
-                            ? MyThemeData.colorLightGrey
-                            : MyThemeData.colorBlack,
+                        themeController.currentTheme == AppColors.lightTheme
+                            ? AppColors.colorLightGrey
+                            : AppColors.colorBlack,
                     isTextField: true,
                     hint: "Enter File Name",
                     
@@ -113,7 +114,7 @@ class _SystemLogsDownloadDialogState extends State<SystemLogsDownloadDialog> {
                             minimumSize: isTablet
                                 ? Size(0.1.w, 0.05.h)
                                 : Size(0.076.w, 0.035.h),
-                            backgroundColor: MyThemeData.colorWhiteDark,
+                            backgroundColor: AppColors.colorWhiteDark,
                             shape: const RoundedRectangleBorder(
                                 borderRadius: BorderRadius.all(
                               Radius.circular(4),
@@ -138,7 +139,7 @@ class _SystemLogsDownloadDialogState extends State<SystemLogsDownloadDialog> {
                             minimumSize: isTablet
                                 ? Size(0.1.w, 0.05.h)
                                 : Size(0.076.w, 0.035.h),
-                            backgroundColor: MyThemeData.signOut,
+                            backgroundColor: AppColors.signOut,
                             shape: const RoundedRectangleBorder(
                                 borderRadius: BorderRadius.all(
                               Radius.circular(4),

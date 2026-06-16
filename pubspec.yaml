@@ -1,5 +1,5 @@
 name: demo_app
-description: "Knowticed demo starter app for module development."
+description: "demo_app demo starter app for module development."
 publish_to: 'none'
 
 version: 1.0.0+1

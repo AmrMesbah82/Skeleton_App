@@ -59,7 +59,7 @@ class SocialController {
         child: Container(
           width: 411.w,
           decoration: BoxDecoration(
-            color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+            color: lightMode ? AppColors.white : AppColors.chatBackground,
             borderRadius: BorderRadius.circular(16.r),
           ),
           padding: EdgeInsets.all(24.sp),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/employees/presentation/ui/widgets/add_employee_page_widgets/indicator_column.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 import '../../../../../../core/dummy_data/mode_changer.dart';
 import '../../../controller/add_new_employee_controller.dart';

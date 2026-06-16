@@ -1,4 +1,5 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -10,9 +11,9 @@ import 'package:demo_app/core/shared_components/custom_schedule_or_now_dialog.da
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class RescheduleDialog extends StatefulWidget {
@@ -109,9 +110,9 @@ class _RescheduleDialogState extends State<RescheduleDialog> {
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(6.0),
                             color: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorLightGrey
-                                : MyThemeData.darkBackGround,
+                                    AppColors.lightTheme
+                                ? AppColors.colorLightGrey
+                                : AppColors.darkBackGround,
                           ),
 
                           /// Calender Widget
@@ -190,9 +191,9 @@ class _RescheduleDialogState extends State<RescheduleDialog> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(6.0),
                               color: themeController.currentTheme ==
-                                      MyThemeData.lightTheme
-                                  ? MyThemeData.colorLightGrey
-                                  : MyThemeData.darkBackGround,
+                                      AppColors.lightTheme
+                                  ? AppColors.colorLightGrey
+                                  : AppColors.darkBackGround,
                             ),
 
                             /// Calender Widget

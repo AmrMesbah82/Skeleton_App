@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/get_photo_asset.dart';
 import 'package:demo_app/core/helper/capitalization_functions.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
 /// Date Created : 11/Sep/2024
 /// Developer Name : Bassem Mohamed
-/// App Version : Knowticed Plus
+/// App Version : demo_app Plus
 /// Date of Last Edit : 11/Sep/2024 By Bassem
 /// Objectives: this widget is for showing the events , todo list, boards, or services names.
 /// This widget consist of description and start time for each one in addition to images of the participants and the total number of the members enrolled in this event
@@ -57,9 +58,9 @@ class CustomScheduleContainer extends StatelessWidget {
             decoration: BoxDecoration(
               // ignore: unrelated_type_equality_checks
               color: isPortrait
-                  ? (themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorWhite
-                      : MyThemeData.dark)
+                  ? (themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorWhite
+                      : AppColors.dark)
                   : (Theme.of(context).colorScheme.inversePrimary),
               borderRadius: BorderRadius.circular(8.0),
             ),
@@ -87,9 +88,9 @@ class CustomScheduleContainer extends StatelessWidget {
                             fontSize: FontConstants.fontSize018.h,
                             // ignore: unrelated_type_equality_checks
                             color: themeController.currentTheme ==
-                                    MyThemeData.lightTheme
-                                ? MyThemeData.colorBlack
-                                : MyThemeData.colorWhiteDark,
+                                    AppColors.lightTheme
+                                ? AppColors.colorBlack
+                                : AppColors.colorWhiteDark,
                             fontWeight: FontWeight.w600,
                             height: 1.4),
                       ),
@@ -106,9 +107,9 @@ class CustomScheduleContainer extends StatelessWidget {
                           fontSize: FontConstants.fontSize016.h,
                           // ignore: unrelated_type_equality_checks
                           color: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorDarkGrey
-                              : MyThemeData.colorGreydark,
+                                  AppColors.lightTheme
+                              ? AppColors.colorDarkGrey
+                              : AppColors.colorGreydark,
                           fontWeight: FontWeight.w600,
                           height: 1.4,
                         ),
@@ -128,9 +129,9 @@ class CustomScheduleContainer extends StatelessWidget {
                           fontSize: FontConstants.fontSize015.h,
                           // ignore: unrelated_type_equality_checks
                           color: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorBlack
-                              : MyThemeData.colorWhiteDark,
+                                  AppColors.lightTheme
+                              ? AppColors.colorBlack
+                              : AppColors.colorWhiteDark,
                           fontWeight: FontWeight.w600,
                         ),
                       ),
@@ -153,7 +154,7 @@ class CustomScheduleContainer extends StatelessWidget {
               height: imageSize,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: MyThemeData.lightPrimary,
+                color: AppColors.lightPrimary,
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
@@ -162,7 +163,7 @@ class CustomScheduleContainer extends StatelessWidget {
                     localizeNumber(displayTotalImagesNum),
                     style: AppFontStyle.cairoRegularStyle.copyWith(
                         fontSize: FontConstants.fontSize010.h,
-                        color: MyThemeData().contrastColor(),
+                        color: AppColors.textButton,
                         fontWeight: FontWeight.w600,
                         height: isTablet ? (1.5) : 2),
                   ),
@@ -183,7 +184,7 @@ class CustomScheduleContainer extends StatelessWidget {
               height: imageSize,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: MyThemeData.lightPrimary,
+                color: AppColors.lightPrimary,
               ),
               child: Center(
                 child: CircleAvatar(
@@ -204,7 +205,7 @@ class CustomScheduleContainer extends StatelessWidget {
               height: imageSize,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
-                color: MyThemeData.lightPrimary,
+                color: AppColors.lightPrimary,
               ),
               child: Center(
                 child: CircleAvatar(

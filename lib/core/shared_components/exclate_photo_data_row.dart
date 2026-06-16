@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class ExcalatePhotoDataRow extends StatefulWidget {
   const ExcalatePhotoDataRow({super.key, required this.photoUrl, required this.space, required this.title});

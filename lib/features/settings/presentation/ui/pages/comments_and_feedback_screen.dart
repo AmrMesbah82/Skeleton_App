@@ -11,11 +11,11 @@ import 'package:get/get.dart';
 import 'dart:ui' as ui;
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
 import 'package:demo_app/core/widgets/dialogs/custom_dialog_box.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/custom_button_widget.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/Category/presentation/ui/services_admin/Widget/W3_Frame_Screen_tablet.dart';
@@ -72,7 +72,7 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
   }
 
   // Get button color based on data
-  Color get buttonColor => hasAnyData ? MyThemeData.signOut : const Color(0xFFD9D9D9);
+  Color get buttonColor => hasAnyData ? AppColors.signOut : const Color(0xFFD9D9D9);
 
   // Build checkbox with label
   Widget buildCheckboxRow(String title, bool isSelected, Function(bool) onChanged) {
@@ -292,7 +292,7 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
                 }
                     : () {}, // Empty function instead of null
                 textStyle: StyleText.fontSize16Weight500.copyWith(
-                  color: hasAnyData ? ColorAppLight.buttonTextColor : lightMode ? Colors.black : Colors.white,
+                  color: hasAnyData ? AppColors.textButton : lightMode ? Colors.black : Colors.white,
                 ),
                 color: hasAnyData ? AppColors.primary : lightMode ? Colors.grey[400] : Colors.grey[700],
                 width: 300.w,
@@ -488,7 +488,7 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
                           title: 'Thanks for sharing your feedback'.tr,
                           subtitle: 'We value our customers and strive to exceed their expectations'.tr,
                           imagePath: 'assets/images/Thanks.png',
-                          backgroundColor: MyThemeData.signOut,
+                          backgroundColor: AppColors.signOut,
                           showButtons: false,
                         );
                       },
@@ -504,7 +504,7 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
                 height: 38.h,
                 color: hasAnyData ? AppColors.primary : lightMode ?  Colors.grey[400] : Colors.grey[700],
                 textStyle: StyleText.fontSize16Weight500.copyWith(
-                  color: hasAnyData ? ColorAppLight.buttonTextColor:lightMode ?  Colors.black : Colors.white,
+                  color: hasAnyData ? AppColors.textButton:lightMode ?  Colors.black : Colors.white,
                 )
             ),
             isMobile ?   SizedBox(height: 15.sp) : SizedBox()

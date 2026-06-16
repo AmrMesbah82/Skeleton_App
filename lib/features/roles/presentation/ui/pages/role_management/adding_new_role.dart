@@ -436,7 +436,7 @@ class _AddingNewRoleState extends State<AddingNewRole> {
   // ── field builders (unchanged) ──────────────────────────────────────────
 
   Widget _buildEnglishNameField() {
-    return CustomKnowticedTextField(
+    return Customdemo_appTextField(
       labelEn: 'Role Name',
       labelAr: 'اسم الدور',
       hintEn: 'Role Name',
@@ -484,7 +484,7 @@ class _AddingNewRoleState extends State<AddingNewRole> {
   }
 
   Widget _buildArabicNameField() {
-    return CustomKnowticedTextField(
+    return Customdemo_appTextField(
       labelEn: 'Role Name',
       labelAr: 'اسم الدور',
       hintEn: 'اسم الدور',
@@ -532,7 +532,7 @@ class _AddingNewRoleState extends State<AddingNewRole> {
   }
 
   Widget _buildEnglishDescriptionField() {
-    return CustomKnowticedTextField(
+    return Customdemo_appTextField(
       labelEn: 'Role Description',
       labelAr: 'وصف الدور',
       hintEn: 'Role Description',
@@ -568,7 +568,7 @@ class _AddingNewRoleState extends State<AddingNewRole> {
   }
 
   Widget _buildArabicDescriptionField() {
-    return CustomKnowticedTextField(
+    return Customdemo_appTextField(
       labelEn: 'Role Description',
       labelAr: 'وصف الدور',
       hintEn: 'اكتب وصف',

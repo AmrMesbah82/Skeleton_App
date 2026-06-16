@@ -1,11 +1,12 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/widgets/form_fields/custom_search.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
@@ -82,8 +83,8 @@ class _RequestsFilterAppBarState extends State<RequestsFilterAppBar> {
                       hint: "Department",
                       value: widget.department,
                       backgroundColor:
-                          themeController.currentTheme == MyThemeData.lightTheme
-                              ? MyThemeData.colorWhite
+                          themeController.currentTheme == AppColors.lightTheme
+                              ? AppColors.colorWhite
                               : Theme.of(context).colorScheme.inversePrimary,
                       buttonPadding: EdgeInsets.symmetric(horizontal: 0.01.w),
                      
@@ -110,8 +111,8 @@ class _RequestsFilterAppBarState extends State<RequestsFilterAppBar> {
                           hint: "Status",
                           value: widget.status,
                           backgroundColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorWhite
+                                  AppColors.lightTheme
+                              ? AppColors.colorWhite
                               : Theme.of(context).colorScheme.inversePrimary,
                           buttonPadding:
                               EdgeInsets.symmetric(horizontal: 0.01.w),
@@ -138,8 +139,8 @@ class _RequestsFilterAppBarState extends State<RequestsFilterAppBar> {
                       hint: "Day",
                       value: widget.day,
                       backgroundColor:
-                          themeController.currentTheme == MyThemeData.lightTheme
-                              ? MyThemeData.colorWhite
+                          themeController.currentTheme == AppColors.lightTheme
+                              ? AppColors.colorWhite
                               : Theme.of(context).colorScheme.inversePrimary,
                       buttonPadding: EdgeInsets.symmetric(horizontal: 0.01.w),
                      
@@ -202,8 +203,8 @@ class _RequestsFilterAppBarState extends State<RequestsFilterAppBar> {
                               EdgeInsets.symmetric(horizontal: 0.01.w),
                          
                           backgroundColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorWhite
+                                  AppColors.lightTheme
+                              ? AppColors.colorWhite
                               : Theme.of(context).colorScheme.inversePrimary,
                           buttonWidth: 0.22.w,
                           dropdownWidth: 0.27.w,
@@ -230,8 +231,8 @@ class _RequestsFilterAppBarState extends State<RequestsFilterAppBar> {
                           buttonPadding:
                               EdgeInsets.symmetric(horizontal: 0.01.w),
                           backgroundColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorWhite
+                                  AppColors.lightTheme
+                              ? AppColors.colorWhite
                               : Theme.of(context).colorScheme.inversePrimary,
                           buttonWidth: 0.22.w,
                           dropdownWidth: 0.27.w,
@@ -257,8 +258,8 @@ class _RequestsFilterAppBarState extends State<RequestsFilterAppBar> {
                           buttonPadding:
                               EdgeInsets.symmetric(horizontal: 0.01.w),
                           backgroundColor: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorWhite
+                                  AppColors.lightTheme
+                              ? AppColors.colorWhite
                               : Theme.of(context).colorScheme.inversePrimary,
                           buttonWidth: 0.22.w,
                           dropdownWidth: 0.27.w,

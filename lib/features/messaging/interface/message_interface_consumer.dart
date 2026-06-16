@@ -5,7 +5,7 @@ import '../../home/app_drawer/presentation/controller/drawer_controller.dart';
 import '../../roles/domain/enums/modules_enum.dart';
 
 // REMOVED_MODULE: messaging_package was removed from demo_app.
-// When adding the messaging module, restore the full implementation from Knowticed_plus.
+// When adding the messaging module, restore the full implementation from demo_app_plus.
 
 class MessageInterfaceConsumer {
   static Future<void> openSingleChat(

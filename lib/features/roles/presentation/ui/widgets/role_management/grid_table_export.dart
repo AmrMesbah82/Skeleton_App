@@ -70,7 +70,7 @@ class ViewToggleButtons extends StatelessWidget {
                         fit: BoxFit.scaleDown,
                         width: 20.sp,
                         height: 20.sp,
-                        color: ColorAppLight.buttonTextColor,
+                        color: AppColors.textButton,
                         semanticsLabel: 'Export',
                       ),
                     ),
@@ -78,7 +78,7 @@ class ViewToggleButtons extends StatelessWidget {
                     Text(
                       S.of(context).export,
                       style: StyleText.fontSize16Weight600.copyWith(
-                        color: ColorAppLight.buttonTextColor
+                        color: AppColors.textButton
                       ),
                     )
                   ],
@@ -89,7 +89,7 @@ class ViewToggleButtons extends StatelessWidget {
                     fit: BoxFit.scaleDown,
                     width: 20.sp,
                     height: 20.sp,
-                    color: ColorAppLight.buttonTextColor,
+                    color: AppColors.textButton,
                     semanticsLabel: 'Export',
                   ),
                 ),
@@ -102,7 +102,7 @@ class ViewToggleButtons extends StatelessWidget {
             width: 38.sp,
             height: 38.sp,
             decoration: BoxDecoration(
-              color: !isGridView ? AppColors.primary : lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+              color: !isGridView ? AppColors.primary : lightMode ? AppColors.white : AppColors.chatBackground,
               borderRadius: BorderRadius.circular(8.r),
             ),
             child: Center(
@@ -112,7 +112,7 @@ class ViewToggleButtons extends StatelessWidget {
                 height: 20.sp,
                 fit: BoxFit.scaleDown,
                 semanticsLabel: 'Table View',
-                color: !isGridView ? ColorAppLight.buttonTextColor : lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                color: !isGridView ? AppColors.textButton : lightMode ? AppColors.blackButton : AppColors.white,
               ),
             ),
           ),
@@ -124,7 +124,7 @@ class ViewToggleButtons extends StatelessWidget {
             width: 38.sp,
             height: 38.sp,
             decoration: BoxDecoration(
-              color: isGridView ? AppColors.primary : lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+              color: isGridView ? AppColors.primary : lightMode ? AppColors.white : AppColors.chatBackground,
               borderRadius: BorderRadius.circular(8.r),
             ),
             child: Center(
@@ -134,7 +134,7 @@ class ViewToggleButtons extends StatelessWidget {
                 height: 20.sp,
                 fit: BoxFit.scaleDown,
                 semanticsLabel: 'Grid View',
-                color: isGridView ? ColorAppLight.buttonTextColor :  lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                color: isGridView ? AppColors.textButton :  lightMode ? AppColors.blackButton : AppColors.white,
               ),
             ),
           ),

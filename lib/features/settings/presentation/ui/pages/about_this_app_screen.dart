@@ -10,10 +10,10 @@ import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_app/core/widgets/circle_progress.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/Category/presentation/ui/services_admin/Widget/W3_Frame_Screen_tablet.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
@@ -535,8 +535,8 @@ class _AboutThisAppScreenState extends State<AboutThisAppScreen> {
                             S.of(context).aboutThisPlatform),
                         style: StyleText.fontSize16Weight500.copyWith(
                             color: lightMode
-                                ? ColorAppLight.grayTextSla
-                                : ColorAppDark.titleKey)),
+                                ? AppColors.secondaryText
+                                : AppColors.grey)),
                     Spacer(),
                     if (_hasDocumentUrl)
                     InkWell(

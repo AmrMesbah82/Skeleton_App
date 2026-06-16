@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../../../core/theme/font_manager.dart';
 
 class NoEmployeeWidget extends StatelessWidget {
   const NoEmployeeWidget({super.key});

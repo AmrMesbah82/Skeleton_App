@@ -5,8 +5,8 @@ import 'package:demo_app/features/employees/presentation/ui/widgets/employees_hr
 import 'package:demo_app/core/shared_components/custom_container_photo.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 import 'package:demo_app/core/theme/app_colors.dart';
@@ -57,11 +57,11 @@ class _ButtonsBesideTitleState extends State<ButtonsBesideTitle> {
                 child: CustomPhotoContainer(
                     imageUrl: "assets/images/chart.svg",
                     backColor: widget.chartSelected
-                        ? MyThemeData.signOut
+                        ? AppColors.signOut
                         : Theme.of(context).colorScheme.inversePrimary,
                    borderColor: Colors.transparent,
                     photoColor: widget.chartSelected
-                        ? MyThemeData().contrastColor()
+                        ? AppColors.textButton
                         : Theme.of(context).colorScheme.scrim),
               )
            ,*/

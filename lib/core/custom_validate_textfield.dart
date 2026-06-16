@@ -31,7 +31,7 @@ import 'package:flutter/material.dart';
   }
 
   /// Custom Validated Text Form Field with Bilingual Support (AR/EN)
-  class CustomKnowticedTextField extends StatefulWidget {
+  class Customdemo_appTextField extends StatefulWidget {
     // Basic Properties
     final String labelEn;
     final String labelAr;
@@ -122,7 +122,7 @@ import 'package:flutter/material.dart';
     final String? errorMessageMaxLengthEn;
     final String? errorMessageMaxLengthAr;
 
-    const CustomKnowticedTextField({
+    const Customdemo_appTextField({
       Key? key,
       required this.labelEn,
       required this.labelAr,
@@ -194,11 +194,11 @@ import 'package:flutter/material.dart';
     }) : super(key: key);
 
     @override
-    State<CustomKnowticedTextField> createState() =>
-        _CustomKnowticedTextFieldState();
+    State<Customdemo_appTextField> createState() =>
+        _Customdemo_appTextFieldState();
   }
 
-  class _CustomKnowticedTextFieldState extends State<CustomKnowticedTextField> {
+  class _Customdemo_appTextFieldState extends State<Customdemo_appTextField> {
     late FocusNode _focusNode;
     late bool _obscurePassword;
     String? _errorMessage;

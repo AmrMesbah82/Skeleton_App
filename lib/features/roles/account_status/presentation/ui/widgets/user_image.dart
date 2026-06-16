@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class UserImage extends StatelessWidget {
   final String imageUrl;

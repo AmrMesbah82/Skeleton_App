@@ -226,7 +226,7 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
           ElevatedButton(
             style: ElevatedButton.styleFrom(
               backgroundColor:
-              isApprove ? ColorAppLight.greenColor : Colors.red,
+              isApprove ? AppColors.green : Colors.red,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(8.r)),
             ),
@@ -344,7 +344,7 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
               Row(
                 children: [
                   Expanded(
-                    child: CustomKnowticedTextField(
+                    child: Customdemo_appTextField(
                       labelEn: '',
                       labelAr: '',
                       height: 36.h,
@@ -367,7 +367,7 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
                       fillColor: AppColors.card,
                       // borderColor: lightMode
                       //     ? Colors.grey[300]
-                      //     : ColorAppDark.titleKey,
+                      //     : AppColors.grey,
                       focusedBorderColor: AppColors.primary,
                       onChanged: (val) {
                         _onSearchChanged();
@@ -644,25 +644,21 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
           label,
           style: StyleText.fontSize12Weight400.copyWith(
               color:
-              lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey),
+              AppColors.text),
         ),
         ellipsis
             ? Expanded(
           child: Text(
             value,
             style: StyleText.fontSize12Weight400.copyWith(
-                color: lightMode
-                    ? ColorAppLight.blackButton
-                    : ColorAppDark.titleValue),
+                color: AppColors.text),
             overflow: TextOverflow.ellipsis,
           ),
         )
             : Text(
           value,
           style: StyleText.fontSize12Weight400.copyWith(
-              color: lightMode
-                  ? ColorAppLight.blackButton
-                  : ColorAppDark.titleValue),
+              color: AppColors.text),
         ),
       ],
     );
@@ -683,9 +679,7 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
                   _filterRequests();
                 });
               },
-              labelColor: Theme.of(context).brightness == Brightness.light
-                  ? ColorAppLight.grayTextSla
-                  : ColorAppDark.titleKey),
+              labelColor: AppColors.text),
           _statusChip("$approvedCount", s.Approved,
               isSelected: selectStatus == s.Approved,
               onTap: () {
@@ -694,7 +688,7 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
                   _filterRequests();
                 });
               },
-              labelColor: ColorAppLight.greenColor),
+              labelColor: AppColors.green),
           _statusChip("$pendingCount", 'Pending',
               isSelected: selectStatus == 'Pending',
               onTap: () {
@@ -703,7 +697,7 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
                   _filterRequests();
                 });
               },
-              labelColor: ColorAppLight.yellowColor),
+              labelColor: AppColors.primary,),
           _statusChip("$rejectedCount", 'Rejected',
               isSelected: selectStatus == 'Rejected',
               onTap: () {
@@ -737,10 +731,10 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
               color: light
                   ? isSelected
                   ? AppColors.primary
-                  : ColorAppLight.whiteColor
+                  : AppColors.white
                   : isSelected
                   ? AppColors.primary
-                  : ColorAppDark.chatBackground,
+                  : AppColors.card,
               borderRadius: BorderRadius.circular(4.r),
             ),
             child: Center(
@@ -750,20 +744,20 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
                     ? StyleText.fontSize14Weight400.copyWith(
                   color: light
                       ? isSelected
-                      ? ColorAppLight.buttonTextColor
-                      : ColorAppLight.grayTextSla
+                      ? AppColors.textButton
+                      : AppColors.secondaryText
                       : isSelected
-                      ? ColorAppLight.buttonTextColor
-                      : ColorAppDark.titleKey,
+                      ? AppColors.textButton
+                      : AppColors.text,
                 )
                     : StyleText.fontSize20Weight500.copyWith(
                   color: light
                       ? isSelected
-                      ? ColorAppLight.buttonTextColor
-                      : ColorAppLight.grayTextSla
+                      ? AppColors.textButton
+                      : AppColors.secondaryText
                       : isSelected
-                      ? ColorAppLight.buttonTextColor
-                      : ColorAppDark.titleKey,
+                      ? AppColors.textButton
+                      : AppColors.text,
                 ),
               ),
             ),

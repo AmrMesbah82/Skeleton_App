@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'dart:math' as math;
 
 // ignore: must_be_immutable
@@ -68,7 +69,7 @@ class _DialogueSwitchersRowState extends State<DialogueSwitchersRow> {
                 height: isTablet ? (isVertical ? 0.022.h : 0.035.h) : 0.03.h,
                 value: widget.switchValue,
                 padding: isTablet ? (isVertical ? 1 : 1.5) : 0.4,
-                activeColor: MyThemeData.lightPrimary,
+                activeColor: AppColors.lightPrimary,
                 onToggle: (newValue) {
                   setState(() {
                     setState(() {

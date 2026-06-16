@@ -7,6 +7,7 @@ import 'package:demo_app/core/extension/context_extensions.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
 
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 
 class SideFrameMaster extends StatelessWidget {
@@ -45,9 +46,7 @@ class SideFrameMaster extends StatelessWidget {
 
     if (isMobile) {
       return Scaffold(
-        backgroundColor: Theme.of(context).brightness == Brightness.light
-            ? ColorAppLight.backGroundGray
-            : ColorAppDark.background,
+        backgroundColor: AppColors.background,
         body: Padding(
           padding: EdgeInsets.symmetric(horizontal: 0.sp, vertical: 0.sp),
           child: SingleChildScrollView(
@@ -69,9 +68,7 @@ class SideFrameMaster extends StatelessWidget {
                               'assets/svg/arrow.svg',
                               width: 24.sp,
                               height: 24.sp,
-                              color: Theme.of(context).brightness == Brightness.light
-                                  ? ColorAppLight.blackButton
-                                  : ColorAppDark.whiteShadow,
+                              color: AppColors.text
                             ),
                           ),
                         ),
@@ -86,9 +83,7 @@ class SideFrameMaster extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                             maxLines: 1,
                             style: StyleText.fontSize24Weight600.copyWith(
-                              color: Theme.of(context).brightness == Brightness.light
-                                  ? ColorAppLight.blackButton
-                                  : ColorAppDark.labelColorDark,
+                              color: AppColors.text
                             ),
                           ),
                         ),
@@ -120,8 +115,8 @@ class SideFrameMaster extends StatelessWidget {
           // Container(
           //   width: 80.sp,
           //   color: Theme.of(context).brightness == Brightness.light
-          //       ? ColorAppLight.whiteColor
-          //       : ColorAppDark.chatBackground,
+          //       ? AppColors.white
+          //       : AppColors.chatBackground,
           //   child: Column(
           //     children: [
           //       SizedBox(height: 26.sp),
@@ -172,8 +167,8 @@ class SideFrameMaster extends StatelessWidget {
                 //   width: MediaQuery.sizeOf(context).width,
                 //   height: 90.sp,
                 //   color: Theme.of(context).brightness == Brightness.light
-                //       ? ColorAppLight.whiteColor
-                //       : ColorAppDark.chatBackground,
+                //       ? AppColors.white
+                //       : AppColors.chatBackground,
                 //   child: Row(
                 //     children: [
                 //       const Spacer(),
@@ -202,16 +197,16 @@ class SideFrameMaster extends StatelessWidget {
                 //                 "Amro Handousa",
                 //                 style: StyleText.fontSize16Weight500.copyWith(
                 //                   color: Theme.of(context).brightness == Brightness.light
-                //                       ? ColorAppLight.blackButton
-                //                       : ColorAppDark.titleValue,
+                //                       ? AppColors.blackButton
+                //                       : AppColors.white,
                 //                 ),
                 //               ),
                 //               Text(
                 //                 "Employee",
                 //                 style: StyleText.fontSize14Weight500.copyWith(
                 //                   color: Theme.of(context).brightness == Brightness.light
-                //                       ? ColorAppLight.subTitleSubmit
-                //                       : ColorAppDark.titleValue,
+                //                       ? AppColors.secondaryText
+                //                       : AppColors.white,
                 //                 ),
                 //               ),
                 //             ],
@@ -226,9 +221,7 @@ class SideFrameMaster extends StatelessWidget {
                 Expanded(
                   child: Container(
                     width: MediaQuery.sizeOf(context).width,
-                    color: Theme.of(context).brightness == Brightness.light
-                        ? ColorAppLight.backGroundGray
-                        : ColorAppDark.background,
+                    color: AppColors.background,
                     // ;;;
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -272,9 +265,7 @@ class SideFrameMaster extends StatelessWidget {
                                           'assets/images/arrow.svg',
                                           width: 30.sp,
                                           height: 30.sp,
-                                          color: Theme.of(context).brightness == Brightness.light
-                                              ? ColorAppLight.blackButton
-                                              : ColorAppDark.whiteShadow,
+                                          color: AppColors.text
                                         ),
                                       ),
                                     ),
@@ -288,9 +279,7 @@ class SideFrameMaster extends StatelessWidget {
                                     child: Text(
                                       valid[i].key,
                                       style: StyleText.fontSize28Weight600.copyWith(
-                                        color: Theme.of(context).brightness == Brightness.light
-                                            ? ColorAppLight.blackButton
-                                            : ColorAppDark.labelColorDark,
+                                        color: AppColors.text
                                       ),
                                     ),
                                   ),
@@ -441,8 +430,8 @@ class SideFrameMasterServices extends StatelessWidget {
           // Container(
           //   width: 80.sp,
           //   color: Theme.of(context).brightness == Brightness.light
-          //       ? ColorAppLight.whiteColor
-          //       : ColorAppDark.chatBackground,
+          //       ? AppColors.white
+          //       : AppColors.chatBackground,
           //   child: Column(
           //     children: [
           //       SizedBox(height: 26.sp),
@@ -493,8 +482,8 @@ class SideFrameMasterServices extends StatelessWidget {
                 //   width: MediaQuery.sizeOf(context).width,
                 //   height: 90.sp,
                 //   color: Theme.of(context).brightness == Brightness.light
-                //       ? ColorAppLight.whiteColor
-                //       : ColorAppDark.chatBackground,
+                //       ? AppColors.white
+                //       : AppColors.chatBackground,
                 //   child: Row(
                 //     children: [
                 //       const Spacer(),
@@ -523,16 +512,16 @@ class SideFrameMasterServices extends StatelessWidget {
                 //                 "Amro Handousa",
                 //                 style: StyleText.fontSize16Weight500.copyWith(
                 //                   color: Theme.of(context).brightness == Brightness.light
-                //                       ? ColorAppLight.blackButton
-                //                       : ColorAppDark.titleValue,
+                //                       ? AppColors.blackButton
+                //                       : AppColors.white,
                 //                 ),
                 //               ),
                 //               Text(
                 //                 "Employee",
                 //                 style: StyleText.fontSize14Weight500.copyWith(
                 //                   color: Theme.of(context).brightness == Brightness.light
-                //                       ? ColorAppLight.subTitleSubmit
-                //                       : ColorAppDark.titleValue,
+                //                       ? AppColors.secondaryText
+                //                       : AppColors.white,
                 //                 ),
                 //               ),
                 //             ],
@@ -547,9 +536,7 @@ class SideFrameMasterServices extends StatelessWidget {
                 Expanded(
                   child: Container(
                     width: MediaQuery.sizeOf(context).width,
-                    color: Theme.of(context).brightness == Brightness.light
-                        ? ColorAppLight.backGroundGray
-                        : ColorAppDark.background,
+                    color: AppColors.background,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -592,9 +579,7 @@ class SideFrameMasterServices extends StatelessWidget {
                                           'assets/images/arrow.svg',
                                           width: 30.sp,
                                           height: 30.sp,
-                                          color: Theme.of(context).brightness == Brightness.light
-                                              ? ColorAppLight.blackButton
-                                              : ColorAppDark.whiteShadow,
+                                          color: AppColors.text,
                                         ),
                                       ),
                                     ),
@@ -608,9 +593,7 @@ class SideFrameMasterServices extends StatelessWidget {
                                     child: Text(
                                       valid[i].key,
                                       style: StyleText.fontSize28Weight600.copyWith(
-                                        color: Theme.of(context).brightness == Brightness.light
-                                            ? ColorAppLight.blackButton
-                                            : ColorAppDark.labelColorDark,
+                                        color: AppColors.text
                                       ),
                                     ),
                                   ),

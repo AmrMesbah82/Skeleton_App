@@ -4,11 +4,12 @@
 // Date of Last Edit :21/November/2023
 // Objectives: this is a widget to customize the title and the value in the employee content container
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class EmployeeContent extends StatelessWidget {
   const EmployeeContent(
@@ -68,7 +69,7 @@ class EmployeeContent extends StatelessWidget {
                       child: SvgPicture.asset(
                         iconUrl!,
                         color:
-                            isFooter ? MyThemeData.colorWhite : MyThemeData.lightPrimary,
+                            isFooter ? AppColors.colorWhite : AppColors.lightPrimary,
                         height: isTablet
                             ? isPortrait
                                 ? 0.025.h
@@ -95,10 +96,10 @@ class EmployeeContent extends StatelessWidget {
                           : FontConstants.fontSize012.h,
               fontWeight: FontWeight.w500,
               color: isFooter
-                  ? MyThemeData.colorWhite
+                  ? AppColors.colorWhite
                   : isReport
-                      ? MyThemeData.dark
-                      : MyThemeData.GreyBack,
+                      ? AppColors.dark
+                      : AppColors.GreyBack,
             ),
           ),
           if (isEmployeeProfile == false)
@@ -124,9 +125,9 @@ class EmployeeContent extends StatelessWidget {
                                   : FontConstants.fontSize012.h,
                       fontWeight: isAssets ? FontWeight.w600 : FontWeight.w500,
                       color: isFooter
-                          ? MyThemeData.colorWhite
+                          ? AppColors.colorWhite
                           : isReport
-                              ? MyThemeData.colorBlack
+                              ? AppColors.colorBlack
                               : textColor ??
                                   Theme.of(context).colorScheme.inverseSurface,
                     ),
@@ -151,9 +152,9 @@ class EmployeeContent extends StatelessWidget {
                                   : FontConstants.fontSize012.h,
                       fontWeight: isAssets ? FontWeight.w600 : FontWeight.w500,
                       color: isFooter
-                          ? MyThemeData.colorWhite
+                          ? AppColors.colorWhite
                           : isReport
-                              ? MyThemeData.colorBlack
+                              ? AppColors.colorBlack
                               : textColor ??
                                   Theme.of(context).colorScheme.inverseSurface,
                     ),

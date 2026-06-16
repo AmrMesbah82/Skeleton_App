@@ -1,4 +1,5 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
@@ -6,9 +7,9 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_yellow_button copy.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 
@@ -61,17 +62,17 @@ class _CustomCreateTaskContainerState extends State<CustomCreateTaskContainer> {
   TextStyle customTitleTextStyle = AppFontStyle.cairoRegularStyle.copyWith(
       fontSize: FontConstants.fontSize018.h,
       // ignore: unrelated_type_equality_checks
-      color: themeController.currentTheme == MyThemeData.lightTheme
-          ? MyThemeData.colorBlack
-          : MyThemeData.colorWhiteDark,
+      color: themeController.currentTheme == AppColors.lightTheme
+          ? AppColors.colorBlack
+          : AppColors.colorWhiteDark,
       fontWeight: FontWeight.w600,
       height: 1.8);
   TextStyle customSubTitleTextStyle = AppFontStyle.cairoRegularStyle.copyWith(
     fontSize: FontConstants.fontSize016.h,
     // ignore: unrelated_type_equality_checks
-    color: themeController.currentTheme == MyThemeData.lightTheme
-        ? MyThemeData.colorDarkGrey
-        : MyThemeData.colorGreydark,
+    color: themeController.currentTheme == AppColors.lightTheme
+        ? AppColors.colorDarkGrey
+        : AppColors.colorGreydark,
     fontWeight: FontWeight.w400,
     height: 0.0016.h,
   );
@@ -92,9 +93,9 @@ class _CustomCreateTaskContainerState extends State<CustomCreateTaskContainer> {
             decoration: BoxDecoration(
               // ignore: unrelated_type_equality_checks
               color: isTablet
-                  ? themeController.currentTheme == MyThemeData.lightTheme
-                      ? MyThemeData.colorLightGrey
-                      : MyThemeData.darkBackGround
+                  ? themeController.currentTheme == AppColors.lightTheme
+                      ? AppColors.colorLightGrey
+                      : AppColors.darkBackGround
                   : Theme.of(context).colorScheme.inversePrimary,
               borderRadius: BorderRadius.circular(8.0),
             ),
@@ -111,7 +112,7 @@ class _CustomCreateTaskContainerState extends State<CustomCreateTaskContainer> {
                       tController.imageUrl == ""
                           ? CircleAvatar(
                               radius: 0.04.h,
-                              backgroundColor: MyThemeData.barrierColor,
+                              backgroundColor: AppColors.barrierColor,
                               child: Center(
                                 child: Transform.scale(
                                     scale: isTablet ? 1.2 : 0.8,
@@ -121,7 +122,7 @@ class _CustomCreateTaskContainerState extends State<CustomCreateTaskContainer> {
                             )
                           : CircleAvatar(
                               radius: 0.08.w,
-                              backgroundColor: MyThemeData.barrierColor,
+                              backgroundColor: AppColors.barrierColor,
                               child: Center(
                                 child: Transform.scale(
                                   scale: 1.2,
@@ -140,11 +141,11 @@ class _CustomCreateTaskContainerState extends State<CustomCreateTaskContainer> {
                           child: Transform.scale(
                             scale: isTablet ? 1.5 : 1.3,
                             child: CircleAvatar(
-                                backgroundColor: MyThemeData.signOut,
+                                backgroundColor: AppColors.signOut,
                                 radius: 0.013.h,
                                 child: SvgPicture.asset(
                                   "assets/icons/CameraIcon.svg",
-                                  color: MyThemeData().contrastColor(),
+                                  color: AppColors.textButton,
                                   height: 0.015.h,
                                 )),
                           ),
@@ -159,9 +160,9 @@ class _CustomCreateTaskContainerState extends State<CustomCreateTaskContainer> {
                 ),
                 ColumnRequestData(
                   fillColor:
-                      themeController.currentTheme == MyThemeData.lightTheme
-                          ? MyThemeData.colorLightGrey
-                          : MyThemeData.colorBlack,
+                      themeController.currentTheme == AppColors.lightTheme
+                          ? AppColors.colorLightGrey
+                          : AppColors.colorBlack,
                   title: widget.isProject == true ? "Card Name" : "Task Name",
                   isRequired: true,
                   isTextField: true,
@@ -196,9 +197,9 @@ class _CustomCreateTaskContainerState extends State<CustomCreateTaskContainer> {
                   isExpanded: true,
               isDescription: true,
                   fillColor:
-                      themeController.currentTheme == MyThemeData.lightTheme
-                          ? MyThemeData.colorLightGrey
-                          : MyThemeData.colorBlack,
+                      themeController.currentTheme == AppColors.lightTheme
+                          ? AppColors.colorLightGrey
+                          : AppColors.colorBlack,
                   textController: cardDescriptionController,
                   // textController: widget.isGroupEdit == true
                   //     ? null

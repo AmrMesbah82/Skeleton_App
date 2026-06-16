@@ -30,7 +30,7 @@ class RoundedImageTextContainer extends StatelessWidget {
     return Container(
       padding: EdgeInsets.all(isTablet ? 20.sp : 10.sp),
       decoration: BoxDecoration(
-        color: AppColors.mainItemColor,
+        color: AppColors.primary,
         borderRadius: BorderRadius.circular(8.0),
       ),
       child: Column(
@@ -43,7 +43,7 @@ class RoundedImageTextContainer extends StatelessWidget {
                 height: isTablet ? (orientation ? 90.w : 70.w) : 70.w,
                 padding: EdgeInsets.all(10.sp),
                 decoration: BoxDecoration(
-                  // color: MyThemeData.colorWhite,
+                  // color: AppColors.colorWhite,
                   border:
                       Border.all(color:AppColors.primary, width: 2.0),
                   borderRadius: BorderRadius.circular(12),

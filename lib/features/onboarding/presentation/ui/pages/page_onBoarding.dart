@@ -6,12 +6,13 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomPageView extends StatelessWidget {
   final String title;
@@ -68,7 +69,7 @@ class CustomPageView extends StatelessWidget {
                 fontSize: isTablet
                     ? FontConstants.fontSize024.h
                     : FontConstants.fontSize018.h,
-                color: MyThemeData.colorGrey,
+                color: AppColors.colorGrey,
                 fontWeight: FontWeight.w200),
           ),
         ],

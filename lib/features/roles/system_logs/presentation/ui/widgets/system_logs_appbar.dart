@@ -18,10 +18,10 @@ import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/form_fields/custom_search.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
 import 'package:demo_app/features/roles/system_logs/presentation/ui/widgets/download_logs_dialog.dart';
 import 'package:demo_app/features/roles/system_logs/presentation/ui/widgets/filter_dialog.dart';
@@ -94,7 +94,7 @@ class _SystemLogsAppBarState extends State<SystemLogsAppBar> {
                  width: 38.sp,
                  height: 38.sp,
                  decoration: BoxDecoration(
-                     color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+                     color: lightMode ? AppColors.white : AppColors.chatBackground,
                      borderRadius: BorderRadius.circular(8.r)
                  ),
                  child: SizedBox(
@@ -103,7 +103,7 @@ class _SystemLogsAppBarState extends State<SystemLogsAppBar> {
                      width: 10.w,
                      height: 10.h,
                      fit: BoxFit.scaleDown,
-                     color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                     color: lightMode ? AppColors.blackButton : AppColors.white,
                    ),
                  ),
                ),
@@ -139,7 +139,7 @@ class _SystemLogsAppBarState extends State<SystemLogsAppBar> {
                     width: isPortrait ? 0.13.w : 0.1.w,
                     decoration: BoxDecoration(
                         color: systemLogsController.isFilter
-                            ? MyThemeData.signOut
+                            ? AppColors.signOut
                             : Theme.of(context).colorScheme.inversePrimary,
                         borderRadius: BorderRadius.circular(8),
                         border: Border.all(color: Colors.transparent)),
@@ -153,7 +153,7 @@ class _SystemLogsAppBarState extends State<SystemLogsAppBar> {
                           child: SvgPicture.asset(
                               "assets/images/filter_table.svg",
                               color: widget.isFilterDataShow
-                                  ? MyThemeData().contrastColor()
+                                  ? AppColors.textButton
                                   : Theme.of(context).colorScheme.scrim),
                         ),
                         Text(
@@ -165,7 +165,7 @@ class _SystemLogsAppBarState extends State<SystemLogsAppBar> {
                               fontWeight: FontWeight.w500,
                               height: isPortrait ? 1.6 : 1.8,
                               color: widget.isFilterDataShow
-                                  ? MyThemeData().contrastColor()
+                                  ? AppColors.textButton
                                   : Theme.of(context).colorScheme.scrim),
                         )
                       ],
@@ -236,7 +236,7 @@ class _SystemLogsAppBarState extends State<SystemLogsAppBar> {
                       width: 10.w,
                       height: 10.h,
                       fit: BoxFit.scaleDown,
-                      color: ColorAppLight.buttonTextColor,
+                      color: AppColors.textButton,
                     ),
                   ),
                 ),
@@ -257,7 +257,7 @@ class _SystemLogsAppBarState extends State<SystemLogsAppBar> {
                     buttonText: "Export".tr,
                     widgetIcon: "assets/icons/exportsquare.svg",
                     buttonStyle: ElevatedButton.styleFrom(
-                      backgroundColor: MyThemeData.signOut,
+                      backgroundColor: AppColors.signOut,
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(8))),
                     ),

@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use, prefer_interpolation_to_compose_strings
 
 import 'dart:io';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
@@ -12,11 +13,11 @@ import 'package:demo_app/core/widgets/country_picker_dialog.dart';
 import 'package:demo_app/core/widgets/intl_phone_field.dart';
 import 'package:demo_app/core/shared_components/phone_number.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
 import 'package:demo_app/core/constants/nationalities_list.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/employees/presentation/ui/pages/add_new_employee_view.dart';
@@ -637,9 +638,9 @@ class _AddNewEmployeePersonInfoState extends State<AddNewEmployeePersonInfo> {
                                       fontSize: FontConstants.fontSize020.h,
                                       fontWeight: FontWeight.w400,
                                       color: themeController.currentTheme ==
-                                              MyThemeData.lightTheme
+                                              AppColors.lightTheme
                                           ? Theme.of(context).colorScheme.scrim
-                                          : MyThemeData.colorWhite,
+                                          : AppColors.colorWhite,
                                     ),
                                   ),
                                   width: .45.w,
@@ -648,9 +649,9 @@ class _AddNewEmployeePersonInfoState extends State<AddNewEmployeePersonInfo> {
                                     fontSize: FontConstants.fontSize020.h,
                                     fontWeight: FontWeight.w400,
                                     color: themeController.currentTheme ==
-                                            MyThemeData.lightTheme
-                                        ? MyThemeData.colorBlack
-                                        : MyThemeData.colorWhite,
+                                            AppColors.lightTheme
+                                        ? AppColors.colorBlack
+                                        : AppColors.colorWhite,
                                   ),
                                 ),
                                 flagsButtonPadding:
@@ -661,17 +662,17 @@ class _AddNewEmployeePersonInfoState extends State<AddNewEmployeePersonInfo> {
                                 style: AppFontStyle.cairoRegularStyle.copyWith(
                                     fontSize: FontConstants.fontSize020.h,
                                     color: themeController.currentTheme ==
-                                            MyThemeData.lightTheme
-                                        ? MyThemeData.colorBlack
-                                        : MyThemeData.colorWhite,
+                                            AppColors.lightTheme
+                                        ? AppColors.colorBlack
+                                        : AppColors.colorWhite,
                                     fontWeight: FontWeight.w400),
                                 dropdownTextStyle:
                                     AppFontStyle.cairoRegularStyle.copyWith(
                                         fontSize: FontConstants.fontSize020.h,
                                         color: themeController.currentTheme ==
-                                                MyThemeData.lightTheme
-                                            ? MyThemeData.colorBlack
-                                            : MyThemeData.colorWhite,
+                                                AppColors.lightTheme
+                                            ? AppColors.colorBlack
+                                            : AppColors.colorWhite,
                                         fontWeight: FontWeight.w400),
                                 decoration: InputDecoration(
                                   filled: true,
@@ -689,7 +690,7 @@ class _AddNewEmployeePersonInfoState extends State<AddNewEmployeePersonInfo> {
                                   hintStyle: AppFontStyle.cairoRegularStyle
                                       .copyWith(
                                           fontSize: FontConstants.fontSize020.h,
-                                          color: MyThemeData.colorGrey,
+                                          color: AppColors.colorGrey,
                                           fontWeight: FontWeight.w400),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(8.0),
@@ -716,7 +717,7 @@ class _AddNewEmployeePersonInfoState extends State<AddNewEmployeePersonInfo> {
                                     borderRadius: BorderRadius.circular(8.0),
                                   ),
                                   fillColor: themeController.currentTheme ==
-                                          MyThemeData.lightTheme
+                                          AppColors.lightTheme
                                       ? Colors.white
                                       : const Color(0xFF545454),
                                 ),

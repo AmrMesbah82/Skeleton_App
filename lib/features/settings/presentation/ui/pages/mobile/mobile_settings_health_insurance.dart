@@ -4,15 +4,16 @@
 /// Refactored At: 11/11/2024
 
 import 'package:demo_app/features/settings/presentation/ui/widgets/request_to_change_dialog_mobile.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 import '../../../../settings_screen/views/profile_screen.dart';
 import '../../widgets/health_insurance_fields.dart' hide HealthInsuranceFields;
@@ -68,7 +69,7 @@ class _MobileSettingsHealthInsuranceState
                             width: 0.95.w,
                             child: ElevatedButton(
                               style: ElevatedButton.styleFrom(
-                                backgroundColor: MyThemeData.signOut,
+                                backgroundColor: AppColors.signOut,
                                 padding: EdgeInsets.symmetric(
                                   vertical: 0.007.h,
                                   horizontal:
@@ -101,7 +102,7 @@ class _MobileSettingsHealthInsuranceState
                                 style: AppFontStyle.cairoRegularStyle.copyWith(
                                   fontSize: FontConstants.fontSize022.h,
                                   fontWeight: FontWeight.w600,
-                                  color: MyThemeData().contrastColor(),
+                                  color: AppColors.textButton,
                                 ),
                               ),
                             ),

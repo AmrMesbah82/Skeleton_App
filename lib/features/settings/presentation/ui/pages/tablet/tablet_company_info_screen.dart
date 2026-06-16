@@ -8,9 +8,9 @@ import 'package:demo_app/core/widgets/side_frame_master.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
 import 'package:get/get.dart';
@@ -92,7 +92,7 @@ class _TabletCompanyInfoScreenState extends State<TabletCompanyInfoScreen> {
           radius: 4.r,
           color: AppColors.primary,
           textStyle: StyleText.fontSize16Weight500.copyWith(
-              color: ColorAppLight.buttonTextColor
+              color: AppColors.textButton
           ),
           function: () async {
             print('🔵 APPLY BUTTON PRESSED');
@@ -118,7 +118,7 @@ class _TabletCompanyInfoScreenState extends State<TabletCompanyInfoScreen> {
             Container(
 
               decoration: BoxDecoration(
-                color: lightMode ? ColorAppLight.whiteOp : ColorAppDark.chatBackground,
+                color: lightMode ? AppColors.background : AppColors.chatBackground,
                 borderRadius: BorderRadius.circular(8.r),
               ),
               child: SingleChildScrollView(
@@ -142,7 +142,7 @@ class _TabletCompanyInfoScreenState extends State<TabletCompanyInfoScreen> {
               radius: 4.r,
               color: AppColors.primary,
               textStyle: StyleText.fontSize16Weight500.copyWith(
-                  color: ColorAppLight.buttonTextColor
+                  color: AppColors.textButton
               ),
               function: () async {
                 hapticController.triggerHapticFeedback(

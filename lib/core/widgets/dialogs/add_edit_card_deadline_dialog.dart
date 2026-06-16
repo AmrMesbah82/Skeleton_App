@@ -3,6 +3,7 @@
 //App Version : Version 2
 // Objectives: this is a widget to customize create,edit, card deadline
 import 'package:flutter/cupertino.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
@@ -15,8 +16,8 @@ import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 import '../../../features/task_management_module/task/data/model/board_model/board_model.dart';
@@ -188,9 +189,9 @@ class _AddEditCardDeadlineDialougeState
                                 },
                                 child: ColumnRequestData(
                                   fillColor: themeController.currentTheme ==
-                                          MyThemeData.lightTheme
-                                      ? MyThemeData.colorLightGrey
-                                      : MyThemeData.colorBlack,
+                                          AppColors.lightTheme
+                                      ? AppColors.colorLightGrey
+                                      : AppColors.colorBlack,
                                   title: "Start Date",
                                   isTextField: true,
                                   textController: controllerStartDate,
@@ -230,9 +231,9 @@ class _AddEditCardDeadlineDialougeState
                                 },
                                 child: ColumnRequestData(
                                   fillColor: themeController.currentTheme ==
-                                          MyThemeData.lightTheme
-                                      ? MyThemeData.colorLightGrey
-                                      : MyThemeData.colorBlack,
+                                          AppColors.lightTheme
+                                      ? AppColors.colorLightGrey
+                                      : AppColors.colorBlack,
                                   title: "",
                                   isTextField: true,
                                   textController: controllerStartTime,
@@ -265,9 +266,9 @@ class _AddEditCardDeadlineDialougeState
                                 },
                                 child: ColumnRequestData(
                                   fillColor: themeController.currentTheme ==
-                                          MyThemeData.lightTheme
-                                      ? MyThemeData.colorLightGrey
-                                      : MyThemeData.colorBlack,
+                                          AppColors.lightTheme
+                                      ? AppColors.colorLightGrey
+                                      : AppColors.colorBlack,
                                   title: "End Date",
                                   isTextField: true,
                                   textController: controllerEndDate,
@@ -308,9 +309,9 @@ class _AddEditCardDeadlineDialougeState
                                 },
                                 child: ColumnRequestData(
                                   fillColor: themeController.currentTheme ==
-                                          MyThemeData.lightTheme
-                                      ? MyThemeData.colorLightGrey
-                                      : MyThemeData.colorBlack,
+                                          AppColors.lightTheme
+                                      ? AppColors.colorLightGrey
+                                      : AppColors.colorBlack,
                                   title: "",
                                   isTextField: true,
                                   hint: hintEndTime,

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
 import 'package:flutter/material.dart';
@@ -9,9 +10,9 @@ import 'package:demo_app/core/shared_components/phone_number.dart';
 
 import 'package:demo_app/features/settings/presentation/ui/widgets/custom_phone_field.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/helper/validator.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
@@ -160,9 +161,9 @@ class ContactRelationSection extends StatelessWidget {
                 : FontConstants.fontSize020.h,
             fontWeight: FontWeight.w400,
             color: themeController.currentTheme.value ==
-                MyThemeData.lightTheme
+                AppColors.lightTheme
                 ? Theme.of(context).colorScheme.scrim
-                : MyThemeData.colorWhite,
+                : AppColors.colorWhite,
           ),
         ),
         width: .45.w,
@@ -173,9 +174,9 @@ class ContactRelationSection extends StatelessWidget {
               : FontConstants.fontSize020.h,
           fontWeight: FontWeight.w400,
           color: themeController.currentTheme.value ==
-              MyThemeData.lightTheme
-              ? MyThemeData.colorBlack
-              : MyThemeData.colorWhite,
+              AppColors.lightTheme
+              ? AppColors.colorBlack
+              : AppColors.colorWhite,
         ),
         countryNameStyle: TextStyle(
           fontSize: isPortrait
@@ -183,9 +184,9 @@ class ContactRelationSection extends StatelessWidget {
               : FontConstants.fontSize020.h,
           fontWeight: FontWeight.w400,
           color: themeController.currentTheme.value ==
-              MyThemeData.lightTheme
-              ? MyThemeData.colorBlack
-              : MyThemeData.colorWhite,
+              AppColors.lightTheme
+              ? AppColors.colorBlack
+              : AppColors.colorWhite,
         ),
       ),
       flagsButtonPadding: const EdgeInsets.only(left: 5),
@@ -196,9 +197,9 @@ class ContactRelationSection extends StatelessWidget {
             ? FontConstants.fontSize017.h
             : FontConstants.fontSize020.h,
         color: themeController.currentTheme.value ==
-            MyThemeData.lightTheme
-            ? MyThemeData.colorBlack
-            : MyThemeData.colorWhite,
+            AppColors.lightTheme
+            ? AppColors.colorBlack
+            : AppColors.colorWhite,
         fontWeight: FontWeight.w400,
         height: isTablet ? (isPortrait ? 1.7 : 1.8) : 2.1,
       ),
@@ -208,9 +209,9 @@ class ContactRelationSection extends StatelessWidget {
             ? FontConstants.fontSize016.h
             : FontConstants.fontSize020.h,
         color: themeController.currentTheme.value ==
-            MyThemeData.lightTheme
-            ? MyThemeData.colorBlack
-            : MyThemeData.colorWhite,
+            AppColors.lightTheme
+            ? AppColors.colorBlack
+            : AppColors.colorWhite,
         fontWeight: FontWeight.w400,
         height: isTablet ? (isPortrait ? 1.6 : 1.6) : 2.4,
       ),
@@ -228,7 +229,7 @@ class ContactRelationSection extends StatelessWidget {
           fontSize: isPortrait
               ? FontConstants.fontSize016.h
               : FontConstants.fontSize020.h,
-          color: MyThemeData.colorGrey,
+          color: AppColors.colorGrey,
           fontWeight: FontWeight.w400,
         ),
         border: OutlineInputBorder(
@@ -250,7 +251,7 @@ class ContactRelationSection extends StatelessWidget {
         errorStyle: AppFontStyle.cairoRegularStyle.copyWith(
           fontSize: FontConstants.fontSize018.h,
           height: isPortrait ? 1.2 : 1.4,
-          color: MyThemeData.delete,
+          color: AppColors.delete,
           fontWeight: FontWeight.w400,
         ),
         disabledBorder: OutlineInputBorder(
@@ -258,9 +259,9 @@ class ContactRelationSection extends StatelessWidget {
           borderRadius: BorderRadius.circular(8.0),
         ),
         fillColor: themeController.currentTheme.value ==
-            MyThemeData.lightTheme
+            AppColors.lightTheme
             ? const Color(0xFFF6F6F6)
-            : MyThemeData.colorBlack,
+            : AppColors.colorBlack,
       ),
       initialCountryCode: initialCountryCode,
       initialValue: phoneInitialValue,

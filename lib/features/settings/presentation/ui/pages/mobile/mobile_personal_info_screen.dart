@@ -9,10 +9,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/personal_information_fields.dart';
 
 import '../../../../../../core/theme/app_colors.dart';
@@ -82,11 +82,11 @@ class _MobilePersonalInfoScreenState extends State<MobilePersonalInfoScreen> {
                           width: 300.w,
                           height: 36.h,
                           textStyle: StyleText.fontSize16Weight500.copyWith(
-                              color: ColorAppLight.buttonTextColor
+                              color: AppColors.textButton
                           ),
                           image: 'assets/request_chnage.svg',
                           radius: 4.r,
-                          svgColor: ColorAppLight.buttonTextColor,
+                          svgColor: AppColors.textButton,
                           widthImage: 16.w,
                           heightImage: 23.h,
                         ),

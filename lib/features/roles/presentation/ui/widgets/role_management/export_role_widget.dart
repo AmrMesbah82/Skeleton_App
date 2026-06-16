@@ -328,7 +328,7 @@ class _RoleExportDialogState extends State<RoleExportDialog> {
                       "assets/upload_file.svg",
                       width: 16.sp,
                       height: 16.sp,
-                      color: ColorAppLight.buttonTextColor,
+                      color: AppColors.textButton,
                     ),
                   ),
                 ),
@@ -377,7 +377,7 @@ class _RoleExportDialogState extends State<RoleExportDialog> {
                     height: 38.h,
                     color: AppColors.primary,
                     textStyle: AppTextStyles.font14BlackCairoMedium.copyWith(
-                      color: ColorAppLight.buttonTextColor,
+                      color: AppColors.textButton,
                     ),
                   ),
                 ),

@@ -14,11 +14,11 @@ import 'package:demo_app/core/shared_components/phone_number.dart';
 
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/shared_components/request_escalate_dialog.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/requests/request_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/responsive_side_frame.dart';
@@ -125,11 +125,11 @@ class _TabletSettingsHealthInsuranceState
                       width: 300.w,
                       height: 36.h,
                       textStyle: StyleText.fontSize16Weight500.copyWith(
-                          color: ColorAppLight.buttonTextColor
+                          color: AppColors.textButton
                       ),
                       radius: 4.r,
                       image: 'assets/request_chnage.svg',
-                      svgColor: ColorAppLight.buttonTextColor,
+                      svgColor: AppColors.textButton,
 
                       space: 8.w,
                       widthImage: 16.w,

@@ -98,8 +98,8 @@ class _TabletHomeScreenState extends State<TabletHomeScreen> {
                                 Text("Upcoming Schedule".tr,
                                     style: StyleText.fontSize20Weight500.copyWith(
                                         color: lightMode
-                                            ? ColorAppLight.redColor
-                                            : ColorAppDark.titleValue)),
+                                            ? AppColors.red
+                                            : AppColors.white)),
                               if (isPortrait)
                                 UpcomingScheduleListview(
                                     selectedDate: selectedDate != null

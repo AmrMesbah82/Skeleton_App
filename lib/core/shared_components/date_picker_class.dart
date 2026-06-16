@@ -5,13 +5,14 @@
 // Objectives: this class  created to customize the new calendar picker
 //import 'package:calendar_date_picker2/calendar_date_picker2.dart';
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/shared_components/calender_package/src/models/calendar_date_picker2_config.dart';
 import 'package:demo_app/core/shared_components/calender_package/src/utils/dialog.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class DatePicker {
   Future<List<DateTime?>?> showDatePicker(
@@ -29,7 +30,7 @@ class DatePicker {
     return showCalendarDatePicker2Dialog(
  
         context: context,
-        barrierColor: MyThemeData.barrierColor,
+        barrierColor: AppColors.barrierColor,
         dialogBackgroundColor: Theme.of(context).colorScheme.inversePrimary,
         barrierDismissible: true,
         value: rangeDatePickerValueWithDefaultValue,
@@ -57,7 +58,7 @@ class DatePicker {
             child: SvgPicture.asset(
               'assets/images/downArrow.svg',
               fit: BoxFit.fitHeight,
-              color: MyThemeData.lightPrimary,
+              color: AppColors.lightPrimary,
               height: isTablet ? 0.053.h : null,
             ),
           ),
@@ -71,7 +72,7 @@ class DatePicker {
                 : 0.38.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: MyThemeData.switchSettings,
+              color: AppColors.switchSettings,
             ),
             child: Center(
               child: Text(
@@ -79,7 +80,7 @@ class DatePicker {
                 style: AppFontStyle.cairoRegularStyle.copyWith(
                     fontSize: fontSize,
                     fontWeight: FontWeight.w500,
-                    color: MyThemeData().contrastColor(),
+                    color: AppColors.textButton,
                     height: isTablet ? 1.6 : 0.002.h),
               ),
             ),
@@ -93,7 +94,7 @@ class DatePicker {
                 : 0.38.w,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(8),
-              color: MyThemeData.colorGreydark,
+              color: AppColors.colorGreydark,
             ),
             child: Center(
               child: Text(
@@ -101,7 +102,7 @@ class DatePicker {
                 style: AppFontStyle.cairoRegularStyle.copyWith(
                     fontSize: fontSize,
                     fontWeight: FontWeight.w500,
-                    color: MyThemeData.textCal,
+                    color: AppColors.textCal,
                     height: isTablet ? 1.6 : 0.002.h),
               ),
             ),
@@ -112,7 +113,7 @@ class DatePicker {
             child: SvgPicture.asset(
               'assets/icons/back_icon.svg',
               // ignore: deprecated_member_use
-              color: MyThemeData.lightPrimary,
+              color: AppColors.lightPrimary,
             ),
           ),
           nextMonthIcon: Transform.rotate(
@@ -120,19 +121,19 @@ class DatePicker {
             child: SvgPicture.asset(
               'assets/icons/back_icon.svg',
               // ignore: deprecated_member_use
-              color: MyThemeData.lightPrimary,
+              color: AppColors.lightPrimary,
             ),
           ),
           weekdayLabelTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
             fontSize: fontSize,
             fontWeight: FontWeight.w600,
-            color: MyThemeData.switchSettings,
+            color: AppColors.switchSettings,
           ),
 
           controlsTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
               fontSize: fontSize,
               fontWeight: FontWeight.w600,
-              color: MyThemeData.switchSettings,
+              color: AppColors.switchSettings,
               height: 1.45),
           selectedYearTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
               fontSize: fontSize,
@@ -140,7 +141,7 @@ class DatePicker {
               height: 1.6,
                color: Theme.of(context).colorScheme.secondaryContainer
               ),
-          selectedDayHighlightColor: MyThemeData.switchSettings,
+          selectedDayHighlightColor: AppColors.switchSettings,
           dayTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
               fontSize: fontSize,
               height: 1.6,
@@ -151,13 +152,13 @@ class DatePicker {
             fontWeight: FontWeight.w500,
             
         height: 1.6,
-            color: MyThemeData().contrastColor(),
+            color: AppColors.textButton,
           ),
         
           selectedRangeDayTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
             fontSize: fontSize,
             fontWeight: FontWeight.w500,
-            color: MyThemeData().contrastColor(),
+            color: AppColors.textButton,
          height: 1.6,
           ),
           yearTextStyle: AppFontStyle.cairoRegularStyle.copyWith(
@@ -172,7 +173,7 @@ class DatePicker {
             color: Theme.of(context).colorScheme.secondaryContainer
           ),
         
-          selectedRangeHighlightColor: MyThemeData.bubbleColor,
+          selectedRangeHighlightColor: AppColors.bubbleColor,
           
           calendarType: calendarType, //CalendarDatePicker2Type.range,
         ),

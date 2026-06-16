@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
 import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 
 
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/employee_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/events/mobile/media_department/create_event_view.dart/add_guests_mobile.dart';
@@ -105,8 +106,8 @@ class _CreateEventMobileState extends State<CreateEventMobile> {
                                     onPressed:
                                         eventController.perviousStepCreateEvent,
                                     hasIcon: false,
-                                    buttonColor: MyThemeData.colorWhiteDark,
-                                    textColor: MyThemeData.colorBlack,
+                                    buttonColor: AppColors.colorWhiteDark,
+                                    textColor: AppColors.colorBlack,
                                   ) : Expanded(child: Container()),
                             Row(
                               mainAxisAlignment:
@@ -149,8 +150,8 @@ class _CreateEventMobileState extends State<CreateEventMobile> {
                                                     .createEventpageIndex = 0;
                                               },
                                         hasIcon: false,
-                                        buttonColor: MyThemeData.colorWhiteDark,
-                                        textColor: MyThemeData.colorBlack,
+                                        buttonColor: AppColors.colorWhiteDark,
+                                        textColor: AppColors.colorBlack,
                                       ),
                                       
                                 eventController.createEventpageIndex != 2

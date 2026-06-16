@@ -849,7 +849,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                         });
                       },
                       textStyle: StyleText.fontSize16Weight500.copyWith(
-                          color: ColorAppLight.whiteColor
+                          color: AppColors.white
                       ),
                       width: 166.sp,
                       height: 30.sp,
@@ -857,7 +857,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                       radius: 4.r,
                       color: Colors.black,
                       image: "assets/minus.svg",
-                      svgColor: ColorAppLight.whiteColor,
+                      svgColor: AppColors.white,
                       widthImage: 12.sp,
                       heightImage: 1.5.sp,
                       colorBorder: Colors.transparent
@@ -919,7 +919,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                       });
                     },
                     textStyle: StyleText.fontSize16Weight500.copyWith(
-                        color: ColorAppLight.whiteColor
+                        color: AppColors.white
                     ),
                     width: 103.sp,
                     height: 30.sp,
@@ -955,7 +955,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                       },
 
                       textStyle: StyleText.fontSize16Weight500.copyWith(
-                          color: ColorAppLight.whiteColor
+                          color: AppColors.white
                       ),
                       width: 82.sp,
                       height: 30.sp,
@@ -963,7 +963,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                       radius: 4.r,
                       color: Colors.black,
                       image: "assets/plus.svg",
-                      svgColor: ColorAppLight.whiteColor,
+                      svgColor: AppColors.white,
                       widthImage: 12.sp,
                       heightImage: 12.sp,
                       colorBorder: Colors.transparent
@@ -976,7 +976,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
               if (formData.isNotEmpty)
                 Container(
                   decoration: BoxDecoration(
-                      color: lightMode ? ColorAppLight.whiteColor : ColorAppDark.chatBackground,
+                      color: lightMode ? AppColors.white : AppColors.chatBackground,
                       borderRadius: BorderRadius.circular(8.r)
                   ),
                   child: Padding(
@@ -996,8 +996,8 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                 height: 25.sp,
                                 decoration: BoxDecoration(
                                     color: lightMode
-                                        ? ColorAppLight.whiteOp
-                                        : ColorAppDark.background,
+                                        ? AppColors.background
+                                        : AppColors.background,
                                     borderRadius: BorderRadius.circular(4.r)
                                 ),
                                 child: Center(
@@ -1005,8 +1005,8 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                     "${S.of(context).totalRoles}: ${formData.length}",
                                     style: StyleText.fontSize14Weight500.copyWith(
                                       color: lightMode
-                                          ? ColorAppLight.blackButton
-                                          : ColorAppDark.titleValue,
+                                          ? AppColors.blackButton
+                                          : AppColors.white,
                                     ),
                                   ),
                                 ),
@@ -1058,7 +1058,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                                       arabicPart,
                                                       textAlign: TextAlign.right,
                                                       style: StyleText.fontSize16Weight500.copyWith(
-                                                        color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                                                        color: lightMode ? AppColors.blackButton : AppColors.white,
                                                       ),
                                                     ),
                                                     const SizedBox(width: 6), // spacing between Arabic and English
@@ -1066,7 +1066,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                                       englishPart,
                                                       textAlign: TextAlign.left,
                                                       style: StyleText.fontSize16Weight500.copyWith(
-                                                        color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                                                        color: lightMode ? AppColors.blackButton : AppColors.white,
                                                       ),
                                                     ),
                                                   ],
@@ -1075,7 +1075,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                                   header,
                                                   textAlign: isArabic ? TextAlign.right : TextAlign.left,
                                                   style: StyleText.fontSize16Weight500.copyWith(
-                                                    color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                                                    color: lightMode ? AppColors.blackButton : AppColors.white,
                                                   ),
                                                 ),
                                               );
@@ -1178,7 +1178,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                     width: 150.sp,
                     height: 38.sp,
                     radius: 8.r,
-                    color: ColorAppLight.grayHead,
+                    color: AppColors.grey,
                   ),
 
                   Spacer(),
@@ -1206,7 +1206,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                 Text(
                                   "You must correct all errors before uploading",
                                   style: StyleText.fontSize18Weight500.copyWith(
-                                    color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey,
+                                    color: lightMode ? AppColors.secondaryText : AppColors.grey,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -1237,7 +1237,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                 Text(
                                   S.of(context).activatingRoles,
                                   style: StyleText.fontSize20Weight500.copyWith(
-                                    color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey,
+                                    color: lightMode ? AppColors.secondaryText : AppColors.grey,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -1245,7 +1245,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                 Text(
                                   S.of(context).confirmActivateRoles,
                                   style: StyleText.fontSize18Weight500.copyWith(
-                                    color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey,
+                                    color: lightMode ? AppColors.secondaryText : AppColors.grey,
                                   ),
                                   textAlign: TextAlign.center,
                                 ),
@@ -1264,7 +1264,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                         width: 135.sp,
                                         height: 38.sp,
                                         radius: 4.r,
-                                        color: ColorAppLight.grayTextSla
+                                        color: AppColors.secondaryText
                                     ),
 
                                     SizedBox(width: 28.sp),
@@ -1311,7 +1311,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                                         Text(
                                                           "You must correct all errors before uploading",
                                                           style: StyleText.fontSize18Weight500.copyWith(
-                                                            color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey,
+                                                            color: lightMode ? AppColors.secondaryText : AppColors.grey,
                                                           ),
                                                           textAlign: TextAlign.center,
                                                         ),
@@ -1342,7 +1342,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                                         Text(
                                                           "Activating Roles",
                                                           style: StyleText.fontSize20Weight500.copyWith(
-                                                            color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey,
+                                                            color: lightMode ? AppColors.secondaryText : AppColors.grey,
                                                           ),
                                                           textAlign: TextAlign.center,
                                                         ),
@@ -1350,7 +1350,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                                         Text(
                                                           "Are You Sure You Want To Activate These Roles ?",
                                                           style: StyleText.fontSize18Weight500.copyWith(
-                                                            color: lightMode ? ColorAppLight.grayTextSla : ColorAppDark.titleKey,
+                                                            color: lightMode ? AppColors.secondaryText : AppColors.grey,
                                                           ),
                                                           textAlign: TextAlign.center,
                                                         ),
@@ -1369,7 +1369,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                                                 width: 135.sp,
                                                                 height: 38.sp,
                                                                 radius: 4.r,
-                                                                color: ColorAppLight.grayTextSla
+                                                                color: AppColors.secondaryText
                                                             ),
 
                                                             SizedBox(width: 28.sp),
@@ -1412,8 +1412,8 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                                                                 "Activated",
                                                                                 style: StyleText.fontSize20Weight500.copyWith(
                                                                                   color: lightMode
-                                                                                      ? ColorAppLight.grayTextSla
-                                                                                      : ColorAppDark.titleKey,
+                                                                                      ? AppColors.secondaryText
+                                                                                      : AppColors.grey,
                                                                                 ),
                                                                                 textAlign: TextAlign.center,
                                                                               ),
@@ -1422,8 +1422,8 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                                                                 "You Successfully Activated These Roles",
                                                                                 style: StyleText.fontSize18Weight500.copyWith(
                                                                                   color: lightMode
-                                                                                      ? ColorAppLight.grayTextSla
-                                                                                      : ColorAppDark.titleKey,
+                                                                                      ? AppColors.secondaryText
+                                                                                      : AppColors.grey,
                                                                                 ),
                                                                                 textAlign: TextAlign.center,
                                                                               ),
@@ -1458,7 +1458,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                                             height: 38.sp,
                                             radius: 8.r,
                                             color: getTotalErrorCount() > 0
-                                                ? ColorAppLight.grayTextSla
+                                                ? AppColors.secondaryText
                                                 : AppColors.primary,
                                           );
                                         },
@@ -1487,7 +1487,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
                     height: 38.sp,
                     radius: 8.r,
                     color: getTotalErrorCount() > 0
-                        ? ColorAppLight.grayTextSla
+                        ? AppColors.secondaryText
                         : AppColors.primary,
                   ),
 
@@ -1521,7 +1521,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
               Text(
                 "You must solve these errors",
                 style: StyleText.fontSize20Weight600.copyWith(
-                  color: ColorAppLight.redColor,
+                  color: AppColors.red,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -1535,7 +1535,7 @@ class _UploadFileDetailsTabletRolesState extends State<UploadFileDetailsTabletRo
               Navigator.pop(context);
             },
             textStyle: StyleText.fontSize16Weight500.copyWith(
-                color: ColorAppLight.blackButton
+                color: AppColors.blackButton
             ),
             width: 150.sp,
             height: 38.sp,
@@ -1632,8 +1632,8 @@ class CustomExcelTextField extends StatelessWidget {
                                     'Warning $placeholder',
                                     style: StyleText.fontSize20Weight600.copyWith(
                                       color: Theme.of(context).brightness == Brightness.light
-                                          ? ColorAppLight.blackButton
-                                          : ColorAppDark.titleValue,
+                                          ? AppColors.blackButton
+                                          : AppColors.white,
                                     ),
                                     textAlign: TextAlign.center,
                                   ),
@@ -1681,7 +1681,7 @@ class CustomExcelTextField extends StatelessWidget {
                           if (onChanged != null) onChanged!(value);
                         },
                         style: StyleText.fontSize14Weight500.copyWith(
-                            color: Theme.of(context).brightness == Brightness.light ? ColorAppLight.blackButton : ColorAppDark.titleValue
+                            color: Theme.of(context).brightness == Brightness.light ? AppColors.blackButton : AppColors.white
                         ),
                         inputFormatters: isEmail
                             ? [FilteringTextInputFormatter.deny(RegExp(r'\s'))]
@@ -1694,8 +1694,8 @@ class CustomExcelTextField extends StatelessWidget {
                           const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
                           filled: true,
                           fillColor: Theme.of(context).brightness == Brightness.light
-                              ? ColorAppLight.whiteOp
-                              : ColorAppDark.background,
+                              ? AppColors.background
+                              : AppColors.background,
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(8),
                             borderSide: BorderSide(

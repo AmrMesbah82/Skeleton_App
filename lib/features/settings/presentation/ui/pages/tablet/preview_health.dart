@@ -135,8 +135,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                       S.of(context).current_details,
                       style: StyleText.fontSize16Weight600.copyWith(
                         color: lightMode
-                            ? ColorAppLight.blackButton
-                            : ColorAppDark.titleValue,
+                            ? AppColors.blackButton
+                            : AppColors.white,
                       ),
                     ),
                     SizedBox(height: 10.sp),
@@ -151,8 +151,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                         S.of(context).current_details,
                         style: StyleText.fontSize16Weight600.copyWith(
                           color: lightMode
-                              ? ColorAppLight.blackButton
-                              : ColorAppDark.titleValue,
+                              ? AppColors.blackButton
+                              : AppColors.white,
                         ),
                       ),
                     ),
@@ -162,8 +162,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                         S.of(context).new_details,
                         style: StyleText.fontSize16Weight600.copyWith(
                           color: lightMode
-                              ? ColorAppLight.blackButton
-                              : ColorAppDark.titleValue,
+                              ? AppColors.blackButton
+                              : AppColors.white,
                         ),
                       ),
                     ),
@@ -191,8 +191,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                       S.of(context).new_details,
                       style: StyleText.fontSize16Weight600.copyWith(
                         color: lightMode
-                            ? ColorAppLight.blackButton
-                            : ColorAppDark.titleValue,
+                            ? AppColors.blackButton
+                            : AppColors.white,
                       ),
                     ),
 
@@ -263,7 +263,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                       width: isMobile ? double.infinity : 150.sp,
                       color: AppColors.primary,
                       textStyle: StyleText.fontSize16Weight500.copyWith(
-                        color: ColorAppLight.buttonTextColor,
+                        color: AppColors.textButton,
                       ),
                     ),
                   ),
@@ -293,7 +293,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                   width: 150.sp,
                   color: AppColors.primary,
                   textStyle: StyleText.fontSize16Weight500.copyWith(
-                    color: ColorAppLight.buttonTextColor,
+                    color: AppColors.textButton,
                   ),
                 ),
               ],
@@ -360,7 +360,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
           Container(
             padding: EdgeInsets.all(15.sp),
             decoration: BoxDecoration(
-              color: lightMode ? Colors.white : ColorAppDark.chatBackground,
+              color: lightMode ? Colors.white : AppColors.chatBackground,
               borderRadius: BorderRadius.circular(8),
             ),
             child: Column(
@@ -380,8 +380,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                       'Health Insurance'.tr,
                       style: StyleText.fontSize16Weight600.copyWith(
                         color: lightMode
-                            ? ColorAppLight.blackButton
-                            : ColorAppDark.titleValue,
+                            ? AppColors.blackButton
+                            : AppColors.white,
                       ),
                     ),
                   ],
@@ -426,7 +426,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
           Container(
             padding: EdgeInsets.all(15.sp),
             decoration: BoxDecoration(
-              color: lightMode ? Colors.white : ColorAppDark.chatBackground,
+              color: lightMode ? Colors.white : AppColors.chatBackground,
               borderRadius: BorderRadius.circular(8),
             ),
             child: Column(
@@ -445,8 +445,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                       S.of(context).emergencyContact,
                       style: StyleText.fontSize16Weight600.copyWith(
                         color: lightMode
-                            ? ColorAppLight.blackButton
-                            : ColorAppDark.titleValue,
+                            ? AppColors.blackButton
+                            : AppColors.white,
                       ),
                     ),
                   ],
@@ -592,7 +592,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
           Container(
             padding: EdgeInsets.all(15.sp),
             decoration: BoxDecoration(
-              color: lightMode ? Colors.white : ColorAppDark.chatBackground,
+              color: lightMode ? Colors.white : AppColors.chatBackground,
               borderRadius: BorderRadius.circular(8),
             ),
             child: Column(
@@ -611,8 +611,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                       S.of(context).secondEmergencyContact,
                       style: StyleText.fontSize16Weight600.copyWith(
                         color: lightMode
-                            ? ColorAppLight.blackButton
-                            : ColorAppDark.titleValue,
+                            ? AppColors.blackButton
+                            : AppColors.white,
                       ),
                     ),
                   ],
@@ -788,7 +788,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
           label,
           style: StyleText.fontSize14Weight400.copyWith(
             color:
-            lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+            lightMode ? AppColors.blackButton : AppColors.white,
           ),
         ),
         SizedBox(height: 10.h),
@@ -797,7 +797,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
           width: double.infinity,
           padding: EdgeInsets.symmetric(horizontal: 12.w, vertical: 10.h),
           decoration: BoxDecoration(
-            color: lightMode ? ColorAppLight.whiteOp : ColorAppDark.background,
+            color: lightMode ? AppColors.background : AppColors.background,
             borderRadius: BorderRadius.circular(4.r),
             border: hasChanged
                 ? Border.all(
@@ -810,8 +810,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
             value.isEmpty ? '-' : value,
             style: StyleText.fontSize12Weight400.copyWith(
               color: lightMode
-                  ? ColorAppLight.blackButton
-                  : ColorAppDark.titleValue,
+                  ? AppColors.blackButton
+                  : AppColors.white,
             ),
           ),
         ),
@@ -1001,8 +1001,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
             builder: (BuildContext dialogContext) {
               return Dialog(
                 backgroundColor: Theme.of(context).brightness == Brightness.light
-                    ? ColorAppLight.whiteColor
-                    : ColorAppDark.background,
+                    ? AppColors.white
+                    : AppColors.background,
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(4.r),
                 ),
@@ -1024,8 +1024,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                           'Error',
                           style: StyleText.fontSize20Weight500.copyWith(
                             color: Theme.of(context).brightness == Brightness.light
-                                ? ColorAppLight.blackButton
-                                : ColorAppDark.titleValue,
+                                ? AppColors.blackButton
+                                : AppColors.white,
                           ),
                         ),
                         SizedBox(height: 18.sp),
@@ -1034,8 +1034,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                           textAlign: TextAlign.center,
                           style: StyleText.fontSize14Weight500.copyWith(
                             color: Theme.of(context).brightness == Brightness.light
-                                ? ColorAppLight.grayTextSla
-                                : ColorAppDark.titleKey,
+                                ? AppColors.secondaryText
+                                : AppColors.grey,
                           ),
                         ),
                         SizedBox(height: 15.sp),
@@ -1043,7 +1043,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                           title: 'Close',
                           function: () => Navigator.pop(dialogContext),
                           textStyle: StyleText.fontSize16Weight500.copyWith(
-                            color: ColorAppLight.buttonTextColor,
+                            color: AppColors.textButton,
                           ),
                           width: 135.sp,
                           height: 38.sp,
@@ -1090,8 +1090,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
       barrierDismissible: false, // User must tap button to close
       builder: (context) => Dialog(
         backgroundColor: Theme.of(context).brightness == Brightness.light
-            ? ColorAppLight.whiteColor
-            : ColorAppDark.background,
+            ? AppColors.white
+            : AppColors.background,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4.r),
         ),
@@ -1113,8 +1113,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                   title,
                   style: StyleText.fontSize20Weight500.copyWith(
                     color: Theme.of(context).brightness == Brightness.light
-                        ? ColorAppLight.blackButton
-                        : ColorAppDark.titleValue,
+                        ? AppColors.blackButton
+                        : AppColors.white,
                   ),
                 ),
                 SizedBox(height: 18.sp),
@@ -1123,8 +1123,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                   textAlign: TextAlign.center,
                   style: StyleText.fontSize14Weight500.copyWith(
                     color: Theme.of(context).brightness == Brightness.light
-                        ? ColorAppLight.grayTextSla
-                        : ColorAppDark.titleKey,
+                        ? AppColors.secondaryText
+                        : AppColors.grey,
                   ),
                 ),
                 SizedBox(height: 20.sp),
@@ -1134,7 +1134,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                     Navigator.pop(context); // Close the success dialog
                   },
                   textStyle: StyleText.fontSize18Weight500.copyWith(
-                    color: ColorAppLight.buttonTextColor,
+                    color: AppColors.textButton,
                   ),
                   width: 120.sp,
                   height: 38.sp,
@@ -1161,8 +1161,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
       barrierDismissible: true,
       builder: (context) => Dialog(
         backgroundColor: Theme.of(context).brightness == Brightness.light
-            ? ColorAppLight.whiteColor
-            : ColorAppDark.background,
+            ? AppColors.white
+            : AppColors.background,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(4.r),
         ),
@@ -1186,8 +1186,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                   title,
                   style: StyleText.fontSize20Weight500.copyWith(
                     color: Theme.of(context).brightness == Brightness.light
-                        ? ColorAppLight.blackButton
-                        : ColorAppDark.titleValue,
+                        ? AppColors.blackButton
+                        : AppColors.white,
                   ),
                 ),
                 SizedBox(height: 18.sp),
@@ -1196,8 +1196,8 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                   textAlign: TextAlign.center,
                   style: StyleText.fontSize14Weight500.copyWith(
                     color: Theme.of(context).brightness == Brightness.light
-                        ? ColorAppLight.grayTextSla
-                        : ColorAppDark.titleKey,
+                        ? AppColors.secondaryText
+                        : AppColors.grey,
                   ),
                 ),
                 SizedBox(height: 15.sp),
@@ -1215,7 +1215,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                         width: isMobile ? 120.sp : 135.sp,
                         height: 38.sp,
                         radius: 4.r,
-                        color: ColorAppLight.grayNoButton,
+                        color: AppColors.secondaryButton,
                       ),
                       SizedBox(width: 20.sp),
                       customButton(
@@ -1225,7 +1225,7 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                           onConfirm();
                         },
                         textStyle: StyleText.fontSize18Weight500.copyWith(
-                          color: ColorAppLight.buttonTextColor,
+                          color: AppColors.textButton,
                         ),
                         width: isMobile ? 120.sp : 135.sp,
                         height: 38.sp,

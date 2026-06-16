@@ -8,9 +8,9 @@ import 'package:demo_app/core/shared_components/filter_dialog.dart';
 import 'package:demo_app/features/employees/employees_views/employees_hr_view/employees_profile/table.dart';
 import 'package:demo_app/features/employees/employees_views/employees_hr_view/employees_profile/table_app_bar.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 /// Date Created :5/Dec/2023
 /// Developer Name : Bassem Mohamed

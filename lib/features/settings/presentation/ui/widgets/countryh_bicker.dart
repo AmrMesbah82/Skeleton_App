@@ -69,7 +69,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(16),
       ),
-      backgroundColor: lightMode ? Colors.white : ColorAppDark.chatBackground,
+      backgroundColor: lightMode ? Colors.white : AppColors.chatBackground,
       child: Container(
         width: isTablet ? 500 : MediaQuery.of(context).size.width * 0.9,
         height: MediaQuery.of(context).size.height * 0.7,
@@ -85,16 +85,16 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                   'Select Country'.tr,
                   style: StyleText.fontSize18Weight500.copyWith(
                     color: lightMode
-                        ? ColorAppLight.blackButton
-                        : ColorAppDark.titleValue,
+                        ? AppColors.blackButton
+                        : AppColors.white,
                   ),
                 ),
                 IconButton(
                   icon: Icon(
                     Icons.close,
                     color: lightMode
-                        ? ColorAppLight.blackButton
-                        : ColorAppDark.titleValue,
+                        ? AppColors.blackButton
+                        : AppColors.white,
                   ),
                   onPressed: () => Navigator.of(context).pop(),
                 ),
@@ -108,24 +108,24 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
               controller: searchController,
               style: StyleText.fontSize14Weight400.copyWith(
                 color: lightMode
-                    ? ColorAppLight.blackButton
-                    : ColorAppDark.titleValue,
+                    ? AppColors.blackButton
+                    : AppColors.white,
               ),
               decoration: InputDecoration(
                 hintText: 'Search country...'.tr,
                 hintStyle: StyleText.fontSize14Weight400.copyWith(
                   color: lightMode
-                      ? ColorAppLight.grayTextSla
-                      : ColorAppDark.titleKey,
+                      ? AppColors.secondaryText
+                      : AppColors.grey,
                 ),
                 prefixIcon: Icon(
                   Icons.search,
                   color: lightMode
-                      ? ColorAppLight.blackButton
-                      : ColorAppDark.titleValue,
+                      ? AppColors.blackButton
+                      : AppColors.white,
                 ),
                 filled: true,
-                fillColor: lightMode ? ColorAppLight.whiteOp : ColorAppDark.background,
+                fillColor: lightMode ? AppColors.background : AppColors.background,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                   borderSide: BorderSide.none,
@@ -152,8 +152,8 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
               '${filteredCountries.length} countries'.tr,
               style: StyleText.fontSize12Weight400.copyWith(
                 color: lightMode
-                    ? ColorAppLight.grayTextSla
-                    : ColorAppDark.titleKey,
+                    ? AppColors.secondaryText
+                    : AppColors.grey,
               ),
             ),
 
@@ -170,16 +170,16 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                       Icons.search_off,
                       size: 48.sp,
                       color: lightMode
-                          ? ColorAppLight.grayTextSla
-                          : ColorAppDark.titleKey,
+                          ? AppColors.secondaryText
+                          : AppColors.grey,
                     ),
                     SizedBox(height: 16.sp),
                     Text(
                       'No countries found'.tr,
                       style: StyleText.fontSize14Weight400.copyWith(
                         color: lightMode
-                            ? ColorAppLight.blackButton
-                            : ColorAppDark.titleValue,
+                            ? AppColors.blackButton
+                            : AppColors.white,
                       ),
                     ),
                   ],
@@ -224,8 +224,8 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                               country.name,
                               style: StyleText.fontSize14Weight500.copyWith(
                                 color: lightMode
-                                    ? ColorAppLight.blackButton
-                                    : ColorAppDark.titleValue,
+                                    ? AppColors.blackButton
+                                    : AppColors.white,
                               ),
                             ),
                           ),
@@ -243,7 +243,7 @@ class _CountryPickerDialogState extends State<CountryPickerDialog> {
                             child: Text(
                               '+${country.dialCode}',
                               style: StyleText.fontSize12Weight500.copyWith(
-                                color: lightMode ? ColorAppLight.blackButton : ColorAppDark.titleValue,
+                                color: lightMode ? AppColors.blackButton : AppColors.white,
                               ),
                             ),
                           ),

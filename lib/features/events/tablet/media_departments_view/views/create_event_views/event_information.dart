@@ -1,9 +1,10 @@
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
@@ -105,9 +106,9 @@ class _EventInformationState extends State<EventInformation> {
               isTextField: true,
               hint: "Text Here",
               isOptional: false,
-              fillColor: themeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.colorLightGrey
-                  : MyThemeData.colorBlack,
+              fillColor: themeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.colorLightGrey
+                  : AppColors.colorBlack,
               isRequired: true,
               isExpanded: true,
               isDescription: true,
@@ -132,9 +133,9 @@ class _EventInformationState extends State<EventInformation> {
               isTextField: true,
               hint: "اكتب هنا",
               isRequired: true,
-              fillColor: themeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.colorLightGrey
-                  : MyThemeData.colorBlack,
+              fillColor: themeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.colorLightGrey
+                  : AppColors.colorBlack,
               isOptional: false,
               isExpanded: true,
               isDescription: true,
@@ -154,9 +155,9 @@ class _EventInformationState extends State<EventInformation> {
             ColumnRequestData(
               title: "Agenda (English)",
               isRequired: true,
-               fillColor: themeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.colorLightGrey
-                  : MyThemeData.colorBlack,
+               fillColor: themeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.colorLightGrey
+                  : AppColors.colorBlack,
               isTextField: true,
               hint: "Text Here",
               isOptional: false,
@@ -183,9 +184,9 @@ class _EventInformationState extends State<EventInformation> {
               isTextField: true,
               isRequired: true,
               hint: "اكتب هنا",
-               fillColor: themeController.currentTheme == MyThemeData.lightTheme
-                  ? MyThemeData.colorLightGrey
-                  : MyThemeData.colorBlack,
+               fillColor: themeController.currentTheme == AppColors.lightTheme
+                  ? AppColors.colorLightGrey
+                  : AppColors.colorBlack,
               isOptional: false,
               isExpanded: true,
               isArabic: true,
@@ -205,9 +206,9 @@ class _EventInformationState extends State<EventInformation> {
                 Expanded(
                   child: ColumnRequestData(
                     fillColor:
-                        themeController.currentTheme == MyThemeData.lightTheme
-                            ? MyThemeData.colorLightGrey
-                            : MyThemeData.colorBlack,
+                        themeController.currentTheme == AppColors.lightTheme
+                            ? AppColors.colorLightGrey
+                            : AppColors.colorBlack,
                     isRequired: true,
                     title: "Department Owner",
                     isTextField: false,

@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
@@ -6,8 +7,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
 import 'package:demo_app/generated/l10n.dart';
@@ -82,7 +83,7 @@ class _CompanyImageState extends State<CompanyImage> {
             radius: isTablet
                 ? (isVertical ? 0.035.h : 0.03.w)
                 : 0.04.h,
-            backgroundColor: MyThemeData.barrierColor,
+            backgroundColor: AppColors.barrierColor,
             child: Center(
               child: Transform.scale(
                   scale: isTablet ? 1.2 : 0.8,
@@ -94,7 +95,7 @@ class _CompanyImageState extends State<CompanyImage> {
             radius: isTablet
                 ? (isVertical ? 0.035.h : 0.03.w)
                 : 0.045.h,
-            backgroundColor: MyThemeData.barrierColor,
+            backgroundColor: AppColors.barrierColor,
             child: ClipOval(
               child: SizedBox(
                 width: isTablet
@@ -118,11 +119,11 @@ class _CompanyImageState extends State<CompanyImage> {
               child: Transform.scale(
                 scale: isTablet ? 1.5 : 1.4,
                 child: CircleAvatar(
-                    backgroundColor: MyThemeData.signOut,
+                    backgroundColor: AppColors.signOut,
                     radius: isVertical ? 0.01.h : 0.013.h,
                     child: SvgPicture.asset(
                       "assets/icons/CameraIcon.svg",
-                      color: MyThemeData().contrastColor(),
+                      color: AppColors.textButton,
                       height: 0.015.h,
                     )),
               ),

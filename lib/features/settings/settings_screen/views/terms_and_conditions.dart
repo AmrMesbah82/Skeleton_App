@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:demo_app/features/settings/settings_screen/views/mark_down.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 /// Full-screen Terms & Conditions page.
-/// Replaces the removed Knowticed version; reuses the same MarkDownWidget
+/// Replaces the removed demo_app version; reuses the same MarkDownWidget
 /// that TermsDialog shows in dialog form.
 class TermsConditions extends StatefulWidget {
   const TermsConditions({super.key});

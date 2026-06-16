@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/home/app_drawer/presentation/ui/pages/custom_drawer.dart';
@@ -7,11 +8,11 @@ import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 
 import 'package:demo_app/core/widgets/title_row.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/constants/image_paths.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/row_icon_text.dart';
 import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
 import 'package:demo_app/features/events/tablet/employees/views/employee_home_screen.dart';
@@ -193,7 +194,7 @@ class EditEvent extends StatelessWidget {
                               iconUrl: "assets/images/attachsquare_field.svg",
                               text: "Flyer",
                               isFlexible: true,
-                              valueColor: MyThemeData.blue,
+                              valueColor: AppColors.blue,
                               value: event!.flyer),
                         ),
                       ],
@@ -222,7 +223,7 @@ class EditEvent extends StatelessWidget {
                       Container(
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            border: Border.all(color: MyThemeData.dividerColor),
+                            border: Border.all(color: AppColors.dividerColor),
                           ),
                           child: Padding(
                             padding: EdgeInsets.symmetric(
@@ -243,7 +244,7 @@ class EditEvent extends StatelessWidget {
                                         : FontConstants.fontSize012.w,
                                     fontWeight: FontWeight.w500,
                                     height: 1.3,
-                                    color: MyThemeData.blue),
+                                    color: AppColors.blue),
                               ),
                             ),
                           ))
@@ -545,7 +546,7 @@ class EditEvent extends StatelessWidget {
                     value: event!.requiredApproval
                         ? "Needs Approval From".tr
                         : "No Approval Required".tr,
-                    valueColor: MyThemeData.unBlock,
+                    valueColor: AppColors.unBlock,
                   ),
                   SizedBox(
                     height: 0.015.h,
@@ -578,23 +579,23 @@ class EditEvent extends StatelessWidget {
                                               fontWeight: FontWeight.w600,
                                               color:
                                                   event!.status! == "Accepted"
-                                                      ? MyThemeData.unBlock
-                                                      : MyThemeData.colorRed))
+                                                      ? AppColors.unBlock
+                                                      : AppColors.colorRed))
                                 ]
                               : [
                                   Row(
                                     children: [
                                       CustomIconButton(
-                                        textColor: MyThemeData.delete,
+                                        textColor: AppColors.delete,
                                         buttonColor: Theme.of(context)
                                             .colorScheme
                                             .inversePrimary,
                                         buttonText: 'Reject',
                                         imagePath:
                                             'assets/icons/RejectionIcon.svg',
-                                        imageColor: MyThemeData.delete,
+                                        imageColor: AppColors.delete,
                                         radius: 8,
-                                        borderColor: MyThemeData.delete,
+                                        borderColor: AppColors.delete,
                                         onPressed: () {},
                                       ),
                                       SizedBox(width: 0.02.w),
@@ -602,9 +603,9 @@ class EditEvent extends StatelessWidget {
                                         buttonColor: Theme.of(context)
                                             .colorScheme
                                             .inversePrimary,
-                                        textColor: MyThemeData.unBlock,
-                                        borderColor: MyThemeData.unBlock,
-                                        imageColor: MyThemeData.unBlock,
+                                        textColor: AppColors.unBlock,
+                                        borderColor: AppColors.unBlock,
+                                        imageColor: AppColors.unBlock,
                                         buttonText: 'Approve',
                                         radius: 8,
                                         imagePath:

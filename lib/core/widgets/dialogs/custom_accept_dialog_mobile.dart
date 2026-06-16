@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -8,9 +9,9 @@ import 'package:demo_app/core/shared_components/custom_calendar_picker.dart';
 import 'package:demo_app/core/widgets/dialogs/custom_time_container.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomAcceptDialogMobile extends StatefulWidget {
   CustomAcceptDialogMobile({
@@ -74,7 +75,7 @@ class _CustomAcceptDialogMobileState extends State<CustomAcceptDialogMobile> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: MyThemeData.colorWhiteDark,
+                  color: AppColors.colorWhiteDark,
                 ),
                 child: SvgPicture.asset(
                   "assets/images/approve.svg",
@@ -186,9 +187,9 @@ class _CustomAcceptDialogMobileState extends State<CustomAcceptDialogMobile> {
               Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(6.0),
-                  // color: themeController.currentTheme == MyThemeData.lightTheme
-                  //     ? MyThemeData.colorLightGrey
-                  //     : MyThemeData.darkBackGround,
+                  // color: themeController.currentTheme == AppColors.lightTheme
+                  //     ? AppColors.colorLightGrey
+                  //     : AppColors.darkBackGround,
                 ),
 
                 /// Calender Widget
@@ -284,7 +285,7 @@ padding: EdgeInsets.zero,
                   children: [
                     Expanded(
                       child: MainCustomButton(
-                        buttonColor: MyThemeData.colorWhiteDark,
+                        buttonColor: AppColors.colorWhiteDark,
                         buttonText: 'Cancel',
                         onPressed: () {},
                       ),

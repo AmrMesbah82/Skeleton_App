@@ -1,12 +1,13 @@
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/survey_controller.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/custom_textfield_container.dart';
 import 'package:demo_app/features/events/components/survey_components/delete_member_dialog.dart';
 import 'package:demo_app/features/events/components/survey_components/dialogue_switchers_row.dart';
@@ -219,9 +220,9 @@ class _QuestionCardState extends State<QuestionCard> {
             //         "assets/icons/uploadPhoto.svg",
             //         height: 0.04.h,
             //         color:
-            //             themeController.currentTheme == MyThemeData.lightTheme
-            //                 ? MyThemeData.colorBlack
-            //                 : MyThemeData.colorWhiteDark,
+            //             themeController.currentTheme == AppColors.lightTheme
+            //                 ? AppColors.colorBlack
+            //                 : AppColors.colorWhiteDark,
             //       ),
             //     ),
 
@@ -308,9 +309,9 @@ class _QuestionCardState extends State<QuestionCard> {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 0.01.h),
               child: Divider(
-                color: themeController.currentTheme == MyThemeData.lightTheme
-                    ? MyThemeData.colorDarkGrey
-                    : MyThemeData.colorGreydark,
+                color: themeController.currentTheme == AppColors.lightTheme
+                    ? AppColors.colorDarkGrey
+                    : AppColors.colorGreydark,
                 thickness: 1,
               ),
             ),
@@ -347,9 +348,9 @@ class _QuestionCardState extends State<QuestionCard> {
                     padding: EdgeInsets.all(0.011.h),
                     child: SvgPicture.asset(
                       color:
-                          themeController.currentTheme == MyThemeData.lightTheme
-                              ? MyThemeData.colorDarkGrey
-                              : MyThemeData.colorGreydark,
+                          themeController.currentTheme == AppColors.lightTheme
+                              ? AppColors.colorDarkGrey
+                              : AppColors.colorGreydark,
                       "assets/icons/duplicate_icon.svg",
                     ),
                   ),

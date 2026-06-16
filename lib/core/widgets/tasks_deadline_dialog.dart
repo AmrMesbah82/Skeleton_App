@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/shared_components/calender_package/calendar_date_picker2.dart';
@@ -8,11 +9,11 @@ import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/widgets/filters_appbar.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class TasksDeadLineDialogue extends StatefulWidget {
   const TasksDeadLineDialogue({super.key});
@@ -116,7 +117,7 @@ class _TasksDeadLineDialogueState extends State<TasksDeadLineDialogue> {
                             
                               buttonStyle: buttonStyle(
                                   startDateSelected
-                                      ? MyThemeData.lightPrimary
+                                      ? AppColors.lightPrimary
                                       : Theme.of(context)
                                           .colorScheme
                                           .inversePrimary,
@@ -148,7 +149,7 @@ class _TasksDeadLineDialogueState extends State<TasksDeadLineDialogue> {
                               
                                 buttonStyle: buttonStyle(
                                     endDateSelected
-                                        ? MyThemeData.lightPrimary
+                                        ? AppColors.lightPrimary
                                         : Theme.of(context)
                                             .colorScheme
                                             .inversePrimary,
@@ -260,7 +261,7 @@ class _TasksDeadLineDialogueState extends State<TasksDeadLineDialogue> {
                       buttonText: "Add".tr,
                       buttonStyle: ElevatedButton.styleFrom(
                         minimumSize: Size(0.09.w, 0.05.h),
-                        backgroundColor: MyThemeData.signOut,
+                        backgroundColor: AppColors.signOut,
                         shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(
                           Radius.circular(8),

@@ -1,4 +1,5 @@
-import 'package:demo_app/core/theme/grc_theme_controller.dart';
+
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -10,9 +11,9 @@ import 'package:demo_app/core/widgets/dialogs/custom_time_container.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
 import 'package:demo_app/core/widgets/column_request_data.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class CustomAcceptDialog extends StatefulWidget {
@@ -85,7 +86,7 @@ class _CustomAcceptDialogState extends State<CustomAcceptDialog> {
                 width: double.infinity,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(8),
-                  color: MyThemeData.colorWhiteDark,
+                  color: AppColors.colorWhiteDark,
                 ),
                 child: SvgPicture.asset(
                   "assets/images/approve.svg",
@@ -171,7 +172,7 @@ class _CustomAcceptDialogState extends State<CustomAcceptDialog> {
                             padding: EdgeInsets.all(isPortrait? 0.005.h : 0.007.h),
                             child: SvgPicture.asset(
                               'assets/icons/isEditIcon.svg',
-                              color: MyThemeData.lightPrimary,
+                              color: AppColors.lightPrimary,
                              
                             ),
                           ),
@@ -211,9 +212,9 @@ class _CustomAcceptDialogState extends State<CustomAcceptDialog> {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(6.0),
                         color: themeController.currentTheme ==
-                                MyThemeData.lightTheme
-                            ? MyThemeData.colorLightGrey
-                            : MyThemeData.darkBackGround,
+                                AppColors.lightTheme
+                            ? AppColors.colorLightGrey
+                            : AppColors.darkBackGround,
                       ),
 
                       /// Calender Widget
@@ -288,7 +289,7 @@ padding: EdgeInsets.zero,
                   children: [
                     Expanded(
                       child: MainCustomButton(
-                        buttonColor: MyThemeData.colorWhiteDark,
+                        buttonColor: AppColors.colorWhiteDark,
                         buttonText: 'Cancel',
                         onPressed: () {},
                       ),

@@ -6,9 +6,9 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 
 import '../../theme/app_colors.dart';
@@ -87,10 +87,10 @@ Widget textfieled(
                           ? (1.8)
                           : 0,
                   color: hasError == true
-                      ? MyThemeData.delete
-                      : themeController.currentTheme == MyThemeData.lightTheme
-                          ? MyThemeData.colorBlack
-                          : MyThemeData.colorWhite,
+                      ? AppColors.delete
+                      : themeController.currentTheme == AppColors.lightTheme
+                          ? AppColors.colorBlack
+                          : AppColors.colorWhite,
                   fontWeight: FontWeight.w400),
               decoration: InputDecoration(
                 isDense: true,
@@ -100,9 +100,9 @@ Widget textfieled(
                     fontSize: orientation == Orientation.portrait
                         ? FontConstants.fontSize014.h
                         : FontConstants.fontSize018.h,
-                    color: MyThemeData.delete,
+                    color: AppColors.delete,
                     fontWeight: FontWeight.w500),
-                focusColor: MyThemeData.textfieldColor,
+                focusColor: AppColors.textfieldColor,
                 hoverColor: Colors.transparent,
                 hintText: hits,
                 counterText: '',
@@ -135,7 +135,7 @@ Widget textfieled(
                               ? FontConstants.fontSize017.h
                               : FontConstants.fontSize017.h
                       : FontConstants.fontSize020.h,
-                  color: MyThemeData.colorGrey,
+                  color: AppColors.colorGrey,
                   fontWeight: FontWeight.w400,
                  
                 ),
@@ -145,7 +145,7 @@ Widget textfieled(
                 ),
                 focusedBorder: OutlineInputBorder(
                   borderSide: isCSV
-                      ? BorderSide(color: MyThemeData.lightPrimary)
+                      ? BorderSide(color: AppColors.lightPrimary)
                       : BorderSide.none,
                   borderRadius: BorderRadius.circular(8.0),
                 ),
@@ -153,14 +153,14 @@ Widget textfieled(
                   borderSide: isCSV
                       ? BorderSide(
                           color: themeController.currentTheme ==
-                                  MyThemeData.lightTheme
-                              ? MyThemeData.colorBlack
-                              : MyThemeData.colorWhite)
+                                  AppColors.lightTheme
+                              ? AppColors.colorBlack
+                              : AppColors.colorWhite)
                       : BorderSide.none,
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 errorBorder: OutlineInputBorder(
-                  borderSide: BorderSide(color: MyThemeData.delete, width: 1),
+                  borderSide: BorderSide(color: AppColors.delete, width: 1),
                   borderRadius: BorderRadius.circular(8.0),
                 ),
                 disabledBorder: OutlineInputBorder(
@@ -194,7 +194,7 @@ Widget textfieled(
                             fontSize: orientation == Orientation.portrait
                                 ? FontConstants.fontSize014.h
                                 : FontConstants.fontSize018.h,
-                            color: MyThemeData.delete,
+                            color: AppColors.delete,
                             fontWeight: FontWeight.w500,
                           ),
                         ),

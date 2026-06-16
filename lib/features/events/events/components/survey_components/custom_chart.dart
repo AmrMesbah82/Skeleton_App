@@ -1,14 +1,15 @@
 // ignore_for_file: unrelated_type_equality_checks, sized_box_for_whitespace, unused_local_variable
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
 import 'package:demo_app/core/shared_components/custom_chart_data.dart';
 import 'package:demo_app/core/shared_components/custom_chart_values.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/features/events/components/survey_components/custom_performance_row.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
@@ -120,15 +121,15 @@ class _CustomChartContainerState extends State<CustomChartContainer> {
   // }
 
   final List<Color> customColors = [
-    MyThemeData.lightPrimary,
-    MyThemeData.signOut,
-    MyThemeData.colorGreydark,
-    MyThemeData.colorLightGrey,
-    MyThemeData.colorWhiteDark,
-    MyThemeData.colorGreyDisabled,
-    MyThemeData.colorDarkGrey,
+    AppColors.lightPrimary,
+    AppColors.signOut,
+    AppColors.colorGreydark,
+    AppColors.colorLightGrey,
+    AppColors.colorWhiteDark,
+    AppColors.colorGreyDisabled,
+    AppColors.colorDarkGrey,
   ];
-  //MyThemeData.colorGreydark,
+  //AppColors.colorGreydark,
 
   final List<String> period = [
     'Weekly'.tr,
@@ -139,21 +140,21 @@ class _CustomChartContainerState extends State<CustomChartContainer> {
   String? selectedPeriod = 'Monthly'.tr;
   // List<Color> attendanceRateColors = [
   //   selectedColor,
-  //   MyThemeData.greenN,
-  //   MyThemeData.blueN,
-  //   MyThemeData.greenN
+  //   AppColors.greenN,
+  //   AppColors.blueN,
+  //   AppColors.greenN
   // ];
   List<Color> assignmnetsColors = [
-    MyThemeData.signOut,
-    MyThemeData.bubbleColor,
-    MyThemeData.blue,
-    MyThemeData.red
+    AppColors.signOut,
+    AppColors.bubbleColor,
+    AppColors.blue,
+    AppColors.red
   ];
   // List<Color> assignmentRateColors = [
   //   selectedColor,
-  //   MyThemeData.red,
-  //   MyThemeData.blueN,
-  //   MyThemeData.greenN
+  //   AppColors.red,
+  //   AppColors.blueN,
+  //   AppColors.greenN
   // ];
 
   @override
@@ -183,11 +184,11 @@ class _CustomChartContainerState extends State<CustomChartContainer> {
             ? Colors.transparent
             : Theme.of(context).colorScheme.inversePrimary,
         borderRadius: BorderRadius.circular(9),
-        boxShadow: themeController.currentTheme == MyThemeData.lightTheme
+        boxShadow: themeController.currentTheme == AppColors.lightTheme
             ? [
                 if (widget.isTransparent == false)
                   BoxShadow(
-                    color: MyThemeData.colorGrey.withOpacity(0.2),
+                    color: AppColors.colorGrey.withOpacity(0.2),
                     blurRadius: 18,
                   ),
               ]
@@ -222,9 +223,9 @@ class _CustomChartContainerState extends State<CustomChartContainer> {
                             style: AppFontStyle.cairoRegularStyle.copyWith(
                                 fontSize: FontConstants.fontSize022.h,
                                 color: themeController.currentTheme ==
-                                        MyThemeData.lightTheme
-                                    ? MyThemeData.colorBlack
-                                    : MyThemeData.colorWhiteDark,
+                                        AppColors.lightTheme
+                                    ? AppColors.colorBlack
+                                    : AppColors.colorWhiteDark,
                                 fontWeight: FontWeight.w600,
                                 height: 0.002.h),
                           ),

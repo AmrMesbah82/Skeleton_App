@@ -1,4 +1,5 @@
 import 'package:calendar_date_picker2/calendar_date_picker2.dart';
+import 'package:demo_app/core/custom_knowticed_dropdwon.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
@@ -6,7 +7,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/DatePicker.dart';
-import 'package:demo_app/core/custom_knowticed_dropdwon.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/theming/new_theme.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
@@ -147,7 +147,7 @@ class _EditAccessDetailsState extends State<EditAccessDetails> {
               children: [
 
                 // ── Role Dropdown ─────────────────────────────────────────
-                CustomKnowticedDropdown<String>(
+                Customdemo_appDropdown<String>(
                   labelEn: 'Role Type',
                   labelAr: 'نوع الدور',
                   hintEn: 'Select role',

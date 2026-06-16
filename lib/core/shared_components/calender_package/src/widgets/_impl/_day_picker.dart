@@ -442,11 +442,11 @@ class _DayPickerState extends State<_DayPicker> {
               borderRadius: BorderRadius.circular(6),
               border: Border.all(
                 color: isToday
-                    ? MyThemeData.switchSettings
+                    ? AppColors.switchSettings
                     : Colors.transparent,
               ),
               color: isSelected
-                  ? MyThemeData.switchSettings
+                  ? AppColors.switchSettings
                   : Colors.transparent,
             ),
             child: Container(
@@ -464,8 +464,8 @@ class _DayPickerState extends State<_DayPicker> {
              Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  if (hasInviteEvents == true) _buildDot(MyThemeData.unBlock),
-                  if (hasTodoItems == true) _buildDot(MyThemeData.warning),
+                  if (hasInviteEvents == true) _buildDot(AppColors.unBlock),
+                  if (hasTodoItems == true) _buildDot(AppColors.warning),
                   if (hasCards == true) _buildDot(AppColors.primary),
                   if (hasRequestedServices == true)
                     _buildDot(const Color(0xFF73A2FF)),

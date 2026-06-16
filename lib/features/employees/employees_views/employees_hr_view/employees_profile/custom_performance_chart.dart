@@ -1,11 +1,12 @@
 // ignore_for_file: unrelated_type_equality_checks, sized_box_for_whitespace, unused_local_variable
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/shared_components/custom_chart_data.dart';
 import 'package:demo_app/core/shared_components/custom_chart_values.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 
@@ -106,16 +107,16 @@ class _CustomPerformanceChartState extends State<CustomPerformanceChart> {
   // }
 
   final List<Color> customColors = [
-    MyThemeData.signOut,
-    MyThemeData.colorGrey,
-    MyThemeData.lightPrimary,
-    MyThemeData.colorGreydark,
-    MyThemeData.colorLightGrey,
-    MyThemeData.colorWhiteDark,
-    MyThemeData.colorGreyDisabled,
-    MyThemeData.colorDarkGrey,
+    AppColors.signOut,
+    AppColors.colorGrey,
+    AppColors.lightPrimary,
+    AppColors.colorGreydark,
+    AppColors.colorLightGrey,
+    AppColors.colorWhiteDark,
+    AppColors.colorGreyDisabled,
+    AppColors.colorDarkGrey,
   ];
-  //MyThemeData.colorGreydark,
+  //AppColors.colorGreydark,
 
   @override
   Widget build(BuildContext context) {
@@ -143,11 +144,11 @@ class _CustomPerformanceChartState extends State<CustomPerformanceChart> {
             ? Colors.transparent
             : Theme.of(context).colorScheme.inversePrimary,
         borderRadius: BorderRadius.circular(9),
-        boxShadow: themeController.currentTheme == MyThemeData.lightTheme
+        boxShadow: themeController.currentTheme == AppColors.lightTheme
             ? [
                 if (widget.isTransparent == false)
                   BoxShadow(
-                    color: MyThemeData.colorGrey.withOpacity(0.2),
+                    color: AppColors.colorGrey.withOpacity(0.2),
                     blurRadius: 18,
                   ),
               ]

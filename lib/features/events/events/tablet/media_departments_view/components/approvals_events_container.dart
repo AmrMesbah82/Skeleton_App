@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/model/survey_model.dart';
@@ -9,8 +10,8 @@ import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/notification/notification_controller.dart';
 import 'package:demo_app/features/events/components/row_icon_text.dart';
 import 'package:demo_app/features/events/controllers/employee_controller.dart';
@@ -168,8 +169,8 @@ class _ApprovalEventContainerState extends State<ApprovalEventContainer> {
                     dropdownWidth: isTablet ? 0.4.w : 0.9.w,
                     dropdownItems: ['Accepted'.tr, 'Rejected'.tr],
                     iconColor: widget.event.status! == "Accepted"
-                        ? MyThemeData.unBlock
-                        : MyThemeData.colorRed,
+                        ? AppColors.unBlock
+                        : AppColors.colorRed,
                     buttonPadding: EdgeInsets.symmetric(horizontal: 0.01.w),
                     buttonDecoration: BoxDecoration(
                         color: Theme.of(context).colorScheme.inversePrimary,
@@ -177,8 +178,8 @@ class _ApprovalEventContainerState extends State<ApprovalEventContainer> {
                         border: Border.all(
                             width: 1.5,
                             color: widget.event.status == "Accepted"
-                                ? MyThemeData.unBlock
-                                : MyThemeData.colorRed)
+                                ? AppColors.unBlock
+                                : AppColors.colorRed)
                         //  color: Theme.of(context).colorScheme.inversePrimary,
                         ),
                     onChanged: (value) {
@@ -333,14 +334,14 @@ class _ApprovalEventContainerState extends State<ApprovalEventContainer> {
                     children: [
                       Expanded(
                         child: CustomIconButton(
-                          textColor: MyThemeData.delete,
+                          textColor: AppColors.delete,
                           buttonColor:
                               Theme.of(context).colorScheme.inversePrimary,
                           buttonText: 'Reject',
                           imagePath: 'assets/icons/RejectionIcon.svg',
-                          imageColor: MyThemeData.delete,
+                          imageColor: AppColors.delete,
                           radius: 8,
-                          borderColor: MyThemeData.delete,
+                          borderColor: AppColors.delete,
                           onPressed: () {
                             setState(() {
                               widget.event.status = "Rejected".tr;
@@ -364,9 +365,9 @@ class _ApprovalEventContainerState extends State<ApprovalEventContainer> {
                         child: CustomIconButton(
                           buttonColor:
                               Theme.of(context).colorScheme.inversePrimary,
-                          textColor: MyThemeData.unBlock,
-                          borderColor: MyThemeData.unBlock,
-                          imageColor: MyThemeData.unBlock,
+                          textColor: AppColors.unBlock,
+                          borderColor: AppColors.unBlock,
+                          imageColor: AppColors.unBlock,
                           buttonText: 'Approve',
                           radius: 8,
                           imagePath: 'assets/icons/ApproveIcon.svg',

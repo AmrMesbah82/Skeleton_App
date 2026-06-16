@@ -2,6 +2,7 @@
 
 // Global permission variables
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -17,7 +18,6 @@ import 'package:demo_app/features/employees/presentation/ui/pages/position_detai
 import '../../../../../core/dummy_data/mode_changer.dart';
 import '../../../../../core/enumeration/enum.dart';
 import '../../../../../core/helper/haptic_controller.dart';
-import '../../../../../core/theme/my_theme.dart';
 import '../../../../../core/widgets/buttons/main_custom_icon_button.dart';
 // REMOVED_MODULE: import '../../../../controllers/users_access_controller.dart';
 import 'package:demo_app/core/widgets/custom_appbar.dart';
@@ -1110,9 +1110,9 @@ class _AddNewEmployeeScreenState extends State<AddNewEmployeeScreen> {
   /// Get next button style based on state
   ButtonStyle _getNextButtonStyle() {
     if (_isNextButtonDisabled()) {
-      return buttonStyle(MyThemeData.GreyBack);
+      return buttonStyle(AppColors.GreyBack);
     }
-    return buttonStyle(MyThemeData.signOut);
+    return buttonStyle(AppColors.signOut);
   }
 
   /// Save employee to database

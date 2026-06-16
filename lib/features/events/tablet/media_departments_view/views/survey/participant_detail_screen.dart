@@ -7,10 +7,10 @@ import 'package:demo_app/features/home/app_drawer/presentation/ui/pages/custom_d
 import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/constants/image_paths.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/events/components/survey_components/employee_detail_row.dart';
 import 'package:demo_app/features/events/components/survey_components/test_question_container.dart';
 

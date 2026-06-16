@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 // Stub: GroupEntity
@@ -25,7 +26,21 @@ class GroupEntity {
         primaryLanguageName = primaryLanguageName ?? name ?? '';
 }
 
+// Stub: MessagingConfigurations
+// Provides the theme-related hooks the app's ThemeController calls into.
+// These are no-ops in the stub build (the real messaging module is absent).
+class MessagingConfigurations {
+  void toggleTheme() {}
+
+  void initTheme(Color primary, Color secondary, bool isDark) {}
+
+  void updateBrandingColors(Color primary, Color secondary) {}
+}
+
 // Stub: MessagingInitController
 class MessagingInitController extends GetxController {
+  final MessagingConfigurations messagingConfigurations =
+      MessagingConfigurations();
+
   List<GroupEntity> getUserGroups() => [];
 }

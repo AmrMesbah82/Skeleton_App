@@ -4,7 +4,7 @@ import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/features/employees/presentation/ui/pages/additionalInformation_container.dart';
 import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:demo_app/features/employees/presentation/ui/pages/add_new_employee_view.dart';
 

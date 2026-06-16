@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
 class ReusableElevatedButton extends StatelessWidget {
@@ -32,7 +33,7 @@ class ReusableElevatedButton extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: MyThemeData.bubbleColor,
+          backgroundColor: AppColors.bubbleColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(8.0),
           ),
@@ -57,7 +58,7 @@ class ReusableElevatedButton extends StatelessWidget {
                 fontSize: isSign == true
                     ? FontConstants.fontSize024.h
                     : !isVertical ? FontConstants.fontSize025.h : FontConstants.fontSize019.h,
-                color: MyThemeData().contrastColor(),
+                color: AppColors.textButton,
                 fontWeight: FontWeight.w600,
               ),
             ),

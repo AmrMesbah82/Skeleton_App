@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
 
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 /// Date Created :27/November/2023
 /// Developer Name : Bassem Mohamed
@@ -31,11 +32,11 @@ class PermissionsHeader extends StatefulWidget {
 class _PermissionsHeaderState extends State<PermissionsHeader> {
   final TextStyle unselectedStyle = AppFontStyle.cairoRegularStyle.copyWith(
     fontSize: FontConstants.fontSize026.h,
-    color: MyThemeData.colorGrey,
+    color: AppColors.colorGrey,
     fontWeight: FontWeight.w400,
   );
   final TextStyle selectedStyle = AppFontStyle.cairoRegularStyle.copyWith(
-    color: MyThemeData.lightPrimary,
+    color: AppColors.lightPrimary,
     /*Theme.of(context).colorScheme.onInverseSurface,*/
     fontWeight: FontWeight.w800,
     fontSize: FontConstants.fontSize026.h,
@@ -172,7 +173,7 @@ class _PermissionsHeaderState extends State<PermissionsHeader> {
               Container(
                 width: Get.locale.toString().contains('en') ? 0.044.w : 0.055.w,
                 color: widget.selectedIndex == 0
-                    ? MyThemeData.lightPrimary
+                    ? AppColors.lightPrimary
                     : Colors.transparent,
               ),
               Container(
@@ -182,7 +183,7 @@ class _PermissionsHeaderState extends State<PermissionsHeader> {
               Container(
                 width: Get.locale.toString().contains('en') ? 0.078.w : 0.06.w,
                 color: widget.selectedIndex == 1
-                    ? MyThemeData.lightPrimary
+                    ? AppColors.lightPrimary
                     : Colors.transparent,
               ),
               Container(
@@ -192,7 +193,7 @@ class _PermissionsHeaderState extends State<PermissionsHeader> {
               Container(
                 width: Get.locale.toString().contains('en') ? 0.035.w : 0.04.w,
                 color: widget.selectedIndex == 2
-                    ? MyThemeData.lightPrimary
+                    ? AppColors.lightPrimary
                     : Colors.transparent,
               ),
               Container(
@@ -202,7 +203,7 @@ class _PermissionsHeaderState extends State<PermissionsHeader> {
               Container(
                 width: Get.locale.toString().contains('en') ? 0.033.w : 0.047.w,
                 color: widget.selectedIndex == 3
-                    ? MyThemeData.lightPrimary
+                    ? AppColors.lightPrimary
                     : Colors.transparent,
               ),
               Container(
@@ -212,7 +213,7 @@ class _PermissionsHeaderState extends State<PermissionsHeader> {
               Container(
                 width: Get.locale.toString().contains('en') ? 0.059.w : 0.045.w,
                 color: widget.selectedIndex == 4
-                    ? MyThemeData.lightPrimary
+                    ? AppColors.lightPrimary
                     : Colors.transparent,
               ),
               Container(
@@ -222,7 +223,7 @@ class _PermissionsHeaderState extends State<PermissionsHeader> {
               Container(
                 width: Get.locale.toString().contains('en') ? 0.06.w : 0.03.w,
                 color: widget.selectedIndex == 5
-                    ? MyThemeData.lightPrimary
+                    ? AppColors.lightPrimary
                     : Colors.transparent,
               ),
               Container(
@@ -232,7 +233,7 @@ class _PermissionsHeaderState extends State<PermissionsHeader> {
               Container(
                 width: Get.locale.toString().contains('en') ? 0.051.w : 0.035.w,
                 color: widget.selectedIndex == 6
-                    ? MyThemeData.lightPrimary
+                    ? AppColors.lightPrimary
                     : Colors.transparent,
               ),
             ],

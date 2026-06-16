@@ -9,14 +9,13 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:lottie/lottie.dart';
 import 'package:demo_app/core/shared_components/timeline_widget.dart';
 import '../../theme/app_colors.dart';
 import '../../../generated/l10n.dart';
-import '../../theme/my_theme.dart';
-import '../../theme/screen_size.dart';
+
 
 class CustomLogOutDialogBox extends StatelessWidget {
   final String title;
@@ -52,7 +51,7 @@ class CustomLogOutDialogBox extends StatelessWidget {
       ButtonStyle buttonStyle(Color buttonColor) {
  
     return ElevatedButton.styleFrom(
-        backgroundColor: buttonColor, //MyThemeData.bubbleColor,
+        backgroundColor: buttonColor, //AppColors.bubbleColor,
         minimumSize: isTablet ? Size(0.1.w, (isPortrait? 0.045.h : 0.06.h)) : Size(0.3.w, 0.04.h),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)));
   }

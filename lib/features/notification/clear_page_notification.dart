@@ -766,7 +766,7 @@ class _NotificationContentState extends State<_NotificationContent> {
             width: isMobile ? 35.sp : 45.sp,
             height: isMobile ? 35.sp : 45.sp,
             decoration: BoxDecoration(
-              color: light ? (isSelected ? AppColors.primary : ColorAppLight.whiteColor) : (isSelected ? AppColors.primary : ColorAppDark.chatBackground),
+              color: light ? (isSelected ? AppColors.primary : AppColors.card) : (isSelected ? AppColors.primary : AppColors.card),
               borderRadius: BorderRadius.circular(4.r),
             ),
             child: Center(
@@ -775,12 +775,12 @@ class _NotificationContentState extends State<_NotificationContent> {
                 style: isMobile
                     ? StyleText.fontSize14Weight400.copyWith(
                     color: light
-                        ? (isSelected ? ColorAppLight.buttonTextColor : ColorAppLight.grayTextSla)
-                        : (isSelected ? ColorAppLight.buttonTextColor : ColorAppDark.titleKey))
+                        ? (AppColors.secondaryText)
+                        : (isSelected ? AppColors.textButton : AppColors.text))
                     : StyleText.fontSize20Weight500.copyWith(
                     color: light
-                        ? (isSelected ? ColorAppLight.buttonTextColor : ColorAppLight.grayTextSla)
-                        : (isSelected ? ColorAppLight.buttonTextColor : ColorAppDark.titleKey)),
+                        ? (isSelected ? AppColors.textButton : AppColors.secondaryText)
+                        : (isSelected ? AppColors.textButton : AppColors.text))
               ),
             ),
           ),

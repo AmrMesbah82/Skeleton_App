@@ -9,12 +9,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/country_picker_dialog.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
+
+
 import 'package:demo_app/core/widgets/intl_phone_field.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
 import 'package:demo_app/core/helper/validator.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 
 import 'package:demo_app/core/shared_components/countries.dart';
@@ -177,8 +177,8 @@ class _ContactInformationState extends State<ContactInformation> {
                             S.of(context).phoneNumber,
                             style: StyleText.fontSize14Weight400.copyWith(
                                 color: lightMode
-                                    ? ColorAppLight.blackButton
-                                    : ColorAppDark.titleValue),
+                                    ? AppColors.blackButton
+                                    : AppColors.white),
                           ),
                           SizedBox(height: 6.h),
 
@@ -255,8 +255,8 @@ class _ContactInformationState extends State<ContactInformation> {
                               style: StyleText.fontSize14Weight400
                                   .copyWith(
                                   color: lightMode
-                                      ? ColorAppLight.blackButton
-                                      : ColorAppDark.titleValue),
+                                      ? AppColors.blackButton
+                                      : AppColors.white),
                             ),
                             SizedBox(height: 6.h),
                             // Phone Fields Row

@@ -166,7 +166,7 @@ class CustomValidatedTextFieldMaster extends StatelessWidget {
                       fontSize: 10.sp,
                       fontWeight: FontWeight.w700,
                       height: 1.1,
-                      color: ColorAppLight.redColor,
+                      color: AppColors.red,
                     ),
                   ),
                 )
@@ -425,8 +425,8 @@ class CustomValidatedTextFieldInv extends StatelessWidget {
               hintText: hint,
               hintStyle: StyleText.fontSize12Weight500.copyWith(
                 color: lightMode
-                    ? ColorAppLight.grayTextSla
-                    : ColorAppDark.darkGrey,
+                    ? AppColors.secondaryText
+                    : AppColors.darkGrey,
               ),
               filled: true,
               fillColor: fillColor ?? AppColors.background,

@@ -1,12 +1,13 @@
 import 'package:demo_app/features/events/events/controllers/survey_controller.dart/model/survey_model.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/core/shared_components/requests_filter_appbar.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/notification/notification_controller.dart';
 import 'package:demo_app/features/events/components/survey_components/delete_member_dialog.dart';
 
@@ -44,13 +45,13 @@ class _ParticipantsContainerState extends State<ParticipantsContainer> {
   Color getStatusColor(String status) {
     switch (status.toLowerCase()) {
       case 'responded':
-        return MyThemeData.unBlock;
+        return AppColors.unBlock;
       case 'pending':
-        return MyThemeData.warning;
+        return AppColors.warning;
       case 'started':
-        return MyThemeData.lightPrimary;
+        return AppColors.lightPrimary;
       default:
-        return MyThemeData.unBlock;
+        return AppColors.unBlock;
     }
   }
 
@@ -148,7 +149,7 @@ class _ParticipantsContainerState extends State<ParticipantsContainer> {
                                   ? FontConstants.fontSize012.h
                                   : FontConstants.fontSize012.w
                               : FontConstants.fontSize015.h,
-                          color: MyThemeData.textGrey,
+                          color: AppColors.textGrey,
                           fontWeight: FontWeight.w600),
                     ),
                   ),
@@ -185,7 +186,7 @@ class _ParticipantsContainerState extends State<ParticipantsContainer> {
                                         ? FontConstants.fontSize010.h
                                         : FontConstants.fontSize012.w
                                     : FontConstants.fontSize015.h,
-                                color: MyThemeData.textGrey,
+                                color: AppColors.textGrey,
                                 height: 1.6,
                                 fontWeight: FontWeight.w600),
                           ),
@@ -243,7 +244,7 @@ class _ParticipantsContainerState extends State<ParticipantsContainer> {
                                               isPortrait ? 0.025.h : 0.035.h)
                                           : Size(
                                               0.35.w, isPortrait ? 0.045.h : 0),
-                                      backgroundColor: MyThemeData.signOut,
+                                      backgroundColor: AppColors.signOut,
                                       shape: const RoundedRectangleBorder(
                                           borderRadius: BorderRadius.all(
                                         Radius.circular(6),

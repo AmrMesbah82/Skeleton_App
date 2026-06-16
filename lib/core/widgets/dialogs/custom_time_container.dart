@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 class CustomTimeContainer extends StatelessWidget {
   final String text;
@@ -24,9 +25,9 @@ class CustomTimeContainer extends StatelessWidget {
         width: 0.2.w,
         decoration: BoxDecoration(
           color:
-              isActive == true ? MyThemeData.lightPrimary : Colors.transparent,
+              isActive == true ? AppColors.lightPrimary : Colors.transparent,
           borderRadius: BorderRadius.circular(8),
-          border: Border.all(color: MyThemeData.lightPrimary),
+          border: Border.all(color: AppColors.lightPrimary),
         ),
         padding: EdgeInsets.all(0.01.h),
         alignment: Alignment.center,
@@ -42,7 +43,7 @@ class CustomTimeContainer extends StatelessWidget {
                letterSpacing: Get.locale.toString().contains('en')
                                       ?  1.1 :null,
               color: isActive == true
-                  ? MyThemeData.colorWhite
+                  ? AppColors.colorWhite
                   : Theme.of(context).colorScheme.inverseSurface,
               height: 1.8),
         ),

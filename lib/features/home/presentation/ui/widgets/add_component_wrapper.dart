@@ -56,7 +56,7 @@ class AddComponentWrapper extends StatelessWidget {
                     Text(
                       'SLA',
                         style: StyleText.fontSize12Weight500.copyWith(
-                            color: Theme.of(context).brightness==Brightness.light?ColorAppLight.blackButton : ColorAppDark.titleValue
+                            color: Theme.of(context).brightness==Brightness.light?AppColors.blackButton : AppColors.white
                         )
                     ),
                   ],

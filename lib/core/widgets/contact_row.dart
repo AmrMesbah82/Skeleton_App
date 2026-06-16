@@ -4,6 +4,7 @@
 // Date of Last Edit :19/November/2023
 // Objectives: this is a widget to customize the contact data and role in the group in messages screen
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
@@ -11,9 +12,9 @@ import 'package:demo_app/core/widgets/buttons/custom_icon_button.dart';
 
 
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 
 // ignore: must_be_immutable
 class ContactRow extends StatefulWidget {
@@ -144,7 +145,7 @@ class _ContactRowState extends State<ContactRow> {
                      // iconHeight: 0.029.h,
                       buttonStyle: ElevatedButton.styleFrom(
                         minimumSize:isTablet ? (isPortrait ? Size(0.086.w, 0.035.h) :   Size(0.086.w, 0.05.h) ) : Size(0.086.w, 0.04.h),
-                        backgroundColor: MyThemeData.signOut,
+                        backgroundColor: AppColors.signOut,
                         shape: const RoundedRectangleBorder(
                             borderRadius: BorderRadius.all(
                           Radius.circular(8),

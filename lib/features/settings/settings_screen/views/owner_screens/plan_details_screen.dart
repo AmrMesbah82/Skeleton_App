@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
@@ -8,10 +9,10 @@ import 'package:demo_app/core/widgets/modal_bottom_sheets.dart';
 import 'package:demo_app/core/widgets/points_card.dart';
 import 'package:demo_app/core/widgets/buttons/yellow_elevated_button.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
+
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/features/settings/settings_screen/views/owner_screens/subscribes_and_services_screen.dart';
 
@@ -19,7 +20,7 @@ import 'package:demo_app/features/settings/settings_screen/views/owner_screens/s
 
 ///  Developer's Name: Bassel Attia
 ///  Date: 11/7/2023
-///  App Version : Knowticed V1
+///  App Version : demo_app V1
 ///  Date of Last Edit: 11/7/2023
 ///
 /// Shows up when clicking on "Choose Plan" button in SubscribesAndServicesScreen.
@@ -65,7 +66,7 @@ class PlanDetailsScreen extends StatelessWidget with ModalBottomSheets {
                         scale: 0.0015.h,
                         child: Container(
                            decoration: BoxDecoration(
-                            color: MyThemeData.signOut,
+                            color: AppColors.signOut,
                             borderRadius: BorderRadius.circular(8), 
                           ),
                           child: Transform.scale(
@@ -130,7 +131,7 @@ class AlreadySubscribedColumn extends StatelessWidget {
   final int? daysUntilRenewal;
   final Plans? nextPlan;
   bool isLightTheme =
-      Get.put(ThemeController()).currentTheme.value == MyThemeData.lightTheme;
+      Get.put(ThemeController()).currentTheme.value == AppColors.lightTheme;
   @override
   Widget build(BuildContext context) {
     final isTablet = MediaQuery.of(context).size.shortestSide > 600;
@@ -155,7 +156,7 @@ class AlreadySubscribedColumn extends StatelessWidget {
                           orientation == Orientation.portrait
                               ? 0.042.h
                               : 0.049.h),
-                      backgroundColor: MyThemeData.signOut,
+                      backgroundColor: AppColors.signOut,
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(
                         Radius.circular(6),
@@ -180,7 +181,7 @@ class AlreadySubscribedColumn extends StatelessWidget {
                               : 0.051.h)
                       : Size(0.94.w, 0.060.h),
                   backgroundColor:
-                      isLightTheme ? MyThemeData.colorBlack : MyThemeData.dark,
+                      isLightTheme ? AppColors.colorBlack : AppColors.dark,
                   shape: const RoundedRectangleBorder(
                       borderRadius: BorderRadius.all(
                     Radius.circular(6),
@@ -213,8 +214,8 @@ class AlreadySubscribedColumn extends StatelessWidget {
                   fontSize: isTablet ? FontConstants.fontSize018.h : null,
                   decoration: TextDecoration.underline,
                   color: isLightTheme
-                      ? MyThemeData.colorGreyDisabled
-                      : MyThemeData.colorLightGrey),
+                      ? AppColors.colorGreyDisabled
+                      : AppColors.colorLightGrey),
             )),
       ],
     );
@@ -274,7 +275,7 @@ class SubscribeRow extends StatelessWidget with ModalBottomSheets {
                 ),
                 ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    backgroundColor: MyThemeData.signOut,
+                    backgroundColor: AppColors.signOut,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8),
                     ),
@@ -295,7 +296,7 @@ class SubscribeRow extends StatelessWidget with ModalBottomSheets {
                   child: Text(
                     "Subscribe".tr,
                     style: AppFontStyle.cairoRegularStyle.copyWith(
-                      color: MyThemeData.colorBlack,
+                      color: AppColors.colorBlack,
                       fontSize: orientation == Orientation.portrait
                           ? 0.019.h
                           : 0.026.h,
@@ -333,7 +334,7 @@ class SubscribeRow extends StatelessWidget with ModalBottomSheets {
                     text: Text(
                       "Subscribe".tr,
                       style: AppFontStyle.cairoRegularStyle.copyWith(
-                        color: MyThemeData.colorBlack,
+                        color: AppColors.colorBlack,
                         fontSize: 0.029.h,
                         fontWeight: FontWeight.w600,
                       ),

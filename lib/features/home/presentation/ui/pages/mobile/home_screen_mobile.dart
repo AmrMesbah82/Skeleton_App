@@ -9,9 +9,9 @@ import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/gradiant_container.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/upcoming_schedule_listview.dart';
-import 'package:demo_app/core/theme/font_manager.dart';
-import 'package:demo_app/core/theme/my_theme.dart';
-import 'package:demo_app/core/theme/screen_size.dart';
+
+
+import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/action_button_row.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
@@ -128,7 +128,7 @@ class _HomeScreenMobileState extends State< HomeScreenMobile> {
                                       },
                                       child: Container(
                                           decoration: BoxDecoration(
-                                            color: MyThemeData.signOut,
+                                            color: AppColors.signOut,
                                             borderRadius:
                                                 BorderRadius.circular(8),
                                           ),
