@@ -12,10 +12,10 @@ import 'package:demo_app/core/network/api_constants.dart';
 import 'package:demo_app/core/network/failure_model.dart';
 import 'package:demo_app/core/services/firebase/repository/firebase_repository.dart';
 import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
-import 'package:demo_app/features/roles/data/models/role_model.dart';
+import 'package:demo_app/features/roles/role_management/data/models/role_model.dart';
 
 import '../../../../employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
-import '../../../../roles/data/models/users_access_model.dart';
+import 'package:demo_app/features/roles/role_management/data/models/users_access_model.dart';
 
 class DemoRemoteDataSource {
   WriteBatch batch = FirebaseFirestore.instance.batch();

@@ -1,10 +1,13 @@
 // ignore_for_file: must_be_immutable, prefer_const_declarations, unused_local_variable, deprecated_member_use, duplicate_ignore, no_leading_underscores_for_local_identifiers, unrelated_type_equality_checks, sdk_version_since, use_build_context_synchronously
 
 import 'dart:io';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
+import 'package:demo_app/core/custom/3-custom_dropdwon_calander.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_reasponsive_filed.dart';
-import 'package:demo_app/features/inventory_module/core/drop_down.dart' hide CustomDropdownFormFieldCalender;
-import 'package:demo_app/features/services_mangment_module/core/custom_drop_down_calender.dart';
+import 'package:demo_app/core/widgets/services_management/custom_reasponsive_filed.dart';
+
+import 'package:demo_app/core/helper_module/inventory_module/core/drop_down.dart' hide CustomDropdownFormFieldCalender;
+import 'package:demo_app/core/custom/1-custom_dropdwon.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter/services.dart';
@@ -28,7 +31,7 @@ import '../../../../../../core/helper/format_helper.dart';
 // REMOVED_MODULE: import '../../../../../../external/inventory_module/core/text_field.dart';
 // REMOVED_MODULE: import '../../../../../../external/services_mangment_module/core/custom_drop_down_calender.dart';
 // REMOVED_MODULE: import '../../../../../../external/services_mangment_module/core/custom_reasponsive_filed.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+
 import '../../../controller/social_controller.dart';
 import '../settings_header.dart';
 
@@ -192,35 +195,32 @@ class _AcademicHistoryState extends State<AcademicHistory> {
                 // First Row: Degree + University
                 buildResponsiveFields(
                   context: context,
-                  left: CustomDropdownFormFieldFinal(
+                  left: CustomDropdown<String>(
                     label: FormatHelper.capitalize(S.of(context).graduationFrom),
-                    selectedValue: isValidDegree ? graduateFromValue : null,
-                    items: _getDegreeItems(),
+                    value: isValidDegree ? graduateFromValue : null,
+                    items: _getDegreeItems()
+                        .map((e) => DropdownItem<String>(
+                              value: e['key']!,
+                              label: e['value']!,
+                            ))
+                        .toList(),
                     onChanged: (value) {
-                      _updateAcademicField(lastIndex, 'graduateFrom', value ?? '');
-                      fieldSet['graduateFrom']!.text = value ?? '';
+                      _updateAcademicField(lastIndex, 'graduateFrom', value);
+                      fieldSet['graduateFrom']!.text = value;
                       setState(() {});
                     },
-                    widthIcon: 16,
-                    buttonPadding: EdgeInsets.symmetric(horizontal: 8.sp),
-                    heightIcon: 16,
-                    height: 36,
-                    hint: Text(
-                      FormatHelper.capitalize(S.of(context).chooseDegree),
-                      style: StyleText.fontSize10Weight500.copyWith(
-                        color: AppColors.secondaryText,
-                      ),
+                    hint: FormatHelper.capitalize(S.of(context).chooseDegree),
+                    hintStyle: StyleText.fontSize10Weight500.copyWith(
+                      color: AppColors.secondaryText,
                     ),
                   ),
-                  right: CustomValidatedTextFieldInv(
+                  right: CustomTextField(
                     label: FormatHelper.capitalize(S.of(context).universityOrInstitute),
                     hint: FormatHelper.capitalize(
                       isArabic ? 'اكتب هنا' : S.of(context).textHere,
                     ),
-                    height: 36,
                     textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
                     controller: fieldSet['university']!,
-                    autoCapitalize: true,
                     onChanged: (value) {
                       _updateAcademicField(lastIndex, 'university', value.trim());
                     },
@@ -232,30 +232,23 @@ class _AcademicHistoryState extends State<AcademicHistory> {
                 // Second Row: Graduation Year
                 buildResponsiveFields(
                   context: context,
-                  left: CustomDropdownFormFieldCalender(
-                    selectedValue: yearValue.isEmpty ? null : yearValue,
-                    items: List.generate(
-                      50,
-                          (i) {
-                        int year = DateTime.now().year - i;
-                        return {"key": year.toString(), "value": year.toString()};
-                      },
-                    ),
+                  left: CustomDropdownCalendar(
+                    value: yearValue.isEmpty
+                        ? null
+                        : DateTime(int.tryParse(yearValue) ?? DateTime.now().year),
+                    firstDate: DateTime(DateTime.now().year - 49),
+                    lastDate: DateTime(DateTime.now().year, 12, 31),
+                    dateFormatter: (d) => d.year.toString(),
                     onChanged: (value) {
-                      _updateAcademicField(lastIndex, 'yearOfGraduation', value ?? '');
-                      fieldSet['yearOfGraduation']!.text = value ?? '';
+                      final year = value?.year.toString() ?? '';
+                      _updateAcademicField(lastIndex, 'yearOfGraduation', year);
+                      fieldSet['yearOfGraduation']!.text = year;
                       setState(() {});
                     },
-                    widthIcon: 16,
-                    heightIcon: 16,
-                    height: 36,
                     label: FormatHelper.capitalize(S.of(context).graduationYear),
-                    spaceHeight: 6,
-                    hint: Text(
-                      FormatHelper.capitalize('Select Date'.tr),
-                      style: StyleText.fontSize10Weight500.copyWith(
-                        color: AppColors.secondaryText,
-                      ),
+                    hint: FormatHelper.capitalize('Select Date'.tr),
+                    hintStyle: StyleText.fontSize10Weight500.copyWith(
+                      color: AppColors.secondaryText,
                     ),
                   ),
                   right: Center(),

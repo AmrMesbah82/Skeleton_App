@@ -11,7 +11,7 @@ import 'package:demo_app/features/employee/data/models/emplyees_model/new_employ
 
 import '../../../../../core/network/failure_model.dart';
 import '../../../../employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
-import '../../../domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import '../data/system_logs_remote_data_source.dart';
 import '../models/system_logs_model.dart';
 

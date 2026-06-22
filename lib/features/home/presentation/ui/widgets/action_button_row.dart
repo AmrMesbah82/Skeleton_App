@@ -7,11 +7,11 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/features/task_management_module/borad/view/board_create/create_board_screen.dart';
-import 'package:demo_app/features/task_management_module/core/components/dialogs/create_board_dialog.dart';
+import 'package:demo_app/core/helper_module/task_management_module/borad/view/board_create/create_board_screen.dart';
+import 'package:demo_app/core/helper_module/task_management_module/core/components/dialogs/create_board_dialog.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/rounded_image_text_container.dart';
-import 'package:demo_app/features/roles/presentation/ui/pages/role_responsive_page.dart';
-import 'package:demo_app/features/roles/presentation/ui/pages/role_screen.dart';
+import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_responsive_page.dart';
+import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_screen.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -20,7 +20,7 @@ import '../../../../../core/theme/app_text_styles.dart';
 import '../../../../../core/theme/app_colors.dart';
 import '../../../app_drawer/presentation/controller/drawer_controller.dart';
 import '../../../nav_bar/presentation/controller/nav_bar_controller.dart';
-import '../../../../roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import '../../controller/skeleton_home_controller.dart';
 
 class ActionButtonsRow extends StatelessWidget {

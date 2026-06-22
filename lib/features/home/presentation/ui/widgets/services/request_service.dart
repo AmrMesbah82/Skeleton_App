@@ -1,4 +1,5 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:demo_app/core/constants/services_management/constant.dart';
 import 'package:demo_app/core/helper/helper_function.dart';
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
 import 'package:flutter/material.dart';
@@ -7,7 +8,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/custom_button.dart';
 import 'package:demo_app/core/widgets/standard_container.dart';
-import 'package:demo_app/features/services_mangment_module/core/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:demo_app/features/home/data/models/home_component_model.dart';
 
 import '../../../../../../../../../generated/l10n.dart';

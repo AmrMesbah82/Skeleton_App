@@ -1,6 +1,7 @@
 import 'package:demo_app/core/widgets/side_frame_master.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
@@ -716,12 +717,11 @@ class _DetailsRequestSettingsState extends State<DetailsRequestSettings> {
           ),
         ),
         SizedBox(height: 15.h),
-        CustomValidatedTextFieldMaster(
+        CustomTextField(
           label: _getFieldLabel(fieldName),
           hint: _getFieldLabel(fieldName),
           controller: TextEditingController(text: value.isEmpty ? '-' : value),
           enabled: false,
-          submitted: submitted,
           fillColor: title.contains('current') || title.contains('الحالية')
               ? (lightMode ? AppColors.background : AppColors.background)
               : null,
@@ -742,16 +742,13 @@ class _DetailsRequestSettingsState extends State<DetailsRequestSettings> {
         padding: EdgeInsets.all(15.sp),
         child: Column(
           children: [
-            CustomValidatedTextFieldMaster(
+            CustomTextField(
               hint: S.of(context).requestNote,
               controller: requestNoteController,
               enabled: false,
               label: S.of(context).requestNote,
-              submitted: submitted,
               maxLines: 3,
-              height: 72,
               textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
-              showCharCount: true,
             ),
             SizedBox(height: 20.h),
 

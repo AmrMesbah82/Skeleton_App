@@ -1,9 +1,9 @@
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../../core/theme/app_colors.dart';
-import '../../../../services_mangment_module/core/new_theme.dart';
 
 class CategoryFilterChips extends StatelessWidget {
   final String selectedCategory;

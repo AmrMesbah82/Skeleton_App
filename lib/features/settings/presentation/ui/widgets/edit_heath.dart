@@ -5,13 +5,13 @@
 /// Updated: Editable fields for health insurance information with controllers passed from parent
 
 import 'package:flutter/cupertino.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/settings_header.dart';
 
 import '../../../../../generated/l10n.dart';
 import '../../../../../core/theme/app_colors.dart';
-import '../../../../services_mangment_module/core/custom_textformfield.dart';
 import '../../controller/settings_controller.dart';
 
 class EditableHealthInsuranceSection extends StatelessWidget {
@@ -46,50 +46,42 @@ class EditableHealthInsuranceSection extends StatelessWidget {
         isMobile
             ? Column(
           children: [
-            CustomValidatedTextFieldMaster(
+            CustomTextField(
               label: 'Insurance Name'.tr,
               hint: 'Enter Insurance Name'.tr,
               controller: insuranceNameController,
-              height: 36,
               fillColor: AppColors.background,
               enabled: true,
-              submitted: false,
             ),
             isMobile ? SizedBox(height: 0,) : SizedBox(height: 16),
-            CustomValidatedTextFieldMaster(
+            CustomTextField(
               label: S.of(context).insurancePolicyNumber,
               hint: 'Enter Policy Number'.tr,
               controller: insurancePolicyNumberController,
-              height: 36,
               fillColor: AppColors.card,
               enabled: true,
-              submitted: false,
             ),
           ],
         )
             : Row(
           children: [
             Expanded(
-              child: CustomValidatedTextFieldMaster(
+              child: CustomTextField(
                 label: 'Insurance Name'.tr,
                 hint: 'Enter Insurance Name'.tr,
                 controller: insuranceNameController,
-                height: 36,
                 fillColor: AppColors.card,
                 enabled: true,
-                submitted: false,
               ),
             ),
             SizedBox(width: 12),
             Expanded(
-              child: CustomValidatedTextFieldMaster(
+              child: CustomTextField(
                 label: S.of(context).insurancePolicyNumber,
                 hint: 'Enter Policy Number'.tr,
                 controller: insurancePolicyNumberController,
-                height: 36,
                 enabled: true,
                 fillColor: AppColors.card,
-                submitted: false,
               ),
             ),
           ],

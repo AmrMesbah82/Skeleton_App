@@ -10,7 +10,7 @@ import 'package:demo_app/features/department/presentation/controller/add_departm
 import 'package:demo_app/features/onboarding/authentication/domain/enums/employee_status_enum.dart';
 
 import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
-import '../../../utils/constants.dart';
+import 'package:demo_app/features/roles/role_management/utils/constants.dart';
 
 class AccountStatusAccessEntity {
   String employeeId;
@@ -51,7 +51,6 @@ class AccountStatusAccessEntity {
 
   static AccountStatusAccessEntity fromEmployeeModelHistory(
       NewEmployeeModelHistory employeeModel) {
-    print(employeeModel.id);
     String? photo;
 
     if (employeeModel.photo.isNotEmpty) {

@@ -4,6 +4,7 @@
 /// Author: Mohamed Elrashidy
 /// Created at: 25/12/2024
 import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/widgets/services_management/custom_filter.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -25,7 +26,6 @@ import '../../../../../../core/widgets/grc/custom_button_with_image.dart';
 // REMOVED_MODULE: import '../../../../../../external/knowledge_hub_module/core/theming/new_theme.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import '../../../../../../core/theme/app_theme.dart';
-import '../../../../../services_mangment_module/core/custom_filter.dart';
 import '../../../controller/employee_controller.dart';
 import '../../widgets/add_depratment_dialog.dart';
 import '../../widgets/employee_card.dart';

@@ -7,6 +7,7 @@
 /// Changes: Updated to fetch data from NewEmployeeModelHistory model
 
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
@@ -21,7 +22,6 @@ import '../../../../../core/widgets/intl_phone_field.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
 import '../../../../employee/presentation/controller/main_core_employee_controller.dart';
-import '../../../../services_mangment_module/core/custom_textformfield.dart';
 import '../../../../employees/presentation/controller/employee_controller.dart';
 import 'settings_header.dart';
 
@@ -84,27 +84,23 @@ class HealthInsuranceSection extends StatelessWidget {
 
 
           // Insurance Name Field
-          CustomValidatedTextFieldMaster(
+          CustomTextField(
             label: S.of(context).insuranceName,
             hint: '-',
             controller: insuranceNameController,
             enabled: false,
-            submitted: false, // ✅ Disable validation
-            height: 36,
-            textDirection: TextDirection.ltr, // ✅ Force LTR
+            textDirection: TextDirection.ltr,
             maxLength: 100,
           ),
                  isMobile ? SizedBox(height: 0,) : SizedBox(height: 10.h),
           // Policy Number Field
-          CustomValidatedTextFieldMaster(
+          CustomTextField(
             label: S.of(context).insurancePolicyNumber,
             hint: "-",
             controller: policyNumberController,
             enabled: false,
-            submitted: false, // ✅ Disable validation
-            textAlign: TextAlign.left, // ✅ Force left align
-            height: 36,
-            textDirection: TextDirection.ltr, // ✅ Force LTR
+            textAlign: TextAlign.left,
+            textDirection: TextDirection.ltr,
           ),
                 ],
               ),
@@ -124,28 +120,24 @@ class HealthInsuranceSection extends StatelessWidget {
           children: [
             // Insurance Name Field
             Expanded(
-              child: CustomValidatedTextFieldMaster(
+              child: CustomTextField(
                 label: S.of(context).insuranceName,
                 hint: "-",
                 controller: insuranceNameController,
                 enabled: false,
-                submitted: false, // ✅ Disable validation
-                height: 36,
-                textDirection: TextDirection.ltr, // ✅ Force LTR
+                textDirection: TextDirection.ltr,
                 maxLength: 100,
               ),
             ),
             SizedBox(width: 15.h),
             // Policy Number Field
             Expanded(
-              child: CustomValidatedTextFieldMaster(
+              child: CustomTextField(
                 label: S.of(context).insurancePolicyNumber,
                 hint: "-",
                 controller: policyNumberController,
                 enabled: false,
-                submitted: false, // ✅ Disable validation
-                height: 36,
-                textDirection: TextDirection.ltr, // ✅ Force LTR
+                textDirection: TextDirection.ltr,
                 maxLength: 100,
               ),
             ),

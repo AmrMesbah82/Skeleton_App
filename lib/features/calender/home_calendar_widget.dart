@@ -1,3 +1,4 @@
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -5,8 +6,8 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/helper/circle_progress.dart';
 import 'package:demo_app/core/widgets/circle_progress.dart';
 import 'package:demo_app/core/widgets/grc/svg_custom_grc.dart';
-import 'package:demo_app/features/data_grc_module/grc_module/grc_owner/presentation/ui/preview_creation.dart';
-import 'package:demo_app/features/services_mangment_module/core/new_theme.dart';
+import 'package:demo_app/core/helper_module/data_grc_module/grc_module/grc_owner/presentation/ui/preview_creation.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:intl/intl.dart';
 import 'package:demo_app/features/calender/calendar_screen.dart';
@@ -19,7 +20,7 @@ import '../../generated/l10n.dart';
 import '../notification/notification_control.dart';
 import '../../core/widgets/grc/custom_button_with_image.dart';
 import '../employee/presentation/controller/main_core_employee_controller.dart';
-import '../roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 
 class HomeCalendarWidget extends StatefulWidget {
   final Function(DateTime)? onDateSelected;

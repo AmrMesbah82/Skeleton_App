@@ -1351,6 +1351,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "downloads": MessageLookupByLibrary.simpleMessage("Downloads"),
     "draft": MessageLookupByLibrary.simpleMessage("Draft"),
     "draftSaved": MessageLookupByLibrary.simpleMessage("Draft Saved"),
+    "draftSavedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "Draft saved successfully!",
+    ),
     "draftService": MessageLookupByLibrary.simpleMessage("Draft Service"),
     "dragDropFilesHere": MessageLookupByLibrary.simpleMessage(
       "Drag and drop files here",
@@ -1388,6 +1391,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "editControlScreenNotImplemented": MessageLookupByLibrary.simpleMessage(
       "Edit control screen not implemented yet",
     ),
+    "editFileName": MessageLookupByLibrary.simpleMessage("Edit File Name"),
     "editGroup": MessageLookupByLibrary.simpleMessage("Edit Group"),
     "editMessage": MessageLookupByLibrary.simpleMessage("Edit Message"),
     "editPolicy": MessageLookupByLibrary.simpleMessage("Edit Policy"),
@@ -1574,6 +1578,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "errorLoadingDashboard": MessageLookupByLibrary.simpleMessage(
       "Error loading dashboard",
     ),
+    "errorLoadingServices": MessageLookupByLibrary.simpleMessage(
+      "Error loading services",
+    ),
     "errorLoadingStatistics": MessageLookupByLibrary.simpleMessage(
       "Error loading statistics",
     ),
@@ -1684,11 +1691,17 @@ class MessageLookup extends MessageLookupByLibrary {
     "failedToCreateKnowledgeHub": MessageLookupByLibrary.simpleMessage(
       "Failed to create knowledge hub",
     ),
+    "failedToCreateServiceRequest": MessageLookupByLibrary.simpleMessage(
+      "Failed to create service request. Please try again.",
+    ),
     "failedToDownloadFile": MessageLookupByLibrary.simpleMessage(
       "FailedToDownloadFile",
     ),
     "failedToLoadDepartments": MessageLookupByLibrary.simpleMessage(
       "Failed to load departments",
+    ),
+    "failedToLoadServiceData": MessageLookupByLibrary.simpleMessage(
+      "Failed to load service data",
     ),
     "failedToPickImage": MessageLookupByLibrary.simpleMessage(
       "Failed to pick image",
@@ -2039,6 +2052,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "limitedDepartmentAvailability": MessageLookupByLibrary.simpleMessage(
       "Limited Department Availability",
     ),
+    "loadMore": MessageLookupByLibrary.simpleMessage("Load more"),
     "loading": MessageLookupByLibrary.simpleMessage("Loading..."),
     "loadingDashboard": MessageLookupByLibrary.simpleMessage(
       "Loading dashboard...",
@@ -2286,6 +2300,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "noLocationsFound": MessageLookupByLibrary.simpleMessage(
       "No Locations Found",
     ),
+    "noMoreResults": MessageLookupByLibrary.simpleMessage("No more results"),
     "noOfControls": MessageLookupByLibrary.simpleMessage("No of Controls"),
     "noOrdersFound": MessageLookupByLibrary.simpleMessage("No orders found"),
     "noPermissionNeeded": MessageLookupByLibrary.simpleMessage(
@@ -2294,11 +2309,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "noResourcesDataAvailable": MessageLookupByLibrary.simpleMessage(
       "No resources data available",
     ),
+    "noResults": MessageLookupByLibrary.simpleMessage("No results"),
     "noRolesToExport": MessageLookupByLibrary.simpleMessage(
       "No roles to export",
     ),
     "noSearchResults": MessageLookupByLibrary.simpleMessage(
       "No Search Results",
+    ),
+    "noServicesFound": MessageLookupByLibrary.simpleMessage(
+      "No services found",
     ),
     "noStatisticsAvailable": MessageLookupByLibrary.simpleMessage(
       "No statistics available",
@@ -2646,6 +2665,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "processingData": MessageLookupByLibrary.simpleMessage(
       "Processing your data, please wait",
     ),
+    "processingFile": MessageLookupByLibrary.simpleMessage(
+      "Processing file...",
+    ),
     "processingRequest": MessageLookupByLibrary.simpleMessage(
       "Processing request...",
     ),
@@ -2744,6 +2766,7 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recording": MessageLookupByLibrary.simpleMessage("Recording"),
     "red": MessageLookupByLibrary.simpleMessage("Red"),
+    "redirecting": MessageLookupByLibrary.simpleMessage("Redirecting..."),
     "registrationDocument": MessageLookupByLibrary.simpleMessage(
       "Registration Document",
     ),
@@ -2810,6 +2833,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "requestDetails": MessageLookupByLibrary.simpleMessage("Request Details"),
     "requestDone": MessageLookupByLibrary.simpleMessage("Request Done"),
+    "requestHasNoAssignedProvider": MessageLookupByLibrary.simpleMessage(
+      "This request has no assigned provider",
+    ),
     "requestID": MessageLookupByLibrary.simpleMessage("Request ID"),
     "requestId": MessageLookupByLibrary.simpleMessage("Request ID"),
     "requestInProgress": MessageLookupByLibrary.simpleMessage(
@@ -3208,6 +3234,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "status_inprogress": MessageLookupByLibrary.simpleMessage("In progress"),
     "status_pending": MessageLookupByLibrary.simpleMessage("Pending"),
     "status_rejected": MessageLookupByLibrary.simpleMessage("Rejected"),
+    "step2ServiceRequests": MessageLookupByLibrary.simpleMessage(
+      "Step 2: Service Requests",
+    ),
     "stock": MessageLookupByLibrary.simpleMessage("Stock"),
     "stocksOverview": MessageLookupByLibrary.simpleMessage("Stocks Overview"),
     "stolen": MessageLookupByLibrary.simpleMessage("Stolen"),

@@ -54,6 +54,126 @@ class S {
     return Localizations.of<S>(context, S);
   }
 
+  /// `Draft saved successfully!`
+  String get draftSavedSuccessfully {
+    return Intl.message(
+      'Draft saved successfully!',
+      name: 'draftSavedSuccessfully',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Edit File Name`
+  String get editFileName {
+    return Intl.message(
+      'Edit File Name',
+      name: 'editFileName',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Error loading services`
+  String get errorLoadingServices {
+    return Intl.message(
+      'Error loading services',
+      name: 'errorLoadingServices',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to create service request. Please try again.`
+  String get failedToCreateServiceRequest {
+    return Intl.message(
+      'Failed to create service request. Please try again.',
+      name: 'failedToCreateServiceRequest',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Failed to load service data`
+  String get failedToLoadServiceData {
+    return Intl.message(
+      'Failed to load service data',
+      name: 'failedToLoadServiceData',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Load more`
+  String get loadMore {
+    return Intl.message('Load more', name: 'loadMore', desc: '', args: []);
+  }
+
+  /// `No more results`
+  String get noMoreResults {
+    return Intl.message(
+      'No more results',
+      name: 'noMoreResults',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No results`
+  String get noResults {
+    return Intl.message('No results', name: 'noResults', desc: '', args: []);
+  }
+
+  /// `No services found`
+  String get noServicesFound {
+    return Intl.message(
+      'No services found',
+      name: 'noServicesFound',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Processing file...`
+  String get processingFile {
+    return Intl.message(
+      'Processing file...',
+      name: 'processingFile',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Redirecting...`
+  String get redirecting {
+    return Intl.message(
+      'Redirecting...',
+      name: 'redirecting',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Step 2: Service Requests`
+  String get step2ServiceRequests {
+    return Intl.message(
+      'Step 2: Service Requests',
+      name: 'step2ServiceRequests',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `This request has no assigned provider`
+  String get requestHasNoAssignedProvider {
+    return Intl.message(
+      'This request has no assigned provider',
+      name: 'requestHasNoAssignedProvider',
+      desc: '',
+      args: [],
+    );
+  }
+
   /// `App Theme`
   String get appTheme {
     return Intl.message('App Theme', name: 'appTheme', desc: '', args: []);

@@ -164,7 +164,6 @@ class _CustomCreateBoardContainerState
 
                     controllerState: (value) {
                       setState(() {
-                        print('value description ${value!}');
                       });
                     },
                     maxlength: 120,
@@ -235,7 +234,6 @@ class _CustomCreateBoardContainerState
 
                     controllerState: (value) {
                       setState(() {
-                        print('value description ${value!}');
                       });
                     },
                     maxlength: 120,

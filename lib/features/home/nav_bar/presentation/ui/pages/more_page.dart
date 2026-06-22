@@ -19,7 +19,7 @@ import 'package:demo_app/core/nav_bar_package.dart/functions.dart';
 
 import 'package:demo_app/core/shared_components/timeline_widget.dart';
 import '../../../../../../core/enumeration/enum.dart';
-import '../../../../../roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 
 class MorePage extends StatelessWidget {
   const MorePage({super.key});

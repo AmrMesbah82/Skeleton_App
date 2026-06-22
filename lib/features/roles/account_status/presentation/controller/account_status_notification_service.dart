@@ -22,7 +22,6 @@ class AccountStatusNotificationService {
   /// ✅ UPDATED: Correctly parses List structure for Role and Email
   static Future<List<String>> _getMasterAdminEmails() async {
     try {
-      print("🔍 Getting Master Admin emails...");
 
       QuerySnapshot employeesSnapshot = await _firestore
           .collection(getBaseUrl('Employees_Info'))
@@ -49,7 +48,6 @@ class AccountStatusNotificationService {
                 if (emailList.isNotEmpty) {
                   String email = emailList.last.toString();
                   masterAdminEmails.add(email);
-                  print("   ✅ Found Master Admin: $email");
                 }
               }
             }
@@ -57,11 +55,8 @@ class AccountStatusNotificationService {
         }
       }
 
-      print("✅ Total Master Admins found: ${masterAdminEmails.length}");
       return masterAdminEmails;
     } catch (e, stackTrace) {
-      print("❌ Error getting Master Admin emails: $e");
-      print("Stack trace: $stackTrace");
       return [];
     }
   }
@@ -73,9 +68,6 @@ class AccountStatusNotificationService {
     required String recipientEmail,
   }) async {
     try {
-      print("📤 Sending push notification to: $recipientEmail");
-      print("   Title: $title");
-      print("   Body: $body");
 
       // TODO: Replace with your actual notification service
       // Example:
@@ -85,10 +77,7 @@ class AccountStatusNotificationService {
       //   recipientEmail,
       // );
 
-      print("✅ Push notification sent");
     } catch (e, stackTrace) {
-      print("❌ Error sending push notification: $e");
-      print("Stack trace: $stackTrace");
     }
   }
 
@@ -102,8 +91,6 @@ class AccountStatusNotificationService {
     required String page,
   }) async {
     try {
-      print("💾 Saving notification to Firestore...");
-      print("   Receiver: $receiverEmail");
 
       final notificationModel = NotificationModelSystem(
         title: title,
@@ -121,10 +108,7 @@ class AccountStatusNotificationService {
           .collection(getBaseUrl('Notifications'))
           .add(notificationModel.toMap());
 
-      print("✅ Notification saved to Firestore");
     } catch (e, stackTrace) {
-      print("❌ Error saving notification to Firestore: $e");
-      print("Stack trace: $stackTrace");
     }
   }
 
@@ -151,9 +135,6 @@ class AccountStatusNotificationService {
     required String userName,
     String senderEmail = "system@company.com", // ✅ ADD WITH DEFAULT
   }) async {
-    print("\n🔔 ════════════════════════════════════════");
-    print("🔔 SENDING: Account Activated Notifications");
-    print("🔔 ════════════════════════════════════════");
 
     // Send to USER
     await _sendPushNotification(
@@ -190,8 +171,6 @@ class AccountStatusNotificationService {
       );
     }
 
-    print("✅ Account Activated notifications sent");
-    print("🔔 ════════════════════════════════════════\n");
   }
 
   /// 2. Account Deactivated (Manual)
@@ -201,10 +180,7 @@ class AccountStatusNotificationService {
     required String userName,
     String senderEmail = "system@company.com", // ✅ ADD THIS
   }) async {
-    print("\n🔔 ════════════════════════════════════════");
-    print("🔔 SENDING: Account Deactivated Notifications");
-    print("🔔 Sender: $senderEmail"); // ✅ ADD THIS
-    print("🔔 ════════════════════════════════════════");
+     // ✅ ADD THIS
 
     // Send to USER
     await _sendPushNotification(
@@ -241,8 +217,6 @@ class AccountStatusNotificationService {
       );
     }
 
-    print("✅ Account Deactivated notifications sent");
-    print("🔔 ════════════════════════════════════════\n");
   }
 
   /// 3. Account Unlocked
@@ -252,10 +226,7 @@ class AccountStatusNotificationService {
     required String userName,
     String senderEmail = "system@company.com", // ✅ ADD THIS
   }) async {
-    print("\n🔔 ════════════════════════════════════════");
-    print("🔔 SENDING: Account Unlocked Notifications");
-    print("🔔 Sender: $senderEmail"); // ✅ ADD THIS
-    print("🔔 ════════════════════════════════════════");
+     // ✅ ADD THIS
 
     // Send to USER
     await _sendPushNotification(
@@ -292,8 +263,6 @@ class AccountStatusNotificationService {
       );
     }
 
-    print("✅ Account Unlocked notifications sent");
-    print("🔔 ════════════════════════════════════════\n");
   }
 
   /// 4. Account Activation Scheduled
@@ -302,9 +271,6 @@ class AccountStatusNotificationService {
     required String userName,
     required String scheduledDate,
   }) async {
-    print("\n🔔 ════════════════════════════════════════");
-    print("🔔 SENDING: Activation Scheduled Notifications");
-    print("🔔 ════════════════════════════════════════");
 
     String formattedDate = _formatDate(scheduledDate);
 
@@ -343,8 +309,6 @@ class AccountStatusNotificationService {
       );
     }
 
-    print("✅ Activation Scheduled notifications sent");
-    print("🔔 ════════════════════════════════════════\n");
   }
 
   /// 5. Account Deactivation Scheduled
@@ -354,10 +318,7 @@ class AccountStatusNotificationService {
     required String scheduledDate,
     String senderEmail = "system@company.com", // ✅ ADD THIS
   }) async {
-    print("\n🔔 ════════════════════════════════════════");
-    print("🔔 SENDING: Deactivation Scheduled Notifications");
-    print("🔔 Sender: $senderEmail"); // ✅ ADD THIS
-    print("🔔 ════════════════════════════════════════");
+     // ✅ ADD THIS
 
     String formattedDate = _formatDate(scheduledDate);
 
@@ -396,8 +357,6 @@ class AccountStatusNotificationService {
       );
     }
 
-    print("✅ Deactivation Scheduled notifications sent");
-    print("🔔 ════════════════════════════════════════\n");
   }
 
   /// 6. Schedule Edited (Activation/Deactivation)
@@ -409,10 +368,7 @@ class AccountStatusNotificationService {
     required String scheduleType, // "activation" or "deactivation"
     String senderEmail = "system@company.com", // ✅ ADD THIS
   }) async {
-    print("\n🔔 ════════════════════════════════════════");
-    print("🔔 SENDING: Schedule Edited Notifications");
-    print("🔔 Sender: $senderEmail"); // ✅ ADD THIS
-    print("🔔 ════════════════════════════════════════");
+     // ✅ ADD THIS
 
     String formattedDate = _formatDate(newScheduledDate);
 
@@ -451,8 +407,6 @@ class AccountStatusNotificationService {
       );
     }
 
-    print("✅ Schedule Edited notifications sent");
-    print("🔔 ════════════════════════════════════════\n");
   }
 
   /// 7. Schedule Canceled
@@ -462,10 +416,7 @@ class AccountStatusNotificationService {
     required String userName,
     String senderEmail = "system@company.com", // ✅ ADD THIS
   }) async {
-    print("\n🔔 ════════════════════════════════════════");
-    print("🔔 SENDING: Schedule Canceled Notifications");
-    print("🔔 Sender: $senderEmail"); // ✅ ADD THIS
-    print("🔔 ════════════════════════════════════════");
+     // ✅ ADD THIS
 
     // Send to USER
     await _sendPushNotification(
@@ -502,8 +453,6 @@ class AccountStatusNotificationService {
       );
     }
 
-    print("✅ Schedule Canceled notifications sent");
-    print("🔔 ════════════════════════════════════════\n");
   }
 
   /// 8. Account Locked (Multiple Failed Attempts) - ADMIN ONLY
@@ -511,9 +460,6 @@ class AccountStatusNotificationService {
     required String userEmail,
     required String userName,
   }) async {
-    print("\n🔔 ════════════════════════════════════════");
-    print("🔔 SENDING: Account Locked Notification (ADMIN ONLY)");
-    print("🔔 ════════════════════════════════════════");
 
     // ✅ Send to ALL MASTER ADMINS ONLY (Dynamic)
     List<String> masterAdmins = await _getMasterAdminEmails();
@@ -534,8 +480,6 @@ class AccountStatusNotificationService {
       );
     }
 
-    print("✅ Account Locked notification sent to admins");
-    print("🔔 ════════════════════════════════════════\n");
   }
 
   /// 9. Unlock Request Sent (when user requests unlock) - ADMIN ONLY
@@ -545,10 +489,7 @@ class AccountStatusNotificationService {
     required String userName,
     String senderEmail = "system@company.com", // ✅ ADD THIS (but typically overridden with userEmail)
   }) async {
-    print("\n🔔 ════════════════════════════════════════");
-    print("🔔 SENDING: Unlock Request Notification (ADMIN ONLY)");
-    print("🔔 Sender: $senderEmail"); // ✅ ADD THIS
-    print("🔔 ════════════════════════════════════════");
+     // ✅ ADD THIS
 
     // Send to ALL MASTER ADMINS ONLY
     List<String> masterAdmins = await _getMasterAdminEmails();
@@ -569,7 +510,5 @@ class AccountStatusNotificationService {
       );
     }
 
-    print("✅ Unlock Request notification sent to admins");
-    print("🔔 ════════════════════════════════════════\n");
   }
 }

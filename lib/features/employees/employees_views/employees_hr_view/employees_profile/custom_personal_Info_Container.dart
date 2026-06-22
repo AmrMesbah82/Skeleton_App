@@ -17,9 +17,9 @@ import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
 import 'package:demo_app/features/employee/presentation/controller/main_core_employee_controller.dart';
-import 'package:demo_app/features/roles/domain/enums/modules_enum.dart';
-import 'package:demo_app/features/roles/domain/enums/settings/settings_permissions_sections.dart';
-import 'package:demo_app/features/roles/domain/enums/settings/social_permissions.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/settings/settings_permissions_sections.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/settings/social_permissions.dart';
 
 class CustomPersonalInfoContainer extends StatefulWidget {
   final String primaryText;

@@ -5,11 +5,11 @@
 /// Using CustomValidatedTextField and CustomDropdownFormField
 
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/widgets/navigation.dart';
 import 'package:demo_app/core/widgets/side_frame_master.dart';
-import 'package:demo_app/features/knowledge_hub_module/core/custom_drop_down.dart';
+import 'package:demo_app/core/helper_module/knowledge_hub_module/core/custom_drop_down.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
 import 'dart:io';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
@@ -574,12 +574,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           if (isPortrait) ...[
-                            CustomValidatedTextFieldInv(
+                            CustomTextField(
                               label: S.of(context).firstName,
                               hint: 'Enter Your First Name'.tr,
                               controller: firstNameController,
-                              height: 36,
-                              submitted: submitted,
                               textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
                               onChanged: (value) {
                                 final isArabic = Get.locale?.languageCode == 'ar';
@@ -593,12 +591,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
                               },
                             ),
                             isPhone ? SizedBox(height: 16.h) : SizedBox(),
-                            CustomValidatedTextFieldInv(
+                            CustomTextField(
                               label: S.of(context).middleName,
                               hint: 'Enter Your Middle Name'.tr,
                               controller: middleNameController,
-                              height: 36,
-                              submitted: submitted,
                               textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
                               onChanged: (value) {
                                 final isArabic = Get.locale?.languageCode == 'ar';
@@ -612,12 +608,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
                               },
                             ),
                             isPhone ? SizedBox(height: 16.h) : SizedBox(),
-                            CustomValidatedTextFieldInv(
+                            CustomTextField(
                               label: S.of(context).lastName,
                               hint: 'Enter Your Last Name'.tr,
                               controller: lastNameController,
-                              height: 36,
-                              submitted: submitted,
                               textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
                               onChanged: (value) {
                                 final isArabic = Get.locale?.languageCode == 'ar';
@@ -703,13 +697,11 @@ class _EditPageRequestState extends State<EditPageRequest> {
                             Row(
                               children: [
                                 Expanded(
-                                  child: CustomValidatedTextFieldInv(
+                                  child: CustomTextField(
                                     label: S.of(context).firstName,
                                     hint: 'Enter Your First Name'.tr,
                                     controller: firstNameController,
-                                    height: 36,
                                     textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
-                                    submitted: submitted,
                                     onChanged: (value) {
                                       final isArabic = Get.locale?.languageCode == 'ar';
                                       _trackChange(
@@ -724,13 +716,11 @@ class _EditPageRequestState extends State<EditPageRequest> {
                                 ),
                                 SizedBox(width: 12.sp),
                                 Expanded(
-                                  child: CustomValidatedTextFieldInv(
+                                  child: CustomTextField(
                                     label: S.of(context).middleName,
                                     hint: 'Enter Your Middle Name'.tr,
                                     controller: middleNameController,
-                                    height: 36,
                                     textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
-                                    submitted: submitted,
                                     onChanged: (value) {
                                       final isArabic = Get.locale?.languageCode == 'ar';
                                       _trackChange(
@@ -745,14 +735,11 @@ class _EditPageRequestState extends State<EditPageRequest> {
                                 ),
                                 SizedBox(width: 12.sp),
                                 Expanded(
-                                  child: CustomValidatedTextFieldInv(
+                                  child: CustomTextField(
                                     label: S.of(context).lastName,
                                     hint: 'Enter Your Last Name'.tr,
                                     controller: lastNameController,
                                     textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
-
-                                    height: 36,
-                                    submitted: submitted,
                                     onChanged: (value) {
                                       final isArabic = Get.locale?.languageCode == 'ar';
                                       _trackChange(
@@ -1075,14 +1062,12 @@ class _EditPageRequestState extends State<EditPageRequest> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (isPortrait) ...[
-            CustomValidatedTextFieldInv(
+            CustomTextField(
               label: S.of(context).email,
               hint: 'Enter Your Email'.tr,
               controller: emailController,
-              height: 36,
-              textDirection: ui.TextDirection.ltr, // Always LTR for email
+              textDirection: ui.TextDirection.ltr,
               textAlign: isArabic ? TextAlign.right : TextAlign.left,
-              submitted: submitted,
               keyboardType: TextInputType.emailAddress,
               onChanged: (value) {
                 _trackChange(
@@ -1107,16 +1092,14 @@ class _EditPageRequestState extends State<EditPageRequest> {
                 // Country Code Field
                 SizedBox(
                   width: 0.25.w,
-                  child: CustomValidatedTextFieldInv(
+                  child: CustomTextField(
                     label: '',
                     hint: flagAndCode,
                     controller: TextEditingController(text: flagAndCode),
-                    height: 36,
                     textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
                     textAlign: isArabic ? TextAlign.right : TextAlign.left,
-                    enabled: false, // Changed to false
-                    readOnly: true, // Add this if your widget supports it
-                    submitted: submitted,
+                    enabled: false,
+                    readOnly: true,
                     onTap: () async { // Add onTap directly to the text field if supported
                       final result = await showCountryPickerDialog(context);
                       if (result != null) {
@@ -1135,16 +1118,13 @@ class _EditPageRequestState extends State<EditPageRequest> {
                 SizedBox(width: 0.02.w),
                 // Phone Number Field
                 Expanded(
-                  child: CustomValidatedTextFieldInv(
+                  child: CustomTextField(
                     label: '',
                     hint: 'Enter The Phone Number'.tr,
                     controller: phoneController,
-                    height: 36,
                     textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
                     textAlign: isArabic ? TextAlign.right : TextAlign.left,
-                    submitted: submitted,
                     keyboardType: TextInputType.phone,
-                    onlyDigits: true,
                     onChanged: (value) {
                       _trackChange(
                         'phone',
@@ -1172,28 +1152,8 @@ class _EditPageRequestState extends State<EditPageRequest> {
                     //       right: Get.locale.toString().contains('en') ? 0.02.h : 0,
                     //       left: Get.locale.toString().contains('ar') ? 0.02.h : 0,
                     //     ),
-                    //     child: CustomValidatedTextFieldInv(
-                    //       label: S.of(context).email,
-                    //       hint: 'Enter Your Email'.tr,
-                    //       controller: emailController,
-                    //       height: 36,
-                    //       textDirection: ui.TextDirection.ltr, // Always LTR for email
-                    //       textAlign: isArabic ? TextAlign.right : TextAlign.left,
-                    //       submitted: submitted,
-                    //       keyboardType: TextInputType.emailAddress,
-                    //       onChanged: (value) {
-                    //         _trackChange(
-                    //           'email',
-                    //           employee?.email?.lastOrNull,
-                    //           value,
-                    //         );
-                    //       },
-                    //     ),
-                    //   ),
-                    // ),
-
-                    // Phone Number Section (Landscape)
-                    Expanded(
+                    //     child: CustomTextField(
+                      Expanded(
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -1202,16 +1162,14 @@ class _EditPageRequestState extends State<EditPageRequest> {
                               // Country Code Field - Using CustomValidatedTextFieldInv
                               SizedBox(
                                 width: 70.w, // Fixed width for country code
-                                child: CustomValidatedTextFieldInv(
+                                child: CustomTextField(
                                   label: '',
                                   hint: flagAndCode,
                                   controller: TextEditingController(text: flagAndCode),
-                                  height: 36,
                                   textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
                                   textAlign: TextAlign.center,
-                                  enabled: true, // Make it non-editable
+                                  enabled: true,
                                   readOnly: true,
-                                  submitted: submitted,
                                   onTap: () async {
                                     final result = await showCountryPickerDialog(context);
                                     if (result != null) {
@@ -1230,17 +1188,13 @@ class _EditPageRequestState extends State<EditPageRequest> {
                               SizedBox(width: 8.w),
                               // Phone Number Field
                               Expanded(
-                                child: CustomValidatedTextFieldInv(
+                                child: CustomTextField(
                                   label: '',
-                                  width: MediaQuery.sizeOf(context).width*.185,
                                   hint: 'Enter The Phone Number'.tr,
                                   controller: phoneController,
-                                  height: 36,
                                   textDirection: ui.TextDirection.ltr,
                                   textAlign: isArabic ? TextAlign.right : TextAlign.left,
-                                  submitted: submitted,
                                   keyboardType: TextInputType.phone,
-                                  onlyDigits: true,
                                   onChanged: (value) {
                                     _trackChange(
                                       'phone',
@@ -1255,8 +1209,8 @@ class _EditPageRequestState extends State<EditPageRequest> {
                         ],
                       ),
                     ),
-                  ],
-                ),
+                      ],
+                    ),
                 SizedBox(height: 15.sp)
               ],
             ),
@@ -1288,12 +1242,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           if (isPortrait) ...[
-            CustomValidatedTextFieldInv(
+            CustomTextField(
               label: S.of(context).country,
               hint: 'Enter Your Country'.tr,
               controller: countryController,
-              height: 36,
-              submitted: submitted,
               onChanged: (value) {
                 _trackChange(
                   'country',
@@ -1303,12 +1255,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
               },
             ),
             isPhone ? SizedBox(height: 16.h) : SizedBox(),
-            CustomValidatedTextFieldInv(
+            CustomTextField(
               label: S.of(context).stateOrProvince,
               hint: 'Enter Your State Or Province'.tr,
               controller: provinceController,
-              height: 36,
-              submitted: submitted,
               onChanged: (value) {
                 _trackChange(
                   'province',
@@ -1317,12 +1267,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
                 );
               },
             ),
-            isPhone ? SizedBox(height: 16.h) : SizedBox(),            CustomValidatedTextFieldInv(
+            isPhone ? SizedBox(height: 16.h) : SizedBox(),            CustomTextField(
               label: S.of(context).city,
               hint: 'Enter Your City'.tr,
               controller: cityController,
-              height: 36,
-              submitted: submitted,
               onChanged: (value) {
                 _trackChange(
                   'city',
@@ -1335,12 +1283,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
             Row(
               children: [
                 Expanded(
-                  child: CustomValidatedTextFieldInv(
+                  child: CustomTextField(
                     label: S.of(context).country,
                     hint: 'Enter Your Country'.tr,
                     controller: countryController,
-                    height: 36,
-                    submitted: submitted,
                     onChanged: (value) {
                       _trackChange(
                         'country',
@@ -1352,12 +1298,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
                 ),
                 SizedBox(width: 12.sp),
                 Expanded(
-                  child: CustomValidatedTextFieldInv(
+                  child: CustomTextField(
                     label: S.of(context).stateOrProvince,
                     hint: 'Enter Your State Or Province'.tr,
                     controller: provinceController,
-                    height: 36,
-                    submitted: submitted,
                     onChanged: (value) {
                       _trackChange(
                         'province',
@@ -1369,12 +1313,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
                 ),
                 SizedBox(width: 12.sp),
                 Expanded(
-                  child: CustomValidatedTextFieldInv(
+                  child: CustomTextField(
                     label: S.of(context).city,
                     hint: 'Enter Your City'.tr,
                     controller: cityController,
-                    height: 36,
-                    submitted: submitted,
                     onChanged: (value) {
                       _trackChange(
                         'city',
@@ -1387,12 +1329,10 @@ class _EditPageRequestState extends State<EditPageRequest> {
               ],
             ),
           ],
-          isPhone ? SizedBox(height: 16.h) : SizedBox(height: 16.h),          CustomValidatedTextFieldInv(
+          isPhone ? SizedBox(height: 16.h) : SizedBox(height: 16.h),          CustomTextField(
             label: S.of(context).streetName,
             hint: 'Enter Your Street Address'.tr,
             controller: streetController,
-            height: 36,
-            submitted: submitted && !touchedFields.contains('street'),
             onChanged: (value) {
               _markFieldAsTouched('street');
               _trackChange(

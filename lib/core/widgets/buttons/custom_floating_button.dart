@@ -7,9 +7,9 @@ import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 
 import '../../../features/employee/presentation/controller/main_core_employee_controller.dart';
-import '../../../features/roles/domain/enums/modules_enum.dart';
-import '../../../features/roles/domain/enums/roles/active_directory_permission.dart';
-import '../../../features/roles/domain/enums/roles/roles_permissions_sections.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/roles/active_directory_permission.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/roles/roles_permissions_sections.dart';
 
 class CustomFloatingButton extends StatefulWidget {
   final String imagePath;

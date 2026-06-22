@@ -7,10 +7,11 @@
 /// Updated by: Amr Mesbah - Colors update instantly in UI after reset (no navigation needed)
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
+import 'package:demo_app/core/widgets/services_management/custom_reasponsive_filed.dart';
 import 'package:demo_app/features/settings/settings_screen/views/owner_screens/company_information/color_display_section.dart';
-import 'package:demo_app/features/knowledge_hub_module/core/custom_drop_down.dart';
+import 'package:demo_app/core/helper_module/knowledge_hub_module/core/custom_drop_down.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_reasponsive_filed.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

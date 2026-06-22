@@ -1,6 +1,7 @@
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -64,13 +65,11 @@ class AddComponentWrapper extends StatelessWidget {
                 SizedBox(height: 20.h),
 
                 // Using CustomValidatedTextField
-                CustomValidatedTextFieldInv(
+                CustomTextField(
                   label: 'SLA Percentage',
                   hint: S.of(context).textHere,
                   controller: textController,
-                  height: 36,
                   keyboardType: TextInputType.number,
-                  onlyDigits: true,
                   textDirection: TextDirection.ltr,
                   textAlign: TextAlign.start,
                 ),

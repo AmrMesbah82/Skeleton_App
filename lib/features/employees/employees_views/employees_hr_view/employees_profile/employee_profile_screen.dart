@@ -23,7 +23,7 @@ import 'package:demo_app/features/employees/employees_views/employees_hr_view/em
 import 'package:demo_app/features/employees/employees_views/employees_hr_view/employees_profile/employee_personal_info_screen.dart';
 import 'package:page_transition/page_transition.dart';
 
-import 'package:demo_app/features/roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 
 /// Date Created :3/Dec/2023
 /// Developer Name : Bassem Mohamed

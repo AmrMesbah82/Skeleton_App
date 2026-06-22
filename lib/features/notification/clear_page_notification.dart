@@ -22,7 +22,7 @@ import '../employee/presentation/controller/main_core_employee_controller.dart';
 import '../home/app_drawer/presentation/controller/drawer_controller.dart';
 import 'data/models/notification_data_model.dart';
 import 'data/repository/notification_services.dart';
-import '../roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 
 // ✅ CLEANED NOTIFICATIONS PAGE - Shows only isClean == true
 class CleanedNotificationLandPage extends StatefulWidget {

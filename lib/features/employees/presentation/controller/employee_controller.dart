@@ -10,7 +10,7 @@ import 'package:multi_dropdown/multiselect_dropdown.dart';
 import '../../../../core/network/failure_model.dart';
 
 import '../../../employee/data/models/emplyees_model/new_employee_model.dart';
-import '../../../roles/utils/constants.dart';
+import 'package:demo_app/features/roles/role_management/utils/constants.dart';
 import '../../data/models/department_model/department_model.dart' as newDepartmentModel;
 import '../../data/models/employee_model/employee_directory_model.dart';
 import '../../data/repository/employees_repository.dart';

@@ -12,7 +12,7 @@ import '../../../../../core/network/failure_model.dart';
 import '../../domain/use_case/approve_reset_password_use_case.dart';
 import '../../domain/use_case/schedule_reactivation_time_use_case.dart';
 import '../../domain/use_case/update_account_status_use_case.dart';
-import '../ui/widgets/filter_widget.dart'; // ✅ Import SortOptionRole from here
+import '../view/widgets/filter_widget.dart'; // ✅ Import SortOptionRole from here
 import 'account_status_state.dart';
 
 

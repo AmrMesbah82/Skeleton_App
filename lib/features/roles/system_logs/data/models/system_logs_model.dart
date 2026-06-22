@@ -7,7 +7,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 
-import '../../../domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 
 class SystemLogsModel {
   String? userEmail;

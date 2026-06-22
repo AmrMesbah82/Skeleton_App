@@ -15,7 +15,7 @@ import '../../../../../core/network/failure_model.dart';
 import '../../domain/use_case/approve_reset_password_use_case.dart';
 import '../../domain/use_case/schedule_reactivation_time_use_case.dart';
 import '../../domain/use_case/update_account_status_use_case.dart';
-import '../ui/widgets/filter_widget.dart';
+import '../view/widgets/filter_widget.dart';
 
 class AccountStatusController extends GetxController {
   AccountStatusRepository repository = AccountStatusRepository();
@@ -82,7 +82,6 @@ class AccountStatusController extends GetxController {
 
         break;
     }
-    print("reach to update ui");
     update();
   }
 

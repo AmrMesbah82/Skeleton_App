@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:demo_app/core/theme/app_colors.dart';
-import '../theme/app_colors.dart';
 
 /// Custom text field widget — mirrors CustomDropdown API exactly.
 ///
@@ -124,6 +123,33 @@ class CustomTextField extends StatefulWidget {
   final TextStyle? helperStyle;
   final TextStyle? counterStyle;
 
+  // ── Sizing (optional fixed box) ────────────────────────────────────────────
+
+  /// Fixed width (interpreted in .w). Null → expands to parent.
+  final double? width;
+
+  /// Fixed height (interpreted in .h). Null → sizes to content.
+  final double? height;
+
+  // ── Built-in validation (opt-in) ───────────────────────────────────────────
+
+  /// When true, an empty field shows a "required" error (use after a submit
+  /// attempt). Only takes effect together with the other validation flags.
+  final bool submitted;
+
+  /// Restricts input to digits and validates the value is numeric.
+  final bool onlyDigits;
+
+  /// Restricts input to the script implied by [textDirection]
+  /// (Arabic for RTL, English otherwise) and validates accordingly.
+  final bool restrictByDirection;
+
+  /// Auto-capitalises the first letter of each word (LTR, non-digit only).
+  final bool autoCapitalize;
+
+  /// Shows a character counter even when [maxLength] is null (limit = 500).
+  final bool showCharCount;
+
   const CustomTextField({
     super.key,
     this.controller,
@@ -163,6 +189,13 @@ class CustomTextField extends StatefulWidget {
     this.errorStyle,
     this.helperStyle,
     this.counterStyle,
+    this.width,
+    this.height,
+    this.submitted = false,
+    this.onlyDigits = false,
+    this.restrictByDirection = false,
+    this.autoCapitalize = false,
+    this.showCharCount = false,
   });
 
   @override
@@ -201,7 +234,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
     _focusNode.addListener(_onFocusChange);
 
-    if (widget.maxLength != null) {
+    if (_needsTextListener) {
       _charCount = _controller.text.length;
       _controller.addListener(_onTextChange);
     }
@@ -213,21 +246,86 @@ class _CustomTextFieldState extends State<CustomTextField> {
   }
 
   void _onTextChange() {
-    if (widget.maxLength != null) {
-      setState(() => _charCount = _controller.text.length);
-    }
+    if (!mounted) return;
+    setState(() => _charCount = _controller.text.length);
   }
 
   @override
   void dispose() {
     _focusNode.removeListener(_onFocusChange);
     if (_ownsFocusNode) _focusNode.dispose();
-    if (widget.maxLength != null) _controller.removeListener(_onTextChange);
+    if (_needsTextListener) _controller.removeListener(_onTextChange);
     if (_ownsController) _controller.dispose();
     super.dispose();
   }
 
   bool get _isMultiline => (widget.maxLines ?? 1) != 1 || widget.minLines != null;
+
+  // ── Opt-in helpers ─────────────────────────────────────────────────────────
+
+  /// Effective character limit: explicit [maxLength], else 500 when a counter
+  /// is requested, else none.
+  int? get _effectiveMaxLength =>
+      widget.maxLength ?? (widget.showCharCount ? 500 : null);
+
+  bool get _showCounter => widget.showCharCount || widget.maxLength != null;
+
+  bool get _hasValidation =>
+      widget.submitted || widget.onlyDigits || widget.restrictByDirection;
+
+  bool get _needsTextListener => _showCounter || _hasValidation;
+
+  /// Resolves the error to display: explicit [errorText] wins, otherwise the
+  /// built-in validation (only active when a validation flag is set).
+  String? get _resolvedError {
+    final explicit = widget.errorText;
+    if (explicit != null && explicit.isNotEmpty) return explicit;
+    if (!_hasValidation) return null;
+
+    final text = _controller.text;
+    final isEmpty = text.trim().isEmpty;
+    final isRtl = widget.textDirection == TextDirection.rtl;
+    final hasArabic = RegExp(r'[؀-ۿ]').hasMatch(text);
+
+    if (widget.submitted && isEmpty) {
+      return isRtl ? 'هذا الحقل مطلوب' : 'This field is required.';
+    }
+    if (!isEmpty && widget.restrictByDirection) {
+      if (!isRtl && hasArabic) return 'Please use English characters only.';
+      if (isRtl && !RegExp(r'^[؀-ۿ\s]+$').hasMatch(text)) {
+        return 'الرجاء استخدام الأحرف العربية فقط.';
+      }
+    }
+    if (widget.onlyDigits &&
+        text.isNotEmpty &&
+        !RegExp(r'^\d+$').hasMatch(text)) {
+      return 'Only numbers are allowed.';
+    }
+    return null;
+  }
+
+  /// Builds input formatters from the opt-in flags, then appends any caller
+  /// supplied [inputFormatters].
+  List<TextInputFormatter>? get _resolvedFormatters {
+    final list = <TextInputFormatter>[];
+    if (widget.autoCapitalize &&
+        widget.textDirection != TextDirection.rtl &&
+        !widget.onlyDigits) {
+      list.add(_CapitalizeTextFormatter());
+    }
+    if (widget.restrictByDirection) {
+      if (widget.textDirection == TextDirection.rtl) {
+        list.add(_ArabicOnlyInputFormatter());
+      } else if (!widget.onlyDigits) {
+        list.add(_EnglishOnlyInputFormatter());
+      }
+    }
+    if (widget.onlyDigits) {
+      list.add(FilteringTextInputFormatter.digitsOnly);
+    }
+    if (widget.inputFormatters != null) list.addAll(widget.inputFormatters!);
+    return list.isEmpty ? null : list;
+  }
 
   // Effective obscure: only applies when the prop is true AND not multiline
   bool get _effectiveObscure =>
@@ -235,7 +333,8 @@ class _CustomTextFieldState extends State<CustomTextField> {
 
   @override
   Widget build(BuildContext context) {
-    final hasError = widget.errorText != null && widget.errorText!.isNotEmpty;
+    final resolvedError = _resolvedError;
+    final hasError = resolvedError != null && resolvedError.isNotEmpty;
     final radius = widget.borderRadius ?? BorderRadius.circular(8.r);
     final isDisabled = !widget.enabled;
 
@@ -296,124 +395,129 @@ class _CustomTextFieldState extends State<CustomTextField> {
         ],
 
         // ── Field ──────────────────────────────────────────────────────────
-        TextField(
-          controller: _controller,
-          focusNode: _focusNode,
-          enabled: widget.enabled,
-          readOnly: widget.readOnly,
-          obscureText: _effectiveObscure,
-          maxLines: widget.obscureText ? 1 : widget.maxLines,
-          minLines: widget.minLines,
-          maxLength: widget.maxLength,
-          keyboardType: _isMultiline
-              ? TextInputType.multiline
-              : widget.keyboardType,
-          inputFormatters: widget.inputFormatters,
-          textAlign: widget.textAlign,
-          textDirection: widget.textDirection,
-          textInputAction: widget.textInputAction,
-          textCapitalization: widget.textCapitalization,
-          autocorrect: widget.autocorrect,
-          enableSuggestions: widget.enableSuggestions,
-          onChanged: widget.onChanged,
-          onSubmitted: widget.onSubmitted,
-          onTap: widget.onTap,
-          style: widget.valueStyle ??
-              TextStyle(
-                fontSize: 14.sp,
-                color: isDisabled
-                    ? AppColors.text.withOpacity(0.4)
-                    : AppColors.text,
-              ),
-          // Hide the built-in counter — we render our own below
-          buildCounter: widget.maxLength != null
-              ? (_, {required currentLength, required isFocused, maxLength}) =>
-          const SizedBox.shrink()
-              : null,
-          decoration: InputDecoration(
-            isDense: true,
-            contentPadding: effectivePadding,
-            filled: true,
-            fillColor: isDisabled
-                ? (widget.fillColor ?? AppColors.card).withOpacity(0.5)
-                : widget.fillColor ?? AppColors.card,
-
-            // ── No border rule ────────────────────────────────────────────
-            // Default / focused / disabled → no border at all.
-            // Error → red border.
-            border: hasError
-                ? OutlineInputBorder(
-              borderRadius: radius,
-              borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
-            )
-                : OutlineInputBorder(
-              borderRadius: radius,
-              borderSide: BorderSide.none,
-            ),
-            enabledBorder: hasError
-                ? OutlineInputBorder(
-              borderRadius: radius,
-              borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
-            )
-                : OutlineInputBorder(
-              borderRadius: radius,
-              borderSide: BorderSide.none,
-            ),
-            focusedBorder: hasError
-                ? OutlineInputBorder(
-              borderRadius: radius,
-              borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
-            )
-                : OutlineInputBorder(
-              borderRadius: radius,
-              borderSide: BorderSide.none,
-            ),
-            disabledBorder: OutlineInputBorder(
-              borderRadius: radius,
-              borderSide: BorderSide.none,
-            ),
-            errorBorder: OutlineInputBorder(
-              borderRadius: radius,
-              borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
-            ),
-            focusedErrorBorder: OutlineInputBorder(
-              borderRadius: radius,
-              borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
-            ),
-            // ─────────────────────────────────────────────────────────────
-
-            hintText: widget.hint,
-            hintStyle: widget.hintStyle ??
+        SizedBox(
+          width: widget.width?.w,
+          height: widget.height?.h,
+          child: TextField(
+            controller: _controller,
+            focusNode: _focusNode,
+            enabled: widget.enabled,
+            readOnly: widget.readOnly,
+            obscureText: _effectiveObscure,
+            maxLines: widget.obscureText ? 1 : widget.maxLines,
+            minLines: widget.minLines,
+            maxLength: _effectiveMaxLength,
+            keyboardType: _isMultiline
+                ? TextInputType.multiline
+                : (widget.keyboardType ??
+                (widget.onlyDigits ? TextInputType.number : null)),
+            inputFormatters: _resolvedFormatters,
+            textAlign: widget.textAlign,
+            textDirection: widget.textDirection,
+            textInputAction: widget.textInputAction,
+            textCapitalization: widget.textCapitalization,
+            autocorrect: widget.autocorrect,
+            enableSuggestions: widget.enableSuggestions,
+            onChanged: widget.onChanged,
+            onSubmitted: widget.onSubmitted,
+            onTap: widget.onTap,
+            style: widget.valueStyle ??
                 TextStyle(
                   fontSize: 14.sp,
-                  color: AppColors.text.withOpacity(0.4),
+                  color: isDisabled
+                      ? AppColors.text.withOpacity(0.4)
+                      : AppColors.text,
                 ),
-
-            prefixIcon: widget.prefixIcon != null
-                ? Padding(
-              padding: EdgeInsets.only(left: 12.w, right: 8.w),
-              child: widget.prefixIcon,
-            )
+            // Hide the built-in counter — we render our own below
+            buildCounter: _effectiveMaxLength != null
+                ? (_, {required currentLength, required isFocused, maxLength}) =>
+            const SizedBox.shrink()
                 : null,
-            prefixIconConstraints: const BoxConstraints(),
+            decoration: InputDecoration(
+              isDense: true,
+              contentPadding: effectivePadding,
+              filled: true,
+              fillColor: isDisabled
+                  ? (widget.fillColor ?? AppColors.card).withOpacity(0.5)
+                  : widget.fillColor ?? AppColors.card,
 
-            suffixIcon: resolvedSuffix != null
-                ? Padding(
-              padding: EdgeInsets.only(left: 8.w, right: 12.w),
-              child: resolvedSuffix,
-            )
-                : null,
-            suffixIconConstraints: const BoxConstraints(),
+              // ── No border rule ────────────────────────────────────────────
+              // Default / focused / disabled → no border at all.
+              // Error → red border.
+              border: hasError
+                  ? OutlineInputBorder(
+                borderRadius: radius,
+                borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
+              )
+                  : OutlineInputBorder(
+                borderRadius: radius,
+                borderSide: BorderSide.none,
+              ),
+              enabledBorder: hasError
+                  ? OutlineInputBorder(
+                borderRadius: radius,
+                borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
+              )
+                  : OutlineInputBorder(
+                borderRadius: radius,
+                borderSide: BorderSide.none,
+              ),
+              focusedBorder: hasError
+                  ? OutlineInputBorder(
+                borderRadius: radius,
+                borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
+              )
+                  : OutlineInputBorder(
+                borderRadius: radius,
+                borderSide: BorderSide.none,
+              ),
+              disabledBorder: OutlineInputBorder(
+                borderRadius: radius,
+                borderSide: BorderSide.none,
+              ),
+              errorBorder: OutlineInputBorder(
+                borderRadius: radius,
+                borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
+              ),
+              focusedErrorBorder: OutlineInputBorder(
+                borderRadius: radius,
+                borderSide: BorderSide(color: AppColors.red, width: 1.5.w),
+              ),
+              // ─────────────────────────────────────────────────────────────
 
-            // Suppress built-in error / helper — we render our own
-            errorText: null,
-            helperText: null,
-            counterText: '',
+              hintText: widget.hint,
+              hintStyle: widget.hintStyle ??
+                  TextStyle(
+                    fontSize: 14.sp,
+                    color: AppColors.text.withOpacity(0.4),
+                  ),
+
+              prefixIcon: widget.prefixIcon != null
+                  ? Padding(
+                padding: EdgeInsets.only(left: 12.w, right: 8.w),
+                child: widget.prefixIcon,
+              )
+                  : null,
+              prefixIconConstraints: const BoxConstraints(),
+
+              suffixIcon: resolvedSuffix != null
+                  ? Padding(
+                padding: EdgeInsets.only(left: 8.w, right: 12.w),
+                child: resolvedSuffix,
+              )
+                  : null,
+              suffixIconConstraints: const BoxConstraints(),
+
+              // Suppress built-in error / helper — we render our own
+              errorText: null,
+              helperText: null,
+              counterText: '',
+            ),
           ),
         ),
 
         // ── Error / Helper / Counter row ───────────────────────────────────
-        if (hasError || widget.helperText != null || widget.maxLength != null) ...[
+        if (hasError || widget.helperText != null || _showCounter) ...[
           SizedBox(height: 4.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -423,7 +527,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
               Expanded(
                 child: hasError
                     ? Text(
-                  widget.errorText!,
+                  resolvedError!,
                   style: widget.errorStyle ??
                       TextStyle(fontSize: 12.sp, color: AppColors.red),
                 )
@@ -440,14 +544,14 @@ class _CustomTextFieldState extends State<CustomTextField> {
               ),
 
               // Right: character counter
-              if (widget.maxLength != null) ...[
+              if (_showCounter && _effectiveMaxLength != null) ...[
                 SizedBox(width: 8.w),
                 Text(
-                  '$_charCount / ${widget.maxLength}',
+                  '$_charCount / ${_effectiveMaxLength}',
                   style: widget.counterStyle ??
                       TextStyle(
                         fontSize: 12.sp,
-                        color: _charCount > widget.maxLength!
+                        color: _charCount > _effectiveMaxLength!
                             ? AppColors.red
                             : AppColors.text.withOpacity(0.4),
                       ),
@@ -457,6 +561,58 @@ class _CustomTextFieldState extends State<CustomTextField> {
           ),
         ],
       ],
+    );
+  }
+}
+
+// ─────────────────────────────────────────────────────────────────────────────
+// Private input formatters (self-contained — no external dependencies)
+// ─────────────────────────────────────────────────────────────────────────────
+
+/// Blocks English letters (used for Arabic/RTL fields).
+class _ArabicOnlyInputFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue,
+      TextEditingValue newValue,
+      ) {
+    final hasEnglishLetters = RegExp(r'[a-zA-Z]').hasMatch(newValue.text);
+    if (hasEnglishLetters) return oldValue;
+    return newValue;
+  }
+}
+
+/// Blocks Arabic characters (used for English/LTR fields).
+class _EnglishOnlyInputFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue,
+      TextEditingValue newValue,
+      ) {
+    final hasArabicCharacters = RegExp(r'[؀-ۿ]').hasMatch(newValue.text);
+    if (hasArabicCharacters) return oldValue;
+    return newValue;
+  }
+}
+
+/// Capitalises the first letter of every word.
+class _CapitalizeTextFormatter extends TextInputFormatter {
+  @override
+  TextEditingValue formatEditUpdate(
+      TextEditingValue oldValue,
+      TextEditingValue newValue,
+      ) {
+    if (newValue.text.isEmpty) return newValue;
+
+    final capitalizedText = newValue.text.split(' ').map((word) {
+      if (word.isEmpty) return word;
+      if (word.length == 1) return word.toUpperCase();
+      return word[0].toUpperCase() + word.substring(1).toLowerCase();
+    }).join(' ');
+
+    return TextEditingValue(
+      text: capitalizedText,
+      selection: TextSelection.collapsed(offset: capitalizedText.length),
     );
   }
 }

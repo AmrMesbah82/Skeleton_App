@@ -1,4 +1,5 @@
 import 'package:demo_app/core/theme/app_colors.dart';
+import 'package:demo_app/core/widgets/services_management/DashBoard_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,7 +10,6 @@ import 'package:demo_app/features/employee/domain/entities/employee_entity.dart'
 
 import '../../../../../generated/l10n.dart';
 import '../../../../employee/presentation/controller/main_core_employee_controller.dart';
-import '../../../../services_mangment_module/core/DashBoard_widget.dart';
 import 'dashboard_view_data/chart_setting_firebase_service.dart';
 import 'dashboard_view_data/chart_settings_dialog.dart';
 import 'dashboard_view_data/chart_orientation_enum.dart';

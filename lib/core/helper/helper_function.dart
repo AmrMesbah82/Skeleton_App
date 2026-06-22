@@ -6,36 +6,7 @@ import 'package:csv/csv.dart';
 import 'package:path_provider/path_provider.dart';
 
 import 'package:demo_app/core/network/get_base_url.dart';
-
-// Inline from deleted services_mangment_module — restore import when module is added.
-class FirestoreCollections {
-  static const createServices = "CreateServices";
-  static const requestServices = "RequestServices";
-  static const accessEmployee = "User_Management";
-  static const employeeInfo = "Employees_Info";
-}
-
-class EmployeeEntityModell {
-  final String? id;
-  late final String? state;
-  final String? email;
-  final String? firstName;
-  final String? lastName;
-
-  EmployeeEntityModell({this.id, this.state, this.email, this.firstName, this.lastName});
-
-  factory EmployeeEntityModell.fromJson(Map<String, dynamic> json) => EmployeeEntityModell(
-    id: json['id']?.toString(),
-    state: json['state']?.toString(),
-    email: json['email']?.toString(),
-    firstName: json['firstName']?.toString(),
-    lastName: json['lastName']?.toString(),
-  );
-}
-
-
-// REMOVED_MODULE: import '../../features/external/services_mangment_module/Category/data/entities/modelEmployee.dart';
-// REMOVED_MODULE: import '../../features/external/services_mangment_module/core/constant/constant.dart';
+import 'package:demo_app/core/constants/services_management/constant.dart';
 
 class CSVHelper {
   String createCsv(List<List<dynamic>> rows) {
@@ -231,31 +202,10 @@ Future<Map<String, dynamic>?> selectServiceProviderRequest(
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 
-Future<void> updateGlobalStateIfFullyApproved({
-  required String docId,
-  required String serviceName,
-  required List<EmployeeEntityModell> approvalCycle,
-}) async {
-  final firestore = FirebaseFirestore.instance;
-
-  final isAllApproved = approvalCycle.every(
-        (e) => (e.state?.toLowerCase() ?? '') == 'approved',
-  );
-
-  final isRejected = approvalCycle.any(
-        (e) =>
-    (e.state?.toLowerCase() ?? '') == 'rejected' ||
-        (e.state?.toLowerCase() ?? '') == 'cancel',
-  );
-
-  if (isRejected) {
-    await updateRequestState(docId, 'rejected');
-  } else if (isAllApproved) {
-    // ✅ Stop at "approved", wait for manual start to become "inprogress"
-    await updateRequestState(docId, 'approved');
-    print("✅ All approvers approved — state updated to 'approved'");
-  }
-}
+// NOTE: updateGlobalStateIfFullyApproved moved to the services module
+// (data/helper/services_helper_function.dart) because it depends on the
+// module's EmployeeEntityModell. Keeping it out of core lets core compile
+// even when the services module is deleted.
 
 //////////////////////////////////////////////////////////////////////////////////
 

@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'dart:io';
 
@@ -21,7 +22,7 @@ import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 
-import '../../features/services_mangment_module/core/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import '../constants/selected_currency_info .dart';
 
 class CustomCard extends StatefulWidget {

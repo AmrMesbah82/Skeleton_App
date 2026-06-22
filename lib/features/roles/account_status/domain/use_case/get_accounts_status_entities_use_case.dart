@@ -28,10 +28,6 @@ class GetAccountsStatusEntitiesUseCase {
       map[status] = [];
     }
 
-    print('');
-    print('═══════════════════════════════════════════════════════════');
-    print('🔍 CATEGORIZING EMPLOYEES');
-    print('═══════════════════════════════════════════════════════════');
 
     for (AccountStatusAccessEntity entity in entities) {
       // ✅ FIXED: Determine the PRIMARY status category
@@ -40,13 +36,10 @@ class GetAccountsStatusEntitiesUseCase {
       // Priority order: willBeActivated > willBeDeactivated > actual status
       if (entity.willBeActivated) {
         primaryCategory = EmployeeStatusEnum.willBeActivated;
-        print('📍 ${entity.englishName}: willBeActivated (scheduled on ${entity.reactivationDate})');
       } else if (entity.willBeDeactivated) {
         primaryCategory = EmployeeStatusEnum.willBeDeactivated;
-        print('📍 ${entity.englishName}: willBeDeactivated (scheduled on ${entity.deactivationDate})');
       } else {
         primaryCategory = entity.status;
-        print('📍 ${entity.englishName}: ${entity.status.name}');
       }
 
       // ✅ Add to PRIMARY category only (never double-add)
@@ -56,11 +49,8 @@ class GetAccountsStatusEntitiesUseCase {
       map[EmployeeStatusEnum.all]!.add(entity);
     }
 
-    print('');
-    print('📊 FINAL COUNTS:');
     map.forEach((status, list) {
       if (list.isNotEmpty) {
-        print('   ${status.name}: ${list.length}');
       }
     });
 
@@ -70,17 +60,10 @@ class GetAccountsStatusEntitiesUseCase {
 
     int allCount = map[EmployeeStatusEnum.all]?.length ?? 0;
 
-    print('   ───────────────────────');
-    print('   Total (excl. All): $totalExcludingAll');
-    print('   All: $allCount');
 
     if (totalExcludingAll == allCount) {
-      print('   ✅ COUNTS MATCH!');
     } else {
-      print('   ⚠️ MISMATCH! Check categorization logic');
     }
-    print('═══════════════════════════════════════════════════════════');
-    print('');
 
     result = Right(map);
     return result;

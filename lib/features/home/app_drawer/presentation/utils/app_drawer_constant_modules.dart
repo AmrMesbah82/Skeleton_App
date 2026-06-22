@@ -1,5 +1,5 @@
 
-import '../../../../roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 
 abstract class AppDrawerConstantModules{
 static List <Modules> drawerModules = [

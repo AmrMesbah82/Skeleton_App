@@ -4,9 +4,10 @@
 /// Created At: 31/10/2025
 /// Modified: Mobile responsive layout - vertical stacking on mobile, show only changed fields
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/widgets/side_frame_master.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+
 import 'package:intl/intl.dart';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
@@ -751,13 +752,11 @@ class _PreviewHealthInsuranceChangesPageState extends State<PreviewHealthInsuran
                 // Request Note (only in New Details column)
                 if (!isCurrentColumn) ...[
                   SizedBox(height: 20.sp),
-                  CustomValidatedTextFieldInv(
+                  CustomTextField(
                     label: S.of(context).request_note,
                     hint: S.of(context).textHere,
                     controller: requestNoteController,
-                    showCharCount: true,
                     maxLines: 3,
-                    height: 72,
                     textAlign: isArabic ? TextAlign.right : TextAlign.left,
                     textDirection: isArabic ?  ui.TextDirection.rtl : ui.TextDirection.ltr,
                     onChanged: (_){

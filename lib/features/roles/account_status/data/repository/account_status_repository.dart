@@ -54,29 +54,17 @@ class AccountStatusRepository {
   /// ✅ UPDATED: Now sends notifications based on status change
   updateAccountStatus(AccountStatusAccessEntity accountStatusAccessEntity,
       EmployeeStatusEnum status) async {
-    print('');
-    print('═══════════════════════════════════════════════════════════');
-    print('🔥 REPOSITORY - updateAccountStatus START');
-    print('═══════════════════════════════════════════════════════════');
-    print('   Employee ID: ${accountStatusAccessEntity.employeeId}');
-    print('   Employee Name: ${accountStatusAccessEntity.englishName}');
-    print('   Current Status (from entity): ${accountStatusAccessEntity.status.name}');
-    print('   NEW Status to set: ${status.name}');
-    print('───────────────────────────────────────────────────────────');
 
     Either<Failure, dynamic> result = await remoteDataSource
         .getEmployeeModel(accountStatusAccessEntity.employeeId);
 
     if (result.isLeft()) {
-      print('❌ FAILED to get employee model from Firebase');
-      print('   Error: $result');
       return result;
     }
 
     var employeeDataOrNull = result.getOrElse(() => null);
 
     if (employeeDataOrNull == null) {
-      print('❌ FAILED - Employee data is NULL');
       return Left(FirebaseFailure(
           'Employee data not found for ID: ${accountStatusAccessEntity.employeeId}'));
     }
@@ -84,24 +72,10 @@ class AccountStatusRepository {
     Map<String, dynamic> employeeData =
     employeeDataOrNull as Map<String, dynamic>;
 
-    print('');
-    print('📥 RAW DATA FROM FIREBASE:');
-    print('   Status field: ${employeeData['Status']}');
-    print('   timestamps field: ${employeeData['timestamps']}');
-    print('   Deactivation_Date: ${employeeData['Deactivation_Date']}');
-    print('   Activation_Date: ${employeeData['Activation_Date']}');
 
     NewEmployeeModelHistory employeeModel =
     NewEmployeeModelHistory.fromMap(employeeData);
 
-    print('');
-    print('📄 PARSED MODEL - BEFORE UPDATE:');
-    print('   status list: ${employeeModel.status}');
-    print('   timestamps list: ${employeeModel.timestamps}');
-    print('   status.length: ${employeeModel.status.length}');
-    print('   timestamps.length: ${employeeModel.timestamps.length}');
-    print('   deactivationDate: ${employeeModel.deactivationDate}');
-    print('   activationDate: ${employeeModel.activationDate}');
 
     // ✅ Store old values for notification logic
     String oldStatus = employeeModel.status.isNotEmpty
@@ -110,8 +84,6 @@ class AccountStatusRepository {
     String? oldActivationDate = employeeModel.activationDate;
     String? oldDeactivationDate = employeeModel.deactivationDate;
 
-    print('');
-    print('🔄 CALLING copyWithUpdateSynchronized...');
 
     // Update the employee model
     employeeModel = employeeModel.copyWithUpdateSynchronized(
@@ -120,33 +92,12 @@ class AccountStatusRepository {
       activationDate: '',   // Clear scheduled activation
     );
 
-    print('');
-    print('📄 PARSED MODEL - AFTER UPDATE:');
-    print('   status list: ${employeeModel.status}');
-    print('   timestamps list: ${employeeModel.timestamps}');
-    print('   status.length: ${employeeModel.status.length}');
-    print('   timestamps.length: ${employeeModel.timestamps.length}');
-    print(
-        '   Last status value: ${employeeModel.status.isNotEmpty ? employeeModel.status.last : "EMPTY"}');
-    print('   deactivationDate: ${employeeModel.deactivationDate}');
-    print('   activationDate: ${employeeModel.activationDate}');
 
     Map<String, dynamic> mapToSave = employeeModel.toMap();
-    print('');
-    print('🗺️ MAP TO SAVE TO FIREBASE:');
-    print('   Status: ${mapToSave['Status']}');
-    print('   timestamps: ${mapToSave['timestamps']}');
-    print('   Deactivation_Date: ${mapToSave['Deactivation_Date']}');
-    print('   Activation_Date: ${mapToSave['Activation_Date']}');
 
-    print('');
-    print('💾 CALLING updateEmployeeModel...');
     var updateResult = await remoteDataSource.updateEmployeeModel(employeeModel);
 
-    print('');
     if (updateResult.isRight()) {
-      print('✅ SUCCESS - Status updated in Firebase');
-      print('   New status should be: ${status.name}');
 
       // ═══════════════════════════════════════════════════════════
       // ✅ SEND NOTIFICATIONS BASED ON STATUS CHANGE
@@ -196,11 +147,7 @@ class AccountStatusRepository {
       }
 
     } else {
-      print('❌ FAILED - Could not update Firebase');
-      print('   Error: $updateResult');
     }
-    print('═══════════════════════════════════════════════════════════');
-    print('');
 
     return updateResult;
   }
@@ -215,10 +162,6 @@ class AccountStatusRepository {
   /// ✅ UPDATED: Now sends notifications when scheduling deactivation
   scheduleDeactivationTime(AccountStatusAccessEntity accountStatusAccessEntity,
       String deactivationTime) async {
-    print('');
-    print('═══════════════════════════════════════════════════════════');
-    print('🔥 SCHEDULE DEACTIVATION TIME');
-    print('═══════════════════════════════════════════════════════════');
 
     Either<Failure, dynamic> result = await remoteDataSource
         .getEmployeeModel(accountStatusAccessEntity.employeeId);
@@ -227,7 +170,6 @@ class AccountStatusRepository {
     var employeeDataOrNull = result.getOrElse(() => null);
 
     if (employeeDataOrNull == null) {
-      print('❌ FAILED - Employee data is NULL for scheduleDeactivationTime');
       return Left(FirebaseFailure(
           'Employee data not found for ID: ${accountStatusAccessEntity.employeeId}'));
     }
@@ -235,9 +177,6 @@ class AccountStatusRepository {
     NewEmployeeModelHistory employeeModel =
     NewEmployeeModelHistory.fromMap(employeeDataOrNull as Map<String, dynamic>);
 
-    print('📋 BEFORE:');
-    print('   - deactivationDate: ${employeeModel.deactivationDate}');
-    print('   - activationDate: ${employeeModel.activationDate}');
 
     // ✅ Store old value to detect edit vs new schedule
     String? oldDeactivationDate = employeeModel.deactivationDate;
@@ -246,11 +185,6 @@ class AccountStatusRepository {
     employeeModel.deactivationDate = deactivationTime;
     employeeModel.activationDate = ''; // Clear activation schedule
 
-    print('📋 AFTER:');
-    print('   - deactivationDate: ${employeeModel.deactivationDate}');
-    print('   - activationDate: ${employeeModel.activationDate}');
-    print('═══════════════════════════════════════════════════════════');
-    print('');
 
     var updateResult = await remoteDataSource.updateEmployeeModel(employeeModel);
 
@@ -296,10 +230,6 @@ class AccountStatusRepository {
   /// ✅ UPDATED: Now sends notifications when scheduling reactivation
   scheduleReactivationTime(AccountStatusAccessEntity accountStatusAccessEntity,
       String reactivationTime) async {
-    print('');
-    print('═══════════════════════════════════════════════════════════');
-    print('🔥 SCHEDULE REACTIVATION TIME');
-    print('═══════════════════════════════════════════════════════════');
 
     Either<Failure, dynamic> result = await remoteDataSource
         .getEmployeeModel(accountStatusAccessEntity.employeeId);
@@ -308,7 +238,6 @@ class AccountStatusRepository {
     var employeeDataOrNull = result.getOrElse(() => null);
 
     if (employeeDataOrNull == null) {
-      print('❌ FAILED - Employee data is NULL for scheduleReactivationTime');
       return Left(FirebaseFailure(
           'Employee data not found for ID: ${accountStatusAccessEntity.employeeId}'));
     }
@@ -316,9 +245,6 @@ class AccountStatusRepository {
     NewEmployeeModelHistory employeeModel =
     NewEmployeeModelHistory.fromMap(employeeDataOrNull as Map<String, dynamic>);
 
-    print('📋 BEFORE:');
-    print('   - deactivationDate: ${employeeModel.deactivationDate}');
-    print('   - activationDate: ${employeeModel.activationDate}');
 
     // ✅ Store old value to detect edit vs new schedule
     String? oldActivationDate = employeeModel.activationDate;
@@ -327,11 +253,6 @@ class AccountStatusRepository {
     employeeModel.activationDate = reactivationTime;
     employeeModel.deactivationDate = ''; // Clear deactivation schedule
 
-    print('📋 AFTER:');
-    print('   - deactivationDate: ${employeeModel.deactivationDate}');
-    print('   - activationDate: ${employeeModel.activationDate}');
-    print('═══════════════════════════════════════════════════════════');
-    print('');
 
     var updateResult = await remoteDataSource.updateEmployeeModel(employeeModel);
 
@@ -384,7 +305,6 @@ class AccountStatusRepository {
     var employeeDataOrNull = result.getOrElse(() => null);
 
     if (employeeDataOrNull == null) {
-      print('❌ FAILED - Employee data is NULL for approveResetPassword');
       return Left(FirebaseFailure(
           'Employee data not found for ID: ${accountStatusAccessEntity.employeeId}'));
     }
@@ -427,18 +347,12 @@ class AccountStatusRepository {
   /// Purpose: Update default password and expiration time in Firebase
   Future<Either<Failure, dynamic>> updateAccessDetails(
       AccountStatusAccessEntity entity) async {
-    print('🔥 FIREBASE UPDATE - START');
 
-    print('📥 RECEIVED VALUES:');
-    print('   - tempPassword: ${entity.tempPassword}');
-    print('   - expirationTimeOfPassword: ${entity.expirationTimeOfPassword}');
-    print('   - expirationTimeUnit: ${entity.expirationTimeUnit}');
 
     try {
       String? documentId = entity.employeeId;
 
       if (documentId == null || documentId.isEmpty) {
-        print('❌ Document ID is null or empty');
         return Left(FirebaseFailure('Document ID cannot be null or empty'));
       }
 
@@ -450,7 +364,6 @@ class AccountStatusRepository {
           .get(const GetOptions(source: Source.server));
 
       if (!docSnapshot.exists) {
-        print('❌ Employee document not found: $documentId');
         return Left(FirebaseFailure('Employee document not found'));
       }
 
@@ -459,35 +372,20 @@ class AccountStatusRepository {
       NewEmployeeModelHistory employeeModel =
       NewEmployeeModelHistory.fromMap(data);
 
-      print('📄 CURRENT FIREBASE VALUES:');
-      print('   - defaultPassword: ${employeeModel.defaultPassword}');
-      print('   - passwordExpirationTime: ${employeeModel.passwordExpirationTime}');
-      print('   - passwordExpirationUnit: ${employeeModel.passwordExpirationUnit}');
 
       // Update ALL THREE fields
       employeeModel.defaultPassword = entity.tempPassword;
       employeeModel.passwordExpirationTime = entity.expirationTimeOfPassword;
       employeeModel.passwordExpirationUnit = entity.expirationTimeUnit;
 
-      print('💾 VALUES TO SAVE:');
-      print('   - defaultPassword: ${employeeModel.defaultPassword}');
-      print('   - passwordExpirationTime: ${employeeModel.passwordExpirationTime}');
-      print('   - passwordExpirationUnit: ${employeeModel.passwordExpirationUnit}');
 
       Map<String, dynamic> mapToSave = employeeModel.toMap();
-      print('🗺️ MAP VALUES:');
-      print('   - Default_Password: ${mapToSave['Default_Password']}');
-      print('   - Password_Expiration_Time: ${mapToSave['Password_Expiration_Time']}');
-      print('   - Password_Expiration_Unit: ${mapToSave['Password_Expiration_Unit']}');
 
       await employeesInfoRef.doc(documentId).set(
           mapToSave, SetOptions(merge: true));
 
-      print('✅ FIREBASE UPDATE - SUCCESS');
       return Right(null);
     } catch (e, stackTrace) {
-      print('❌ FIREBASE UPDATE - ERROR: $e');
-      print('Stack trace: $stackTrace');
       return Left(FirebaseFailure('Failed to update access details: $e'));
     }
   }

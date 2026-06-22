@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:demo_app/features/data_grc_module/feature/nav_bar.dart';
+import 'package:demo_app/core/helper_module/data_grc_module/feature/nav_bar.dart';
 
 ///Youssef Ashraf:
 ///Adding Horizontal animation  to a given child, used in message bubble

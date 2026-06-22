@@ -1260,6 +1260,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "downloads": MessageLookupByLibrary.simpleMessage("التنزيلات"),
     "draft": MessageLookupByLibrary.simpleMessage("مسودة"),
     "draftSaved": MessageLookupByLibrary.simpleMessage("تم حفظ المسودة"),
+    "draftSavedSuccessfully": MessageLookupByLibrary.simpleMessage(
+      "تم حفظ المسودة بنجاح!",
+    ),
     "draftService": MessageLookupByLibrary.simpleMessage("خدمة المسودات"),
     "dragDropFilesHere": MessageLookupByLibrary.simpleMessage(
       "اسحب وأفلت الملفات هنا",
@@ -1293,6 +1296,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "editControlScreenNotImplemented": MessageLookupByLibrary.simpleMessage(
       "شاشة تعديل الضابط غير مطبقة بعد",
     ),
+    "editFileName": MessageLookupByLibrary.simpleMessage("تعديل اسم الملف"),
     "editGroup": MessageLookupByLibrary.simpleMessage("تعديل المجموعة"),
     "editMessage": MessageLookupByLibrary.simpleMessage("تعديل الرسالة"),
     "editPolicy": MessageLookupByLibrary.simpleMessage("تعديل السياسة"),
@@ -1466,6 +1470,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "errorLoadingDashboard": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ أثناء تحميل لوحة التحكم",
     ),
+    "errorLoadingServices": MessageLookupByLibrary.simpleMessage(
+      "حدث خطأ أثناء تحميل الخدمات",
+    ),
     "errorLoadingStatistics": MessageLookupByLibrary.simpleMessage(
       "حدث خطأ أثناء تحميل الإحصائيات",
     ),
@@ -1578,9 +1585,15 @@ class MessageLookup extends MessageLookupByLibrary {
     "failedToCreateKnowledgeHub": MessageLookupByLibrary.simpleMessage(
       "فشل في إنشاء مركز المعرفة",
     ),
+    "failedToCreateServiceRequest": MessageLookupByLibrary.simpleMessage(
+      "فشل إنشاء طلب الخدمة. يرجى المحاولة مرة أخرى.",
+    ),
     "failedToDownloadFile": MessageLookupByLibrary.simpleMessage("فشل التحميل"),
     "failedToLoadDepartments": MessageLookupByLibrary.simpleMessage(
       "فشل في تحميل الأقسام",
+    ),
+    "failedToLoadServiceData": MessageLookupByLibrary.simpleMessage(
+      "فشل تحميل بيانات الخدمة",
     ),
     "failedToPickImage": MessageLookupByLibrary.simpleMessage(
       "فشل اختيار الصورة",
@@ -1921,6 +1934,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "limitedDepartmentAvailability": MessageLookupByLibrary.simpleMessage(
       "تقييد إتاحة الأقسام",
     ),
+    "loadMore": MessageLookupByLibrary.simpleMessage("تحميل المزيد"),
     "loading": MessageLookupByLibrary.simpleMessage("جاري التحميل..."),
     "loadingDashboard": MessageLookupByLibrary.simpleMessage(
       "جارٍ تحميل لوحة التحكم...",
@@ -2140,6 +2154,7 @@ class MessageLookup extends MessageLookupByLibrary {
     "noLocationsFound": MessageLookupByLibrary.simpleMessage(
       "لم يتم العثور على مواقع",
     ),
+    "noMoreResults": MessageLookupByLibrary.simpleMessage("لا مزيد من النتائج"),
     "noOfControls": MessageLookupByLibrary.simpleMessage("عدد الضوابط"),
     "noOrdersFound": MessageLookupByLibrary.simpleMessage("لا توجد طلبات"),
     "noPermissionNeeded": MessageLookupByLibrary.simpleMessage(
@@ -2148,12 +2163,14 @@ class MessageLookup extends MessageLookupByLibrary {
     "noResourcesDataAvailable": MessageLookupByLibrary.simpleMessage(
       "لا توجد بيانات موارد متاحة",
     ),
+    "noResults": MessageLookupByLibrary.simpleMessage("لا توجد نتائج"),
     "noRolesToExport": MessageLookupByLibrary.simpleMessage(
       "لا توجد أدوار للتصدير",
     ),
     "noSearchResults": MessageLookupByLibrary.simpleMessage(
       "لا توجد نتائج بحث",
     ),
+    "noServicesFound": MessageLookupByLibrary.simpleMessage("لا توجد خدمات"),
     "noStatisticsAvailable": MessageLookupByLibrary.simpleMessage(
       "لا توجد إحصائيات متاحة",
     ),
@@ -2483,6 +2500,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "processingData": MessageLookupByLibrary.simpleMessage(
       "جاري معالجة بياناتك، يرجى الانتظار",
     ),
+    "processingFile": MessageLookupByLibrary.simpleMessage(
+      "جارٍ معالجة الملف...",
+    ),
     "processingRequest": MessageLookupByLibrary.simpleMessage(
       "جارٍ معالجة الطلب...",
     ),
@@ -2561,6 +2581,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "recording": MessageLookupByLibrary.simpleMessage("مسجل"),
     "red": MessageLookupByLibrary.simpleMessage("احمر"),
+    "redirecting": MessageLookupByLibrary.simpleMessage(
+      "جارٍ إعادة التوجيه...",
+    ),
     "registrationDocument": MessageLookupByLibrary.simpleMessage(
       "وثيقة التسجيل",
     ),
@@ -2620,6 +2643,9 @@ class MessageLookup extends MessageLookupByLibrary {
     ),
     "requestDetails": MessageLookupByLibrary.simpleMessage("تفاصيل الطلب"),
     "requestDone": MessageLookupByLibrary.simpleMessage("تم إنجاز الطلب"),
+    "requestHasNoAssignedProvider": MessageLookupByLibrary.simpleMessage(
+      "لا يوجد مزوّد معيّن لهذا الطلب",
+    ),
     "requestID": MessageLookupByLibrary.simpleMessage("معرف الطلب"),
     "requestId": MessageLookupByLibrary.simpleMessage("معرّف الطلب"),
     "requestInProgress": MessageLookupByLibrary.simpleMessage(
@@ -2967,6 +2993,9 @@ class MessageLookup extends MessageLookupByLibrary {
     "status_inprogress": MessageLookupByLibrary.simpleMessage("قيد التنفيذ"),
     "status_pending": MessageLookupByLibrary.simpleMessage("قيد الانتظار"),
     "status_rejected": MessageLookupByLibrary.simpleMessage("مرفوض"),
+    "step2ServiceRequests": MessageLookupByLibrary.simpleMessage(
+      "الخطوة 2: طلبات الخدمة",
+    ),
     "stock": MessageLookupByLibrary.simpleMessage("المخزون"),
     "stocksOverview": MessageLookupByLibrary.simpleMessage(
       "نظرة عامة على المخزون",

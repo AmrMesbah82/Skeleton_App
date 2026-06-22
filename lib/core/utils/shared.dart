@@ -2,7 +2,13 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'package:demo_app/features/services_mangment_module/Category/data/entities/modelEmployee.dart';
+import '../helper/helper_function.dart';
+
+// NOTE: SharedPrefsEmployeeHelper / SharedPrefsApprovalHelper live in the
+// services module (data/helper/services_prefs_employee.dart) so core no longer
+// depends on the module's EmployeeEntityModell and survives module deletion.
+
+
 
 class SharedPrefsHelper {
   static Future<void> setString(String key, String value) async {
@@ -62,55 +68,6 @@ class SharedPrefsHelper {
   static Future<void> clearAll() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.clear();
-  }
-}
-
-
-class SharedPrefsEmployeeHelper {
-  static const String _key = 'selected_employees';
-
-  static Future<void> saveSelectedEmployees(List<EmployeeEntityModell> employees) async {
-    final prefs = await SharedPreferences.getInstance();
-    final employeeJson = employees.map((e) => e.toJson()).toList();
-    await prefs.setString(_key, jsonEncode(employeeJson));
-  }
-
-  static Future<List<EmployeeEntityModell>> getSelectedEmployees() async {
-    final prefs = await SharedPreferences.getInstance();
-    final jsonString = prefs.getString(_key);
-    if (jsonString == null) return [];
-    final List decoded = jsonDecode(jsonString);
-    return decoded.map((e) => EmployeeEntityModell.fromJson(e)).toList();
-  }
-
-  static Future<void> clearSelectedEmployees() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove(_key);
-  }
-}
-
-
-
-class SharedPrefsApprovalHelper {
-  static const _approvalKey = 'approval_cycle_employees';
-
-  static Future<void> saveApprovalCycle(List<EmployeeEntityModell> employees) async {
-    final prefs = await SharedPreferences.getInstance();
-    final employeeJson = employees.map((e) => e.toJson()).toList();
-    await prefs.setString(_approvalKey, jsonEncode(employeeJson));
-  }
-
-  static Future<List<EmployeeEntityModell>> getApprovalCycle() async {
-    final prefs = await SharedPreferences.getInstance();
-    final jsonString = prefs.getString(_approvalKey);
-    if (jsonString == null) return [];
-    final List decoded = jsonDecode(jsonString);
-    return decoded.map((e) => EmployeeEntityModell.fromJson(e)).toList();
-  }
-
-  static Future<void> clearApprovalCycle() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.remove(_approvalKey);
   }
 }
 

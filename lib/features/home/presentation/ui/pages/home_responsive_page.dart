@@ -11,7 +11,7 @@ import 'package:demo_app/features/home/presentation/ui/pages/tablet/tablet_home_
 import 'package:get/get.dart';
 import '../../../../../core/widgets/custom_appbar.dart';
 import 'package:demo_app/core/widgets/responsive_helper.dart';
-import '../../../../roles/presentation/ui/pages/role_management/role_management_home.dart';
+import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_management/role_management_home.dart';
 import '../../controller/schedule_controller.dart';
 import '../../controller/skeleton_home_controller.dart';
 

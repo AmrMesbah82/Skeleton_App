@@ -11,7 +11,7 @@
   import 'package:cloud_firestore/cloud_firestore.dart';
   import 'package:dartz/dartz.dart';
 import 'package:demo_app/features/notification/notification_controller.dart';
-import 'package:demo_app/features/roles/presentation/controller/user_role_controller.dart';
+import 'package:demo_app/features/roles/role_management/presentation/controller/user_role_controller.dart';
   import 'package:firebase_core/firebase_core.dart';
   import 'package:flutter/material.dart';
   import 'package:geolocator/geolocator.dart';
@@ -26,39 +26,39 @@ import 'package:demo_app/features/employees/add_wrong_employee_controller.dart';
 import 'package:demo_app/features/employees/biometrics_contoller.dart';
 // REMOVED_MODULE:   import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:demo_app/features/requests/request_controller.dart';
-import 'package:demo_app/features/events/controllers/employee_controller.dart';
-import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/events/controllers/employee_controller.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/events/controllers/events_controllers/event_controller.dart';
 // REMOVED_MODULE:   import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
   import 'package:demo_app/features/department/presentation/controller/add_department_controller.dart';
   import 'package:demo_app/features/home/app_drawer/presentation/ui/pages/custom_drawer.dart';
   import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
   import 'package:demo_app/features/employees/presentation/controller/main_core_department_controller.dart';
-  import 'package:demo_app/features/roles/presentation/ui/pages/role_responsive_page.dart';
+  import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_responsive_page.dart';
   import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
   import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
   import 'package:page_transition/page_transition.dart';
 
   import '../../../../../core/network/failure_model.dart';
   import '../../../../../core/services/notifications/firebase_notification_handler.dart';
-  import '../../../../roles/add_access_type_controller.dart';
+  import '../../../../roles/role_management/presentation/controller/add_access_type_controller.dart';
   import '../../welcome_screen/views/mobile_view/mobile_sign_in.dart';
   import '../../welcome_screen/views/reset_password/reset_password_screen.dart';
   import '../../welcome_screen/views/start_sign_in.dart';
-  import '../../../../form_builder_module/core/di/injection.dart';
+  // REMOVED_MODULE: import '../../../../form_builder_module/core/di/injection.dart';
   import '../../../../messaging/interface/messaging_interface_implementation.dart';
   import 'package:demo_app/core/network/get_base_url.dart';
   import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
   import '../../../../employee/presentation/controller/main_core_employee_controller.dart';
   import '../../../../notification/presentation/controller/notification_controller_cubit_main_core.dart';
-  import '../../../../task_management_module/borad/controller/board_controller.dart';
+  // REMOVED_MODULE: import '../../../../task_management_module/borad/controller/board_controller.dart';
   import '../../../../home/app_drawer/presentation/controller/drawer_controller.dart';
   import '../../../../employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
   import '../../../../home/presentation/ui/pages/main_responnsive.dart';
   import '../../../../home/nav_bar/presentation/controller/nav_bar_controller.dart';
   import '../../../../notification/subscrip.dart';
-  import '../../../../roles/data/models/role_model.dart';
-  import '../../../../roles/data/repository/role_repository.dart';
-  import '../../../../roles/data/services/permission_sync_service.dart';
+  import 'package:demo_app/features/roles/role_management/data/models/role_model.dart';
+  import 'package:demo_app/features/roles/role_management/data/repository/role_repository.dart';
+  import 'package:demo_app/features/roles/role_management/data/services/permission_sync_service.dart';
   import '../../domain/enums/success_authentication_type.dart';
   import '../../utils/constants.dart';
   import 'demo_login_controller.dart';
@@ -207,15 +207,15 @@ import 'package:demo_app/features/events/controllers/events_controllers/event_co
     AppNotificationController appNotificationController =
     Get.put(AppNotificationController());
 
-    EventsEmployeeController employeeController =
-    Get.put(EventsEmployeeController());
+    // EventsEmployeeController employeeController =
+    // Get.put(EventsEmployeeController());
 
     Future<void> getEvents() async {
       print("📅 getEvents() called");
-      await eventController.fetchEmployees();
-      await eventController.fetchEventsFromFirebase();
-      await employeeController.fetchEmployees();
-      await employeeController.fetchEventsFromFirebase();
+      // await eventController.fetchEmployees();
+      // await eventController.fetchEventsFromFirebase();
+      // await employeeController.fetchEmployees();
+      // await employeeController.fetchEventsFromFirebase();
       update();
       print("📅 getEvents() complete");
     }
@@ -324,7 +324,7 @@ import 'package:demo_app/features/events/controllers/events_controllers/event_co
       return parsedDate.isBefore(now);
     }
 
-    EventController eventController = Get.put(EventController());
+    // EventController eventController = Get.put(EventController());
 
     Future<void> getAllEmployees() async {
       print("👥 getAllEmployees() called");
@@ -1188,7 +1188,7 @@ import 'package:demo_app/features/events/controllers/events_controllers/event_co
 
       try {
         print("\n🔹 Initializing controllers...");
-        Get.put(BoardController());
+        // Get.put(BoardController());
 
         MessagingInterfaceImplementation().initMessagingModule();
 
@@ -1375,7 +1375,7 @@ import 'package:demo_app/features/events/controllers/events_controllers/event_co
       }
 
       Get.find<MainCoreDepartmentController>().getAllDepartments();
-      configurationDependencies(); // form_builder
+      // configurationDependencies(); // form_builder
       // Register todo + role controllers needed by home/roles screens
 
       if (!Get.isRegistered<EmployeeRoleController>()) {

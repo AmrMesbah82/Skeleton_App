@@ -28,7 +28,7 @@ import '../../../../data/models/home_component_model.dart';
 import '../../../controller/home_cubit.dart';
 import '../../../controller/home_state.dart';
 import '../../../controller/skeleton_home_controller.dart';
-import '../../../../../roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import '../../../../utils/home_constants.dart';
 
 

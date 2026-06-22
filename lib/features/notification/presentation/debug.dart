@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/employee/presentation/controller/main_core_employee_controller.dart';
-import 'package:demo_app/features/roles/domain/enums/modules_enum.dart';
-import 'package:demo_app/features/roles/domain/enums/notification/notification_permissions.dart';
-import 'package:demo_app/features/roles/domain/enums/notification/notification_permissions_sections.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/notification/notification_permissions.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/notification/notification_permissions_sections.dart';
 
 /// DEBUG WIDGET - Add this to your notification control page temporarily
 /// to see exactly what the permission checker is doing

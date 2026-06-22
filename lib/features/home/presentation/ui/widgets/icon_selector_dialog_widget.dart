@@ -1,17 +1,18 @@
 import 'package:demo_app/core/theme/new_theme.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/services_mangment_module/presentation/s7_approvals/ui/pages/approval_request_toggle.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/services_mangment_module/presentation/s9_admin_dashboard/ui/pages/dashBoard_admin.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
+import 'package:demo_app/core/removed_module_placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
-import '../../../../inventory_module/category/presentation/ui/tablet/s7_dashboard/p7_dashboard/p7_dashboard_toogel.dart';
+// REMOVED_MODULE: import '../../../../inventory_module/category/presentation/ui/tablet/s7_dashboard/p7_dashboard/p7_dashboard_toogel.dart';
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
-import '../../../../services_mangment_module/Category/presentation/ui/service_department_manager/tablet/s4_approvals/approval_requests/approval_request_toggle.dart';
-import '../../../../services_mangment_module/Category/presentation/ui/services_admin/tablet/s3_dashboard/dashBoard_admin/dashBoard_admin.dart';
-import '../../../../roles/presentation/ui/pages/role_management/role_management_home.dart';
-import '../../../../roles/presentation/ui/pages/user_management/user_management_home.dart';
+import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_management/role_management_home.dart';
+import 'package:demo_app/features/roles/role_management/presentation/view/pages/user_management/user_management_home.dart';
 
 class HeaderIconItem {
   final String svgPath;
@@ -58,12 +59,12 @@ class HeaderIconItem {
       HeaderIconItem(
         svgPath: 'assets/dailog/services_dashboard.svg',
         getTitle: (ctx) => S.of(ctx).serviceDashboard,
-        navigateTo: (context) => AdminDashBoardMasterTablet(),
+        navigateTo: (context) => RemovedModulePage(moduleName: 'Services'.tr),
       ),
       HeaderIconItem(
         svgPath: 'assets/dailog/inventory_dashboard.svg',
         getTitle: (ctx) => S.of(ctx).inventoryDashboard,
-        navigateTo: (context) => DashboardSection(),
+        navigateTo: (context) => RemovedModulePage(moduleName: 'Inventory'.tr),
       ),
       HeaderIconItem(
         svgPath: 'assets/dailog/qias_dashboard.svg',
@@ -73,7 +74,7 @@ class HeaderIconItem {
       HeaderIconItem(
         svgPath: 'assets/dailog/services_approval.svg',
         getTitle: (ctx) => S.of(ctx).serviceApprovals,
-        navigateTo: (context) => ApprovalToggle(),
+        navigateTo: (context) => RemovedModulePage(moduleName: 'Services'.tr),
       ),
       HeaderIconItem(
         svgPath: 'assets/dailog/create_todo.svg',

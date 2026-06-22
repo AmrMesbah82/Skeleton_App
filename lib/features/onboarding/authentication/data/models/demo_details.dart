@@ -5,7 +5,7 @@
 /// Created At: 31/12/2024
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/features/roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import '../../../../../core/generic_models/single_value_tracking_model.dart';
 
 class DemoDetails {

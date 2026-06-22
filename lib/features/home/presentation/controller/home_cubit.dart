@@ -17,7 +17,7 @@ import '../../../../core/enumeration/enum.dart';
 import '../../../../core/network/failure_model.dart';
 import '../../app_drawer/presentation/controller/drawer_controller.dart';
 import '../../nav_bar/presentation/controller/nav_bar_controller.dart';
-import '../../../roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import '../../data/models/home_component_model.dart';
 import '../../data/repository/home_repository.dart';
 import '../ui/widgets/icon_selector_dialog_widget.dart';

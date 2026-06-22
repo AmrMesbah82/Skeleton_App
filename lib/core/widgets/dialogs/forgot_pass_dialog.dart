@@ -1,8 +1,9 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -89,21 +90,14 @@ class _ForgotPassDialogState extends State<ForgotPassDialog> {
               SizedBox(
                 height: 15.sp,
               ),
-              CustomValidatedTextFieldInv(
+              CustomTextField(
                 label: S.of(context).email,
                 hint: S.of(context).textHere,
                 controller: emailController,
-                height: 44,
                 textDirection: TextDirection.ltr,
                 textAlign: TextAlign.start,
-
-                // ✅ Email keyboard type
                 keyboardType: TextInputType.emailAddress,
-
-                // ✅ Show error text from validation
                 errorText: emailError,
-
-                // ✅ Handle text changes
                 onChanged: (value) {
                   setState(() {
                     email = value;
@@ -113,10 +107,7 @@ class _ForgotPassDialogState extends State<ForgotPassDialog> {
                     }
                   });
                 },
-
                 fillColor: AppColors.background,
-
-
               ),
 
               SizedBox(height: 5.sp),

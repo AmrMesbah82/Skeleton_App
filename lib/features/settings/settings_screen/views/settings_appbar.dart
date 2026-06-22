@@ -11,7 +11,7 @@ import 'package:demo_app/core/dummy_data/mode_changer.dart';
 
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
-import 'package:demo_app/features/services_mangment_module/core/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 

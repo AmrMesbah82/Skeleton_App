@@ -1,5 +1,6 @@
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
+
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -172,12 +173,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                   ? Row(
                 children: [
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'Company Name'.tr,
                       hint: S.of(context).textHere,
                       controller: companyNameController,
-                      height: 36,
-                      submitted: false,
                       textDirection: companyNameDirection,
                       enabled: false,
                       onChanged: (value) {
@@ -189,25 +188,20 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                   ),
                   SizedBox(width: 12.w),
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'Tax Number'.tr,
                       hint: S.of(context).textHere,
                       controller: taxNumberController,
-                      height: 36,
-                      submitted: false,
-                      onlyDigits: true,
                       enabled: false,
                       onChanged: (value) => setState(() {}),
                     ),
                   ),
                   SizedBox(width: 12.w),
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'Country'.tr,
                       hint: S.of(context).textHere,
                       controller: countryController,
-                      height: 36,
-                      submitted: false,
                       textDirection: countryDirection,
                       enabled: false,
                       onChanged: (value) {
@@ -221,12 +215,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
               )
                   : Column(
                 children: [
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'Company Name'.tr,
                     hint: S.of(context).textHere,
                     controller: companyNameController,
-                    height: 36,
-                    submitted: false,
                     textDirection: companyNameDirection,
                     enabled: false,
                     onChanged: (value) {
@@ -236,23 +228,18 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                     },
                   ),
                   SizedBox(height: 0.h),
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'Tax Number'.tr,
                     hint: S.of(context).textHere,
                     controller: taxNumberController,
-                    height: 36,
-                    submitted: false,
-                    onlyDigits: true,
                     enabled: false,
                     onChanged: (value) => setState(() {}),
                   ),
                   SizedBox(height: 0.h),
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'Country'.tr,
                     hint: S.of(context).textHere,
                     controller: countryController,
-                    height: 36,
-                    submitted: false,
                     textDirection: countryDirection,
                     enabled: false,
                     onChanged: (value) {
@@ -270,12 +257,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                   ? Row(
                 children: [
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'Province'.tr,
                       hint: S.of(context).textHere,
                       controller: provinceController,
-                      height: 36,
-                      submitted: false,
                       textDirection: provinceDirection,
                       enabled: false,
                       onChanged: (value) {
@@ -287,12 +272,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                   ),
                   SizedBox(width: 12.w),
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'City'.tr,
                       hint: S.of(context).textHere,
                       controller: cityController,
-                      height: 36,
-                      submitted: false,
                       textDirection: cityDirection,
                       enabled: false,
                       onChanged: (value) {
@@ -307,12 +290,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
               )
                   : Column(
                 children: [
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'Province'.tr,
                     hint: S.of(context).textHere,
                     controller: provinceController,
-                    height: 36,
-                    submitted: false,
                     textDirection: provinceDirection,
                     enabled: false,
                     onChanged: (value) {
@@ -322,12 +303,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                     },
                   ),
                   SizedBox(height: 0.h),
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'City'.tr,
                     hint: S.of(context).textHere,
                     controller: cityController,
-                    height: 36,
-                    submitted: false,
                     textDirection: cityDirection,
                     enabled: false,
                     onChanged: (value) {
@@ -341,12 +320,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
               SizedBox(height: 0.h),
 
               // Row 3: Street (full width)
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: S.of(context).street,
                 hint: S.of(context).textHere,
                 controller: streetController,
-                height: 36,
-                submitted: false,
                 textDirection: streetDirection,
                 enabled: false,
                 onChanged: (value) {
@@ -378,12 +355,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                   ? Row(
                 children: [
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'Industry'.tr,
                       hint: S.of(context).textHere,
                       controller: industryController,
-                      height: 36.h,
-                      submitted: false,
                       textDirection: industryDirection,
                       enabled: false,
                       onChanged: (value) {
@@ -395,12 +370,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                   ),
                   SizedBox(width: 12.w),
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'Company Size'.tr,
                       hint: S.of(context).textHere,
                       controller: companySizeController,
-                      height: 36.h,
-                      submitted: false,
                       enabled: false,
                       onChanged: (value) => setState(() {}),
                     ),
@@ -409,12 +382,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
               )
                   : Column(
                 children: [
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'Industry'.tr,
                     hint: S.of(context).textHere,
                     controller: industryController,
-                    height: 36.h,
-                    submitted: false,
                     textDirection: industryDirection,
                     enabled: false,
                     onChanged: (value) {
@@ -424,12 +395,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                     },
                   ),
                   SizedBox(height: 0.h),
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'Company Size'.tr,
                     hint: S.of(context).textHere,
                     controller: companySizeController,
-                    height: 36.h,
-                    submitted: false,
                     enabled: false,
                     onChanged: (value) => setState(() {}),
                   ),
@@ -458,12 +427,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                   ? Row(
                 children: [
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'First Name'.tr,
                       hint: S.of(context).textHere,
                       controller: firstNameController,
-                      height: 36.h,
-                      submitted: false,
                       textDirection: firstNameDirection,
                       enabled: false,
                       onChanged: (value) {
@@ -475,12 +442,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                   ),
                   SizedBox(width: 12.w),
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'Last Name'.tr,
                       hint: S.of(context).textHere,
                       controller: lastNameController,
-                      height: 36.h,
-                      submitted: false,
                       textDirection: lastNameDirection,
                       enabled: false,
                       onChanged: (value) {
@@ -494,12 +459,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
               )
                   : Column(
                 children: [
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'First Name'.tr,
                     hint: S.of(context).textHere,
                     controller: firstNameController,
-                    height: 36.h,
-                    submitted: false,
                     textDirection: firstNameDirection,
                     enabled: false,
                     onChanged: (value) {
@@ -509,12 +472,10 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                     },
                   ),
                   SizedBox(height: 0.h),
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'Last Name'.tr,
                     hint: S.of(context).textHere,
                     controller: lastNameController,
-                    height: 36.h,
-                    submitted: false,
                     textDirection: lastNameDirection,
                     enabled: false,
                     onChanged: (value) {
@@ -532,25 +493,20 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
                   ? Row(
                 children: [
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'Email'.tr,
                       hint: S.of(context).textHere,
                       controller: emailController,
-                      height: 36.h,
-                      submitted: false,
                       enabled: false,
                       onChanged: (value) => setState(() {}),
                     ),
                   ),
                   SizedBox(width: 12.w),
                   Expanded(
-                    child: CustomValidatedTextFieldMaster(
+                    child: CustomTextField(
                       label: 'Phone Number'.tr,
                       hint: S.of(context).textHere,
                       controller: phoneNumberController,
-                      height: 36.h,
-                      submitted: false,
-                      onlyDigits: true,
                       enabled: false,
                       onChanged: (value) => setState(() {}),
                     ),
@@ -559,23 +515,18 @@ class _CompanyInformationFieldsState extends State<CompanyInformationFields> {
               )
                   : Column(
                 children: [
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'Email'.tr,
                     hint: S.of(context).textHere,
                     controller: emailController,
-                    height: 36.h,
-                    submitted: false,
                     enabled: false,
                     onChanged: (value) => setState(() {}),
                   ),
                   SizedBox(height: 0.h),
-                  CustomValidatedTextFieldMaster(
+                  CustomTextField(
                     label: 'Phone Number'.tr,
                     hint: S.of(context).textHere,
                     controller: phoneNumberController,
-                    height: 36.h,
-                    submitted: false,
-                    onlyDigits: true,
                     enabled: false,
                     onChanged: (value) => setState(() {}),
                   ),

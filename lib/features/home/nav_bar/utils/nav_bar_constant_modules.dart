@@ -1,4 +1,4 @@
-import '../../../roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 
 abstract class NavBarConstantModules {
   /// default modules to appear at admin nav bar

@@ -1,5 +1,6 @@
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -127,19 +128,15 @@ class _NameSectionState extends State<NameSection> {
         ],
 
         // First Name Field
-        CustomValidatedTextFieldMaster(
-          textStyle: StyleText.fontSize12Weight500.copyWith(
+        CustomTextField(
+          valueStyle: StyleText.fontSize12Weight500.copyWith(
             color: AppColors.text
           ),
           label: S.of(context).firstName,
           hint: widget.firstNameHint.tr,
           controller: _firstNameController,
           textDirection: isArabic ?  TextDirection.rtl : TextDirection.ltr,
-          height: 36,
-          width: double.infinity,
-          // textDirection: TextDirection.rtl,
           enabled: !widget.isReadOnly,
-          submitted: widget.submitted,
           onChanged: (value) {
             if (widget.firstNameOnChanged != null) {
               widget.firstNameOnChanged!(value);
@@ -150,15 +147,12 @@ class _NameSectionState extends State<NameSection> {
         isPhone ? SizedBox() : SizedBox(height: 16.h),
 
         // Middle Name Field
-        CustomValidatedTextFieldMaster(
+        CustomTextField(
           label: S.of(context).middleName,
           hint: widget.middleNameHint.tr,
           controller: _middleNameController,
-          height: 36,
-          width: double.infinity,
           textDirection: isArabic ?  TextDirection.rtl : TextDirection.ltr,
           enabled: !widget.isReadOnly,
-          submitted: widget.submitted,
           onChanged: (value) {
             if (widget.middleNameOnChanged != null) {
               widget.middleNameOnChanged!(value);
@@ -169,15 +163,12 @@ class _NameSectionState extends State<NameSection> {
         isPhone ? SizedBox() : SizedBox(height: 16.h),
 
         // Last Name Field
-        CustomValidatedTextFieldMaster(
+        CustomTextField(
           label: S.of(context).lastName,
           hint: widget.lastNameHint.tr,
           controller: _lastNameController,
-          height: 36,
           textDirection: isArabic ?  TextDirection.rtl : TextDirection.ltr,
-          width: double.infinity,
           enabled: !widget.isReadOnly,
-          submitted: widget.submitted,
           onChanged: (value) {
             if (widget.lastNameOnChanged != null) {
               widget.lastNameOnChanged!(value);
@@ -216,15 +207,12 @@ class _NameSectionState extends State<NameSection> {
                   right: isArabic ? 0 : 12.w,
                   left: isArabic ? 12.w : 0,
                 ),
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: S.of(context).firstName,
                   hint: widget.firstNameHint.tr,
                   controller: _firstNameController,
-                  height: 36,
-                  width: double.infinity,
                   enabled: !widget.isReadOnly,
                   textDirection: isArabic ?  TextDirection.rtl : TextDirection.ltr,
-                  submitted: widget.submitted,
                   onChanged: (value) {
                     if (widget.firstNameOnChanged != null) {
                       widget.firstNameOnChanged!(value);
@@ -241,16 +229,12 @@ class _NameSectionState extends State<NameSection> {
                   right: isArabic ? 0 : 12.w,
                   left: isArabic ? 12.w : 0,
                 ),
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: S.of(context).middleName,
                   hint: widget.middleNameHint.tr,
                   controller: _middleNameController,
-                  height: 36,
-                  width: double.infinity,
                   textDirection: isArabic ?  TextDirection.rtl : TextDirection.ltr,
-
                   enabled: !widget.isReadOnly,
-                  submitted: widget.submitted,
                   onChanged: (value) {
                     if (widget.middleNameOnChanged != null) {
                       widget.middleNameOnChanged!(value);
@@ -262,16 +246,12 @@ class _NameSectionState extends State<NameSection> {
 
             // Last Name
             Expanded(
-              child: CustomValidatedTextFieldMaster(
+              child: CustomTextField(
                 label: S.of(context).lastName,
                 hint: widget.lastNameHint.tr,
                 controller: _lastNameController,
-                height: 36,
                 textDirection: isArabic ?  TextDirection.rtl : TextDirection.ltr,
-
-                width: double.infinity,
                 enabled: !widget.isReadOnly,
-                submitted: widget.submitted,
                 onChanged: (value) {
                   if (widget.lastNameOnChanged != null) {
                     widget.lastNameOnChanged!(value);

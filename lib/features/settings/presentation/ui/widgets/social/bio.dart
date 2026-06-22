@@ -3,7 +3,8 @@
 /// Author: Mohamed Elrashidy
 /// Created at: 13/11/2024
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -15,7 +16,7 @@ import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/text_field.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 
-import '../../../../../services_mangment_module/core/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import '../../../../../../core/helper/format_helper.dart'; // ✅ ADD THIS
 import '../../../controller/settings_controller.dart';
 import '../settings_header.dart';
@@ -83,18 +84,14 @@ class _BioState extends State<Bio> {
             text: FormatHelper.capitalize('Bio'.tr), // ✅ CAPITALIZE
           ),
           SizedBox(height: 10.sp),
-          CustomValidatedTextFieldInv(
-            hint: FormatHelper.capitalize("Share Something About Yourself".tr), // ✅ CAPITALIZE
+          CustomTextField(
+            hint: FormatHelper.capitalize("Share Something About Yourself".tr),
             controller: settingsController.socialController.bioController,
             maxLines: 3,
-            height: 72,
             maxLength: 500,
-            showCharCount: true,
             enabled: true,
-            submitted: false,
             textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
             textAlign: TextAlign.start,
-            autoCapitalize: true, // ✅ ADD THIS
             onChanged: (value) {
               setState(() {
                 settingsController.socialController.changeBio = true;

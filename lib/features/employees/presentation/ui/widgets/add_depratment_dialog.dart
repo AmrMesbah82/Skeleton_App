@@ -1,5 +1,6 @@
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
+
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -311,34 +312,30 @@ class _AddDepartmentDialogNewState extends State<AddDepartmentDialogNew> {
                 left: Directionality(
                   textDirection: TextDirection.ltr,
 
-                child: CustomValidatedTextFieldInv(
-                    label: 'Department Name',
-                    hint: 'Text here',
-                    controller: departmentNameController,
-                    height: 36,
-                    fillColor: AppColors.background,
-                    textDirection: TextDirection.ltr,
-                    textAlign: TextAlign.start,
-                    submitted: submitted,
-                    maxLength: 100,
-                    onChanged: (value) {
+                child: CustomTextField(
+                  label: 'Department Name',
+                  hint: 'Text here',
+                  controller: departmentNameController,
+                  fillColor: AppColors.background,
+                  textDirection: TextDirection.ltr,
+                  textAlign: TextAlign.start,
+                  maxLength: 100,
+                  onChanged: (value) {
                       if (submitted) {
                         _validateFields();
                       }
                     },
-                  ),
+                ),
                 ),
                 right: Directionality(
                   textDirection: TextDirection.rtl,
-                  child: CustomValidatedTextFieldInv(
+                  child: CustomTextField(
                     label: 'اسم القسم',
                     hint: 'نص هنا',
                     controller: departmentNameArabicController,
-                    height: 36,
                     fillColor: AppColors.background,
                     textDirection: TextDirection.rtl,
                     textAlign: TextAlign.right,
-                    submitted: submitted,
                     maxLength: 100,
                     onChanged: (value) {
                       if (submitted) {

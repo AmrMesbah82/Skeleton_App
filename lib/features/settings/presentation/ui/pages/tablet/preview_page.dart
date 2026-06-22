@@ -5,9 +5,10 @@
 /// Modified: Mobile responsive layout - vertical stacking on mobile
 
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/widgets/side_frame_master.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+
 import 'dart:io';
 import 'dart:ui' as ui;
 
@@ -21,7 +22,6 @@ import 'package:demo_app/core/helper/format_helper.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/text_field.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
-import 'package:demo_app/features/requests/request_controller.dart';
 import 'package:demo_app/core/shared_components/countries.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
@@ -147,7 +147,6 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
     final screenWidth = MediaQuery.of(context).size.width;
     final isMobile = screenWidth < 600;
     var lightMode = Theme.of(context).brightness == Brightness.light;
-    final requestController = Get.find<RequestController>();
 
     return Scaffold(
       body: SideFrameMaster(
@@ -645,14 +644,12 @@ class _PreviewChangesPageState extends State<PreviewChangesPage> {
                 // Request Note (only in New Details column)
                 if (!isCurrentColumn) ...[
                   SizedBox(height: 20.sp),
-                  CustomValidatedTextFieldInv(
+                  CustomTextField(
                     label: S.of(context).request_note,
                     hint: S.of(context).textHere,
                     controller: requestNoteController,
                     textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
-                    showCharCount: true,
                     maxLines: 3,
-                    height: 72,
                     onChanged: (_){
                       setState(() {
 

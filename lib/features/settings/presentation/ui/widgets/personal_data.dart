@@ -4,8 +4,8 @@
 /// Creation Date: 10/11/2024
 /// Refactored Date: 11/04/2025
 
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -28,7 +28,6 @@ import '../../../../../core/widgets/name_section.dart';
 // REMOVED: import '../../../settings_screen/views/personal_info_screens/personal_info_tablet/nationality_and_birth_section.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../../core/theme/app_colors.dart';
-import '../../../../services_mangment_module/core/new_theme.dart';
 import '../../controller/settings_controller.dart';
 import '../pages/settings_screen.dart';
 import 'settings_header.dart';
@@ -335,16 +334,13 @@ class _ThreeTextSectionState extends State<ThreeTextSection> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         // Gender Field
-        CustomValidatedTextFieldMaster(
+        CustomTextField(
           label: S.of(context).gender,
           hint: widget.firstHint,
           controller: _firstController,
-          height: 36,
           textDirection: isArabic ?  ui.TextDirection.rtl : ui.TextDirection.ltr,
-          width: double.infinity,
           maxLines: 1,
           enabled: false,
-          submitted: widget.submitted,
           onChanged: (value) {
             if (widget.firstOnChanged != null) {
               widget.firstOnChanged!(value);
@@ -360,15 +356,12 @@ class _ThreeTextSectionState extends State<ThreeTextSection> {
         isPhone ? SizedBox() : SizedBox(height: 16.h),
 
         // Marital Status Field
-        CustomValidatedTextFieldMaster(
+        CustomTextField(
           label: S.of(context).status,
           hint: widget.thirdHint,
           textDirection: isArabic ?  ui.TextDirection.rtl : ui.TextDirection.ltr,
           controller: _thirdController,
-          height: 36,
-          width: double.infinity,
           enabled: !widget.isReadOnly,
-          submitted: widget.submitted,
           onChanged: (value) {
             if (widget.thirdOnChanged != null) {
               widget.thirdOnChanged!(value);
@@ -397,16 +390,13 @@ class _ThreeTextSectionState extends State<ThreeTextSection> {
                 right: isArabic ? 0 : 12.w,
                 left: isArabic ? 12.w : 0,
               ),
-              child: CustomValidatedTextFieldMaster(
+              child: CustomTextField(
                 label: S.of(context).gender,
                 hint: widget.firstHint,
                 controller: _firstController,
-                height: 36,
-                width: double.infinity,
                 textDirection: isArabic ?  ui.TextDirection.rtl : ui.TextDirection.ltr,
                 maxLines: 1,
-                enabled: false, // Always read-only for gender
-                submitted: widget.submitted,
+                enabled: false,
                 onChanged: (value) {
                   if (widget.firstOnChanged != null) {
                     widget.firstOnChanged!(value);
@@ -429,16 +419,12 @@ class _ThreeTextSectionState extends State<ThreeTextSection> {
 
           // Marital Status
           Expanded(
-            child: CustomValidatedTextFieldMaster(
+            child: CustomTextField(
               label: S.of(context).status,
               hint: widget.thirdHint,
               controller: _thirdController,
-              height: 36,
-              width: double.infinity,
               textDirection: isArabic ?  ui.TextDirection.rtl : ui.TextDirection.ltr,
               enabled: !widget.isReadOnly,
-              showCharCount: false,
-              submitted: widget.submitted,
               onChanged: (value) {
                 if (widget.thirdOnChanged != null) {
                   widget.thirdOnChanged!(value);
@@ -464,20 +450,17 @@ class _ThreeTextSectionState extends State<ThreeTextSection> {
           ),
         ),
         SizedBox(height: 6.h),
-        CustomValidatedTextFieldMaster(
+        CustomTextField(
           hint: widget.secondHint,
-          height: 36,
           controller: _secondController,
           textDirection: isArabic ?  ui.TextDirection.rtl : ui.TextDirection.ltr,
           enabled: !widget.isReadOnly,
-          textStyle: StyleText.fontSize12Weight400.copyWith(
+          valueStyle: StyleText.fontSize12Weight400.copyWith(
             color: AppColors.text
           ),
           hintStyle: StyleText.fontSize12Weight400.copyWith(
             color: AppColors.secondaryText
           ),
-          // Note: suffixIcon is not supported in CustomValidatedTextFieldMaster
-          // You'll need to add this parameter to the widget or handle it differently
         ),
         isPhone ? SizedBox() : SizedBox(height: 16.h),
       ],
@@ -538,14 +521,11 @@ class _NationalitySectionState extends State<NationalitySection> {
       data: Theme.of(context).copyWith(
         hoverColor: Colors.transparent,
       ),
-      child: CustomValidatedTextFieldMaster(
+      child: CustomTextField(
         label: widget.hint.tr,
         hint: 'Select ${widget.hint}'.tr,
         controller: _controller,
-        height: 36,
-        width: double.infinity,
         enabled: !widget.isReadOnly,
-        submitted: widget.submitted,
         onChanged: (value) {
           if (widget.onChanged != null) {
             widget.onChanged!(value);

@@ -3,8 +3,9 @@
 /// Author: Mohamed Elrashidy
 /// Created At: 10/11/2024
 
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
@@ -94,14 +95,11 @@ class _LocationDataState extends State<LocationData> {
                 // Country Field
                 Stack(
                   children: [
-                    CustomValidatedTextFieldMaster(
+                    CustomTextField(
                       label: S.of(context).country,
                       hint: 'Enter Your Country'.tr,
                       controller: _countryController,
-                      height: 36,
-                      width: double.infinity,
                       enabled: false,
-                      submitted: false,
                     ),
                     InkWell(
                       onTap: () {},
@@ -118,14 +116,11 @@ class _LocationDataState extends State<LocationData> {
                 // Province Field
                 Stack(
                   children: [
-                    CustomValidatedTextFieldMaster(
+                    CustomTextField(
                       label: S.of(context).stateOrProvince,
                       hint: 'Enter Your State Or Province'.tr,
                       controller: _provinceController,
-                      height: 36,
-                      width: double.infinity,
                       enabled: false,
-                      submitted: false,
                     ),
                     InkWell(
                       onTap: () {},
@@ -142,14 +137,11 @@ class _LocationDataState extends State<LocationData> {
                 // City Field
                 Stack(
                   children: [
-                    CustomValidatedTextFieldMaster(
+                    CustomTextField(
                       label: S.of(context).city,
                       hint: 'Enter Your City'.tr,
                       controller: _cityController,
-                      height: 36,
-                      width: double.infinity,
                       enabled: false,
-                      submitted: false,
                     ),
                     InkWell(
                       onTap: () {},
@@ -175,13 +167,11 @@ class _LocationDataState extends State<LocationData> {
                     ),
                     child: Stack(
                       children: [
-                        CustomValidatedTextFieldMaster(
+                        CustomTextField(
                           label: S.of(context).country,
                           hint: 'Enter Your Country'.tr,
                           controller: _countryController,
-                          height: 36,
                           enabled: false,
-                          submitted: false,
                         ),
                         InkWell(
                           onTap: () {},
@@ -204,13 +194,11 @@ class _LocationDataState extends State<LocationData> {
                     ),
                     child: Stack(
                       children: [
-                        CustomValidatedTextFieldMaster(
+                        CustomTextField(
                           label: S.of(context).stateOrProvince,
                           hint: '_',
                           controller: _provinceController,
-                          height: 36,
                           enabled: false,
-                          submitted: false,
                         ),
                         InkWell(
                           onTap: () {},
@@ -234,13 +222,11 @@ class _LocationDataState extends State<LocationData> {
                     ),
                     child: Stack(
                       children: [
-                        CustomValidatedTextFieldMaster(
+                        CustomTextField(
                           label: S.of(context).city,
                           hint: 'Enter Your City'.tr,
                           controller: _cityController,
-                          height: 36,
                           enabled: false,
-                          submitted: false,
                         ),
                         InkWell(
                           onTap: () {},
@@ -260,14 +246,11 @@ class _LocationDataState extends State<LocationData> {
          //   SizedBox(height: 0.01.h),
 
             // Street Field (Full Width)
-            CustomValidatedTextFieldMaster(
+            CustomTextField(
               label: S.of(context).streetName,
               hint: '-',
               controller: _streetController,
-              height: 36,
-              width: double.infinity,
               enabled: false,
-              submitted: false,
             ),
 
            // isPhone ? SizedBox() : SizedBox(height: 16.h),

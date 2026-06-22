@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:demo_app/features/services_mangment_module/core/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 
 class SettingsSvgIcon extends StatelessWidget {
   SettingsSvgIcon({required this.path,super.key});

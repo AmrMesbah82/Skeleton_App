@@ -17,7 +17,7 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/shared_components/timeline_widget.dart';
 import '../../../../../../core/enumeration/enum.dart';
 import '../../../../../../generated/l10n.dart';
-import '../../../../../services_mangment_module/core/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import '../../widgets/company/company_branding_screen.dart';
 import 'package:flutter/src/services/haptic_feedback.dart';
 

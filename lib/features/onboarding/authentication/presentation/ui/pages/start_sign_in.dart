@@ -25,7 +25,7 @@ import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/features/employees/biometrics_contoller.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/start_sign_up.dart';
 import 'package:demo_app/features/onboarding/authentication/presentation/controller/login_controller.dart';
-import 'package:demo_app/features/roles/presentation/controller/role_controller.dart';
+import 'package:demo_app/features/roles/role_management/presentation/controller/role_controller.dart';
 import 'package:demo_app/main.dart';
 
 // REMOVED_MODULE: import '../../../features/external/services_mangment_module/core/new_theme.dart';

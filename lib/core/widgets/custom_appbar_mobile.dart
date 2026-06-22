@@ -21,7 +21,7 @@ import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import '../../features/home/nav_bar/presentation/controller/nav_bar_controller.dart';
 import '../../features/notification/notification_page.dart';
-import '../../features/roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import '../../features/settings/presentation/controller/add_company_controller.dart';
 
 

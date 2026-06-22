@@ -4,14 +4,14 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/dummy_data/mode_changer.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/employees/presentation/ui/widgets/temp_upload_widget.dart';
-import '../../../../roles/presentation/controller/role_cubit.dart';
-import '../../../../roles/presentation/ui/pages/role_responsive_page.dart';
+import 'package:demo_app/features/roles/role_management/presentation/controller/role_cubit.dart';
+import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_responsive_page.dart';
 import 'add_depratment_dialog.dart';
 import '../../../../../core/dummy_data/chats_lists.dart';
 
 import '../../../../../core/widgets/buttons/main_custom_icon_button.dart';
-import '../../../../roles/presentation/controller/role_controller.dart';
-import '../../../../roles/users_access_controller.dart';
+import 'package:demo_app/features/roles/role_management/presentation/controller/role_controller.dart';
+import '../../../../roles/role_management/presentation/controller/users_access_controller.dart';
 import '../../controller/employee_controller.dart';
 
 class AddButtons extends StatelessWidget {

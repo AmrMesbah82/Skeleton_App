@@ -215,9 +215,10 @@ class _AttendanceScreenState extends State<AttendanceScreen> {
                                 child: Container(
                                   width: double.infinity,
                                   height: 0.5.h,
-                                  child: TableData(
-                                    isEmployeeScreen: true,
-                                  ),
+                                  child: Column()
+                                    //TableData(
+                                  //                                     isEmployeeScreen: true,
+                                  //                                   ),
                                 ),
                               ),
                             ],

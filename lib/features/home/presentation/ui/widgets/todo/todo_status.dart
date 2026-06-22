@@ -4,17 +4,18 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/standard_container.dart';
-import 'package:demo_app/features/services_mangment_module/Category/presentation/ui/service_employee/Widget/W2_Navigator.dart';
 
+import '../../../../../../core/custom/37-custom_navigate.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../../../../../core/theme/app_colors.dart';
 import '../../../../../../core/theme/app_text_styles.dart';
-import '../../../../../todo_new_module/external/tasks_module/category/data/models/task_model_updates_with_field_history.dart';
-import '../../../../../todo_new_module/external/tasks_module/category/domain/services/task_services.dart';
-import '../../../../../todo_new_module/external/tasks_module/category/presentation/screens/to_do_list/home_screen.dart';
-import '../../../../../todo_new_module/external/tasks_module/core/enums/task_priority_enum.dart';
-import '../../../../../todo_new_module/external/tasks_module/core/enums/task_status_enum.dart';
+// REMOVED_MODULE: import '../../../../../todo_new_module/external/tasks_module/category/data/models/task_model_updates_with_field_history.dart';
+// REMOVED_MODULE: import '../../../../../todo_new_module/external/tasks_module/category/domain/services/task_services.dart';
+// REMOVED_MODULE: import '../../../../../todo_new_module/external/tasks_module/category/presentation/screens/to_do_list/home_screen.dart';
+// REMOVED_MODULE: import '../../../../../todo_new_module/external/tasks_module/core/enums/task_priority_enum.dart';
+// REMOVED_MODULE: import '../../../../../todo_new_module/external/tasks_module/core/enums/task_status_enum.dart';
 import '../../../../data/models/home_component_model.dart';
+import 'package:demo_app/core/helper_module/todo_new_module/tasks_stub.dart';
 
 
 class MyTodoStatus extends StatelessWidget {

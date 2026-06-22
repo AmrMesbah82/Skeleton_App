@@ -17,14 +17,15 @@ import '../../core/widgets/text_single_field.dart';
 import '../../generated/l10n.dart';
 
 // REMOVED_MODULE: import '../../external/knowledge_hub_module/core/theming/new_theme.dart';
-import '../knowledge_hub_module/core/app_multi_select_drop_down.dart';
+// REMOVED_MODULE: import '../knowledge_hub_module/core/app_multi_select_drop_down.dart';
+import 'package:demo_app/core/custom/31-custom_multi_select_dropdown.dart';
 import '../../core/theme/app_colors.dart';
 import '../employee/presentation/controller/main_core_employee_controller.dart';
 // REMOVED_MODULE: import '../../external/todo_module/core/components/other_components/flutter_switch.dart';
 import 'data/models/notification_modle.dart';
-import '../roles/domain/enums/modules_enum.dart';
-import '../roles/domain/enums/notification/notification_permissions.dart';
-import '../roles/domain/enums/notification/notification_permissions_sections.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/notification/notification_permissions.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/notification/notification_permissions_sections.dart';
 import 'mobile/notification_edit_page.dart';
 
 enum NotificationTab {
@@ -1609,9 +1610,8 @@ class _NotificationControlPageState extends State<NotificationControlPage> {
                                           ),
                                         ),
                                       ),
-                                      AppMultiSelectDropdown(
-                                        selectedItems:
-                                        selectedNotificationTypes
+                                      CustomMultiSelectDropdown<String>(
+                                        values: selectedNotificationTypes
                                             .map((type) {
                                           if (isRTL) {
                                             return type == "email"
@@ -1623,7 +1623,7 @@ class _NotificationControlPageState extends State<NotificationControlPage> {
                                                 : "Push Notification";
                                           }
                                         }).toList(),
-                                        items: isRTL
+                                        items: (isRTL
                                             ? [
                                           "البريد الإلكتروني",
                                           "إشعار الهاتف"
@@ -1631,43 +1631,28 @@ class _NotificationControlPageState extends State<NotificationControlPage> {
                                             : [
                                           "Email",
                                           "Push Notification"
-                                        ],
-                                        textButton:
-                                        _getSelectedNotificationTypesText(
+                                        ])
+                                            .map((e) => MultiSelectDropdownItem<String>(value: e, label: e))
+                                            .toList(),
+                                        selectedTextBuilder: (_) => _getSelectedNotificationTypesText(
                                             isRTL),
-                                        hintText: isRTL
+                                        hint: isRTL
                                             ? "اختر نوع الإشعار"
                                             : "Select Notification Type",
-                                        onChanged: (dynamic selectedItem) {
+                                        onChanged: (selected) {
                                           setState(() {
-                                            String displayName =
-                                            selectedItem.toString();
-                                            String key =
-                                            _getNotificationTypeKey(
-                                                displayName, isRTL);
-
-                                            if (selectedNotificationTypes
-                                                .contains(key)) {
-                                              selectedNotificationTypes
-                                                  .remove(key);
-                                            } else {
-                                              selectedNotificationTypes
-                                                  .add(key);
-                                            }
+                                            selectedNotificationTypes
+                                              ..clear()
+                                              ..addAll(selected
+                                                  .map((label) => _getNotificationTypeKey(label, isRTL)));
                                           });
                                         },
-                                        width: double.infinity,
-                                        height: 38.h,
                                         fillColor: AppColors.background,
-                                        textStyle: StyleText
+                                        valueStyle: StyleText
                                             .fontSize12Weight400
                                             .copyWith(
                                           color: AppColors.text,
                                         ),
-                                        showErrorBorder: false,
-                                        forceDirection: isRTL
-                                            ? TextDirection.rtl
-                                            : TextDirection.ltr,
                                       ),
                                     ],
                                   ),
@@ -2287,9 +2272,8 @@ class _NotificationControlPageState extends State<NotificationControlPage> {
                                                       ),
                                                     ),
                                                   ),
-                                                  AppMultiSelectDropdown(
-                                                    selectedItems:
-                                                    selectedNotificationTypes
+                                                  CustomMultiSelectDropdown<String>(
+                                                    values: selectedNotificationTypes
                                                         .map(
                                                             (type) {
                                                           if (isRTL) {
@@ -2304,7 +2288,7 @@ class _NotificationControlPageState extends State<NotificationControlPage> {
                                                                 : "Push Notification";
                                                           }
                                                         }).toList(),
-                                                    items: isRTL
+                                                    items: (isRTL
                                                         ? [
                                                       "البريد الإلكتروني",
                                                       "إشعار الهاتف"
@@ -2312,57 +2296,31 @@ class _NotificationControlPageState extends State<NotificationControlPage> {
                                                         : [
                                                       "Email",
                                                       "Push Notification"
-                                                    ],
-                                                    textButton:
-                                                    _getSelectedNotificationTypesText(
+                                                    ])
+                                                        .map((e) => MultiSelectDropdownItem<String>(value: e, label: e))
+                                                        .toList(),
+                                                    selectedTextBuilder: (_) => _getSelectedNotificationTypesText(
                                                         isRTL),
-                                                    hintText: isRTL
+                                                    hint: isRTL
                                                         ? "اختر نوع الإشعار"
                                                         : "Select Notification Type",
-                                                    onChanged: (dynamic
-                                                    selectedItem) {
+                                                    onChanged: (selected) {
                                                       setState(() {
-                                                        String
-                                                        displayName =
-                                                        selectedItem
-                                                            .toString();
-                                                        String key =
-                                                        _getNotificationTypeKey(
-                                                            displayName,
-                                                            isRTL);
-
-                                                        if (selectedNotificationTypes
-                                                            .contains(
-                                                            key)) {
-                                                          selectedNotificationTypes
-                                                              .remove(
-                                                              key);
-                                                        } else {
-                                                          selectedNotificationTypes
-                                                              .add(
-                                                              key);
-                                                        }
+                                                        selectedNotificationTypes
+                                                          ..clear()
+                                                          ..addAll(selected
+                                                              .map((label) => _getNotificationTypeKey(label, isRTL)));
                                                       });
                                                     },
-                                                    width: double
-                                                        .infinity,
-                                                    height: 38.h,
                                                     fillColor: AppColors
                                                         .background,
-                                                    textStyle: StyleText
+                                                    valueStyle: StyleText
                                                         .fontSize12Weight400
                                                         .copyWith(
                                                       color:
                                                       AppColors
                                                           .text,
                                                     ),
-                                                    showErrorBorder:
-                                                    false,
-                                                    forceDirection: isRTL
-                                                        ? TextDirection
-                                                        .rtl
-                                                        : TextDirection
-                                                        .ltr,
                                                   ),
                                                 ],
                                               ),

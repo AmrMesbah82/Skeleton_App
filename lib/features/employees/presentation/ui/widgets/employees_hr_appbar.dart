@@ -16,11 +16,11 @@ import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/core/widgets/form_fields/custom_search.dart';
 import 'package:demo_app/features/employees/presentation/ui/pages/add_new_employee_view.dart';
 import 'package:demo_app/features/employees/presentation/ui/widgets/add_depratment_dialog.dart';
-import 'package:demo_app/features/roles/presentation/controller/role_controller.dart';
+import 'package:demo_app/features/roles/role_management/presentation/controller/role_controller.dart';
 import 'package:page_transition/page_transition.dart';
 
-import '../../../../roles/presentation/controller/role_cubit.dart';
-import '../../../../roles/presentation/ui/pages/role_responsive_page.dart';
+import 'package:demo_app/features/roles/role_management/presentation/controller/role_cubit.dart';
+import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_responsive_page.dart';
 
 // ignore: must_be_immutable
 class EmployeeHrAppBar extends StatefulWidget {

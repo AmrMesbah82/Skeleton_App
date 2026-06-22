@@ -3,8 +3,9 @@
 /// Author: Mohamed Elrashidy
 /// Created At: 10/11/2024
 
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+
 import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -156,16 +157,13 @@ class _ContactInformationState extends State<ContactInformation> {
                       ? Column(
                     children: [
                       // Email Field (Portrait)
-                      CustomValidatedTextFieldMaster(
+                      CustomTextField(
                         label: S.of(context).email,
-                        textDirection: TextDirection.ltr, // Always LTR for email to avoid validation errors
-                        textAlign: isArabic ? TextAlign.right : TextAlign.left, // Align based on locale
+                        textDirection: TextDirection.ltr,
+                        textAlign: isArabic ? TextAlign.right : TextAlign.left,
                         hint: 'Enter Your Email'.tr,
                         controller: _emailController,
-                        height: 36,
-                        width: double.infinity,
                         enabled: !widget.isReadOnly,
-                        submitted: false,
                       ),
                       isPhone ? SizedBox() : SizedBox(height: 16.h),
 
@@ -188,28 +186,23 @@ class _ContactInformationState extends State<ContactInformation> {
                               // Country Code Field
                               SizedBox(
                                 width: 0.25.w,
-                                child: CustomValidatedTextFieldMaster(
+                                child: CustomTextField(
                                   hint: '',
-                                  textDirection: isArabic ?TextDirection.rtl : TextDirection.ltr, // Keep LTR to avoid validation
+                                  textDirection: isArabic ?TextDirection.rtl : TextDirection.ltr,
                                   textAlign: isArabic ? TextAlign.right : TextAlign.left,
                                   controller: _countryCodeController,
-                                  height: 36,
                                   enabled: false,
-                                  submitted: false,
                                 ),
                               ),
                               SizedBox(width: 0.02.w),
                               // Phone Number Field
                               Expanded(
-                                child: CustomValidatedTextFieldMaster(
+                                child: CustomTextField(
                                   hint: 'Enter The Phone Number'.tr,
                                   controller: _phoneController,
-                                  height: 36,
                                   enabled: false,
-                                  textDirection: isArabic ?TextDirection.rtl : TextDirection.ltr, // Keep LTR to avoid validation
+                                  textDirection: isArabic ?TextDirection.rtl : TextDirection.ltr,
                                   textAlign: isArabic ? TextAlign.right : TextAlign.left,
-                                  submitted: false,
-                                  onlyDigits: false,
                                 ),
                               ),
                             ],
@@ -232,15 +225,13 @@ class _ContactInformationState extends State<ContactInformation> {
                                 ? 0.02.h
                                 : 0,
                           ),
-                          child: CustomValidatedTextFieldMaster(
+                          child: CustomTextField(
                             label: S.of(context).email,
-                            textDirection: TextDirection.ltr, // Always LTR for email to avoid validation errors
-                            textAlign: isArabic ? TextAlign.right : TextAlign.left, // Align based on locale
+                            textDirection: TextDirection.ltr,
+                            textAlign: isArabic ? TextAlign.right : TextAlign.left,
                             hint: 'Enter Your Email'.tr,
                             controller: _emailController,
-                            height: 36,
                             enabled: false,
-                            submitted: false,
                           ),
                         ),
                       ),
@@ -265,27 +256,23 @@ class _ContactInformationState extends State<ContactInformation> {
                                 // Country Code Field
                                 SizedBox(
                                   width: 0.08.w,
-                                  child: CustomValidatedTextFieldMaster(
+                                  child: CustomTextField(
                                     hint: '',
                                     controller: _countryCodeController,
-                                    textDirection: isArabic ?TextDirection.rtl : TextDirection.ltr, // Keep LTR to avoid validation
+                                    textDirection: isArabic ?TextDirection.rtl : TextDirection.ltr,
                                     textAlign: isArabic ? TextAlign.right : TextAlign.left,
-                                    height: 36,
                                     enabled: false,
-                                    submitted: false,
                                   ),
                                 ),
                                 SizedBox(width: 0.01.w),
                                 // Phone Number Field
                                 Expanded(
-                                  child: CustomValidatedTextFieldMaster(
+                                  child: CustomTextField(
                                     hint: 'Enter The Phone Number'.tr,
                                     controller: _phoneController,
-                                    height: 36,
-                                    textDirection: isArabic ?TextDirection.rtl : TextDirection.ltr, // Keep LTR to avoid validation
+                                    textDirection: isArabic ?TextDirection.rtl : TextDirection.ltr,
                                     textAlign: isArabic ? TextAlign.right : TextAlign.left,
                                     enabled: false,
-                                    submitted: false,
                                   ),
                                 ),
                               ],

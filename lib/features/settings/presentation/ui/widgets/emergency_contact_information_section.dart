@@ -8,6 +8,7 @@
 /// Description: Added support for both 1st and 2nd emergency contacts from history data
 
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
@@ -16,7 +17,6 @@ import 'package:demo_app/features/settings/presentation/controller/settings_cont
 import '../../../../../generated/l10n.dart';
 import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
 import '../../../../employee/presentation/controller/main_core_employee_controller.dart';
-import '../../../../services_mangment_module/core/custom_textformfield.dart';
 import '../../../../employees/presentation/controller/employee_controller.dart';
 import 'settings_header.dart';
 
@@ -194,66 +194,54 @@ class EmergencyContactInformationSection extends StatelessWidget {
           isMobile
               ? Column(
             children: [
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: 'First Name'.tr,
                 hint: '-',
                 controller: firstNameController,
-                height: 36,
                 enabled: false,
-                submitted: false,
               ),
               isMobile ? SizedBox(height: 0) : SizedBox(height: 16),
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: 'Last Name'.tr,
                 hint: '-',
                 controller: lastNameController,
-                height: 36,
                 enabled: false,
-                submitted: false,
               ),
              isMobile ? SizedBox(height: 0) : SizedBox(height: 16),
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: 'Relationship'.tr,
                 hint: '-',
                 controller: relationshipController,
-                height: 36,
                 enabled: false,
-                submitted: false,
               ),
             ],
           )
               : Row(
             children: [
               Expanded(
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: 'First Name'.tr,
                   hint: '-',
                   controller: firstNameController,
-                  height: 36,
                   enabled: false,
-                  submitted: false,
                 ),
               ),
               SizedBox(width: 12),
               Expanded(
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: 'Last Name'.tr,
                   hint: '-',
                   controller: lastNameController,
-                  height: 36,
                   enabled: false,
-                  submitted: false,
                 ),
               ),
               SizedBox(width: 12),
               Expanded(
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: 'Relationship'.tr,
                   hint: '-',
                   controller: relationshipController,
-                  height: 36,
                   enabled: false,
-                  submitted: false,
                 ),
               ),
             ],
@@ -263,68 +251,54 @@ class EmergencyContactInformationSection extends StatelessWidget {
           isMobile
               ? Column(
             children: [
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: 'Email'.tr,
                 hint: '-',
                 controller: emailController,
-                height: 36,
                 enabled: false,
-                submitted: false,
               ),
               isMobile ? SizedBox(height: 0) : SizedBox(height: 16),
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: S.of(context).phoneNumber,
                 hint: '-',
                 controller: mobilePhoneController,
-                height: 36,
                 enabled: false,
-                submitted: false,
-                onlyDigits: true,
               ),
               isMobile ? SizedBox(height: 0) : SizedBox(height: 16),
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: 'Language'.tr,
                 hint: '-',
                 controller: languageController,
-                height: 36,
                 enabled: false,
-                submitted: false,
               ),
             ],
           )
               : Row(
             children: [
               Expanded(
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: 'Email'.tr,
                   hint: "-",
                   controller: emailController,
-                  height: 36,
                   enabled: false,
-                  submitted: false,
                 ),
               ),
               SizedBox(width: 12),
               Expanded(
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: S.of(context).phoneNumber,
                   hint: '-',
                   controller: mobilePhoneController,
-                  height: 36,
                   enabled: false,
-                  submitted: false,
-                  onlyDigits: true,
                 ),
               ),
               SizedBox(width: 12),
               Expanded(
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: 'Language'.tr,
                   hint: '-',
                   controller: languageController,
-                  height: 36,
                   enabled: false,
-                  submitted: false,
                 ),
               ),
             ],
@@ -335,66 +309,54 @@ class EmergencyContactInformationSection extends StatelessWidget {
           isMobile
               ? Column(
             children: [
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: 'Country'.tr,
                 hint: '-',
                 controller: countryController,
-                height: 36,
                 enabled: false,
-                submitted: false,
               ),
               isMobile ? SizedBox(height: 0) : SizedBox(height: 16),
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: 'Province'.tr,
                 hint: '-',
                 controller: provinceController,
-                height: 36,
                 enabled: false,
-                submitted: false,
               ),
               isMobile ? SizedBox(height: 0) : SizedBox(height: 16),
-              CustomValidatedTextFieldMaster(
+              CustomTextField(
                 label: 'City'.tr,
                 hint: '-',
                 controller: cityController,
-                height: 36,
                 enabled: false,
-                submitted: false,
               ),
             ],
           )
               : Row(
             children: [
               Expanded(
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: 'Country'.tr,
                   hint: '-',
                   controller: countryController,
-                  height: 36,
                   enabled: false,
-                  submitted: false,
                 ),
               ),
               SizedBox(width: 12),
               Expanded(
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: 'Province'.tr,
                   hint: '-',
                   controller: provinceController,
-                  height: 36,
                   enabled: false,
-                  submitted: false,
                 ),
               ),
               SizedBox(width: 12),
               Expanded(
-                child: CustomValidatedTextFieldMaster(
+                child: CustomTextField(
                   label: 'City'.tr,
                   hint: '-',
                   controller: cityController,
-                  height: 36,
                   enabled: false,
-                  submitted: false,
                 ),
               ),
             ],
@@ -402,13 +364,11 @@ class EmergencyContactInformationSection extends StatelessWidget {
 
 
           // Fourth Row: Street (full width on both mobile and desktop)
-          CustomValidatedTextFieldMaster(
+          CustomTextField(
             label: S.of(context).street,
             hint: '-',
             controller: streetController,
-            height: 36,
             enabled: false,
-            submitted: false,
           ),
         ],
       ),

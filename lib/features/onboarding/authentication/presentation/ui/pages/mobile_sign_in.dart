@@ -22,7 +22,7 @@ import 'package:demo_app/features/employees/biometrics_contoller.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/onboarding/authentication/presentation/controller/login_controller.dart';
-import 'package:demo_app/features/roles/presentation/controller/role_controller.dart';
+import 'package:demo_app/features/roles/role_management/presentation/controller/role_controller.dart';
 import 'package:demo_app/main.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 

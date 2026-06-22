@@ -4,6 +4,7 @@
 /// Author: Mohamed Elrashidy
 /// Created at: 21/9/2025
 
+import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -20,7 +21,6 @@ import '../../../../../core/enumeration/enum.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../../core/theme/app_colors.dart';
-import '../../../../services_mangment_module/core/new_theme.dart';
 import '../../../app_drawer/presentation/ui/pages/custom_drawer.dart';
 import '../../../../settings/presentation/ui/pages/settings_screen.dart';
 import '../../../utils/home_constants.dart';

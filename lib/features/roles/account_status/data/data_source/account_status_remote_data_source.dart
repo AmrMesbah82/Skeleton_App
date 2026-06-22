@@ -17,14 +17,12 @@ class AccountStatusRemoteDataSource with EmployeeMixinRemoteDataSource {
   @override
   Future<Either<Failure, dynamic>> getEmployees() async {
     try {
-      print('🔍 Fetching employees from Employees_Info (SERVER SOURCE)...');
 
       // ✅ CRITICAL FIX: Force server read to get latest data after updates
       QuerySnapshot querySnapshot = await FirebaseFirestore.instance
           .collection(getBaseUrl('Employees_Info'))
           .get(GetOptions(source: Source.server));  // ← Force server read!
 
-      print('✅ Found ${querySnapshot.docs.length} employees (from server)');
 
       List<Map<String, dynamic>> employees = [];
       for (var doc in querySnapshot.docs) {
@@ -35,7 +33,6 @@ class AccountStatusRemoteDataSource with EmployeeMixinRemoteDataSource {
         if (data['Status'] != null && data['Status'] is List) {
           List<dynamic> statusList = data['Status'] as List;
           if (statusList.isNotEmpty) {
-            print('   ${doc.id}: status = ${statusList.last}');
           }
         }
 
@@ -44,7 +41,6 @@ class AccountStatusRemoteDataSource with EmployeeMixinRemoteDataSource {
 
       return Right(employees);
     } catch (e) {
-      print('❌ Error: $e');
       return Left(FirebaseFailure(e.toString()));
     }
   }
@@ -52,9 +48,7 @@ class AccountStatusRemoteDataSource with EmployeeMixinRemoteDataSource {
   /// ✅ ADD THIS METHOD - Get single employee by ID
   Future<Either<Failure, dynamic>> getEmployeeModel(String employeeId) async {
     try {
-      print('📥 Getting employee model for ID: $employeeId');
       String collectionPath = getBaseUrl('Employees_Info');
-      print('   Collection: $collectionPath');
 
       // ✅ Force server read to get fresh data
       DocumentSnapshot docSnapshot = await FirebaseFirestore.instance
@@ -63,20 +57,15 @@ class AccountStatusRemoteDataSource with EmployeeMixinRemoteDataSource {
           .get(GetOptions(source: Source.server));
 
       if (!docSnapshot.exists) {
-        print('❌ Employee document does not exist: $employeeId');
         return Left(FirebaseFailure('Employee not found'));
       }
 
       Map<String, dynamic> data = docSnapshot.data() as Map<String, dynamic>;
       data['Id'] = employeeId;  // ✅ Ensure ID is in the data
 
-      print('✅ Successfully retrieved employee data');
-      print('   Status: ${data['Status']}');
-      print('   timestamps: ${data['timestamps']}');
 
       return Right(data);
     } catch (e) {
-      print('❌ Error getting employee model: $e');
       return Left(FirebaseFailure(e.toString()));
     }
   }
@@ -85,24 +74,18 @@ class AccountStatusRemoteDataSource with EmployeeMixinRemoteDataSource {
   Future<Either<Failure, dynamic>> updateEmployeeModel(
       NewEmployeeModelHistory employeeModel) async {
     try {
-      print('💾 Updating employee model: ${employeeModel.id}');
       String collectionPath = getBaseUrl('Employees_Info');
 
       Map<String, dynamic> dataToSave = employeeModel.toMap();
 
-      print('📤 Data being saved:');
-      print('   Status: ${dataToSave['Status']}');
-      print('   timestamps: ${dataToSave['timestamps']}');
 
       await FirebaseFirestore.instance
           .collection(collectionPath)
           .doc(employeeModel.id)
           .set(dataToSave, SetOptions(merge: true));
 
-      print('✅ Employee model updated successfully');
       return Right(null);
     } catch (e) {
-      print('❌ Error updating employee model: $e');
       return Left(FirebaseFailure(e.toString()));
     }
   }
@@ -122,7 +105,6 @@ class AccountStatusRemoteDataSource with EmployeeMixinRemoteDataSource {
             .collection(getBaseUrl('Employees_Info'))
             .doc(employeeModel.id!),
         employeeModel.toMap());
-    print('Employee Updated');
   }
 
   updateDemoUsersAccountWithinTransaction(
@@ -132,17 +114,14 @@ class AccountStatusRemoteDataSource with EmployeeMixinRemoteDataSource {
             .collection(ApiConstants.demoUsersAccounts)
             .doc(email),
         data);
-    print('Demo User Account Updated');
   }
 
   commitTransaction() async {
     Either<FirebaseFailure, dynamic> result;
     try {
       await _batch.commit();
-      print('Transaction Completed');
       result = Right(null);
     } catch (e) {
-      print('Transaction Failed $e');
       result = Left(FirebaseFailure(e.toString()));
     }
     return result;

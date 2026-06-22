@@ -16,7 +16,7 @@ import 'package:demo_app/features/onboarding/authentication/data/models/demo_use
 import 'package:demo_app/features/onboarding/authentication/data/repository/demo_initialiazation_repository.dart';
 import 'package:demo_app/features/onboarding/authentication/domain/enums/success_authentication_type.dart';
 import 'package:demo_app/features/onboarding/authentication/utils/constants.dart';
-import 'package:demo_app/features/roles/data/models/users_access_model.dart';
+import 'package:demo_app/features/roles/role_management/data/models/users_access_model.dart';
 
 import '../../../../../core/enums/approval_status.dart';
 import '../../../../../core/network/failure_model.dart';

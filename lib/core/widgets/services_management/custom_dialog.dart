@@ -13,7 +13,7 @@ import 'package:demo_app/core/widgets/grc/svg_custom.dart';
 import 'package:lottie/lottie.dart';
 
 import 'package:demo_app/generated/l10n.dart';
-import 'package:demo_app/features/knowledge_hub_module/knowledge_hub/presentation/ui/widgets/customed_text_field.dart';
+import 'package:demo_app/core/helper_module/knowledge_hub_module/knowledge_hub/presentation/ui/widgets/customed_text_field.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/core/widgets/services_management/custom_botton.dart';
 import 'package:demo_app/core/widgets/services_management/custom_textformfield.dart';

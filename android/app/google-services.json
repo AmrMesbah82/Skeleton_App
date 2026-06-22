@@ -1,9 +1,9 @@
 {
   "project_info": {
     "project_number": "662885989585",
-    "firebase_url": "https://demo_app-v2-scheme-default-rtdb.firebaseio.com",
-    "project_id": "demo_app-v2-scheme",
-    "storage_bucket": "demo_app-v2-scheme.appspot.com"
+    "firebase_url": "https://knowticed-v2-scheme-default-rtdb.firebaseio.com",
+    "project_id": "knowticed-v2-scheme",
+    "storage_bucket": "knowticed-v2-scheme.appspot.com"
   },
   "client": [
     {

@@ -7,15 +7,15 @@
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:demo_app/features/home/presentation/controller/skeleton_home_controller.dart';
-import 'package:demo_app/features/todo_new_module/todo_stub.dart';
+import 'package:demo_app/core/helper_module/todo_new_module/todo_stub.dart';
 
-import '../../../events/controllers/employee_controller.dart';
-import '../../../events/controllers/events_controllers/model/event_model.dart';
-import '../../../task_management_module/task/data/model/board_model/board_model.dart';
-import '../../../task_management_module/task/data/model/card_model/card_model.dart';
-import '../../../task_management_module/task/data/model/card_model/checklist_item.dart';
+import 'package:demo_app/core/helper_module/events/events_stub.dart';
+import 'package:demo_app/core/helper_module/events/controllers/events_controllers/model/event_model.dart';
+import 'package:demo_app/core/helper_module/task_management_module/task/data/model/board_model/board_model.dart';
+import 'package:demo_app/core/helper_module/task_management_module/task/data/model/card_model/card_model.dart';
+import 'package:demo_app/core/helper_module/task_management_module/task/data/model/card_model/checklist_item.dart';
 import '../../../employees/presentation/controller/employee_controller.dart';
-import '../../../roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import '../../utils/helper.dart';
 
 class ScheduleController extends GetxController {

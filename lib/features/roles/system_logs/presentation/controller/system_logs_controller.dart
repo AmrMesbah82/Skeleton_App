@@ -19,8 +19,8 @@ import '../../../../../core/helper/csv_helper.dart';
 import '../../../../../core/network/failure_model.dart';
 import '../../../../../core/services/gelocator/gelocator_repository.dart';
 import '../../../../../core/widgets/loading.dart';
-import '../../../domain/enums/modules_enum.dart';
-import '../../../presentation/ui/pages/role_responsive_page.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_responsive_page.dart';
 import '../../data/repository/system_logs_repository.dart';
 import '../../domain/system_logs_items.dart';
 

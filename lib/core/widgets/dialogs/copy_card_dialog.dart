@@ -22,9 +22,9 @@ import 'package:demo_app/core/helper/haptic_controller.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
-import '../../../features/task_management_module/task/data/model/board_model/board_model.dart';
-import '../../../features/task_management_module/task/data/model/card_model/card_checklists.dart';
-import '../../../features/task_management_module/task/data/model/card_model/card_model.dart';
+import 'package:demo_app/core/helper_module/task_management_module/task/data/model/board_model/board_model.dart';
+import 'package:demo_app/core/helper_module/task_management_module/task/data/model/card_model/card_checklists.dart';
+import 'package:demo_app/core/helper_module/task_management_module/task/data/model/card_model/card_model.dart';
 
 
 class CopyCardDialouge extends StatefulWidget {

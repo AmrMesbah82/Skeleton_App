@@ -1,3 +1,4 @@
+import 'services_history_model.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -7,13 +8,12 @@ import 'dart:convert';
 import 'dart:math';
 import 'dart:async';
 import '../../../core/network/api_constants.dart';
-import '../../roles/domain/enums/modules_enum.dart';
-import '../../roles/domain/enums/qiyas/qiyas_permissions_sections.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/qiyas/qiyas_permissions_sections.dart';
 import '../../department/presentation/controller/add_department_controller.dart';
 import '../../employee/presentation/controller/main_core_employee_controller.dart';
 import 'calendar_event_model.dart';
 import 'package:demo_app/core/network/get_base_url.dart';
-import '../../services_mangment_module/Category/data/entities/services_history_model.dart';
 
 class CalendarDataService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;

@@ -1,7 +1,8 @@
 // ignore_for_file: must_be_immutable, prefer_const_declarations, unused_local_variable, deprecated_member_use, duplicate_ignore, no_leading_underscores_for_local_identifiers, unrelated_type_equality_checks, sdk_version_since, use_build_context_synchronously
 
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
+
 import 'dart:io';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -133,18 +134,14 @@ class _SkillsState extends State<Skills> {
                   children: [
                     // ✅ SKILL TEXT FIELD
                     Expanded(
-                      child: CustomValidatedTextFieldInv(
+                      child: CustomTextField(
                         hint: FormatHelper.capitalize(S.of(context).enterSkill),
                         controller: settingsController.socialController.skillsControllers[index],
                         maxLines: 1,
-                        height: 48,
                         maxLength: 100,
-                        showCharCount: false,
                         enabled: true,
-                        submitted: false,
                         textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
                         textAlign: TextAlign.start,
-                        autoCapitalize: true,
                         onChanged: (value) {
                           print("✏️ Skill [$index] changed to: $value");
 

@@ -20,8 +20,10 @@ import 'package:intl/intl.dart';
 
 import 'package:demo_app/core/services/notifications/flutter_local_notification_handler.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
-import 'package:demo_app/features/requests/request_controller.dart';
 import 'package:demo_app/features/onboarding/authentication/presentation/controller/login_controller.dart';
+import 'package:demo_app/features/requests/request_controller.dart';
+import 'package:demo_app/core/helper_module/todo_new_module/todo_stub.dart';
+import 'package:demo_app/core/helper_module/events/events_stub.dart';
 import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
 import 'package:demo_app/features/department/presentation/controller/add_department_controller.dart';
 import 'package:demo_app/features/employee/presentation/controller/main_core_employee_controller.dart';
@@ -82,7 +84,12 @@ void main() async {
 
     // Register controllers needed early (before splash screen navigation)
     Get.put(SystemLogsController());
-    Get.put(RequestController());
+    // RequestController must be registered before LoginController, whose
+    // constructor calls Get.find<RequestController>().
+    Get.lazyPut(() => RequestController());
+    // ScheduleController (home screen) calls Get.find for these stub controllers.
+    Get.lazyPut(() => TodoController());
+    Get.lazyPut(() => EventsEmployeeController());
     Get.lazyPut(() => LoginController());
 
     // Theme

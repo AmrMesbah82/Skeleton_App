@@ -31,7 +31,7 @@ import '../../../../../../core/enumeration/enum.dart' as FormatHelper;
 import '../../../../../../generated/l10n.dart';
 import '../../../../../employee/data/models/emplyees_model/new_employee_model.dart';
 import '../../../../../employee/presentation/controller/main_core_employee_controller.dart';
-import '../../../../../services_mangment_module/core/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import '../../../controller/settings_controller.dart' show SettingsController;
 import '../../../../../employees/presentation/controller/employee_controller.dart';
 import '../../widgets/edit_details.dart';

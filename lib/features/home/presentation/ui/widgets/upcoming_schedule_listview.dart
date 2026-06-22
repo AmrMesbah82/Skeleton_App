@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';
-import 'package:demo_app/features/events/controllers/employee_controller.dart';
-import 'package:demo_app/features/events/controllers/events_controllers/model/event_model.dart';
-import 'package:demo_app/features/events/mobile/employee/take_survey_screen_mobile.dart';
-import 'package:demo_app/features/events/mobile/event_details_mobiel.dart';
-import 'package:demo_app/features/events/tablet/media_departments_view/views/event_details.dart';
-import 'package:demo_app/features/events/tablet/media_departments_view/views/survey/take_survey_screen.dart';
+import 'package:demo_app/core/helper_module/events/events_stub.dart';
+import 'package:demo_app/core/helper_module/events/controllers/events_controllers/model/event_model.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/events/mobile/employee/take_survey_screen_mobile.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/events/mobile/event_details_mobiel.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/events/tablet/media_departments_view/views/event_details.dart';
+// REMOVED_MODULE: import 'package:demo_app/features/events/tablet/media_departments_view/views/survey/take_survey_screen.dart';
 import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/custom_schedule_container.dart';
 import 'package:demo_app/core/nav_bar_package.dart/functions.dart';
@@ -18,9 +18,8 @@ import 'package:demo_app/core/nav_bar_package.dart/model.dart';
 import 'package:lottie/lottie.dart';
 import 'package:page_transition/page_transition.dart';
 
-import '../../../../task_management_module/task/data/model/card_model/checklist_item.dart';
-import '../../../../task_management_module/task/view/task_details_screen_mobile.dart';
-import '../../../../task_management_module/task/view/task_details_screen_tablet.dart';
+import 'package:demo_app/core/helper_module/task_management_module/task/data/model/card_model/checklist_item.dart';
+import 'package:demo_app/core/helper_module/todo_new_module/tasks_stub.dart';
 import '../../../utils/helper.dart';
 import '../../controller/schedule_controller.dart';
 
@@ -35,6 +34,9 @@ class UpcomingScheduleListview extends StatefulWidget {
 
 final EventsEmployeeController empController =
     Get.put(EventsEmployeeController());
+
+// Employee controller used for member photos/details in the schedule cards.
+final EmployeeController addEmployeeController = Get.find();
 
 class _UpcomingScheduleListviewState extends State<UpcomingScheduleListview> {
   ScheduleController scheduleController = Get.find();

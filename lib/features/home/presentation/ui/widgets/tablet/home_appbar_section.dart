@@ -17,7 +17,7 @@ import 'package:demo_app/core/shared_components/timeline_widget.dart';
 import 'package:demo_app/core/enumeration/enum.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/gradiant_container.dart';
-import 'package:demo_app/features/roles/domain/enums/modules_enum.dart';
+import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 
 import '../../../../../../core/animation_page.dart';
@@ -27,7 +27,6 @@ import '../../../../../../core/theme/app_text_styles.dart';
 // REMOVED_MODULE: import '../../../../../../external/todo_new_module/external/tasks_module/category/presentation/screens/to_do_list/details_screen/hr_module/add_new_employee_screen.dart';
 // REMOVED_MODULE: import '../../../../../../external/todo_new_module/external/tasks_module/category/presentation/screens/to_do_list/details_screen/hr_module/hr_dashboard.dart';
 import '../../../../app_drawer/presentation/controller/drawer_controller.dart';
-import '../../../../../notification/notification_page_confg.dart';
 import '../../../../../../core/twillo/twilio_constants.dart';
 import '../../../../../../core/twillo/twilio_repository.dart';
 import '../../../controller/home_cubit.dart';

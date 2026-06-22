@@ -1,5 +1,6 @@
-import 'package:demo_app/features/services_mangment_module/core/custom_textformfield.dart';
-import 'package:demo_app/features/inventory_module/core/custom_check_box.dart';
+
+import 'package:demo_app/core/helper_module/inventory_module/core/custom_check_box.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/widgets/custom_button_widget.dart';
 import 'package:demo_app/core/widgets/side_frame_master.dart';
 import 'package:demo_app/core/theme/new_theme.dart';
@@ -189,14 +190,11 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
                           // Show TextField only if checkbox is selected
                           if (isReportBugsSelected) ...[
                             SizedBox(height: 8.h),
-                            CustomValidatedTextFieldMaster(
-                              // label: 'Report Bugs'.tr,
+                            CustomTextField(
                               hint: S.of(context).textHere,
                               controller: textControllerReport,
-                              height: 72,
                               maxLines: 3,
                               textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
-                              showCharCount: true,
                               onChanged: (value) => setState(() {}),
                             ),
                           ],
@@ -220,14 +218,11 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
                           // Show TextField only if checkbox is selected
                           if (isCommentsSelected) ...[
                             SizedBox(height: 8.h),
-                            CustomValidatedTextFieldMaster(
-                            //  label: 'Comments And Feedback'.tr,
+                            CustomTextField(
                               hint: S.of(context).textHere,
                               controller: textControllerComments,
-                              height: 72,
                               maxLines: 3,
                               textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
-                              showCharCount: true,
                               onChanged: (value) => setState(() {}),
                             ),
                           ],
@@ -251,15 +246,11 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
                           // Show TextField only if checkbox is selected
                           if (isRequestFeatureSelected) ...[
                             SizedBox(height: 8.h),
-                            CustomValidatedTextFieldMaster(
-                             // label: 'Request New Feature'.tr,
+                            CustomTextField(
                               hint: S.of(context).textHere,
                               textDirection: isArabic ? TextDirection.rtl : TextDirection.ltr,
-
                               controller: textControllerRequest,
-                              height: 72,
                               maxLines: 3,
-                              showCharCount: true,
                               onChanged: (value) => setState(() {}),
                             ),
                           ],
@@ -384,15 +375,12 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
                         // Show TextField only if checkbox is selected
                         if (isReportBugsSelected) ...[
                           SizedBox(height: 8.h),
-                          CustomValidatedTextFieldInv(
+                          CustomTextField(
                             label: 'Report Bugs'.tr,
                             textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
                             hint: S.of(context).enter_bug_details,
                             controller: textControllerReport,
-                            height: 72,
-
                             maxLines: 3,
-                            showCharCount: true,
                             onChanged: (value) => setState(() {}),
                           ),
                         ],
@@ -416,14 +404,12 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
                         // Show TextField only if checkbox is selected
                         if (isCommentsSelected) ...[
                           SizedBox(height: 8.h),
-                          CustomValidatedTextFieldInv(
+                          CustomTextField(
                             label: 'Comments And Feedback'.tr,
                             hint: S.of(context).enter_your_comments,
                             controller: textControllerComments,
                             textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
-                            height: 72,
                             maxLines: 3,
-                            showCharCount: true,
                             onChanged: (value) => setState(() {}),
                           ),
                         ],
@@ -447,15 +433,12 @@ class _CommentsAndFeedbackScreenState extends State<CommentsAndFeedbackScreen> {
                         // Show TextField only if checkbox is selected
                         if (isRequestFeatureSelected) ...[
                           SizedBox(height: 8.h),
-                          CustomValidatedTextFieldInv(
+                          CustomTextField(
                             label: 'Request New Feature'.tr,
                             hint: S.of(context).describe_the_feature,
                             controller: textControllerRequest,
-                            height: 72,
                             maxLines: 3,
                             textDirection: isArabic ? ui.TextDirection.rtl : ui.TextDirection.ltr,
-
-                            showCharCount: true,
                             onChanged: (value) => setState(() {}),
                           ),
                         ],

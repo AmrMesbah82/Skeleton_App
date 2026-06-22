@@ -17,7 +17,7 @@ import 'package:demo_app/features/settings/presentation/ui/widgets/personal_info
 
 import '../../../../../../core/theme/app_colors.dart';
 import '../../../../../../core/widgets/navigation.dart';
-import '../../../../../services_mangment_module/core/new_theme.dart';
+import 'package:demo_app/core/theme/new_theme.dart';
 import '../tablet/eeit_page_request.dart';
 
 final HapticController hapticController = Get.put(HapticController());

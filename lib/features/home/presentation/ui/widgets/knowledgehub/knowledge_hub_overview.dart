@@ -11,8 +11,8 @@ import '../../../../../../generated/l10n.dart';
 import '../../../../../../core/theme/app_colors.dart';
 import '../../../../../../core/theme/app_text_styles.dart';
 import '../../../../../employee/presentation/controller/main_core_employee_controller.dart';
-import '../../../../../knowledge_hub_module/knowledge_hub/presentation/cubit/dashboard_cubit/dashboard_cubit.dart';
-import '../../../../../knowledge_hub_module/knowledge_hub/presentation/cubit/dashboard_cubit/dashboard_states.dart';
+import 'package:demo_app/core/helper_module/knowledge_hub_module/knowledge_dashboard_stub.dart';
+// REMOVED_MODULE: import '../../../../../knowledge_hub_module/knowledge_hub/presentation/cubit/dashboard_cubit/dashboard_states.dart';
 import '../../../../data/models/home_component_model.dart';
 
 class KnowledgeHubOverview extends StatelessWidget {
