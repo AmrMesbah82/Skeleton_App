@@ -5,7 +5,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../../core/constatnt.dart';
 import '../../../../core/network/failure_model.dart';
 import 'package:demo_app/core/helper/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/roles/role_management/data/models/role_model.dart';
@@ -811,4 +810,11 @@ class MainCoreEmployeeController extends GetxController with StateMixin {
 
 
 
+}
+
+abstract class Constant {
+  static String? emailUser;
+  static String? departmentId;
+  static String? roleName;
+  static String? idUser;
 }

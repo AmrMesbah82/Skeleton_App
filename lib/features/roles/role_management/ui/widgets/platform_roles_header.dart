@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/constants/skeleton_assets.dart';
-import 'package:demo_app/core/custom_validate_textfield.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
@@ -77,32 +77,23 @@ class _PlatformRolesHeaderState extends State<PlatformRolesHeader> {
               spacing: 15.sp,
               children: [
                 Expanded(
-                  child: Customdemo_appTextField(
+                  child: CustomTextField(
                     height: 36.h,
-                    labelEn: '',
-                    labelAr: '',
-                    hintEn: 'Search',
-                    hintAr: 'بحث',
+                    hint: Get.locale?.languageCode == 'ar' ? 'بحث' : 'Search',
                     controller: controller.searchController,
-                    language: Get.locale?.languageCode == 'ar'
-                        ? AppLanguage.arabic
-                        : AppLanguage.english,
-                    validationType: ValidationType.none,
-                    prefixIcon: Icons.search,
+                    prefixIcon: const Icon(Icons.search),
                     suffixIcon: controller.searchController.text.isNotEmpty
-                        ? Icons.clear
-                        : null,
-                    suffixIconOnPressed: controller.searchController.text.isNotEmpty
-                        ? () {
-                      controller.searchController.clear();
-                      controller.filterRoles();
-                    }
+                        ? IconButton(
+                            icon: const Icon(Icons.clear),
+                            onPressed: () {
+                              controller.searchController.clear();
+                              controller.filterRoles();
+                            },
+                          )
                         : null,
                     fillColor: AppColors.card,
-                    borderColor: AppColors.card,
-                    focusedBorderColor: AppColors.primary,
-                    borderRadius: 8,
-                    inputStyle: StyleText.fontSize16Weight400.copyWith(
+                    borderRadius: BorderRadius.circular(8),
+                    valueStyle: StyleText.fontSize16Weight400.copyWith(
                         color: AppColors.text
                     ),
                     onChanged: _onSearchChanged,

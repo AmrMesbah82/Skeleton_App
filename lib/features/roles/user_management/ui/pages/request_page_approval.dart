@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/custom_validate_textfield.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/helper/main_helper/circle_progress.dart';
 import 'package:demo_app/core/helper/main_helper/format_helper.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
@@ -170,31 +170,18 @@ class _RequestPageApprovalState extends State<RequestPageApproval> {
               Row(
                 children: [
                   Expanded(
-                    child: Customdemo_appTextField(
-                      labelEn: '',
-                      labelAr: '',
+                    child: CustomTextField(
                       height: 36.h,
                       labelStyle: StyleText.fontSize16Weight400.copyWith(
                         color:   AppColors.text
                       ),
-                      borderColor: Colors.transparent,
-                      hintEn: 'Search',
-                      hintAr: 'بحث',
+                      hint: Localizations.localeOf(context).languageCode == 'ar' ? 'بحث' : 'Search',
                       contentPadding: EdgeInsets.symmetric(vertical: 5.h),
                       controller: searchController,
-                      language: Localizations.localeOf(context).languageCode == 'ar'
-                          ? AppLanguage.arabic
-                          : AppLanguage.english,
-
                       keyboardType: TextInputType.text,
-                      prefixIcon: Icons.search,
-
-                      borderRadius: 8,
+                      prefixIcon: const Icon(Icons.search),
+                      borderRadius: BorderRadius.circular(8),
                       fillColor: AppColors.card,
-                      // borderColor: lightMode
-                      //     ? Colors.grey[300]
-                      //     : AppColors.grey,
-                      focusedBorderColor: AppColors.primary,
                       onChanged: (val) {
                         _onSearchChanged();
                       },

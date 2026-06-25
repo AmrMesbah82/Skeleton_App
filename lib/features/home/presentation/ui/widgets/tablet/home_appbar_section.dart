@@ -20,7 +20,6 @@ import 'package:demo_app/features/home/presentation/ui/widgets/gradiant_containe
 import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 
-import '../../../../../../core/animation_page.dart';
 import '../../../../../../core/theme/app_colors.dart';
 import '../../../../../../core/theme/app_text_styles.dart';
 // REMOVED_MODULE: import '../../../../../../external/services_mangment_module/core/new_theme.dart';

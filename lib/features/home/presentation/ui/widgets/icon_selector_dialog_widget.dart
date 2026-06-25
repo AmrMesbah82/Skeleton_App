@@ -3,7 +3,7 @@ import 'package:demo_app/core/theme/app_theme.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/services_mangment_module/presentation/s9_admin_dashboard/ui/pages/dashBoard_admin.dart';
 import 'package:flutter/material.dart';
 import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
-import 'package:demo_app/core/removed_module_placeholder.dart';
+import 'package:demo_app/core/widgets/removed_module_placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';

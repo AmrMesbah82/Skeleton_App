@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/custom_validate_textfield.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/core/helper/main_helper/format_helper.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/form_builder_module/core/configs/extensions/extensions.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
@@ -224,25 +224,15 @@ class _UserManagementHomeState extends State<UserManagementHome> {
                 spacing: 10.sp,
                 children: [
                   Expanded(
-                    child: Customdemo_appTextField(
-                      labelEn: '',
-                      labelAr: '',
-                      hintEn: 'Search',
-                      hintAr: 'بحث',
-
+                    child: CustomTextField(
+                      hint: Get.locale?.languageCode == 'ar' ? 'بحث' : 'Search',
                       controller: controller.homePageSearchController,
-                      language: Get.locale?.languageCode == 'ar'
-                          ? AppLanguage.arabic
-                          : AppLanguage.english,
-                      validationType: ValidationType.none,
                       keyboardType: TextInputType.text,
                       textInputAction: TextInputAction.search,
                       onChanged: (value) => controller.filterHomePageUser(value),
-                      prefixIcon: Icons.search,
+                      prefixIcon: const Icon(Icons.search),
                       fillColor: AppColors.card,
-                      borderColor: Colors.transparent,
-                      focusedBorderColor: AppColors.primary,
-                      borderRadius: 8.r,
+                      borderRadius: BorderRadius.circular(8.r),
                       height: 36.h,
                     ),
                   ),

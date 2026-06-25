@@ -11,7 +11,7 @@ import 'package:demo_app/features/home/widgets/standard_container.dart';
 import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:demo_app/core/custom/37-custom_navigate.dart';
 import 'package:demo_app/features/home/data/models/home_component_model.dart';
-import 'package:demo_app/core/removed_module_placeholder.dart';
+import 'package:demo_app/core/widgets/removed_module_placeholder.dart';
 
 import 'package:demo_app/core/widgets/main_widget/custom_button.dart';
 import '../../../../../../core/theme/app_colors.dart';

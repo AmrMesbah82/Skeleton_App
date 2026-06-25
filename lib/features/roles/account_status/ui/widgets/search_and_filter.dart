@@ -10,7 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/custom_validate_textfield.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 
 
 import 'package:demo_app/features/roles/account_status/utils/account_status_helper.dart';
@@ -39,26 +39,19 @@ class SearchAndFilter extends StatelessWidget {
         children: [
           // ✅ Replace AppSearchTextField with Customdemo_appTextField
           Expanded(
-            child: Customdemo_appTextField(
-              labelEn: '',
-              labelAr: '',
-              hintEn: 'Search',
-              hintAr: 'بحث',
+            child: CustomTextField(
+              hint: isArabic ? 'بحث' : 'Search',
               controller: controller.searchController,
-              language: isArabic ? AppLanguage.arabic : AppLanguage.english,
-              validationType: ValidationType.none,
               fillColor: AppColors.card,
-              borderColor: Colors.transparent,
-              focusedBorderColor: AppColors.primary,
-              borderRadius: 8,
+              borderRadius: BorderRadius.circular(8),
               height: 36.h,
-              inputStyle: StyleText.fontSize14Weight500.copyWith(
+              valueStyle: StyleText.fontSize14Weight500.copyWith(
                 color: AppColors.secondaryText,
               ),
               hintStyle: StyleText.fontSize14Weight500.copyWith(
                 color: AppColors.secondaryText.withOpacity(.5),
               ),
-              prefixIcon: Icons.search,
+              prefixIcon: const Icon(Icons.search),
               onChanged: (value) {
                 controller.searchAccountsStatusEntities(
                     value, controller.selectedSortOption);

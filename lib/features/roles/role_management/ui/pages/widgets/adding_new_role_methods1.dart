@@ -110,165 +110,79 @@ extension AddingNewRoleMethods1 on _AddingNewRoleState {
   // ── field builders (unchanged) ──────────────────────────────────────────
 
   Widget _buildEnglishNameField() {
-    return Customdemo_appTextField(
-      labelEn: 'Role Name',
-      labelAr: 'اسم الدور',
-      hintEn: 'Role Name',
-      hintAr: 'Role Name',
+    return CustomTextField(
+      label: 'Role Name',
+      hint: 'Role Name',
       controller: controller.roleNameController,
-      language: AppLanguage.english,
-      isRequired: true,
-      validationType: ValidationType.custom,
+      required: true,
       fillColor: AppColors.background,
-      borderColor: AppColors.secondaryText.withOpacity(0.2),
-      focusedBorderColor: AppColors.primary,
-      errorBorderColor: Colors.red,
-      borderRadius: 8,
+      borderRadius: BorderRadius.circular(8),
       height: 65.h,
-      inputStyle: StyleText.fontSize14Weight500.copyWith(
+      valueStyle: StyleText.fontSize14Weight500.copyWith(
           color: AppColors.secondaryText),
       hintStyle: StyleText.fontSize14Weight500
           .copyWith(color: AppColors.secondaryText.withOpacity(.5)),
       labelStyle:
       AppTextStyles.font16BlackRegularCairo.copyWith(fontSize: 14.sp),
       onChanged: (value) => controller.emit(RoleModuleSelected()),
-      customValidator: (value) {
-        if (value == null || value.trim().isEmpty)
-          return 'Role Name is required'.tr;
-        if (!_containsEnglish(value)) return 'Please write in English'.tr;
-        if (_containsArabic(value))
-          return 'Arabic characters not allowed here'.tr;
-        if (controller.isEditing || controller.selectedRole != null) {
-          String? originalRoleName = controller.selectedRole?.currentRoleName;
-          if (originalRoleName?.toLowerCase() == value.trim().toLowerCase())
-            return null;
-          bool nameExists = controller.roles.any((role) =>
-          role.currentRoleName.toLowerCase() ==
-              value.trim().toLowerCase() &&
-              role.currentRoleName != originalRoleName);
-          if (nameExists) return 'Role Name Already Exists'.tr;
-          return null;
-        }
-        bool nameExists = controller.roles.any((role) =>
-        role.currentRoleName.toLowerCase() == value.trim().toLowerCase());
-        if (nameExists) return 'Role Name Already Exists'.tr;
-        return null;
-      },
     );
   }
   Widget _buildArabicNameField() {
-    return Customdemo_appTextField(
-      labelEn: 'Role Name',
-      labelAr: 'اسم الدور',
-      hintEn: 'اسم الدور',
-      hintAr: 'اسم الدور',
+    return CustomTextField(
+      label: 'اسم الدور',
+      hint: 'اسم الدور',
       controller: controller.roleNameControllerAr,
-      language: AppLanguage.arabic,
-      isRequired: true,
-
-      validationType: ValidationType.custom,
+      required: true,
       fillColor: AppColors.background,
-      borderColor: AppColors.secondaryText.withOpacity(0.2),
-      focusedBorderColor: AppColors.primary,
-      errorBorderColor: Colors.red,
-      borderRadius: 8,
+      borderRadius: BorderRadius.circular(8),
       height: 65.h,
-      inputStyle: StyleText.fontSize14Weight500.copyWith(
+      valueStyle: StyleText.fontSize14Weight500.copyWith(
           color: AppColors.secondaryText),
       hintStyle: StyleText.fontSize14Weight500
           .copyWith(color: AppColors.secondaryText.withOpacity(.5)),
       labelStyle:
       AppTextStyles.font16BlackRegularCairo.copyWith(fontSize: 14.sp),
       onChanged: (value) => controller.emit(RoleModuleSelected()),
-      customValidator: (value) {
-        if (value == null || value.trim().isEmpty) return 'اسم الدور مطلوب';
-        if (!_containsArabic(value)) return 'يرجى الكتابة بالعربية';
-        if (_containsEnglish(value)) return 'الأحرف الإنجليزية غير مسموحة هنا';
-        if (controller.isEditing || controller.selectedRole != null) {
-          String? originalRoleNameAr =
-              controller.selectedRole?.currentRoleNameAr;
-          if (originalRoleNameAr?.toLowerCase() == value.trim().toLowerCase())
-            return null;
-          bool nameExists = controller.roles.any((role) =>
-          role.currentRoleNameAr.toLowerCase() ==
-              value.trim().toLowerCase() &&
-              role.currentRoleNameAr != originalRoleNameAr);
-          if (nameExists) return 'اسم الدور موجود مسبقاً';
-          return null;
-        }
-        bool nameExists = controller.roles.any((role) =>
-        role.currentRoleNameAr.toLowerCase() == value.trim().toLowerCase());
-        if (nameExists) return 'اسم الدور موجود مسبقاً';
-        return null;
-      },
     );
   }
   Widget _buildEnglishDescriptionField() {
-    return Customdemo_appTextField(
-      labelEn: 'Role Description',
-      labelAr: 'وصف الدور',
-      hintEn: 'Role Description',
-      hintAr: 'Role Description',
+    return CustomTextField(
+      label: 'Role Description',
+      hint: 'Role Description',
       controller: controller.roleDescriptionController,
-      language: AppLanguage.english,
-      isRequired: true,
-      validationType: ValidationType.custom,
+      required: true,
       maxLines: 3,
       minLines: 3,
       maxLength: 500,
-      showCharacterCount: true,
+      showCharCount: true,
       fillColor: AppColors.background,
-      borderColor: AppColors.secondaryText.withOpacity(0.2),
-      focusedBorderColor: AppColors.primary,
-      errorBorderColor: Colors.red,
-      borderRadius: 8,
-      inputStyle: StyleText.fontSize14Weight500.copyWith(
+      borderRadius: BorderRadius.circular(8),
+      valueStyle: StyleText.fontSize14Weight500.copyWith(
           color: AppColors.secondaryText),
       hintStyle: StyleText.fontSize14Weight500
           .copyWith(color: AppColors.secondaryText.withOpacity(.5)),
       labelStyle:
       AppTextStyles.font16BlackRegularCairo.copyWith(fontSize: 14.sp),
-      customValidator: (value) {
-        if (value == null || value.trim().isEmpty)
-          return 'Description is required'.tr;
-        if (!_containsEnglish(value)) return 'Please write in English'.tr;
-        if (_containsArabic(value))
-          return 'Arabic characters not allowed here'.tr;
-        return null;
-      },
     );
   }
   Widget _buildArabicDescriptionField() {
-    return Customdemo_appTextField(
-      labelEn: 'Role Description',
-      labelAr: 'وصف الدور',
-      hintEn: 'اكتب وصف',
-      hintAr: 'اكتب وصف',
+    return CustomTextField(
+      label: 'وصف الدور',
+      hint: 'اكتب وصف',
       controller: controller.roleDescriptionControllerAr,
-      language: AppLanguage.arabic,
-      isRequired: true,
-      validationType: ValidationType.custom,
+      required: true,
       maxLines: 3,
       minLines: 3,
       maxLength: 500,
-      showCharacterCount: true,
+      showCharCount: true,
       fillColor: AppColors.background,
-      borderColor: AppColors.secondaryText.withOpacity(0.2),
-      focusedBorderColor: AppColors.primary,
-      errorBorderColor: Colors.red,
-      borderRadius: 8,
-      inputStyle: StyleText.fontSize14Weight500.copyWith(
+      borderRadius: BorderRadius.circular(8),
+      valueStyle: StyleText.fontSize14Weight500.copyWith(
           color: AppColors.secondaryText),
       hintStyle: StyleText.fontSize14Weight500
           .copyWith(color: AppColors.secondaryText.withOpacity(.5)),
       labelStyle:
       AppTextStyles.font16BlackRegularCairo.copyWith(fontSize: 14.sp),
-      customValidator: (value) {
-        if (value == null || value.trim().isEmpty) return 'الوصف مطلوب';
-        if (!_containsArabic(value)) return 'يرجى الكتابة بالعربية';
-        if (_containsEnglish(value)) return 'الأحرف الإنجليزية غير مسموحة هنا';
-        return null;
-      },
     );
   }
   Widget _moduleItem(Modules module, BuildContext context) {
