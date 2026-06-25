@@ -1,34 +1,27 @@
-// ignore_for_file: must_be_immutable, prefer_const_declarations, unused_local_variable, deprecated_member_use, duplicate_ignore, no_leading_underscores_for_local_identifiers, unrelated_type_equality_checks, unrelated_type_equality_checks
-
-//import 'package:calendar_date_picker2/calendar_date_picker2.dart';
-import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
+// ignore_for_file: must_be_immutable, prefer_const_declarations, unused_local_variable, deprecated_member_use, duplicate_ignore, no_leading_underscores_for_local_identifiers, unrelated_type_equality_checks, use_build_context_synchronously
+///*************************** FILE INFO **********************************///
+/// Purpose: Responsive company information / branding screen (phone + tablet in
+/// one page).
+/// Author: Mohamed Elrashidy
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/core/widgets/custom_button_widget.dart';
-import 'package:demo_app/core/theme/new_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
+import 'package:demo_app/core/enums/enum.dart';
+import 'package:demo_app/core/extension/context_extensions.dart';
 import 'package:demo_app/core/network/api_constants.dart';
-import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
-import 'package:demo_app/core/widgets/custom_upper_filter.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
-
-import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/core/dummy_data/mode_changer.dart';
-
-import 'package:demo_app/core/theme/app_font_size.dart';
+import 'package:demo_app/core/helper/main_helper/haptic_controller.dart';
+import 'package:demo_app/core/widgets/main_widget/loading.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_button_widget.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
-// REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
-import 'package:demo_app/features/settings/settings_screen/views/owner_screens/company_info_update_dialog/update_company_info_dialog.dart';
+import 'package:demo_app/features/settings/presentation/ui/widgets/update_company_info_dialog.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/company/company_branding_screen.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/company/company_information_fields.dart';
-import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
-import 'package:page_transition/page_transition.dart';
-
+import 'package:demo_app/features/settings/widgets/custom_upper_filter.dart';
 
 final HapticController hapticController = Get.put(HapticController());
 
@@ -44,29 +37,28 @@ class CompanyInfoScreen extends StatefulWidget {
 
 class _CompanyInfoScreenState extends State<CompanyInfoScreen> {
   bool isEnglish = Get.locale.toString().contains('en');
+  late String filterChoice;
+  CompanyController companyController = Get.find();
 
   @override
   void initState() {
     super.initState();
   }
 
-  late String filterChoice;
-  CompanyController companyController = Get.find();
-
   @override
   Widget build(BuildContext context) {
-    var isMobile = context.isPhone;
-    var lightMode = Theme.of(context).brightness == Brightness.light;
-    final orientation = MediaQuery.of(context).orientation;
-    final HapticController hapticController = Get.put(HapticController());
+    return ContextExtension(context).isPhone
+        ? _buildPhone(context)
+        : _buildTablet(context);
+  }
+
+  /// Phone design (formerly company_info_screen.dart)
+  Widget _buildPhone(BuildContext context) {
     final ThemeController themeController = Get.find();
-    bool isPortrait =
-        MediaQuery.of(context).orientation == Orientation.portrait;
     return SingleChildScrollView(
       child: Column(
         children: [
           Container(
-            //  height: 492.h,
             decoration: BoxDecoration(
               color: AppColors.background,
               borderRadius: BorderRadius.circular(8),
@@ -100,9 +92,7 @@ class _CompanyInfoScreenState extends State<CompanyInfoScreen> {
                   ),
                   if (companyController.brandingSelectedIndex == 0)
                     Column(
-                      children: [
-
-                        CompanyInformationFields()],
+                      children: [CompanyInformationFields()],
                     ),
                   if (companyController.brandingSelectedIndex == 1)
                     CompanyBrandingScreen(
@@ -121,84 +111,125 @@ class _CompanyInfoScreenState extends State<CompanyInfoScreen> {
               ),
             ),
           ),
-
           customButton(
-            title: companyController.brandingSelectedIndex == 0
-                ? 'Update'.tr
-                : "Apply".tr,
-            function: () async {
-              if (companyController.brandingSelectedIndex == 0) {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return const UpdateCompanyInfoDialog();
-                  },
-                );
-              } else {
-                showLoadingIndicator();
-                if (companyController.imageUrl != null) {
-                  companyController.company!.companyLogo!.companyLogo!
-                      .add(companyController.imageUrl);
-                  companyController.company!.companyLogo!.timestamps!
-                      .add(Timestamp.now());
+              title: companyController.brandingSelectedIndex == 0
+                  ? 'Update'.tr
+                  : "Apply".tr,
+              function: () async {
+                if (companyController.brandingSelectedIndex == 0) {
+                  showDialog(
+                    context: context,
+                    builder: (BuildContext context) {
+                      return const UpdateCompanyInfoDialog();
+                    },
+                  );
+                } else {
+                  showLoadingIndicator();
+                  if (companyController.imageUrl != null) {
+                    companyController.company!.companyLogo!.companyLogo!
+                        .add(companyController.imageUrl);
+                    companyController.company!.companyLogo!.timestamps!
+                        .add(Timestamp.now());
+                  }
+
+                  companyController.company!.status = 'active';
+                  if (companyController.primaryColor != null) {
+                    companyController.company!.primaryColor!.primaryColor!.add(
+                        '0x${companyController.primaryColor!.value.toRadixString(16)}');
+                    companyController.company!.primaryColor!.timestamps!
+                        .add(Timestamp.now());
+                  }
+
+                  if (companyController.secondaryColor != null) {
+                    companyController.company!.secondaryColor!.secondaryColor!
+                        .add(
+                            '0x${companyController.secondaryColor!.value.toRadixString(16)}');
+                    companyController.company!.secondaryColor!.timestamps!
+                        .add(Timestamp.now());
+                  }
+
+                  if (companyController.selectedEnglishFont != null) {
+                    companyController.company!.englishFont!.englishFont!
+                        .add(companyController.selectedEnglishFont!
+                            .toLowerCase());
+
+                    companyController.company!.englishFont!.timestamps!
+                        .add(Timestamp.now());
+                  }
+
+                  if (companyController.selectedArabicFont != null) {
+                    companyController.company!.arabicFont!.arabicFont!.add(
+                        companyController.selectedArabicFont!.toLowerCase());
+
+                    companyController.company!.arabicFont!.timestamps!
+                        .add(Timestamp.now());
+                  }
+
+                  await companyController.addCompany(
+                    companyController.company!,
+                    ApiConstants.baseUri.split('/').last,
+                  );
+
+                  await companyController.getCompany();
+                  themeController.updatePrimaryColor();
+                  themeController.updateSecondaryColor();
+                  themeController.updateFonts();
+                  setState(() {});
+                  hideLoadingIndicator();
                 }
-
-                companyController.company!.status = 'active';
-                if (companyController.primaryColor != null) {
-                  companyController.company!.primaryColor!.primaryColor!.add(
-                      '0x${companyController.primaryColor!.value.toRadixString(16)}');
-                  companyController.company!.primaryColor!.timestamps!
-                      .add(Timestamp.now());
-                }
-
-                if (companyController.secondaryColor != null) {
-                  companyController.company!.secondaryColor!.secondaryColor!.add(
-                      '0x${companyController.secondaryColor!.value.toRadixString(16)}');
-                  companyController.company!.secondaryColor!.timestamps!
-                      .add(Timestamp.now());
-                }
-
-                if (companyController.selectedEnglishFont != null) {
-                  companyController.company!.englishFont!.englishFont!.add(
-                      companyController.selectedEnglishFont!.toLowerCase());
-
-                  companyController.company!.englishFont!.timestamps!
-                      .add(Timestamp.now());
-                }
-
-                if (companyController.selectedArabicFont != null) {
-                  companyController.company!.arabicFont!.arabicFont!
-                      .add(companyController.selectedArabicFont!.toLowerCase());
-
-                  companyController.company!.arabicFont!.timestamps!
-                      .add(Timestamp.now());
-                }
-
-                await companyController.addCompany(
-                  companyController.company!,
-                  ApiConstants.baseUri.split('/').last,
-                );
-
-                await companyController.getCompany();
-                themeController.updatePrimaryColor();
-                themeController.updateSecondaryColor();
-                themeController.updateFonts();
-                setState(() {});
-                print(
-                    'rrrrrrrrrrr=${companyController.company!.primaryColor!.primaryColor!.last}');
-                hideLoadingIndicator();
-              }
-            },
-            width: isMobile ? 340.w : 300.w,
-            height: 38.sp,
-            color: AppColors.primary,
-            textStyle: StyleText.fontSize22Weight700.copyWith(
-              color: AppColors.textButton
-            )
-          )
-
-          //  SizedBox(height: 0.02.h,),
+              },
+              width: 340.w,
+              height: 38.sp,
+              color: AppColors.primary,
+              textStyle: StyleText.fontSize22Weight700
+                  .copyWith(color: AppColors.textButton))
         ],
+      ),
+    );
+  }
+
+  /// Tablet design (formerly tablet_company_info_screen.dart)
+  Widget _buildTablet(BuildContext context) {
+    var lightMode = Theme.of(context).brightness == Brightness.light;
+    return Expanded(
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color:
+                    lightMode ? AppColors.background : AppColors.chatBackground,
+                borderRadius: BorderRadius.circular(8.r),
+              ),
+              child: SingleChildScrollView(
+                child: CompanyBrandingScreen(
+                  onChangedImageUrl: (value) {},
+                  onChangedPrimaryColor: (Color value) {},
+                  onChangedSecondaryColor: (Color value) {},
+                  onChangedFontArabic: (String value) {},
+                  onChangedFontEnglish: (String value) {},
+                ),
+              ),
+            ),
+            SizedBox(height: 10.h),
+            customButton(
+              title: 'Apply'.tr,
+              width: 300.w,
+              height: 36.h,
+              radius: 4.r,
+              color: AppColors.primary,
+              textStyle: StyleText.fontSize16Weight500
+                  .copyWith(color: AppColors.textButton),
+              function: () async {
+                hapticController.triggerHapticFeedback(
+                    vibration: VibrateType.mediumImpact,
+                    hapticFeedback: HapticFeedback.mediumImpact);
+                await companyController.updateCompanyModel();
+                setState(() {});
+              },
+            ),
+          ],
+        ),
       ),
     );
   }

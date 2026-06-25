@@ -3,10 +3,11 @@
 /// Author: Mohamed Elrashidy
 /// Refactored At: 13/11/2024
 
+import 'package:demo_app/core/constants/files_extensions.dart';
+import 'package:demo_app/core/enums/enum.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/shared_components/request_escalate_dialog.dart';
-import 'package:demo_app/core/helper/file_path_functions.dart';
+import 'package:demo_app/core/widgets/main_widget/request_escalate_dialog.dart';
 import 'package:demo_app/features/settings/presentation/controller/settings_controller.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'document_section.dart';
@@ -86,3 +87,33 @@ class AdditionalInfoContent extends StatelessWidget {
     }
   }
 }
+
+class FilePathFunctions {
+  static bool isImage(String filePath) {
+    for (var extension in FilesExtensions.imageExtensions) {
+      if (filePath.contains(extension)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  static String getFileNameFromPath(String path) {
+    return path.split('/').last;
+
+  }
+}
+class StringFormatter {
+  static String localizedString(
+      {required String englishName, required String? arabicName}) {
+    if( Get.locale.toString().contains('en')|| arabicName == null)
+    {
+      return capitalize(englishName);
+    }
+    else
+    {
+      return arabicName;
+    }
+  }}
+
+

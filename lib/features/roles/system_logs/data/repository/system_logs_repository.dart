@@ -9,11 +9,11 @@ import 'package:dartz/dartz.dart';
 import 'package:geolocator_platform_interface/src/models/position.dart';
 import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
 
-import '../../../../../core/network/failure_model.dart';
-import '../../../../employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
+import 'package:demo_app/core/network/failure_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
 import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
-import '../data/system_logs_remote_data_source.dart';
-import '../models/system_logs_model.dart';
+import 'package:demo_app/features/roles/system_logs/data/data/system_logs_remote_data_source.dart';
+import 'package:demo_app/features/roles/system_logs/data/models/system_logs_model.dart';
 
 class SystemLogsRepository {
   SystemLogsRemoteDataSource systemLogsRemoteDataSource =

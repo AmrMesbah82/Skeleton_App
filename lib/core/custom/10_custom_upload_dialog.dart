@@ -3,12 +3,12 @@
 // ─────────────────────────────────────────────
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
-import 'package:demo_app/core/widgets/services_management/custom_textformfield.dart';
 import '../theme/app_colors.dart';
 
 ///
@@ -250,11 +250,10 @@ class _UploadDialogState extends State<_UploadDialog> {
                   .copyWith(color: AppColors.text),
             ),
             SizedBox(height: 6.h),
-            CustomValidatedTextFieldMaster(
+            CustomTextField(
               hint: widget.titleFieldHint,
               controller: _titleCtrl,
-              height: 36,
-              submitted: _submitted,
+              required: _submitted,
               textDirection: widget.textDirection,
               onChanged: (_) => setState(() {}),
             ),

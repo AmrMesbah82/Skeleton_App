@@ -4,10 +4,11 @@
 /// Author: Mohamed Elrashidy
 /// Created At: 31/12/2024
 
+import 'package:demo_app/features/onboarding/helper/enum_single_value_tracking_model.dart';
+
 import '../../../../../core/enums/company_size_list.dart';
 import '../../../../../core/enums/industry.dart';
-import '../../../../../core/generic_models/enum_single_value_tracking_model.dart';
-import '../../../../../core/generic_models/single_value_tracking_model.dart';
+import 'package:demo_app/core/helper/main_helper/single_value_tracking_model.dart';
 
 class CompanyInformationModel {
   SingleValueTrackingModel<String> companyName;

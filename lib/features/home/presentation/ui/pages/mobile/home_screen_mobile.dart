@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_appbar_mobile.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/gradiant_container.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/upcoming_schedule_listview.dart';
@@ -17,9 +17,9 @@ import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
-import 'package:demo_app/core/shared_components/timeline_widget.dart';
-import '../../../../../../core/dummy_data/mode_changer.dart';
-import '../../../../../../core/enumeration/enum.dart';
+import 'package:demo_app/core/widgets/main_widget/timeline_widget.dart';
+import 'package:demo_app/features/settings/mode_changer.dart';
+import 'package:demo_app/core/enums/enum.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../nav_bar/presentation/controller/nav_bar_controller.dart';

@@ -2,10 +2,10 @@ import 'package:dartz/dartz.dart';
 import 'package:demo_app/features/notification/notification_controller.dart';
 import 'package:get/get.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
-import '../../../../../core/helper/date_time_in_arabic.dart';
-import '../../../../../core/network/failure_model.dart';
-import '../../data/repository/account_status_repository.dart';
-import '../entity/account_status_access_entity.dart';
+import 'package:demo_app/core/helper/main_helper/date_time_in_arabic.dart';
+import 'package:demo_app/core/network/failure_model.dart';
+import 'package:demo_app/features/roles/account_status/data/repository/account_status_repository.dart';
+import 'package:demo_app/features/roles/account_status/domain/entity/account_status_access_entity.dart';
 
 class ScheduleReactivationTimeUseCase {
   AccountStatusRepository repository;

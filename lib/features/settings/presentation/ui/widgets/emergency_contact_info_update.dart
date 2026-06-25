@@ -2,20 +2,20 @@ import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.da
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/country_picker_dialog.dart';
-import 'package:demo_app/core/widgets/intl_phone_field.dart';
+import 'package:demo_app/core/widgets/main_widget/country_picker_dialog.dart';
+import 'package:demo_app/core/widgets/main_widget/intl_phone_field.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/location_info_update.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
+import 'package:demo_app/core/enums/enum.dart';
 
 
 import 'package:demo_app/core/theme/app_font_size.dart';
-import 'package:demo_app/core/helper/validator.dart';
-import 'package:demo_app/features/settings/presentation/ui/pages/tablet/tablet_settings_health_insurance.dart';
+import 'package:demo_app/core/helper/main_helper/validator.dart';
+import 'package:demo_app/features/settings/presentation/ui/pages/settings_health_insurance.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
-import 'package:demo_app/features/settings/settings_screen/views/profile_screen.dart';
+import 'package:demo_app/features/settings/presentation/ui/pages/profile_screen.dart';
 
 class EmergencyContactInfoUpdate extends StatefulWidget {
   final bool isRequestMobile;

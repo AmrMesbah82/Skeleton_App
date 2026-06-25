@@ -4,7 +4,7 @@
 /// Creation Date: 10/11/2024
 /// Refactored Date: 11/04/2025
 
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:flutter/material.dart';
@@ -13,23 +13,23 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'dart:ui' as ui;
 import 'package:intl/intl.dart';
-import 'package:demo_app/core/widgets/form_fields/two_text_section.dart';
-import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/helper/string_formatter.dart';
-import 'package:demo_app/core/helper/validator.dart';
+import 'package:demo_app/features/settings/widgets/form_fields/two_text_section.dart';
+import 'package:demo_app/core/helper/main_helper/date_time_in_arabic.dart';
+import 'package:demo_app/core/helper/main_helper/haptic_controller.dart';
+import 'package:demo_app/core/helper/main_helper/validator.dart';
 
 import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import '../../../../../core/constants/skeleton_assets.dart';
-import '../../../../../core/enumeration/enum.dart';
+import 'package:demo_app/core/enums/enum.dart';
 import '../../../../../core/widgets/form_fields/profile_textfield.dart';
-import '../../../../../core/widgets/name_section.dart';
+import 'package:demo_app/features/settings/widgets/name_section.dart';
 // REMOVED: import '../../../settings_screen/views/personal_info_screens/personal_info_tablet/nationality_and_birth_section.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../../core/theme/app_colors.dart';
 import '../../controller/settings_controller.dart';
 import '../pages/settings_screen.dart';
+import 'additional_info_content.dart';
 import 'settings_header.dart';
 
 class PersonalData extends StatelessWidget {

@@ -5,9 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/switchs_data_column.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/helper/haptic_controller.dart';
+import 'package:demo_app/core/widgets/main_widget/switchs_data_column.dart';
+import 'package:demo_app/core/enums/enum.dart';
+import 'package:demo_app/core/helper/main_helper/haptic_controller.dart';
 
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'dart:math' as math;

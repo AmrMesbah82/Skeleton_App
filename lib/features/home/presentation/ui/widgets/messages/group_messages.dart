@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/helper/format_helper.dart';
-import 'package:demo_app/core/widgets/standard_container.dart';
+import 'package:demo_app/core/helper/main_helper/format_helper.dart';
+import 'package:demo_app/features/home/widgets/standard_container.dart';
 import 'package:demo_app/core/extension/context_extensions.dart';
 import 'package:demo_app/features/messaging/features/groups/domain/entity/group_entity.dart';
 import 'package:demo_app/features/messaging/interface/controller/messaging_init_controller.dart';
 import 'package:demo_app/features/home/data/models/group_message_model.dart';
 
-import '../../../../../../core/widgets/custom_button.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_button.dart';
 import '../../../../../../core/theme/app_colors.dart';
 import '../../../../../../core/theme/app_text_styles.dart';
 import '../../../../../messaging/interface/message_interface_consumer.dart';

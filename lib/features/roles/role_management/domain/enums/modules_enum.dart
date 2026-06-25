@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/stubs/module_page_stubs.dart';
+import 'package:demo_app/features/roles/widgets/module_page_stubs.dart';
 import 'package:get/get_core/src/get_main.dart';
 
 // REMOVED_MODULE: import 'package:demo_app/features/external/database_builder/database_builder_responsive_page.dart';
@@ -23,12 +23,12 @@ import 'package:demo_app/features/roles/role_management/domain/enums/services/se
 // REMOVED_MODULE: import '../../../todo_new_module/todo_responsive_page.dart';
 
 // REMOVED_MODULE: import '../../../../external/tracking_module/tracking_responsive_page.dart';
-import 'package:demo_app/features/employees/presentation/ui/pages/employees_responsive_page.dart';
+import 'package:demo_app/core/helper/employees/presentation/ui/pages/employees_responsive_page.dart';
 import 'package:demo_app/features/home/presentation/ui/pages/home_responsive_page.dart';
 import 'package:demo_app/features/home/nav_bar/presentation/ui/pages/more_page.dart';
 import 'package:demo_app/features/notification/notification_control.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
-import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_responsive_page.dart';
+import 'package:demo_app/features/roles/role_management/ui/pages/role_responsive_page.dart';
 import 'form/form_permissions_sections.dart';
 import 'hr/hr_subsSections_enums.dart';
 import 'inventory/inventory_permissions_sections.dart';

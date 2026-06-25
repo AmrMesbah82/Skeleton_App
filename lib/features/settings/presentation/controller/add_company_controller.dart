@@ -13,9 +13,9 @@ import 'package:demo_app/core/network/api_constants.dart';
 import 'package:demo_app/features/settings/data/models/company_model/company_model.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
-import '../../../../core/widgets/loading.dart';
-import '../../../../core/widgets/restart_widget.dart';
-import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
+import 'package:demo_app/core/widgets/main_widget/loading.dart';
+import 'package:demo_app/core/widgets/main_widget/restart_widget.dart';
+import 'package:demo_app/features/roles/system_logs/controller/system_logs_controller.dart';
 
 class CompanyController extends GetxController with StateMixin {
   final SystemLogsController systemLogsController = Get.find<SystemLogsController>();

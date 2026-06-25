@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 
-import '../../../../../core/helper/date_time_in_arabic.dart';
+import 'package:demo_app/core/helper/main_helper/date_time_in_arabic.dart';
 
 import '../../../data/models/notification_model_main_core.dart';
 

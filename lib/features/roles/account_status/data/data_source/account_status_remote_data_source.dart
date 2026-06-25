@@ -3,11 +3,11 @@ import 'package:dartz/dartz.dart';
 import 'package:demo_app/core/network/api_constants.dart';
 import 'package:demo_app/core/services/firebase/repository/firebase_repository.dart';
 
-import '../../../../../core/network/failure_model.dart';
+import 'package:demo_app/core/network/failure_model.dart';
 import 'package:demo_app/core/network/get_base_url.dart';
-import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
-import '../../../../onboarding/authentication/data/models/demo_user_account_overview.dart';
-import '../../../../employees/mixin_feature/data/employee_mixin_remote_data_source.dart';
+import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
+import 'package:demo_app/features/onboarding/authentication/data/models/demo_user_account_overview.dart';
+import 'package:demo_app/core/helper/employees/mixin_feature/data/employee_mixin_remote_data_source.dart';
 
 class AccountStatusRemoteDataSource with EmployeeMixinRemoteDataSource {
   WriteBatch _batch = FirebaseFirestore.instance.batch();

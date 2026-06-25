@@ -12,6 +12,7 @@ import 'dart:io';
 
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../theme/app_colors.dart';
@@ -21,7 +22,6 @@ import 'package:demo_app/core/widgets/grc/svg_custom.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
 import '../theme/app_colors.dart';
-import '../widgets/services_management/custom_textformfield.dart';
 
 // ─────────────────────────────────────────────
 //  SHARED HELPERS
@@ -463,16 +463,14 @@ class _CommentDialogState extends State<_CommentDialog> {
           SizedBox(height: 16.h),
 
           // ── Text field ──
-          CustomValidatedTextFieldMaster(
+          CustomTextField(
             label: widget.fieldLabel,
             hint: widget.hint,
             controller: _controller,
-            height: 100,
             maxLines: 5,
             fillColor:AppColors.card,
             maxLength: widget.maxLength,
-            showCharCount: true,
-            submitted: _submitted,
+            required: _submitted,
             textDirection: widget.textDirection,
             onChanged: (_) => setState(() {}),
           ),
@@ -696,12 +694,11 @@ class _UploadDialogState extends State<_UploadDialog> {
                   .copyWith(color: AppColors.text),
             ),
             SizedBox(height: 6.h),
-            CustomValidatedTextFieldMaster(
+            CustomTextField(
               hint: widget.titleFieldHint,
               controller: _titleCtrl,
               fillColor: AppColors.card,
-              height: 36,
-              submitted: _submitted,
+              required: _submitted,
               textDirection: widget.textDirection,
               onChanged: (_) => setState(() {}),
             ),

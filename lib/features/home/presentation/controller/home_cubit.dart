@@ -13,7 +13,7 @@ import 'package:demo_app/features/employee/presentation/controller/main_core_emp
 import 'package:demo_app/features/home/domain/enum/home_components.dart';
 
 import '../../../../core/constants/quotes_list.dart';
-import '../../../../core/enumeration/enum.dart';
+import 'package:demo_app/core/enums/enum.dart';
 import '../../../../core/network/failure_model.dart';
 import '../../app_drawer/presentation/controller/drawer_controller.dart';
 import '../../nav_bar/presentation/controller/nav_bar_controller.dart';

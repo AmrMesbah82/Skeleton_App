@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/constants/image_paths.dart';
-import 'package:demo_app/core/helper/biometric_controller.dart';
+import 'package:demo_app/core/helper/main_helper/biometric_controller.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/onboarding/authentication/presentation/ui/pages/start_sign_in.dart';
 import 'package:demo_app/features/onboarding/authentication/presentation/ui/pages/mobile_sign_in.dart';

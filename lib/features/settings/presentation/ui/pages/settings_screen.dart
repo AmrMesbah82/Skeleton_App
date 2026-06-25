@@ -10,15 +10,14 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
-import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
+import 'package:demo_app/core/helper/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/home/presentation/controller/home_cubit.dart';
 
-import '../../../../employees/data/models/employee_model/employee_directory_model.dart';
-import '../../../../employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/employee_model/employee_directory_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
 import '../../../utils/settings_constants.dart';
 import '../../controller/settings_controller.dart';
-import 'mobile/settings_mobile_layout.dart';
-import 'tablet/settings_tablet_layout.dart';
+import 'settings_layout.dart';
 
 NewEmployeeModelHistory? employee = NewEmployeeModelHistory();
 EmployeeDirectoryModel? employeeDirectory;
@@ -132,12 +131,12 @@ class SettingsScreenState extends State<SettingsScreen> {
                         onGenerateRoute: (settings) {
                           return MaterialPageRoute(
                             builder: (_) {
-                              return SettingsTabletLayout();
+                              return SettingsLayout();
                             },
                           );
                         },
                       )
-                          : SettingsTabletLayout(),
+                          : SettingsLayout(),
                     );
                   },
                 ),

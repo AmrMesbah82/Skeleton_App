@@ -11,18 +11,18 @@ import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
+import 'package:demo_app/core/enums/enum.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/settings/presentation/controller/settings_controller.dart';
 
 
-import '../../../../../core/widgets/country_picker_dialog.dart';
-import '../../../../../core/widgets/intl_phone_field.dart';
+import 'package:demo_app/core/widgets/main_widget/country_picker_dialog.dart';
+import 'package:demo_app/core/widgets/main_widget/intl_phone_field.dart';
 // REMOVED: import '../../../../authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
 import '../../../../employee/presentation/controller/main_core_employee_controller.dart';
-import '../../../../employees/presentation/controller/employee_controller.dart';
+import 'package:demo_app/core/helper/employees/presentation/controller/employee_controller.dart';
 import 'settings_header.dart';
 
 class HealthInsuranceSection extends StatelessWidget {

@@ -13,9 +13,9 @@ import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/page_onBoarding.dart';
 // import 'package:demo_app/components/on_boarding_components.dart/page_onboarding.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
+import 'package:demo_app/core/enums/enum.dart';
 
-import 'package:demo_app/core/helper/haptic_controller.dart';
+import 'package:demo_app/core/helper/main_helper/haptic_controller.dart';
 
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/theme_controller.dart';

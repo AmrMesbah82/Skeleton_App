@@ -8,7 +8,7 @@ import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
+import 'package:demo_app/core/enums/enum.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/features/settings/presentation/controller/settings_controller.dart';
 import '../../../../../generated/l10n.dart';

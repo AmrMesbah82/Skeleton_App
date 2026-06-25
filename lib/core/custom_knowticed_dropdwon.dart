@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/widgets/custom_svg.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/theming/new_theme.dart';
 
 import 'theme/app_colors.dart';
 import 'theme/app_theme.dart';
-import 'theme/new_theme.dart';
 
 /// Enum for supported languages
 enum AppLanguage {

@@ -1,9 +1,9 @@
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/standard_container.dart';
+import 'package:demo_app/features/home/widgets/standard_container.dart';
 
 import '../../../../../../core/custom/37-custom_navigate.dart';
 import '../../../../../../generated/l10n.dart';
@@ -15,7 +15,7 @@ import '../../../../../../core/theme/app_text_styles.dart';
 // REMOVED_MODULE: import '../../../../../todo_new_module/external/tasks_module/core/enums/task_priority_enum.dart';
 // REMOVED_MODULE: import '../../../../../todo_new_module/external/tasks_module/core/enums/task_status_enum.dart';
 import '../../../../data/models/home_component_model.dart';
-import 'package:demo_app/core/helper_module/todo_new_module/tasks_stub.dart';
+import 'package:demo_app/features/home/helper/todo_new_module/tasks_stub.dart';
 
 
 class MyTodoStatus extends StatelessWidget {

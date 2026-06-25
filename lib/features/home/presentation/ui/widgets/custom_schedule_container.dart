@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/home/presentation/ui/widgets/get_photo_asset.dart';
-import 'package:demo_app/core/helper/capitalization_functions.dart';
-import 'package:demo_app/core/helper/date_time_in_arabic.dart';
+import 'package:demo_app/features/home/helper/capitalization_functions.dart';
+import 'package:demo_app/core/helper/main_helper/date_time_in_arabic.dart';
 
 
 import 'package:demo_app/core/theme/app_font_size.dart';

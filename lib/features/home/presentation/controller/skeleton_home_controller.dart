@@ -2,11 +2,11 @@ import 'package:get/get.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 import '../../../../core/constants/quotes_list.dart';
-import '../../../../core/enumeration/enum.dart';
+import 'package:demo_app/core/enums/enum.dart';
 import '../../app_drawer/presentation/controller/drawer_controller.dart';
 import '../../nav_bar/presentation/controller/nav_bar_controller.dart';
 import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
-import 'package:demo_app/features/roles/role_management/presentation/controller/modules_controller.dart';
+import 'package:demo_app/features/roles/role_management/controller/modules_controller.dart';
 import 'schedule_controller.dart';
 
 class SkeletonHomeController extends GetxController {

@@ -1,17 +1,17 @@
-import 'package:demo_app/core/widgets/side_frame_master.dart';
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/widgets/main_widget/side_frame_master.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/widgets/custom_svg.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
 import 'package:flutter_markdown/flutter_markdown.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/core/widgets/circle_progress.dart';
-import 'package:demo_app/core/widgets/custom_appbar_mobile.dart';
+import 'package:demo_app/core/widgets/main_widget/circle_progress.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_appbar_mobile.dart';
 
-import 'package:demo_app/core/dummy_data/mode_changer.dart';
+import 'package:demo_app/features/settings/mode_changer.dart';
 
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
@@ -25,7 +25,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'dart:io';
 
-import '../../../../../core/enumeration/enum.dart' as FormatHelper;
+import 'package:demo_app/core/enums/enum.dart' as FormatHelper;
 import '../../../../../core/network/api_constants.dart';
 import '../../../../../generated/l10n.dart';
 

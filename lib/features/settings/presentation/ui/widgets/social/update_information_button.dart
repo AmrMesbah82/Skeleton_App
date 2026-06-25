@@ -7,11 +7,11 @@ import 'package:get/get.dart';
 
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
-import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
+import 'package:demo_app/core/helper/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/settings/presentation/controller/settings_controller.dart';
 import 'package:demo_app/features/settings/presentation/controller/social_controller.dart';
 
-import '../../../../../../core/widgets/custom_button.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_button.dart';
 // Add the import for CustomButton here
 // import 'path/to/custom_button.dart';
 

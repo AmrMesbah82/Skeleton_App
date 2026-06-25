@@ -1,12 +1,12 @@
 import 'package:demo_app/core/custom/35-custom_search_widget_custom.dart';
-import 'package:demo_app/core/widgets/shared_action_widgets.dart';
-import 'package:demo_app/core/widgets/side_frame_master.dart';
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/widgets/main_widget/shared_action_widgets.dart';
+import 'package:demo_app/core/widgets/main_widget/side_frame_master.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/widgets/custom_svg.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/helper/format_helper.dart';
+import 'package:demo_app/core/helper/main_helper/format_helper.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/custom_button_widget.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/navigate.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/theming/new_theme.dart';
@@ -16,8 +16,8 @@ import 'package:demo_app/features/notification/pin_notification.dart';
 import 'package:lottie/lottie.dart';
 import 'package:timeago/timeago.dart' as timeago;
 
-import '../../core/helper/cross_axis_count_helper.dart';
-import '../../core/widgets/app_search_text_field.dart';
+import 'package:demo_app/core/helper/main_helper/cross_axis_count_helper.dart';
+import 'package:demo_app/core/widgets/main_widget/app_search_text_field.dart';
 import '../../generated/l10n.dart';
 // REMOVED_MODULE: import '../../external/inventory_module/core/drop_down.dart';
 import '../../core/theme/app_colors.dart';

@@ -2,7 +2,7 @@
 // import 'package:flutter/material.dart';
 // import 'package:flutter_svg/svg.dart';
 // import 'package:get/get.dart';
-// import 'package:demo_app/core/dummy_data/mode_changer.dart';
+// import 'package:demo_app/features/settings/mode_changer.dart';
 // import 'package:demo_app/core/helper/date_time_in_arabic.dart';
 // import 'package:demo_app/core/theme/app_colors.dart';
 //

@@ -1,11 +1,11 @@
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:demo_app/core/custom/2-custom_textfield.dart';
 
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/widgets/custom_svg.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/helper/format_helper.dart';
+import 'package:demo_app/core/helper/main_helper/format_helper.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';

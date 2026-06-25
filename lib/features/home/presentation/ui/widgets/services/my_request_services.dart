@@ -1,11 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/core/constants/services_management/constant.dart';
-import 'package:demo_app/core/helper/helper_function.dart';
+import 'package:demo_app/core/constants/constant.dart';
+import 'package:demo_app/core/helper/main_helper/helper_function.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/standard_container.dart';
+import 'package:demo_app/features/home/widgets/standard_container.dart';
 
 import '../../../../../../generated/l10n.dart';
 import 'package:demo_app/core/network/get_base_url.dart';

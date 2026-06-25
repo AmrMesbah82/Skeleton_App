@@ -4,12 +4,12 @@
 import 'dart:io';
 import 'package:demo_app/core/custom/2-custom_textfield.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/widgets/custom_svg.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/helper/haptic_controller.dart';
+import 'package:demo_app/core/enums/enum.dart';
+import 'package:demo_app/core/helper/main_helper/haptic_controller.dart';
 
 
 import 'package:demo_app/core/theme/app_font_size.dart';
@@ -17,7 +17,7 @@ import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/knowledge_hub_module/core/custom_validated_text_field_master.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
-import '../../../../../../core/helper/format_helper.dart';
+import 'package:demo_app/core/helper/main_helper/format_helper.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../../controller/settings_controller.dart';
 import '../settings_header.dart';

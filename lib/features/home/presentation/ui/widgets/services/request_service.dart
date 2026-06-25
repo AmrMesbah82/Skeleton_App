@@ -1,17 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/core/constants/services_management/constant.dart';
-import 'package:demo_app/core/helper/helper_function.dart';
-import 'package:demo_app/core/widgets/custom_button_widget.dart';
+import 'package:demo_app/core/constants/constant.dart';
+import 'package:demo_app/core/helper/main_helper/helper_function.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/custom_button.dart';
-import 'package:demo_app/core/widgets/standard_container.dart';
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_button.dart';
+import 'package:demo_app/features/home/widgets/standard_container.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:demo_app/features/home/data/models/home_component_model.dart';
 
-import '../../../../../../../../../generated/l10n.dart';
+import 'package:demo_app/generated/l10n.dart';
 
 import 'package:demo_app/core/network/get_base_url.dart';
 import '../../../../../../core/theme/app_colors.dart';

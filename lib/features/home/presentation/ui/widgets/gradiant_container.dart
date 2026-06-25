@@ -3,7 +3,7 @@
 /// Purpose: Contains the gradient container widget for the home screen
 /// Author: Mohamed Elrashidy
 /// Refactored at: 9/2/2025
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

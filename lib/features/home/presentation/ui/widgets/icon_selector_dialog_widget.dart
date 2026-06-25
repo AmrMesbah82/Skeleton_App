@@ -1,8 +1,8 @@
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/services_mangment_module/presentation/s7_approvals/ui/pages/approval_request_toggle.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/services_mangment_module/presentation/s9_admin_dashboard/ui/pages/dashBoard_admin.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/widgets/custom_svg.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
 import 'package:demo_app/core/removed_module_placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -11,8 +11,8 @@ import 'package:get/get.dart';
 import '../../../../../core/theme/app_colors.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
-import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_management/role_management_home.dart';
-import 'package:demo_app/features/roles/role_management/presentation/view/pages/user_management/user_management_home.dart';
+import 'package:demo_app/features/roles/role_management/ui/pages/role_management_home.dart';
+import 'package:demo_app/features/roles/user_management/ui/pages/user_management_home.dart';
 
 class HeaderIconItem {
   final String svgPath;

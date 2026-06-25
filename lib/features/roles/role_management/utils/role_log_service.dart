@@ -7,7 +7,7 @@
 
 import 'package:get/get.dart';
 import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
-import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
+import 'package:demo_app/features/roles/system_logs/controller/system_logs_controller.dart';
 
 class RoleLogService {
   // ─── Page views ────────────────────────────────────────────

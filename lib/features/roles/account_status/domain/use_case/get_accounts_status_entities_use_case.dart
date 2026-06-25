@@ -3,7 +3,7 @@ import 'package:demo_app/features/roles/account_status/data/repository/account_s
 import 'package:demo_app/features/roles/account_status/domain/entity/account_status_access_entity.dart';
 import 'package:demo_app/features/onboarding/authentication/domain/enums/employee_status_enum.dart';
 
-import '../../../../../core/network/failure_model.dart';
+import 'package:demo_app/core/network/failure_model.dart';
 
 class GetAccountsStatusEntitiesUseCase {
   AccountStatusRepository repository;

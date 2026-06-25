@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:demo_app/features/roles/role_management/data/repository/user_role_repository.dart';
 
-import 'package:demo_app/core/helper/date_time_in_arabic.dart';
+import 'package:demo_app/core/helper/main_helper/date_time_in_arabic.dart';
 import 'package:demo_app/core/network/failure_model.dart';
 import 'package:demo_app/features/employee/domain/entities/employee_entity.dart';
-import 'package:demo_app/features/employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
 
 import 'package:dartz/dartz.dart';
 import 'package:demo_app/core/network/failure_model.dart';

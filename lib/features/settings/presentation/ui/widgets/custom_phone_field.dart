@@ -3,9 +3,9 @@ import 'package:demo_app/core/theme/app_colors.dart';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/country_picker_dialog.dart';
-import 'package:demo_app/core/widgets/intl_phone_field.dart';
-import 'package:demo_app/core/shared_components/phone_number.dart';
+import 'package:demo_app/core/widgets/main_widget/country_picker_dialog.dart';
+import 'package:demo_app/core/widgets/main_widget/intl_phone_field.dart';
+import 'package:demo_app/core/widgets/main_widget/phone_number.dart';
 
 
 

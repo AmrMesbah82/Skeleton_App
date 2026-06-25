@@ -7,14 +7,14 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../core/constatnt.dart';
 import '../../../../core/network/failure_model.dart';
-import '../../../employees/presentation/controller/employee_controller.dart';
+import 'package:demo_app/core/helper/employees/presentation/controller/employee_controller.dart';
 import 'package:demo_app/features/roles/role_management/data/models/role_model.dart';
 import 'package:demo_app/features/roles/role_management/data/repository/role_repository.dart';
 import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 import 'package:demo_app/features/roles/role_management/domain/enums/services/services_permissions_sections.dart';
 import 'package:demo_app/features/roles/role_management/domain/interfaces/module_permissions_sections.dart';
 import 'package:demo_app/features/roles/role_management/domain/interfaces/module_permissions_sections_permissions.dart';
-import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_responsive_page.dart';
+import 'package:demo_app/features/roles/role_management/ui/pages/role_responsive_page.dart';
 import '../../../department/presentation/controller/add_department_controller.dart';
 import '../../data/models/emplyees_model/new_employee_model.dart';
 import '../../data/repository/main_core_employee_repository.dart';

@@ -11,7 +11,7 @@ import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
 import '../../../../employee/presentation/controller/main_core_employee_controller.dart';
-import '../../../../employees/presentation/controller/employee_controller.dart';
+import 'package:demo_app/core/helper/employees/presentation/controller/employee_controller.dart';
 import '../../controller/settings_controller.dart';
 import 'emergency_contact_information_section.dart';
 import 'health_insurance_section.dart';

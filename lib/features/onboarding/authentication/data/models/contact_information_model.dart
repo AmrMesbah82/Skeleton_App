@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import '../../../../../core/generic_models/single_value_tracking_model.dart';
+import 'package:demo_app/core/helper/main_helper/single_value_tracking_model.dart';
+import 'package:demo_app/core/helper/main_helper/single_value_tracking_model.dart';
 import 'phone_model.dart';
 
 class ContactInformationModel {

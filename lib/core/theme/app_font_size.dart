@@ -4,7 +4,7 @@ import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-import '../../../../../core/helper/biometric_controller.dart';
+import '../helper/main_helper/biometric_controller.dart';
 import 'app_text_styles.dart';
 
 class FontConstants {

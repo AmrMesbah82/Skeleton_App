@@ -5,7 +5,7 @@
 /// Created on: 3/9/2025
 /// Updated: Added debug logging to find translation issue
 
-import 'package:demo_app/core/helper_module/form_builder_module/core/constants/strings.dart';
+import 'package:demo_app/features/roles/helper/form_builder_module/core/constants/strings.dart';
 import 'package:get/get.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/form_builder_module/core/constants/strings.dart';
 

@@ -16,8 +16,8 @@ import 'package:demo_app/core/theme/app_font_size.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/inventory_module/core/text_field.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 
-import 'package:demo_app/core/theme/new_theme.dart';
-import '../../../../../../core/helper/format_helper.dart'; // ✅ ADD THIS
+import 'package:demo_app/core/theme/app_theme.dart';
+import 'package:demo_app/core/helper/main_helper/format_helper.dart'; // ✅ ADD THIS
 import '../../../controller/settings_controller.dart';
 import '../settings_header.dart';
 

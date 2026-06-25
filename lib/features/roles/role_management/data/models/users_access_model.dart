@@ -5,7 +5,7 @@
 /// Created at: 20/1/2025
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import 'package:demo_app/core/generic_models/single_value_tracking_model.dart';
+import 'package:demo_app/core/helper/main_helper/single_value_tracking_model.dart';
 
 class UserPermissionModel {
   SingleValueTrackingModel<String> role;

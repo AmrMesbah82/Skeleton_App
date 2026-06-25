@@ -1,17 +1,17 @@
   import 'package:cloud_firestore/cloud_firestore.dart';
   import 'package:flutter/material.dart';
   import 'package:get/get.dart';
-  import 'package:demo_app/core/dummy_data/mode_changer.dart';
+  import 'package:demo_app/features/settings/mode_changer.dart';
   import 'package:demo_app/features/employee/presentation/controller/main_core_employee_controller.dart';
   import 'package:demo_app/features/roles/role_management/data/models/role_model.dart';
   import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
   import 'package:demo_app/main.dart';
 
-  import '../../../../../core/helper/biometric_controller.dart';
+  import 'package:demo_app/core/helper/main_helper/biometric_controller.dart';
   import '../../../../../core/network/api_constants.dart';
-  import 'package:demo_app/features/roles/role_management/presentation/controller/modules_controller.dart';
-  import 'package:demo_app/features/roles/role_management/presentation/controller/role_cubit.dart';
-  import 'package:demo_app/features/roles/role_management/presentation/view/pages/role_responsive_page.dart';
+  import 'package:demo_app/features/roles/role_management/controller/modules_controller.dart';
+  import 'package:demo_app/features/roles/role_management/controller/role_cubit.dart';
+  import 'package:demo_app/features/roles/role_management/ui/pages/role_responsive_page.dart';
   import '../utils/app_drawer_constant_modules.dart';
   import '../utils/app_drawer_update_ids.dart';
 

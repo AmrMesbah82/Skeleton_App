@@ -9,7 +9,7 @@ import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/network/api_constants.dart';
 import 'package:demo_app/core/services/firebase/repository/firebase_repository.dart';
-import 'package:demo_app/features/employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/new_employee_model/emplyees_model/new_employee_model.dart';
 
 import 'package:demo_app/core/network/failure_model.dart';
 import 'package:demo_app/core/network/get_base_url.dart';

@@ -6,7 +6,7 @@
 
 import 'package:get/get.dart';
 
-import 'package:demo_app/core/helper_module/form_builder_module/core/constants/strings.dart';
+import 'package:demo_app/features/roles/helper/form_builder_module/core/constants/strings.dart';
 import 'package:demo_app/features/roles/role_management/domain/interfaces/module_permissions_sections.dart';
 import 'package:demo_app/features/roles/role_management/domain/interfaces/module_permissions_sections_permissions.dart';
 import 'settings_permissions.dart';

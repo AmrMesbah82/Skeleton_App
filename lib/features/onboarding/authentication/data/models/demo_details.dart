@@ -6,7 +6,7 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
-import '../../../../../core/generic_models/single_value_tracking_model.dart';
+import 'package:demo_app/core/helper/main_helper/single_value_tracking_model.dart';
 
 class DemoDetails {
   String? reasonOfRejection;

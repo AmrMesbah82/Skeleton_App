@@ -456,7 +456,7 @@ import 'package:get_storage/get_storage.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
 import '../../features/messaging/interface/controller/messaging_init_controller.dart';
-import 'package:demo_app/features/roles/system_logs/presentation/controller/system_logs_controller.dart';
+import 'package:demo_app/features/roles/system_logs/controller/system_logs_controller.dart';
 import 'app_theme.dart';
 import 'package:demo_app/core/theme/app_text_styles.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';

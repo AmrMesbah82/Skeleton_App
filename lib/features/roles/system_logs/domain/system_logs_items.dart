@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:demo_app/features/roles/system_logs/data/models/system_logs_model.dart';
 
-import '../../../../core/helper/date_time_helper.dart';
+import 'package:demo_app/features/roles/helper/date_time_helper.dart';
 
 ///*********************** FILE INFO ********************///
 /// FILE NAME: system_logs_items.dart

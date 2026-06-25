@@ -13,7 +13,7 @@ import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
 import 'package:demo_app/generated/l10n.dart';
 
-import '../../../../../../core/widgets/loading.dart';
+import 'package:demo_app/core/widgets/main_widget/loading.dart';
 
 class CompanyImage extends StatefulWidget {
    CompanyImage({required this.onChangedImageUrl,super.key});

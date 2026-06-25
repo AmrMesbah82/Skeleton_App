@@ -6,18 +6,18 @@
 /// Updated by: Amr Mesbah - Reset now applies immediately without needing Apply click
 /// Updated by: Amr Mesbah - Colors update instantly in UI after reset (no navigation needed)
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/core/widgets/custom_button_widget.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_button_widget.dart';
 import 'package:demo_app/core/widgets/services_management/custom_reasponsive_filed.dart';
-import 'package:demo_app/features/settings/settings_screen/views/owner_screens/company_information/color_display_section.dart';
-import 'package:demo_app/core/helper_module/knowledge_hub_module/core/custom_drop_down.dart';
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/features/settings/presentation/ui/widgets/color_display_section.dart';
+import 'package:demo_app/core/helper/knowledge_hub_module/core/custom_drop_down.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/helper/biometric_controller.dart';
+import 'package:demo_app/core/enums/enum.dart';
+import 'package:demo_app/core/helper/main_helper/biometric_controller.dart';
 
 
 import 'package:demo_app/core/theme/app_font_size.dart';
@@ -29,9 +29,9 @@ import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
 import 'package:demo_app/features/settings/utils/company_constants.dart';
-import 'package:demo_app/core/shared_components/timeline_widget.dart';
+import 'package:demo_app/core/widgets/main_widget/timeline_widget.dart';
 import '../../../../../../core/network/api_constants.dart';
-import '../../../../../../core/widgets/custom_drop_down.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_drop_down.dart';
 // REMOVED_MODULE: import '../../../../../../external/inventory_module/core/custom_button_widget.dart';
 // REMOVED_MODULE: import '../../../../../../external/services_mangment_module/core/custom_reasponsive_filed.dart';
 import 'company_image.dart';

@@ -1,7 +1,7 @@
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/helper/format_helper.dart';
+import 'package:demo_app/core/helper/main_helper/format_helper.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/employee/presentation/controller/main_core_employee_controller.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';

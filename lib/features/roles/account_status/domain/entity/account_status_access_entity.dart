@@ -9,7 +9,7 @@ import 'package:intl/intl.dart';
 import 'package:demo_app/features/department/presentation/controller/add_department_controller.dart';
 import 'package:demo_app/features/onboarding/authentication/domain/enums/employee_status_enum.dart';
 
-import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
+import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
 import 'package:demo_app/features/roles/role_management/utils/constants.dart';
 
 class AccountStatusAccessEntity {

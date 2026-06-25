@@ -1,11 +1,11 @@
 import 'package:demo_app/core/custom/35-custom_search_widget_custom.dart';
-import 'package:demo_app/core/widgets/side_frame_master.dart';
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/widgets/main_widget/side_frame_master.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/widgets/custom_svg.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/helper/circle_progress.dart';
+import 'package:demo_app/core/helper/main_helper/circle_progress.dart';
 // navigate helpers (inlined from removed inventory_module)
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/Category/presentation/ui/service_department_manager/tablet/s2_details_service/details_service/widget/info_text.dart';
@@ -13,8 +13,8 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:intl/intl.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../../../core/helper/cross_axis_count_helper.dart';
-import '../../../../../core/widgets/app_search_text_field.dart';
+import 'package:demo_app/core/helper/main_helper/cross_axis_count_helper.dart';
+import 'package:demo_app/core/widgets/main_widget/app_search_text_field.dart';
 import '../../../../../generated/l10n.dart';
 import 'package:demo_app/core/network/get_base_url.dart';
 import '../../../../employee/presentation/controller/main_core_employee_controller.dart';

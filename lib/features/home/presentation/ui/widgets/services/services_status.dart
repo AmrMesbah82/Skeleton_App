@@ -1,20 +1,20 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/core/constants/services_management/constant.dart';
-import 'package:demo_app/core/helper/helper_function.dart';
+import 'package:demo_app/core/constants/constant.dart';
+import 'package:demo_app/core/helper/main_helper/helper_function.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/standard_container.dart';
+import 'package:demo_app/features/home/widgets/standard_container.dart';
 import 'package:percentages_with_animation/percentages_with_animation.dart';
 
-import '../../../../../../core/widgets/circle_progress.dart';
+import 'package:demo_app/core/widgets/main_widget/circle_progress.dart';
 import '../../../../../../generated/l10n.dart';
 import '../../../../../../core/theme/app_colors.dart';
 import '../../../../../../core/theme/app_text_styles.dart';
 import 'package:demo_app/core/network/get_base_url.dart';
 import '../../../../../employee/presentation/controller/main_core_employee_controller.dart';
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import '../../../../data/models/home_component_model.dart';
 
 class ServicesStatus extends StatefulWidget {

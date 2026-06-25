@@ -9,8 +9,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 
-import '../../enumeration/enum.dart';
-import '../../helper/haptic_controller.dart';
+import 'package:demo_app/core/enums/enum.dart';
+import 'package:demo_app/core/helper/main_helper/haptic_controller.dart';
 import '../../theme/app_colors.dart';
 
 // ─── Animated wrapper ────────────────────────────────────────────────────────

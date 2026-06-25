@@ -11,7 +11,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:get/get.dart';
-import '../../../../core/enumeration/enum.dart';
+import 'package:demo_app/core/enums/enum.dart';
 import '../../../../core/network/failure_model.dart';
 import '../../data/model/department_model.dart';
 import '../../data/repository/department_repository.dart';

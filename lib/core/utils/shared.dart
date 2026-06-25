@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../helper/helper_function.dart';
+import 'package:demo_app/core/helper/main_helper/helper_function.dart';
 
 // NOTE: SharedPrefsEmployeeHelper / SharedPrefsApprovalHelper live in the
 // services module (data/helper/services_prefs_employee.dart) so core no longer

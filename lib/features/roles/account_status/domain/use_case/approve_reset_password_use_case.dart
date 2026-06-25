@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/controllers/notification_controller.dart';
 import 'package:demo_app/features/roles/account_status/domain/entity/account_status_access_entity.dart';
 
-import '../../../../../core/network/failure_model.dart';
-import '../../data/repository/account_status_repository.dart';
+import 'package:demo_app/core/network/failure_model.dart';
+import 'package:demo_app/features/roles/account_status/data/repository/account_status_repository.dart';
 
 class ApproveResetPasswordUseCase {
   final AccountStatusRepository repository;

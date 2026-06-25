@@ -5,8 +5,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/core/widgets/buttons/main_yellow_button copy.dart';
-import 'package:demo_app/core/widgets/column_request_data.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
+import 'package:demo_app/core/widgets/main_widget/column_request_data.dart';
+import 'package:demo_app/core/enums/enum.dart';
 
 
 import 'package:demo_app/core/theme/app_font_size.dart';

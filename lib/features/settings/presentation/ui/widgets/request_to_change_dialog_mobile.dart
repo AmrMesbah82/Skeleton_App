@@ -16,8 +16,8 @@ import 'package:multi_dropdown/multiselect_dropdown.dart';
 
 
 
-import 'package:demo_app/core/widgets/filters_appbar.dart';
-import 'package:demo_app/core/widgets/column_request_data.dart';
+import 'package:demo_app/core/widgets/main_widget/filters_appbar.dart';
+import 'package:demo_app/core/widgets/main_widget/column_request_data.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/additional_info_update.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/contact_info_update.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/emergency_contact_info_update.dart';
@@ -25,8 +25,6 @@ import 'package:demo_app/features/settings/presentation/ui/widgets/health_insura
 import 'package:demo_app/features/settings/presentation/ui/widgets/personal_data_update.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_icon_button.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/settings_header.dart';
-
-import '../../../../../../core/enumeration/enum.dart';
 
 // LocationInfoUpdate may or may not exist — import conditionally:
 // import 'package:demo_app/features/skeleton/settings/presentation/ui/widgets/location_info_update.dart';

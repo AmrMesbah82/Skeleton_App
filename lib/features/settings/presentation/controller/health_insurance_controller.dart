@@ -8,12 +8,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/core/shared_components/phone_number.dart';
-import 'package:demo_app/core/widgets/loading.dart';
-import 'package:demo_app/features/employees/domain/entities/emergency_contact_entity.dart';
-import 'package:demo_app/features/employees/domain/entities/request_health_insurance_entity.dart';
-import 'package:demo_app/features/employees/presentation/controller/emergency_contact_controller.dart';
-import 'package:demo_app/features/employees/presentation/controller/health_insurance_controller.dart';
+import 'package:demo_app/core/widgets/main_widget/phone_number.dart';
+import 'package:demo_app/core/widgets/main_widget/loading.dart';
+import 'package:demo_app/core/helper/employees/domain/entities/emergency_contact_entity.dart';
+import 'package:demo_app/core/helper/employees/domain/entities/request_health_insurance_entity.dart';
+import 'package:demo_app/core/helper/employees/presentation/controller/emergency_contact_controller.dart';
+import 'package:demo_app/core/helper/employees/presentation/controller/health_insurance_controller.dart';
 import 'package:demo_app/core/network/get_base_url.dart';
 import 'settings_controller.dart';
 

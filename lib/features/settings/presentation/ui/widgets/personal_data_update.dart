@@ -5,23 +5,23 @@ import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:demo_app/core/shared_components/calender_package/src/models/calendar_date_picker2_config.dart';
-import 'package:demo_app/core/shared_components/date_picker_class.dart';
-import 'package:demo_app/core/widgets/custom_drop_down_menu.dart';
+import 'package:demo_app/core/widgets/calender_package/src/models/calendar_date_picker2_config.dart';
+import 'package:demo_app/core/widgets/main_widget/date_picker_class.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_drop_down_menu.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/location_info_update.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
-import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
+import 'package:demo_app/core/helper/main_helper/date_time_in_arabic.dart';
+import 'package:demo_app/core/enums/enum.dart';
 
 
 import 'package:demo_app/core/constants/nationalities_list.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';
-import 'package:demo_app/core/helper/validator.dart';
-import 'package:demo_app/features/settings/presentation/ui/pages/tablet/tablet_personal_info_screen.dart';
+import 'package:demo_app/core/helper/main_helper/validator.dart';
+import 'package:demo_app/features/settings/presentation/ui/pages/personal_info_screen.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/skeleton/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 
-import 'package:demo_app/features/settings/settings_screen/views/profile_screen.dart';
+import 'package:demo_app/features/settings/presentation/ui/pages/profile_screen.dart';
 import 'package:demo_app/features/settings/presentation/controller/settings_controller.dart';
 
 class PersonalDataUpdate extends StatefulWidget {

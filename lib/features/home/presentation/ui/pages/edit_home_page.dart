@@ -4,20 +4,20 @@
 /// Author: Mohamed Elrashidy
 /// Created at: 21/9/2025
 
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
-import 'package:demo_app/core/widgets/custom_svg.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_svg.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/pagination_app_bar.dart';
+import 'package:demo_app/core/widgets/main_widget/pagination_app_bar.dart';
 import 'package:demo_app/features/home/data/models/home_component_model.dart';
 import 'package:demo_app/features/home/presentation/controller/home_cubit.dart';
 import 'package:demo_app/features/home/presentation/ui/pages/adding_widget_page.dart';
 import 'package:flutter/src/services/haptic_feedback.dart';
 
-import 'package:demo_app/core/shared_components/timeline_widget.dart';
-import '../../../../../core/enumeration/enum.dart';
+import 'package:demo_app/core/widgets/main_widget/timeline_widget.dart';
+import 'package:demo_app/core/enums/enum.dart';
 import '../../../../../core/theme/app_text_styles.dart';
 import '../../../../../generated/l10n.dart';
 import '../../../../../core/theme/app_colors.dart';

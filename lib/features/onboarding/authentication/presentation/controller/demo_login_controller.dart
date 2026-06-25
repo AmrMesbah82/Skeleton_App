@@ -12,18 +12,18 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/onboarding/authentication/utils/constants.dart';
-import 'package:demo_app/features/employees/presentation/controller/employee_controller.dart';
+import 'package:demo_app/core/helper/employees/presentation/controller/employee_controller.dart';
 
 import '../../../../../core/constants/system_actions.dart';
 import '../../../../../core/network/failure_model.dart';
 import '../../../../../core/widgets/dialogs/response_dialog.dart';
-import '../../../../../core/widgets/loading.dart';
+import 'package:demo_app/core/widgets/main_widget/loading.dart';
 import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
-import '../../../../roles/account_status/presentation/controller/account_status_notification_service.dart';
+import 'package:demo_app/features/roles/account_status/controller/account_status_notification_service.dart';
 import '../../data/repository/demo_login_repository.dart';
 import '../../domain/enums/employee_status_enum.dart';
 import '../../domain/enums/failure_authentication_type.dart';
-import '../../../../roles/system_logs/presentation/controller/system_logs_controller.dart';
+import 'package:demo_app/features/roles/system_logs/controller/system_logs_controller.dart';
 
 class DemoLoginController {
   final DemoLoginRepository demoLoginRepository = DemoLoginRepository();

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:demo_app/core/widgets/standard_container.dart';
+import 'package:demo_app/features/home/widgets/standard_container.dart';
 import 'package:demo_app/features/home/data/models/group_message_model.dart';
 import 'package:demo_app/features/home/data/models/home_component_model.dart';
 import 'package:demo_app/features/home/presentation/controller/home_cubit.dart';

@@ -1,28 +1,28 @@
 import 'dart:ui';
 
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:demo_app/features/onboarding/authentication/presentation/ui/pages/custom_textfield.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
-import 'package:demo_app/core/helper/date_time_in_arabic.dart';
-import 'package:demo_app/core/helper/functions.dart';
-import 'package:demo_app/core/helper/haptic_controller.dart';
-import 'package:demo_app/core/helper/validator.dart';
+import 'package:demo_app/core/enums/enum.dart';
+import 'package:demo_app/core/helper/main_helper/date_time_in_arabic.dart';
+import 'package:demo_app/features/onboarding/helper/functions.dart';
+import 'package:demo_app/core/helper/main_helper/haptic_controller.dart';
+import 'package:demo_app/core/helper/main_helper/validator.dart';
 
 
 import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/widgets/buttons/main_custom_button.dart';
-import 'package:demo_app/core/widgets/dialogs/forgot_pass_dialog.dart';
+import 'package:demo_app/features/onboarding/widgets/dialogs/forgot_pass_dialog.dart';
 import 'package:demo_app/core/widgets/dialogs/response_dialog.dart';
-import 'package:demo_app/features/employees/biometrics_contoller.dart';
+import 'package:demo_app/core/helper/employees/biometrics_contoller.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 import 'package:demo_app/features/onboarding/authentication/presentation/controller/login_controller.dart';
-import 'package:demo_app/features/roles/role_management/presentation/controller/role_controller.dart';
+import 'package:demo_app/features/roles/role_management/controller/role_controller.dart';
 import 'package:demo_app/main.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 

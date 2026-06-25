@@ -9,14 +9,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:dartz/dartz.dart';
 import 'package:demo_app/core/network/api_constants.dart';
 import 'package:demo_app/features/onboarding/authentication/domain/enums/employee_status_enum.dart';
-import '../../../../../core/helper/biometric_controller.dart';
-import '../../../../../core/network/failure_model.dart';
+import 'package:demo_app/core/helper/main_helper/biometric_controller.dart';
+import 'package:demo_app/core/network/failure_model.dart';
 import 'package:demo_app/core/network/get_base_url.dart';
-import '../../../../employee/data/models/emplyees_model/new_employee_model.dart';
-import '../../../../onboarding/authentication/data/models/demo_user_account_overview.dart';
-import '../../domain/entity/account_status_access_entity.dart';
-import '../../presentation/controller/account_status_notification_service.dart';
-import '../data_source/account_status_remote_data_source.dart';
+import 'package:demo_app/features/employee/data/models/emplyees_model/new_employee_model.dart';
+import 'package:demo_app/features/onboarding/authentication/data/models/demo_user_account_overview.dart';
+import 'package:demo_app/features/roles/account_status/domain/entity/account_status_access_entity.dart';
+import 'package:demo_app/features/roles/account_status/controller/account_status_notification_service.dart';
+import 'package:demo_app/features/roles/account_status/data/data_source/account_status_remote_data_source.dart';
 
 class AccountStatusRepository {
   AccountStatusRemoteDataSource remoteDataSource =

@@ -6,16 +6,16 @@ import 'package:file_picker/file_picker.dart';
 import 'package:firebase_storage/firebase_storage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/shared_components/custom_icon_container.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_icon_container.dart';
 import 'package:demo_app/features/settings/presentation/ui/widgets/location_info_update.dart';
-import 'package:demo_app/core/shared_components/request_escalate_dialog.dart';
-import 'package:demo_app/core/widgets/loading.dart';
+import 'package:demo_app/core/widgets/main_widget/request_escalate_dialog.dart';
+import 'package:demo_app/core/widgets/main_widget/loading.dart';
 import 'package:demo_app/core/theme/app_font_size.dart';
-import 'package:demo_app/features/settings/presentation/ui/pages/tablet/tablet_settings_additional_info.dart';
+import 'package:demo_app/features/settings/presentation/ui/pages/settings_additional_info.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-import 'package:demo_app/features/settings/settings_screen/views/profile_screen.dart';
+import 'package:demo_app/features/settings/presentation/ui/pages/profile_screen.dart';
 
 class AdditionalInfoUpdate extends StatefulWidget {
   const AdditionalInfoUpdate({super.key});

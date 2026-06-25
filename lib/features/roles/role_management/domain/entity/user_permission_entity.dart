@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
-import 'package:demo_app/core/helper/employee_helper.dart';
+import 'package:demo_app/core/helper/main_helper/employee_helper.dart';
 import 'package:demo_app/features/roles/role_management/utils/user_access_status.dart';
-import 'package:demo_app/features/roles/role_management/presentation/controller/role_cubit.dart';
+import 'package:demo_app/features/roles/role_management/controller/role_cubit.dart';
 
 import 'package:demo_app/features/department/presentation/controller/add_department_controller.dart';
 import 'package:demo_app/features/employee/domain/entities/employee_entity.dart';

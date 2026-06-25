@@ -1,4 +1,4 @@
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,7 +10,7 @@ import 'package:demo_app/core/theme/app_font_size.dart';
 import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/core/new_theme.dart';
 
-import '../../../../../core/widgets/sort_option_widget.dart';
+import 'package:demo_app/core/widgets/main_widget/sort_option_widget.dart';
 
 class SettingsHeader extends StatefulWidget {
   final String imagePath;

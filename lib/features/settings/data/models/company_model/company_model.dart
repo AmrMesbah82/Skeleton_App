@@ -18,12 +18,12 @@ import 'package:demo_app/features/settings/data/models/company_model/province_mo
 import 'package:demo_app/features/settings/data/models/company_model/secondary_color_model.dart';
 import 'package:demo_app/features/settings/data/models/company_model/tax_number_model.dart';
 import 'package:demo_app/features/settings/data/models/company_model/zip_code.dart';
-import 'package:demo_app/features/employees/data/models/employee_model/address_model.dart';
-import 'package:demo_app/features/employees/data/models/new_employee_model/emplyees_model/email_model.dart';
-import 'package:demo_app/features/employees/data/models/new_employee_model/emplyees_model/first_name_model.dart';
-import 'package:demo_app/features/employees/data/models/new_employee_model/emplyees_model/last_name_model.dart';
-import 'package:demo_app/features/employees/data/models/new_employee_model/emplyees_model/mobile_phone_model.dart';
-import 'package:demo_app/features/employees/data/models/new_employee_model/emplyees_model/role_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/employee_model/address_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/new_employee_model/emplyees_model/email_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/new_employee_model/emplyees_model/first_name_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/new_employee_model/emplyees_model/last_name_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/new_employee_model/emplyees_model/mobile_phone_model.dart';
+import 'package:demo_app/core/helper/employees/data/models/new_employee_model/emplyees_model/role_model.dart';
 class CompanyModel {
   CompanyName? companyName;
   TaxNumber? taxNumber;

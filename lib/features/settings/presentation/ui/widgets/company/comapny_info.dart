@@ -3,12 +3,12 @@
 /// Author: Mohamed Elrashidy
 /// refactored at:11/12/2024
 
-import 'package:demo_app/core/widgets/custom_button_widget.dart';
-import 'package:demo_app/core/widgets/side_frame_master.dart';
-import 'package:demo_app/core/theme/new_theme.dart';
+import 'package:demo_app/core/widgets/main_widget/custom_button_widget.dart';
+import 'package:demo_app/core/widgets/main_widget/side_frame_master.dart';
+import 'package:demo_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:demo_app/core/dummy_data/mode_changer.dart';
+import 'package:demo_app/features/settings/mode_changer.dart';
 
 
 import 'package:demo_app/core/theme/app_font_size.dart';
@@ -17,8 +17,8 @@ import 'package:demo_app/core/theme/app_colors.dart';
 // REMOVED_MODULE: import 'package:demo_app/features/external/services_mangment_module/Category/presentation/ui/services_admin/Widget/W3_Frame_Screen_tablet.dart';
 import 'package:demo_app/features/settings/presentation/controller/add_company_controller.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/shared_components/timeline_widget.dart';
-import '../../../../../../core/enumeration/enum.dart';
+import 'package:demo_app/core/widgets/main_widget/timeline_widget.dart';
+import 'package:demo_app/core/enums/enum.dart';
 // REMOVED: import '../../../../settings_screen/views/owner_screens/company_info_update_dialog/update_company_info_dialog.dart';
 import '../../../../../../generated/l10n.dart';
 // REMOVED_MODULE: import '../../../../../../external/inventory_module/core/custom_button_widget.dart';

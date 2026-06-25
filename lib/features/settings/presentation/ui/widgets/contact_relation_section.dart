@@ -4,16 +4,16 @@ import 'package:demo_app/core/theme/app_colors.dart';
 import 'package:demo_app/features/onboarding/presentation/ui/pages/onboarding.dart' hide themeController;
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:demo_app/core/widgets/country_picker_dialog.dart';
-import 'package:demo_app/core/widgets/intl_phone_field.dart';
-import 'package:demo_app/core/shared_components/phone_number.dart';
+import 'package:demo_app/core/widgets/main_widget/country_picker_dialog.dart';
+import 'package:demo_app/core/widgets/main_widget/intl_phone_field.dart';
+import 'package:demo_app/core/widgets/main_widget/phone_number.dart';
 
 import 'package:demo_app/features/settings/presentation/ui/widgets/custom_phone_field.dart';
 import 'package:demo_app/core/widgets/form_fields/profile_textfield.dart';
 
 
 import 'package:demo_app/core/theme/app_font_size.dart';
-import 'package:demo_app/core/helper/validator.dart';
+import 'package:demo_app/core/helper/main_helper/validator.dart';
 import 'package:demo_app/features/settings/presentation/ui/pages/settings_screen.dart';
 import 'package:demo_app/features/onboarding/authentication/welcome_screen/views/mobile_view/nav_bar.dart';
 

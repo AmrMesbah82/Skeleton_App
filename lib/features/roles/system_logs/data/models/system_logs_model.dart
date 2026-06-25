@@ -5,7 +5,7 @@
 /// Refactored at: 29/1/2025
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:demo_app/core/enumeration/enum.dart';
+import 'package:demo_app/core/enums/enum.dart';
 
 import 'package:demo_app/features/roles/role_management/domain/enums/modules_enum.dart';
 
