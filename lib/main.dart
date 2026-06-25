@@ -49,6 +49,7 @@ void main() async {
 
     FlutterError.onError = FlutterError.presentError;
 
+    // test
     // Firebase
     await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
